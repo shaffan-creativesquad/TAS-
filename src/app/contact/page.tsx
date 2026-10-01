@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, Star } from "lucide-react";
 import Link from "next/link";
 import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
 import BookCoversStrip from "@/components/ui/BookCoversStrip";
@@ -99,18 +99,6 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-center gap-3">
-                  <div className="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
-                    <MessageCircle size={16} className="text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-green-800 text-sm flex items-center gap-1.5">
-                      <span className="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse" />
-                      Live Chat Available Now
-                    </div>
-                    <div className="text-green-600 text-xs">Chat with a publishing expert instantly</div>
-                  </div>
-                </div>
               </div>
             </SlideLeft>
 
@@ -206,9 +194,6 @@ export default function ContactPage() {
                     Send Message & Get Free Quote →
                   </button>
 
-                  <p className="text-center text-xs text-brand-muted">
-                    🔒 Your information is 100% secure and confidential. No spam, ever.
-                  </p>
                 </form>
               </div>
             </SlideRight>
