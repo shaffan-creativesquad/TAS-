@@ -30,8 +30,8 @@ export default function ContactPage() {
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Let&apos;s Talk</span></FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl font-black text-brand-dark leading-[1.1] mb-5">
-              Get Your Free<br />
-              <span className="text-gradient">Publishing Consultation</span>
+              <span className="text-black">Get Your Free</span><br />
+              <span className="text-primary">Publishing</span> <span className="text-black">Consultation</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.16}>
