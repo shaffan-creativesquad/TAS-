@@ -1,5 +1,6 @@
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/home/Marquee";
+import WhoWeHelp from "@/components/home/WhoWeHelp";
 import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import WhatWeBring from "@/components/home/WhatWeBring";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
+      <WhoWeHelp />
       <Services />
       <WhyChooseUs />
       <WhatWeBring />

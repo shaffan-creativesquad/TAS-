@@ -76,6 +76,84 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── OUR PROCESS ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">How We Work</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark">
+                <span className="text-black">Our </span><span className="text-primary">3-Phase</span><span className="text-black"> Process</span>
+              </h2>
+              <p className="text-brand-body text-sm leading-relaxed max-w-xl mx-auto mt-3">
+                Every book we publish follows a proven three-phase workflow — from raw idea to global bookstore shelf.
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                phase: "Phase 1",
+                title: "Extract",
+                color: "#0891B2",
+                bg: "bg-cyan-50",
+                border: "border-cyan-200",
+                steps: ["Strategy Session", "Author Interviews", "Market Research"],
+                desc: "We dive deep into your story, expertise, and goals to lay a solid strategic foundation before a single word is written.",
+              },
+              {
+                phase: "Phase 2",
+                title: "Craft",
+                color: "#7C3AED",
+                bg: "bg-purple-50",
+                border: "border-purple-200",
+                steps: ["Ghostwriting / Writing", "Multi-Level Editing", "Cover & Interior Design"],
+                desc: "Our expert team transforms your ideas into a polished, professionally designed manuscript ready for the world.",
+              },
+              {
+                phase: "Phase 3",
+                title: "Amplify",
+                color: "#059669",
+                bg: "bg-emerald-50",
+                border: "border-emerald-200",
+                steps: ["Global Publishing", "Launch Marketing", "PR & Media Outreach"],
+                desc: "Your book goes live on Amazon and 40+ platforms, backed by a full marketing and PR campaign to maximise sales.",
+              },
+            ].map((p, i) => (
+              <FadeUp key={p.phase} delay={i * 0.1}>
+                <div className={`relative bg-white border ${p.border} rounded-3xl p-7 hover:shadow-xl transition-all duration-300 h-full`}>
+                  {/* Phase number */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className={`w-10 h-10 ${p.bg} rounded-xl flex items-center justify-center`}>
+                      <span className="font-[family-name:var(--font-playfair)] font-black text-sm" style={{ color: p.color }}>{i + 1}</span>
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-widest" style={{ color: p.color }}>{p.phase}</div>
+                      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-black text-brand-dark">{p.title}</h3>
+                    </div>
+                  </div>
+
+                  <p className="text-brand-body text-sm leading-relaxed mb-5">{p.desc}</p>
+
+                  <div className="flex flex-col gap-2">
+                    {p.steps.map(s => (
+                      <div key={s} className="flex items-center gap-2.5">
+                        <CheckCircle size={14} style={{ color: p.color }} className="shrink-0" />
+                        <span className="text-sm text-brand-dark-2 font-medium">{s}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Bottom accent */}
+                  <div className="mt-6 h-1 rounded-full" style={{ background: `linear-gradient(90deg, ${p.color}60, ${p.color}10)` }} />
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── STATS ── */}
       <section style={{ background: "#0891b2" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

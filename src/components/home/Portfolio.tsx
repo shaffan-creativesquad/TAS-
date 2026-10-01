@@ -1,17 +1,17 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B" },
-  { title: "Whispers of Eden", author: "E. Chen", genre: "Romance", bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5" },
-  { title: "Beyond the Horizon", author: "J. Rodriguez", genre: "Self-Help", bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD" },
-  { title: "The Last Oracle", author: "A. Johnson", genre: "Fantasy", bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD" },
-  { title: "Silicon Dreams", author: "D. Thompson", genre: "Sci-Fi", bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC" },
-  { title: "Roots of Gold", author: "M. Santos", genre: "Memoir", bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D" },
-  { title: "Rise & Conquer", author: "K. Williams", genre: "Business", bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC" },
-  { title: "The Iron Crown", author: "T. Morgan", genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74" },
-  { title: "Mind Unlocked", author: "P. Evans", genre: "Psychology", bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC" },
-  { title: "Little Wonders", author: "S. Park", genre: "Children's", bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",   bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B",   outcome: "Amazon Top 100" },
+  { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",    bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5",   outcome: "10K Copies Sold" },
+  { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",  bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD",   outcome: "#1 Category" },
+  { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",    bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD",   outcome: "Pre-Orders Sold Out" },
+  { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",     bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC",   outcome: "Audible Bestseller" },
+  { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",     bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D",   outcome: "Press Coverage" },
+  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",   bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC",   outcome: "Wall St. Pick" },
+  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74",   outcome: "Award Winner" },
+  { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology", bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC",   outcome: "5K+ Reviews" },
+  { title: "Little Wonders",       author: "S. Park",     genre: "Children's", bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7",   outcome: "School Favourite" },
 ];
 
 function BookCover({ b }: { b: typeof books[0] }) {
@@ -30,7 +30,14 @@ function BookCover({ b }: { b: typeof books[0] }) {
           {b.genre}
         </span>
         <div>
-          <div className="h-px opacity-20 mb-2" style={{ background: b.text }} />
+          {/* Outcome badge */}
+          <div
+            className="text-[6px] font-bold uppercase tracking-widest mb-1.5 px-1.5 py-0.5 rounded-full self-start inline-flex items-center gap-0.5"
+            style={{ background: `${b.accent}20`, color: b.accent }}
+          >
+            {b.outcome}
+          </div>
+          <div className="h-px opacity-20 mb-1.5" style={{ background: b.text }} />
           <div className="font-[family-name:var(--font-playfair)] text-[10px] font-bold leading-tight mb-1" style={{ color: b.text }}>
             {b.title}
           </div>
@@ -55,8 +62,11 @@ export default function Portfolio() {
               Published Works
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
-              <span className="text-black">2,500+ Books</span><br /><span className="text-black">We&apos;ve </span><span className="text-primary">Published</span>
+              <span className="text-black">2,500+ Books</span><br /><span className="text-black">Real </span><span className="text-primary">Outcomes</span>
             </h2>
+            <p className="text-brand-muted text-sm mt-2 max-w-sm">
+              Every book comes with a result worth celebrating — bestseller ranks, media coverage, and sold-out launches.
+            </p>
           </div>
           <Link
             href="/portfolio"

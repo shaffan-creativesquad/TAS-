@@ -58,10 +58,10 @@ export default function ContactPage() {
               <div className="flex flex-col gap-5 lg:sticky lg:top-28">
                 <div className="bg-brand-dark rounded-3xl p-7">
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white mb-2">
-                    Why Book a Consultation?
+                    Book Your Free Strategy Call
                   </h3>
                   <p className="text-slate-400 text-sm mb-5">
-                    Talk directly with a publishing expert who will give you a honest, personalized roadmap.
+                    Talk directly with a publishing expert who will give you an honest, personalised roadmap — at no cost.
                   </p>
                   <div className="flex flex-col gap-2.5">
                     {reasons.map(r => (
@@ -213,6 +213,31 @@ export default function ContactPage() {
               </div>
             </SlideRight>
           </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIAL QUOTE ── */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-3xl mx-auto px-4">
+          <FadeUp>
+            <div className="bg-white border border-slate-100 rounded-3xl p-8 text-center shadow-sm">
+              <div className="flex justify-center mb-4">
+                {[1,2,3,4,5].map(i => <Star key={i} size={16} className="text-amber-400 fill-amber-400" />)}
+              </div>
+              <blockquote className="font-[family-name:var(--font-playfair)] text-xl italic text-brand-dark mb-5 leading-relaxed">
+                &quot;From the first call to launch day, The Author Success held my hand through the entire process. My book hit Amazon&apos;s Top 100 in week one — I couldn&apos;t have done it without their team.&quot;
+              </blockquote>
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-sm">
+                  MR
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-brand-dark text-sm">Marcus Reid</div>
+                  <div className="text-brand-muted text-xs">Author of &quot;The Ascent&quot; · Amazon Top 100</div>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </section>
 

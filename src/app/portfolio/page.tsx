@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, BookOpen, Users, Globe, Award } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/Animate";
 import PortfolioGrid from "@/components/portfolio/PortfolioGrid";
 
@@ -56,6 +56,30 @@ export default function PortfolioPage() {
               A showcase of the incredible stories we&apos;ve helped publish — across every genre, for every kind of author.
             </p>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* ── STATS ROW ── */}
+      <section style={{ background: "#0891b2" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+            {[
+              { icon: BookOpen, value: "2,500+", label: "Books Published" },
+              { icon: Globe,    value: "40+",    label: "Countries" },
+              { icon: Users,    value: "1,800+", label: "Authors Helped" },
+              { icon: Award,    value: "50+",    label: "#1 Bestsellers" },
+            ].map((s, i) => (
+              <FadeUp key={s.label} delay={i * 0.08}>
+                <div className="px-8 py-10 text-center" style={{ background: "#0891b2" }}>
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <s.icon size={18} className="text-white" />
+                  </div>
+                  <div className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white mb-1">{s.value}</div>
+                  <div className="text-xs text-[#CFFAFE] uppercase tracking-wider">{s.label}</div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 
