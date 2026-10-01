@@ -60,22 +60,22 @@ export default function ContactPage() {
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white mb-2">
                     Book Your Free Strategy Call
                   </h3>
-                  <p className="text-slate-400 text-sm mb-5">
+                  <p className="text-white/75 text-sm mb-5">
                     Talk directly with a publishing expert who will give you an honest, personalised roadmap — at no cost.
                   </p>
                   <div className="flex flex-col gap-2.5">
                     {reasons.map(r => (
                       <div key={r} className="flex items-center gap-2.5">
-                        <CheckCircle size={14} className="text-primary shrink-0" />
-                        <span className="text-slate-300 text-sm">{r}</span>
+                        <CheckCircle size={14} className="text-white shrink-0" />
+                        <span className="text-white/90 text-sm">{r}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center gap-2 mt-6 pt-6 border-t border-white/10">
+                  <div className="flex items-center gap-2 mt-6 pt-6 border-t border-white/20">
                     <div className="flex">
-                      {[1,2,3,4,5].map(i => <Star key={i} size={13} className="text-amber-400 fill-amber-400" />)}
+                      {[1,2,3,4,5].map(i => <Star key={i} size={13} className="text-amber-300 fill-amber-300" />)}
                     </div>
-                    <span className="text-slate-400 text-xs">4.9/5 · 1,200+ author reviews</span>
+                    <span className="text-white/75 text-xs">4.9/5 · 1,200+ author reviews</span>
                   </div>
                 </div>
 
