@@ -5,6 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 
+const whoWeHelp = [
+  { name: "Founders & CEOs",    href: "/who-we-help/founders-ceos" },
+  { name: "Consultants",        href: "/who-we-help/consultants" },
+  { name: "Coaches & Speakers", href: "/who-we-help/coaches-speakers" },
+  { name: "Professionals",      href: "/who-we-help/professionals" },
+  { name: "Businesses",         href: "/who-we-help/businesses" },
+];
+
 const services = [
   { name: "Ghostwriting",                   href: "/services/ghostwriting" },
   { name: "Book Editing",                   href: "/services/editing" },
@@ -32,9 +40,11 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [whoWeHelpOpen, setWhoWeHelpOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const whoWeHelpRef = useRef<HTMLDivElement>(null);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -49,6 +59,9 @@ export default function Navbar() {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
+      }
+      if (whoWeHelpRef.current && !whoWeHelpRef.current.contains(e.target as Node)) {
+        setWhoWeHelpOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -139,6 +152,61 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* Who We Help dropdown */}
+            <div className="relative" ref={whoWeHelpRef}>
+              <div className="flex items-center gap-0.5">
+                <Link
+                  href="/who-we-help/consultants"
+                  className={`relative text-sm font-semibold transition-colors ${
+                    isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2 hover:text-primary"
+                  }`}
+                >
+                  Who We Help
+                  {isActive("/who-we-help") && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                  )}
+                </Link>
+                <button
+                  onClick={() => setWhoWeHelpOpen(!whoWeHelpOpen)}
+                  className={`p-1 transition-colors ${isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2 hover:text-primary"}`}
+                  aria-label="Toggle who we help menu"
+                >
+                  <ChevronDown size={14} className={`transition-transform duration-200 ${whoWeHelpOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {whoWeHelpOpen && (
+                <div className="absolute top-full -left-20 mt-3 w-56 bg-white rounded-2xl shadow-2xl shadow-black/10 border border-slate-100 p-3 z-50">
+                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-slate-100 rotate-45" />
+                  <div className="flex flex-col gap-0.5">
+                    {whoWeHelp.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setWhoWeHelpOpen(false)}
+                        className="flex items-center gap-2 px-3 py-2.5 text-xs font-semibold text-brand-dark-2 hover:bg-cyan-50 hover:text-primary rounded-lg transition-colors"
+                      >
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Insights link */}
+            <Link
+              href="/insights"
+              className={`relative text-sm font-semibold transition-colors ${
+                isActive("/insights") ? "text-primary" : "text-brand-dark-2 hover:text-primary"
+              }`}
+            >
+              Insights
+              {isActive("/insights") && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+              )}
+            </Link>
+
             {/* Contact link — last */}
             <Link
               href="/contact"
@@ -162,10 +230,10 @@ export default function Navbar() {
               +1 (800) 123-4567
             </Link>
             <Link
-              href="/contact"
+              href="/book-a-call"
               className="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all"
             >
-              Free Consultation
+              Book a Call
             </Link>
           </div>
 
@@ -220,6 +288,44 @@ export default function Navbar() {
               ))}
             </div>
           )}
+
+          {/* Who We Help mobile */}
+          <div className={`flex items-center justify-between border-l-2 pl-3 ${isActive("/who-we-help") ? "border-primary" : "border-transparent"}`}>
+            <Link
+              href="/who-we-help/consultants"
+              onClick={() => setIsOpen(false)}
+              className={`font-semibold py-0.5 transition-colors ${isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2"}`}
+            >
+              Who We Help
+            </Link>
+            <button
+              onClick={() => setWhoWeHelpOpen(!whoWeHelpOpen)}
+              className={`p-1 transition-colors ${isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2"}`}
+            >
+              <ChevronDown size={14} className={`transition-transform duration-200 ${whoWeHelpOpen ? "rotate-180" : ""}`} />
+            </button>
+          </div>
+          {whoWeHelpOpen && (
+            <div className="pl-4 flex flex-col gap-2">
+              {whoWeHelp.map((item) => (
+                <Link key={item.name} href={item.href} className="text-sm text-brand-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {/* Insights mobile */}
+          <Link
+            href="/insights"
+            onClick={() => setIsOpen(false)}
+            className={`font-semibold py-0.5 border-l-2 pl-3 transition-colors ${
+              isActive("/insights") ? "text-primary border-primary" : "text-brand-dark-2 border-transparent"
+            }`}
+          >
+            Insights
+          </Link>
+
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
@@ -230,11 +336,11 @@ export default function Navbar() {
             Contact
           </Link>
           <Link
-            href="/contact"
+            href="/book-a-call"
             className="bg-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1"
             onClick={() => setIsOpen(false)}
           >
-            Free Consultation
+            Book a Call
           </Link>
         </div>
       )}
