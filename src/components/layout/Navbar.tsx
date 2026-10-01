@@ -6,12 +6,31 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
-  { name: "Ghostwriting", href: "/services/ghostwriting" },
-  { name: "Book Editing", href: "/services/editing" },
-  { name: "Cover Design", href: "/services/cover-design" },
-  { name: "Publishing", href: "/services/publishing" },
-  { name: "Book Marketing", href: "/services/marketing" },
-  { name: "Audiobooks", href: "/services/audiobooks" },
+  { name: "Ghostwriting",                   href: "/services/ghostwriting" },
+  { name: "Book Writing",                   href: "/services/ghostwriting" },
+  { name: "Book Editing",                   href: "/services/editing" },
+  { name: "Proofreading Services",          href: "/services/editing" },
+  { name: "Cover Design",                   href: "/services/cover-design" },
+  { name: "Publishing & Distribution",      href: "/services/publishing" },
+  { name: "Book Marketing",                 href: "/services/marketing" },
+  { name: "Audiobooks",                     href: "/services/audiobooks" },
+  { name: "Book Publishing",                href: "/services/publishing" },
+  { name: "Book Promotion",                 href: "/services/marketing" },
+  { name: "eBook Writing",                  href: "/services/ghostwriting" },
+  { name: "Formatting Services",            href: "/services/publishing" },
+  { name: "Digital Marketing",              href: "/services/marketing" },
+  { name: "Author Marketing",               href: "/services/marketing" },
+  { name: "Audio Book Recording",           href: "/services/audiobooks" },
+  { name: "Article Writing & Publishing",   href: "/services/article-writing" },
+  { name: "Blog Writing",                   href: "/services/blog-writing" },
+  { name: "Book Trailer",                   href: "/services/book-trailer" },
+  { name: "Business Proposal Writing",      href: "/services/business-proposal" },
+  { name: "Children Book Publication",      href: "/services/childrens-book-publication" },
+  { name: "Children's Book Illustrations",  href: "/services/book-illustrations" },
+  { name: "Web Content Writing",            href: "/services/web-content" },
+  { name: "Author Website Design",          href: "/services/author-website" },
+  { name: "Children Book Writing",          href: "/services/children-book-writing" },
+  { name: "Book Printing",                  href: "/services/book-printing" },
 ];
 
 export default function Navbar() {
@@ -106,19 +125,21 @@ export default function Navbar() {
                 </button>
               </div>
               {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl shadow-2xl shadow-black/10 border border-slate-100 py-2 z-50">
+                <div className="absolute top-full -left-40 mt-3 w-[620px] bg-white rounded-2xl shadow-2xl shadow-black/10 border border-slate-100 p-4 z-50">
                   <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-slate-100 rotate-45" />
-                  {services.map((s) => (
-                    <Link
-                      key={s.name}
-                      href={s.href}
-                      onClick={() => setServicesOpen(false)}
-                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-brand-dark-2 hover:bg-cyan-50 hover:text-primary transition-colors"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/30" />
-                      {s.name}
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-3 gap-0.5">
+                    {services.map((s) => (
+                      <Link
+                        key={s.name}
+                        href={s.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="flex items-center gap-2 px-2.5 py-2 text-xs font-semibold text-brand-dark-2 hover:bg-cyan-50 hover:text-primary rounded-lg transition-colors"
+                      >
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

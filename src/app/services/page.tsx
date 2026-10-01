@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { PenLine, BookOpen, Palette, Globe, Megaphone, Headphones, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { PenLine, BookOpen, Palette, Globe, Megaphone, Headphones, CheckCircle, ArrowRight, Star, FileText, Rss, Video, Briefcase, Baby, Image, Monitor, Laptop, Printer, TrendingUp, BarChart2, Mic, BookMarked } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/Animate";
 import BookCoversStrip from "@/components/ui/BookCoversStrip";
 
@@ -274,6 +274,57 @@ export default function ServicesPage() {
               </div>
             </FadeUp>
           ))}
+        </div>
+      </section>
+
+      {/* ── MORE SERVICES GRID ── */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-10">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">We Also Offer</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-brand-dark">
+                More Services for Every Author
+              </h2>
+            </div>
+          </FadeUp>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {[
+              { icon: BookMarked, title: "Book Publishing",               desc: "End-to-end book publishing on Amazon KDP and global platforms.",         href: "/services/book-publishing" },
+              { icon: TrendingUp, title: "Book Promotion",                desc: "Strategic promotion campaigns to boost visibility and sales.",            href: "/services/book-promotion" },
+              { icon: FileText,   title: "eBook Writing",                 desc: "Professional eBook writing for any topic, niche, or audience.",          href: "/services/ebook-writing" },
+              { icon: Globe,      title: "Formatting Services",           desc: "Print and digital interior formatting to industry standards.",            href: "/services/formatting-services" },
+              { icon: BarChart2,  title: "Digital Marketing",             desc: "Full-funnel digital marketing campaigns for authors and books.",          href: "/services/digital-marketing" },
+              { icon: Megaphone,  title: "Author Marketing",              desc: "Build your author brand and grow a loyal reader community.",              href: "/services/author-marketing" },
+              { icon: Mic,        title: "Audio Book Recording",          desc: "Studio-quality narration and full post-production mastering.",            href: "/services/audio-book-recording" },
+              { icon: FileText,   title: "Article Writing & Publishing",  desc: "SEO-optimized articles and guest posts to build your authority.",         href: "/services/article-writing" },
+              { icon: Rss,        title: "Blog Writing",                  desc: "Consistent, engaging blog content that attracts readers.",                href: "/services/blog-writing" },
+              { icon: Video,      title: "Book Trailer",                  desc: "Cinematic book trailers for social media and Amazon pages.",              href: "/services/book-trailer" },
+              { icon: Briefcase,  title: "Business Proposal Writing",     desc: "Persuasive, polished business proposals and white papers.",               href: "/services/business-proposal" },
+              { icon: Baby,       title: "Children Book Publication",     desc: "Complete publishing service for children's picture books.",               href: "/services/childrens-book-publication" },
+              { icon: Image,      title: "Children's Book Illustrations", desc: "Vibrant, age-appropriate illustrations for children's books.",            href: "/services/book-illustrations" },
+              { icon: Monitor,    title: "Web Content Writing",           desc: "Website copy, landing pages, and brand messaging that converts.",         href: "/services/web-content" },
+              { icon: Laptop,     title: "Author Website Design",         desc: "Beautiful, professional author websites built to grow your brand.",       href: "/services/author-website" },
+              { icon: PenLine,    title: "Children Book Writing",         desc: "Expert children's book writing across all age groups and formats.",       href: "/services/children-book-writing" },
+              { icon: Printer,    title: "Book Printing",                 desc: "High-quality print-on-demand and bulk printing solutions.",               href: "/services/book-printing" },
+            ].map((s, i) => (
+              <FadeUp key={s.title} delay={(i % 4) * 0.07}>
+                <Link
+                  href={s.href}
+                  className="group bg-white border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-100 hover:-translate-y-1 transition-all block h-full"
+                >
+                  <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-4">
+                    <s.icon size={18} className="text-primary" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-brand-dark text-sm mb-1.5">{s.title}</h3>
+                  <p className="text-brand-muted text-xs leading-relaxed mb-3">{s.desc}</p>
+                  <span className="text-xs font-bold text-primary group-hover:gap-2 flex items-center gap-1">
+                    Learn More <ArrowRight size={11} />
+                  </span>
+                </Link>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 
