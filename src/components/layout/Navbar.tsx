@@ -69,7 +69,7 @@ export default function Navbar() {
           <Link href="/">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/light-theme-logo.png"
+              src="/logo.png"
               alt="The Author Success"
               style={{ height: "46px", width: "auto", display: "block" }}
             />

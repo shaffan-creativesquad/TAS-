@@ -6,14 +6,14 @@ export default function Footer() {
     <footer className="text-white" style={{ background: "#0891b2" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16 border-b border-white/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16 border-b border-white/20 text-center md:text-left">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
               <div className="bg-white rounded-xl px-3 py-2 inline-block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/light-theme-logo.png"
+                  src="/logo.png"
                   alt="The Author Success"
                   style={{ height: "40px", width: "auto", display: "block" }}
                 />
@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="text-white/80 text-sm leading-relaxed mb-6">
               Your trusted partner for end-to-end book publishing. From first draft to global distribution.
             </p>
-            <div className="flex gap-2.5">
+            <div className="flex gap-2.5 justify-center md:justify-start">
               {[
                 { label: "f", title: "Facebook" },
                 { label: "in", title: "LinkedIn" },
@@ -92,7 +92,7 @@ export default function Footer() {
                 { icon: Mail, value: "info@theauthorsuccess.com" },
                 { icon: MapPin, value: "New York, NY 10001" },
               ].map(({ icon: Icon, value }) => (
-                <li key={value} className="flex items-start gap-3">
+                <li key={value} className="flex items-start gap-3 justify-center md:justify-start">
                   <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
                     <Icon size={14} className="text-white" />
                   </div>
