@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "#0f172a", spine: "#DC2626", text: "#f8fafc", accent: "#F59E0B" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B" },
   { title: "Whispers of Eden", author: "E. Chen", genre: "Romance", bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5" },
   { title: "Beyond the Horizon", author: "J. Rodriguez", genre: "Self-Help", bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD" },
   { title: "The Last Oracle", author: "A. Johnson", genre: "Fantasy", bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD" },

@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.85, ease: "easeOut", delay: i * 0.1 }}
               >
-                <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-3">
+                <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-3">
                   <f.icon size={18} className="text-primary" />
                 </div>
                 <h4 className="font-semibold text-brand-dark mb-1 text-sm">{f.title}</h4>
@@ -76,13 +76,13 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.95, ease: "easeOut", delay: 0.1 }}
           >
             <div>
-              <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
                 <Trophy size={22} className="text-white" />
               </div>
               <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white mb-3">
                 The Complete Author Solution
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              <p className="text-[#CFFAFE] text-sm leading-relaxed mb-6">
                 Stop juggling 5 different freelancers. We handle everything under one roof — from your first draft to a global bestseller.
               </p>
             </div>
@@ -93,15 +93,15 @@ export default function WhyChooseUs() {
                 "Revision cycles included",
                 "Post-launch support",
               ].map(item => (
-                <div key={item} className="flex items-center gap-2.5 text-sm text-slate-300">
-                  <CheckCircle size={14} className="text-primary shrink-0" />
+                <div key={item} className="flex items-center gap-2.5 text-sm text-[#CFFAFE]">
+                  <CheckCircle size={14} className="text-white shrink-0" />
                   {item}
                 </div>
               ))}
             </div>
             <Link
               href="/contact"
-              className="mt-7 block bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl text-center text-sm transition-colors shadow-lg shadow-red-900/30"
+              className="mt-7 block bg-white hover:bg-slate-50 text-primary font-bold py-3 rounded-xl text-center text-sm transition-colors shadow-lg"
             >
               Get Started Today
             </Link>
@@ -118,7 +118,7 @@ export default function WhyChooseUs() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.85, ease: "easeOut", delay: i * 0.1 }}
               >
-                <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-3">
+                <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-3">
                   <f.icon size={18} className="text-primary" />
                 </div>
                 <h4 className="font-semibold text-brand-dark mb-1 text-sm">{f.title}</h4>

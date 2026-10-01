@@ -5,13 +5,13 @@
    ═══════════════════════════════════════════════════════════════ */
 :root {
   /* Primary accent */
-  --brand-primary:        #DC2626;  /* main brand color */
-  --brand-primary-hover:  #B91C1C;  /* hover/darker variant */
-  --brand-primary-dark:   #991B1B;  /* darkest (gradients, deep shadows) */
-  --brand-primary-light:  #FEF2F2;  /* lightest tint (subtle backgrounds) */
+  --brand-primary:        #0891B2;  /* main brand color */
+  --brand-primary-hover:  #0E7490;  /* hover/darker variant */
+  --brand-primary-dark:   #155E75;  /* darkest (gradients, deep shadows) */
+  --brand-primary-light:  #ECFEFF;  /* lightest tint (subtle backgrounds) */
 
   /* Dark palette */
-  --brand-dark:           #0F172A;  /* headings, dark sections, footer */
+  --brand-dark:           #0891B2;  /* headings, dark sections, footer */
   --brand-dark-2:         #1E293B;  /* secondary dark (nav links, subheadings) */
 
   /* Text */

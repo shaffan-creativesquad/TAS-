@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ALL_BOOKS = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0f172a", spine: "#DC2626", text: "#f8fafc", accent: "#F59E0B", result: "Amazon Top 100",      platform: "Amazon KDP" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B", result: "Amazon Top 100",      platform: "Amazon KDP" },
   { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",     bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5", result: "10K Copies Sold",     platform: "Amazon KDP" },
   { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",   bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD", result: "#1 Category",         platform: "IngramSpark" },
   { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD", result: "Pre-Orders Sold Out", platform: "Amazon KDP" },
@@ -76,7 +76,7 @@ function MiniBookCard({ b }: { b: typeof ALL_BOOKS[0] }) {
         <p className="text-brand-dark font-semibold text-xs leading-tight truncate">{b.title}</p>
         <p className="text-brand-muted text-[11px]">{b.author}</p>
         <span
-          className="inline-block mt-1 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-50 text-primary"
+          className="inline-block mt-1 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-cyan-50 text-primary"
         >
           {b.result}
         </span>
@@ -115,7 +115,7 @@ export default function BooksShowcase({
               onClick={() => setActive(g)}
               className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all ${
                 active === g
-                  ? "bg-primary text-white border-primary shadow-lg shadow-red-200"
+                  ? "bg-primary text-white border-primary shadow-lg shadow-cyan-200"
                   : "border-slate-200 text-slate-500 hover:border-primary hover:text-primary bg-white"
               }`}
             >
@@ -140,7 +140,7 @@ export default function BooksShowcase({
           </p>
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-red-200 transition-all text-sm"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-cyan-200 transition-all text-sm"
           >
             View Full Portfolio <ArrowRight size={15} />
           </Link>

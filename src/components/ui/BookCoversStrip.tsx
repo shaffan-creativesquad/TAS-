@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const COVERS = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0f172a", spine: "#DC2626", text: "#f8fafc", accent: "#F59E0B" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B" },
   { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",     bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5" },
   { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD" },
   { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",      bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC" },

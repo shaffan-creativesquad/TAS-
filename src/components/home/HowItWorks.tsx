@@ -11,7 +11,7 @@ const steps = [
     title: "Free Consultation",
     desc: "Tell us your book idea and goals. We assign your dedicated team and build a custom publishing roadmap tailored to your vision.",
     color: "bg-primary",
-    light: "bg-red-50",
+    light: "bg-cyan-50",
     iconColor: "text-primary",
   },
   {
@@ -45,10 +45,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-brand-dark relative overflow-hidden">
-      {/* Subtle radial */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #DC2626 0%, transparent 50%)" }} />
+    <section className="py-24 relative overflow-hidden" style={{ background: "#107c99" }}>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -59,13 +56,13 @@ export default function HowItWorks() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60 mb-3 block">
             Our Process
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-white mb-4">
             Idea to Bestseller in<br />4 Simple Steps
           </h2>
-          <p className="text-slate-400 text-sm max-w-md mx-auto">
+          <p className="text-white/70 text-sm max-w-md mx-auto">
             A transparent, guided process so you always know what&apos;s happening with your book.
           </p>
         </motion.div>
@@ -83,16 +80,16 @@ export default function HowItWorks() {
             >
               {/* Connector arrow (desktop) */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 -right-2.5 z-10 text-slate-600 text-lg">›</div>
+                <div className="hidden lg:block absolute top-8 -right-2.5 z-10 text-white/50 text-lg">›</div>
               )}
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/[0.08] hover:border-white/20 transition-all h-full">
+              <div className="bg-white/15 border border-white/25 rounded-2xl p-6 hover:bg-white/25 hover:border-white/40 transition-all h-full">
                 {/* Number */}
                 <div className="flex items-center justify-between mb-5">
                   <div className={`w-12 h-12 ${step.color} rounded-xl flex items-center justify-center shadow-lg`}>
                     <step.icon size={20} className="text-white" />
                   </div>
-                  <span className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white/10">
+                  <span className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white/30">
                     {step.num}
                   </span>
                 </div>
@@ -100,7 +97,7 @@ export default function HowItWorks() {
                 <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-white mb-2">
                   {step.title}
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                <p className="text-white/75 text-sm leading-relaxed">{step.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -108,21 +105,21 @@ export default function HowItWorks() {
 
         {/* CTA strip */}
         <motion.div
-          className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-7 flex flex-col sm:flex-row items-center justify-between gap-5"
+          className="bg-white rounded-2xl p-7 flex flex-col sm:flex-row items-center justify-between gap-5"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <div>
-            <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white mb-1">
+            <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-brand-dark mb-1">
               Ready to Start Your Publishing Journey?
             </h3>
-            <p className="text-red-200 text-sm">Join 1,800+ authors who trusted us with their story.</p>
+            <p className="text-brand-muted text-sm">Join 1,800+ authors who trusted us with their story.</p>
           </div>
           <Link
             href="/contact"
-            className="shrink-0 bg-white text-primary font-bold px-8 py-3.5 rounded-full hover:bg-red-50 transition-colors shadow-lg whitespace-nowrap"
+            className="shrink-0 bg-primary text-white font-bold px-8 py-3.5 rounded-full hover:bg-primary-hover transition-colors shadow-lg whitespace-nowrap"
           >
             Book Free Consultation
           </Link>

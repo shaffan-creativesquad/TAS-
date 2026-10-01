@@ -36,13 +36,13 @@ export default function CTABanner() {
                 <div className="flex">
                   {[1,2,3,4,5].map(i => <Star key={i} size={14} className="text-white fill-white" />)}
                 </div>
-                <span className="text-red-200 text-sm font-medium">4.9/5 from 1,200+ authors</span>
+                <span className="text-cyan-200 text-sm font-medium">4.9/5 from 1,200+ authors</span>
               </div>
 
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white leading-tight mb-4">
                 Your Book Won&apos;t Write<br />Itself. Let&apos;s Fix That.
               </h2>
-              <p className="text-red-100 text-lg max-w-lg mb-6">
+              <p className="text-cyan-100 text-lg max-w-lg mb-6">
                 Free 30-minute consultation with a publishing expert. No fluff, no pressure — just a clear roadmap to get your book published.
               </p>
 
@@ -64,7 +64,7 @@ export default function CTABanner() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             >
-              <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
                 <BookOpen size={18} className="text-primary" />
               </div>
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-brand-dark mb-1">
@@ -77,7 +77,7 @@ export default function CTABanner() {
               <div className="flex flex-col gap-2.5">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl text-sm shadow-lg shadow-red-200 transition-all"
+                  className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl text-sm shadow-lg shadow-cyan-200 transition-all"
                 >
                   Book Free Consultation <ArrowRight size={15} />
                 </Link>

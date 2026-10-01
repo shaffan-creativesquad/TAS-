@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PenLine, BookOpen, Palette, Globe, Megaphone, Headphones, CheckCircle, ArrowRight, Star } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/Animate";
@@ -27,8 +27,8 @@ const services = [
       "Chapter-by-chapter reviews",
       "Unlimited revision rounds",
     ],
-    color: "#DC2626",
-    iconBg: "bg-red-50",
+    color: "#0891B2",
+    iconBg: "bg-cyan-50",
     iconColor: "text-primary",
     result: "Avg. delivery: 8–10 weeks",
   },
@@ -49,9 +49,9 @@ const services = [
       "Tracked Changes with Notes",
       "Editorial Letter Included",
     ],
-    color: "#7C3AED",
-    iconBg: "bg-purple-50",
-    iconColor: "text-purple-600",
+    color: "#0891B2",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-primary",
     result: "Avg. delivery: 2–4 weeks",
   },
   {
@@ -71,9 +71,9 @@ const services = [
       "3 Initial Concepts Provided",
       "Unlimited Revisions",
     ],
-    color: "#D97706",
-    iconBg: "bg-amber-50",
-    iconColor: "text-amber-600",
+    color: "#0891B2",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-primary",
     result: "Avg. delivery: 10–14 days",
   },
   {
@@ -93,9 +93,9 @@ const services = [
       "Amazon Author Central Setup",
       "100% Royalty Ownership",
     ],
-    color: "#059669",
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-600",
+    color: "#0891B2",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-primary",
     result: "Live on Amazon in 72 hours",
   },
   {
@@ -117,7 +117,7 @@ const services = [
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
-    iconColor: "text-cyan-600",
+    iconColor: "text-primary",
     result: "Avg. 3x sales increase at launch",
   },
   {
@@ -137,9 +137,9 @@ const services = [
       "Royalty Share or Flat Fee",
       "Spanish & French Narration Available",
     ],
-    color: "#BE185D",
-    iconBg: "bg-pink-50",
-    iconColor: "text-pink-600",
+    color: "#0891B2",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-primary",
     result: "Avg. delivery: 3–5 weeks",
   },
 ];
@@ -149,10 +149,10 @@ export default function ServicesPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-36 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 via-white to-slate-50/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-slate-50/30 pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(#DC2626 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+          style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Full-Service Publishing</span></FadeUp>
@@ -284,12 +284,12 @@ export default function ServicesPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
               Not Sure Which Service<br />You Need?
             </h2>
-            <p className="text-slate-400 text-sm mb-8 max-w-lg mx-auto">
+            <p className="text-[#CFFAFE] text-sm mb-8 max-w-lg mx-auto">
               Book a free 30-minute consultation. Our publishing experts will review your project and recommend the perfect solution.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-red-900/30 transition-all"
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-primary font-bold px-10 py-4 rounded-full shadow-xl transition-all"
             >
               Book Free Consultation <ArrowRight size={18} />
             </Link>

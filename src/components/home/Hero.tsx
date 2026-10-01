@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -53,7 +53,7 @@ function BookCover({
 }
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "linear-gradient(160deg,#0f172a 0%,#1e293b 100%)", spine: "#DC2626", textColor: "#f8fafc", accentColor: "#F59E0B", className: "float-a" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "linear-gradient(160deg,#0891B2 0%,#1e293b 100%)", spine: "#0891B2", textColor: "#f8fafc", accentColor: "#F59E0B", className: "float-a" },
   { title: "Whispers of Forever", author: "E. Chen", genre: "Romance", bg: "linear-gradient(160deg,#881337 0%,#be123c 100%)", spine: "#4C0519", textColor: "#fff1f2", accentColor: "#FCA5A5", className: "float-b" },
   { title: "Beyond the Stars", author: "A. Mitchell", genre: "Sci-Fi", bg: "linear-gradient(160deg,#0c4a6e 0%,#075985 100%)", spine: "#082f49", textColor: "#e0f2fe", accentColor: "#7DD3FC", className: "float-c" },
   { title: "Rise to Power", author: "K. Williams", genre: "Business", bg: "linear-gradient(160deg,#14532d 0%,#166534 100%)", spine: "#052e16", textColor: "#f0fdf4", accentColor: "#86EFAC", className: "float-a" },
@@ -65,11 +65,11 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-white overflow-hidden flex items-center">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-50/60 via-white to-slate-50/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/60 via-white to-slate-50/40 pointer-events-none" />
       {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{ backgroundImage: "radial-gradient(#DC2626 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+        style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full">
@@ -78,7 +78,7 @@ export default function Hero() {
           {/* ── LEFT ── */}
           <div>
             {/* Badge */}
-            <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2.5 bg-white border border-red-200 shadow-sm rounded-full px-4 py-1.5 mb-7">
+            <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2.5 bg-white border border-cyan-200 shadow-sm rounded-full px-4 py-1.5 mb-7">
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}
               </div>
@@ -119,7 +119,7 @@ export default function Hero() {
             <motion.div {...fadeUp(0.32)} className="flex flex-wrap gap-3 mb-12">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-200 hover:shadow-red-300 transition-all text-[0.95rem]"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all text-[0.95rem]"
               >
                 Start Publishing <ArrowRight size={17} />
               </Link>
@@ -156,7 +156,7 @@ export default function Hero() {
           >
             {/* Book covers cluster */}
             <div className="relative h-[300px] mb-6 hidden sm:block">
-              <div className="absolute inset-x-8 bottom-0 h-20 bg-red-100/60 blur-2xl rounded-full" />
+              <div className="absolute inset-x-8 bottom-0 h-20 bg-cyan-100/60 blur-2xl rounded-full" />
               <div className="absolute top-0 left-4"       style={{ transform: "rotate(-8deg)" }}><BookCover {...books[0]} /></div>
               <div className="absolute top-4 left-[160px]" style={{ transform: "rotate(4deg)" }}><BookCover {...books[1]} /></div>
               <div className="absolute top-0 left-[310px]" style={{ transform: "rotate(-3deg)" }}><BookCover {...books[2]} /></div>
@@ -195,7 +195,7 @@ export default function Hero() {
                 </select>
                 <button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-red-100 transition-all mt-0.5"
+                  className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-100 transition-all mt-0.5"
                 >
                   Claim Free Consultation →
                 </button>

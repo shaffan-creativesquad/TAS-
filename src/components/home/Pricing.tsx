@@ -101,20 +101,20 @@ export default function Pricing() {
               )}
 
               <div className="p-7">
-                <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${plan.highlight ? "text-red-400" : "text-primary"}`}>
+                <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${plan.highlight ? "text-white/70" : "text-primary"}`}>
                   {plan.name}
                 </div>
                 <div className={`font-[family-name:var(--font-playfair)] text-4xl font-black mb-1 ${plan.highlight ? "text-white" : "text-brand-dark"}`}>
                   {plan.price}
                 </div>
-                <p className={`text-sm mb-6 leading-relaxed ${plan.highlight ? "text-slate-400" : "text-brand-muted"}`}>
+                <p className={`text-sm mb-6 leading-relaxed ${plan.highlight ? "text-white/75" : "text-brand-muted"}`}>
                   {plan.desc}
                 </p>
 
                 <div className="flex flex-col gap-3 mb-7">
                   {plan.features.map(f => (
                     <div key={f} className="flex items-start gap-2.5">
-                      <CheckCircle size={15} className="text-primary shrink-0 mt-0.5" />
+                      <CheckCircle size={15} className={`shrink-0 mt-0.5 ${plan.highlight ? "text-white" : "text-primary"}`} />
                       <span className={`text-sm ${plan.highlight ? "text-slate-300" : "text-brand-dark-2"}`}>{f}</span>
                     </div>
                   ))}
@@ -124,7 +124,7 @@ export default function Pricing() {
                   href="/contact"
                   className={`flex items-center justify-center gap-2 font-bold py-3.5 rounded-xl text-sm transition-all ${
                     plan.highlight
-                      ? "bg-primary hover:bg-primary-hover text-white shadow-lg shadow-red-900/40"
+                      ? "bg-white hover:bg-slate-50 text-primary shadow-lg"
                       : "bg-slate-50 hover:bg-slate-100 text-brand-dark border border-slate-200"
                   }`}
                 >

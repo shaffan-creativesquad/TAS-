@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -113,7 +113,7 @@ export default function Navbar() {
                       key={s.name}
                       href={s.href}
                       onClick={() => setServicesOpen(false)}
-                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-brand-dark-2 hover:bg-red-50 hover:text-primary transition-colors"
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-brand-dark-2 hover:bg-cyan-50 hover:text-primary transition-colors"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-primary/30" />
                       {s.name}
@@ -147,7 +147,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-red-200 hover:shadow-red-300 transition-all"
+              className="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all"
             >
               Free Consultation
             </Link>

@@ -102,12 +102,12 @@ export default function Services() {
                 className={`group rounded-2xl p-6 border hover-lift cursor-pointer transition-all block h-full ${
                   s.dark
                     ? "bg-brand-dark border-brand-dark text-white"
-                    : "bg-white border-slate-200 hover:border-red-100 hover:shadow-lg"
+                    : "bg-white border-slate-200 hover:border-cyan-100 hover:shadow-lg"
                 }`}
               >
                 {/* Icon */}
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                  s.dark ? "bg-white/10" : "bg-red-50"
+                  s.dark ? "bg-white/10" : "bg-cyan-50"
                 }`}>
                   <s.icon size={22} className={s.dark ? "text-white" : "text-primary"} />
                 </div>
@@ -118,17 +118,17 @@ export default function Services() {
                   }`}>{s.title}</h3>
                   {s.tag && (
                     <span className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 mt-1 ${
-                      s.dark ? "bg-primary text-white" : "bg-red-50 text-primary border border-red-200"
+                      s.dark ? "bg-primary text-white" : "bg-cyan-50 text-primary border border-cyan-200"
                     }`}>{s.tag}</span>
                   )}
                 </div>
 
                 <p className={`text-sm leading-relaxed mb-5 ${
-                  s.dark ? "text-slate-400" : "text-brand-muted"
+                  s.dark ? "text-[#CFFAFE]" : "text-brand-muted"
                 }`}>{s.desc}</p>
 
                 <div className={`flex items-center gap-1.5 text-sm font-bold group-hover:gap-3 transition-all ${
-                  s.dark ? "text-red-400" : "text-primary"
+                  s.dark ? "text-[#CFFAFE]" : "text-primary"
                 }`}>
                   Learn more <ArrowUpRight size={15} />
                 </div>

@@ -36,8 +36,8 @@ type ServiceData = {
 const SERVICES: Record<string, ServiceData> = {
   ghostwriting: {
     slug: "ghostwriting",
-    color: "#DC2626",
-    lightBg: "#FEF2F2",
+    color: "#0891B2",
+    lightBg: "#ECFEFF",
     icon: PenLine,
     badge: "Most Popular Service",
     headline: "Turn Your Idea Into a Bestselling Book",
@@ -408,8 +408,8 @@ export default async function ServicePage({
   if (!s) notFound();
 
   const Icon = s.icon;
-  const COLOR = "#DC2626";
-  const LIGHT_BG = "#FEF2F2";
+  const COLOR = "#0891B2";
+  const LIGHT_BG = "#ECFEFF";
 
   return (
     <>
@@ -420,7 +420,7 @@ export default async function ServicePage({
       >
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(#0F172A 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+          style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -643,7 +643,7 @@ export default async function ServicePage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-red-50">
+      <section className="py-20 bg-cyan-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}>
@@ -658,7 +658,7 @@ export default async function ServicePage({
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-white font-bold px-10 py-4 rounded-full shadow-lg shadow-red-200 transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 text-white font-bold px-10 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all hover:opacity-90"
                 style={{ background: COLOR }}
               >
                 Book Free Consultation <ArrowRight size={18} />

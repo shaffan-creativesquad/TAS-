@@ -57,7 +57,7 @@ export default function FAQ() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-full text-sm shadow-lg shadow-red-200 hover:bg-primary-hover transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-full text-sm shadow-lg shadow-cyan-200 hover:bg-primary-hover transition-colors"
             >
               Still have questions? Ask us
             </a>
@@ -73,7 +73,7 @@ export default function FAQ() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.75, ease: "easeOut", delay: i * 0.06 }}
                 className={`rounded-2xl border overflow-hidden transition-colors ${
-                  open === i ? "border-red-200 bg-white shadow-md shadow-red-50" : "border-slate-200 bg-white"
+                  open === i ? "border-cyan-200 bg-white shadow-md shadow-cyan-50" : "border-slate-200 bg-white"
                 }`}
               >
                 <button

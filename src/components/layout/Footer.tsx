@@ -1,9 +1,9 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-white">
+    <footer className="text-white" style={{ background: "#0a3d4d" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16 border-b border-white/10">
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500 mb-5">Services</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Services</h4>
             <ul className="flex flex-col gap-3">
               {[
                 { name: "Ghostwriting", href: "/services/ghostwriting" },
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500 mb-5">Company</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Company</h4>
             <ul className="flex flex-col gap-3">
               {[
                 { name: "About Us", href: "/about" },
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500 mb-5">Get in Touch</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Get in Touch</h4>
             <ul className="flex flex-col gap-4">
               {[
                 { icon: Phone, value: "+1 (800) 123-4567" },
@@ -103,7 +103,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="mt-6 block bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center transition-colors shadow-lg shadow-red-900/30"
+              className="mt-6 block bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center transition-colors shadow-lg shadow-cyan-900/30"
             >
               Free Consultation
             </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-600">
+        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400">
           <p>© 2024 The Author Success. All rights reserved.</p>
           <p>Crafted with ♥ for Authors Worldwide</p>
         </div>

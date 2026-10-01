@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Eye, Headphones, Zap, Lock, Users, ShieldCheck } from "lucide-react";
 import { FadeUp, SlideLeft } from "@/components/ui/Animate";
@@ -8,8 +8,8 @@ const features = [
     icon: Eye,
     title: "Transparency",
     desc: "We believe lack of transparency creates problems, so we are committed to complete openness with every author, at every step.",
-    color: "#DC2626",
-    bg: "bg-red-50",
+    color: "#0891B2",
+    bg: "bg-cyan-50",
   },
   {
     icon: Headphones,

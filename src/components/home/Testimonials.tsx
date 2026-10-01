@@ -12,7 +12,7 @@ const testimonials = [
     result: "Amazon Top 100 in Week 1",
     text: "The Author Success transformed my rough concept into a polished thriller. The ghostwriting team nailed my voice on the very first draft. My book hit Amazon Top 100 in its first week — I was speechless.",
     initials: "SM",
-    color: "#DC2626",
+    color: "#0891B2",
     rating: 5,
   },
   {
@@ -130,7 +130,7 @@ export default function Testimonials() {
                       <div className="font-bold text-white text-sm">{testimonials[active].name}</div>
                       <div className="text-slate-400 text-xs">
                         {testimonials[active].role} ·{" "}
-                        <span className="text-primary">{testimonials[active].book}</span>
+                        <span className="text-white/80">{testimonials[active].book}</span>
                       </div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ export default function Testimonials() {
                 onClick={() => setActive(i)}
                 className={`flex items-center gap-3 p-4 rounded-2xl text-left border transition-all ${
                   i === active
-                    ? "bg-white border-red-200 shadow-md"
+                    ? "bg-white border-cyan-200 shadow-md"
                     : "bg-white border-slate-200 hover:border-slate-300"
                 }`}
               >

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Users, Award, Globe, Target, Heart, Zap, CheckCircle } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { name: "Jonathan Pierce", role: "Founder & CEO", initials: "JP", color: "#DC2626", bio: "20+ years in traditional publishing. Former senior editor at Penguin Random House. Now helps independent authors compete at the highest level." },
+  { name: "Jonathan Pierce", role: "Founder & CEO", initials: "JP", color: "#0891B2", bio: "20+ years in traditional publishing. Former senior editor at Penguin Random House. Now helps independent authors compete at the highest level." },
   { name: "Lisa Chen", role: "Head of Ghostwriting", initials: "LC", color: "#7C3AED", bio: "Award-winning author and ghostwriter. 300+ books to her name across fiction, memoir, and business. She disappears into every author's voice perfectly." },
   { name: "Marcus Williams", role: "Creative Director", initials: "MW", color: "#D97706", bio: "Former art director with 15 years designing book covers for top publishers. Every cover he creates is engineered to sell." },
   { name: "Sofia Ramirez", role: "Head of Marketing", initials: "SR", color: "#059669", bio: "Bestseller strategist behind 50+ Amazon #1 launches. She turns unknown authors into recognized names through smart, data-driven campaigns." },
@@ -39,10 +39,10 @@ export default function AboutPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-36 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 via-white to-slate-50/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-slate-50/30 pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(#DC2626 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+          style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Our Story</span></FadeUp>
@@ -59,7 +59,7 @@ export default function AboutPage() {
           </FadeUp>
           <FadeUp delay={0.24}>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-200 transition-all">
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all">
                 Work With Us <ArrowRight size={17} />
               </Link>
               <Link href="/portfolio" className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-slate-900 text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">
@@ -77,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="bg-brand-dark">
+      <section style={{ background: "#0891b2" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {[
@@ -87,12 +87,12 @@ export default function AboutPage() {
               { icon: Award, value: "98%", label: "Satisfaction Rate" },
             ].map((s, i) => (
               <FadeUp key={s.label} delay={i * 0.1}>
-                <div className="bg-brand-dark px-8 py-10 text-center">
-                  <div className="w-10 h-10 bg-primary/15 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <s.icon size={18} className="text-primary" />
+                <div className="px-8 py-10 text-center" style={{ background: "#0891b2" }}>
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <s.icon size={18} className="text-white" />
                   </div>
                   <div className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white mb-1">{s.value}</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wider">{s.label}</div>
+                  <div className="text-xs text-[#CFFAFE] uppercase tracking-wider">{s.label}</div>
                 </div>
               </FadeUp>
             ))}
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 {values.map((v, i) => (
                   <FadeUp key={v.title} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-5 hover-lift">
-                      <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-3">
                         <v.icon size={18} className="text-primary" />
                       </div>
                       <h4 className="font-semibold text-brand-dark mb-1.5 text-sm">{v.title}</h4>
@@ -170,7 +170,7 @@ export default function AboutPage() {
                   <div className={`relative flex gap-6 items-start ${i % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}`}>
                     <div className="relative z-10 shrink-0">
                       <div className={`w-20 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-lg ${
-                        i === milestones.length - 1 ? "bg-primary text-white shadow-red-200" : "bg-brand-dark text-white shadow-slate-200"
+                        i === milestones.length - 1 ? "bg-primary text-white shadow-cyan-200" : "bg-brand-dark text-white shadow-slate-200"
                       }`}>
                         {m.year}
                       </div>
@@ -222,10 +222,10 @@ export default function AboutPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
               Ready to Write Your<br />Success Story?
             </h2>
-            <p className="text-slate-400 mb-8 text-sm">
+            <p className="text-[#CFFAFE] mb-8 text-sm">
               Schedule a free consultation. Let&apos;s talk about your book and build your publishing roadmap.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-red-900/30 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-primary font-bold px-10 py-4 rounded-full shadow-xl transition-all">
               Get Free Consultation <ArrowRight size={18} />
             </Link>
           </FadeUp>

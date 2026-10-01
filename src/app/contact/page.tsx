@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, Star } from "lucide-react";
 import Link from "next/link";
 import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
@@ -21,10 +21,10 @@ export default function ContactPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-36 pb-16 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 via-white to-slate-50/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-slate-50/30 pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(#DC2626 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+          style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Let&apos;s Talk</span></FadeUp>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                     { icon: Clock, label: "Hours", value: "Mon–Fri: 9 AM – 6 PM", sub: "Eastern Standard Time" },
                   ].map(({ icon: Icon, label, value, sub }) => (
                     <div key={label} className="flex items-start gap-3.5">
-                      <div className="w-9 h-9 bg-red-50 rounded-xl flex items-center justify-center shrink-0">
+                      <div className="w-9 h-9 bg-cyan-50 rounded-xl flex items-center justify-center shrink-0">
                         <Icon size={15} className="text-primary" />
                       </div>
                       <div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary-hover text-white font-black py-4 rounded-xl shadow-lg shadow-red-100 transition-all text-[1rem] tracking-wide"
+                    className="w-full bg-primary hover:bg-primary-hover text-white font-black py-4 rounded-xl shadow-lg shadow-cyan-100 transition-all text-[1rem] tracking-wide"
                   >
                     Send Message & Get Free Quote →
                   </button>

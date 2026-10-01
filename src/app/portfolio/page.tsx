@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/Animate";
@@ -15,7 +15,7 @@ const successStories = [
     name: "J. Harrison",
     book: "The Midnight Verdict",
     result: "Amazon Top 100",
-    color: "#DC2626",
+    color: "#0891B2",
   },
   {
     quote: "10,000 copies sold in 3 months. The marketing team is phenomenal.",
@@ -38,10 +38,10 @@ export default function PortfolioPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-36 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 via-white to-slate-50/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-slate-50/30 pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(#DC2626 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+          style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Published Works</span></FadeUp>
@@ -96,7 +96,7 @@ export default function PortfolioPage() {
                         <div className="text-xs text-brand-muted">{s.book}</div>
                       </div>
                     </div>
-                    <span className="text-[10px] font-black uppercase bg-red-50 text-primary border border-red-200 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-black uppercase bg-cyan-50 text-primary border border-cyan-200 px-2.5 py-1 rounded-full">
                       {s.result}
                     </span>
                   </div>
@@ -111,12 +111,12 @@ export default function PortfolioPage() {
       <section className="py-16 bg-brand-dark">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeUp>
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500 mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#CFFAFE] mb-6">
               Every Book We Publish Reaches Readers on
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {["Amazon KDP", "Barnes & Noble", "Apple Books", "Audible", "Kobo", "Google Play Books", "IngramSpark", "Scribd", "Draft2Digital", "Findaway Voices"].map(p => (
-                <div key={p} className="bg-white/8 border border-white/10 hover:border-primary/50 rounded-full px-5 py-2 text-sm font-semibold text-slate-400 hover:text-white transition-colors">
+                <div key={p} className="bg-white/15 border border-white/25 hover:border-white/50 rounded-full px-5 py-2 text-sm font-semibold text-[#CFFAFE] hover:text-white transition-colors">
                   {p}
                 </div>
               ))}
@@ -137,7 +137,7 @@ export default function PortfolioPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-red-200 transition-all"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-cyan-200 transition-all"
             >
               Start My Publishing Journey <ArrowRight size={18} />
             </Link>
