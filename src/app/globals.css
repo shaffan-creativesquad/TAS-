@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════════════════
+   BRAND THEME — sirf yahan se color change karo, pura site update
+   ═══════════════════════════════════════════════════════════════ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary accent */
+  --brand-primary:        #DC2626;  /* main brand color */
+  --brand-primary-hover:  #B91C1C;  /* hover/darker variant */
+  --brand-primary-dark:   #991B1B;  /* darkest (gradients, deep shadows) */
+  --brand-primary-light:  #FEF2F2;  /* lightest tint (subtle backgrounds) */
+
+  /* Dark palette */
+  --brand-dark:           #0F172A;  /* headings, dark sections, footer */
+  --brand-dark-2:         #1E293B;  /* secondary dark (nav links, subheadings) */
+
+  /* Text */
+  --brand-body:           #475569;  /* body paragraphs */
+  --brand-muted:          #64748B;  /* captions, meta text */
+
+  /* Borders & surfaces */
+  --brand-border:         #E2E8F0;
+  --brand-bg-light:       #F8FAFC;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-playfair);
+
+  /* These become Tailwind utilities:
+     bg-primary, text-primary, border-primary, fill-primary …
+     bg-primary/50 opacity variants work too               */
+  --color-primary:        var(--brand-primary);
+  --color-primary-hover:  var(--brand-primary-hover);
+  --color-primary-dark:   var(--brand-primary-dark);
+  --color-primary-light:  var(--brand-primary-light);
+  --color-brand-dark:     var(--brand-dark);
+  --color-brand-dark-2:   var(--brand-dark-2);
+  --color-brand-body:     var(--brand-body);
+  --color-brand-muted:    var(--brand-muted);
+  --color-brand-border:   var(--brand-border);
+  --color-brand-bg:       var(--brand-bg-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--brand-dark);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
+
+/* Float animation for hero book covers */
+@keyframes float-a {
+  0%, 100% { transform: rotate(-8deg) translateY(0px); }
+  50%       { transform: rotate(-8deg) translateY(-12px); }
+}
+@keyframes float-b {
+  0%, 100% { transform: rotate(5deg) translateY(0px); }
+  50%       { transform: rotate(5deg) translateY(-8px); }
+}
+@keyframes float-c {
+  0%, 100% { transform: rotate(-4deg) translateY(0px); }
+  50%       { transform: rotate(-4deg) translateY(-14px); }
+}
+.float-a { animation: float-a 5s ease-in-out infinite; }
+.float-b { animation: float-b 6s ease-in-out infinite 1s; }
+.float-c { animation: float-c 4.5s ease-in-out infinite 0.5s; }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
 }
