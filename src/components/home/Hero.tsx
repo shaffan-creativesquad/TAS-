@@ -87,11 +87,11 @@ export default function Hero() {
 
             {/* Headline */}
             <motion.h1 {...fadeUp(0.08)} className="font-[family-name:var(--font-playfair)] text-[3.2rem] sm:text-[3.75rem] lg:text-[4rem] font-black text-brand-dark leading-[1.08] mb-5">
-              We Publish
+              <span className="text-black">We Publish</span>
               <br />
               <span className="text-gradient">Bestselling</span>
               <br />
-              Books for You
+              <span className="text-black">Books for You</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.16)} className="text-brand-body text-lg leading-relaxed mb-7 max-w-[480px]">

@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
             Why Authors Trust Us
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-            Built for Authors,<br />By Publishing Experts
+            <span className="text-black">Built for Authors,</span><br /><span className="text-black">By </span><span className="text-primary">Publishing</span><span className="text-black"> Experts</span>
           </h2>
           <p className="text-brand-muted max-w-lg mx-auto text-sm leading-relaxed">
             We&apos;ve navigated the complex publishing world for 1,800+ authors. Here&apos;s what makes us different.

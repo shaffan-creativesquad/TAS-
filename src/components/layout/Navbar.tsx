@@ -7,20 +7,13 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
   { name: "Ghostwriting",                   href: "/services/ghostwriting" },
-  { name: "Book Writing",                   href: "/services/ghostwriting" },
   { name: "Book Editing",                   href: "/services/editing" },
-  { name: "Proofreading Services",          href: "/services/editing" },
   { name: "Cover Design",                   href: "/services/cover-design" },
-  { name: "Publishing & Distribution",      href: "/services/publishing" },
   { name: "Book Marketing",                 href: "/services/marketing" },
   { name: "Audiobooks",                     href: "/services/audiobooks" },
   { name: "Book Publishing",                href: "/services/publishing" },
-  { name: "Book Promotion",                 href: "/services/marketing" },
-  { name: "eBook Writing",                  href: "/services/ghostwriting" },
-  { name: "Formatting Services",            href: "/services/publishing" },
   { name: "Digital Marketing",              href: "/services/marketing" },
   { name: "Author Marketing",               href: "/services/marketing" },
-  { name: "Audio Book Recording",           href: "/services/audiobooks" },
   { name: "Article Writing & Publishing",   href: "/services/article-writing" },
   { name: "Blog Writing",                   href: "/services/blog-writing" },
   { name: "Book Trailer",                   href: "/services/book-trailer" },
@@ -31,6 +24,8 @@ const services = [
   { name: "Author Website Design",          href: "/services/author-website" },
   { name: "Children Book Writing",          href: "/services/children-book-writing" },
   { name: "Book Printing",                  href: "/services/book-printing" },
+  { name: "Formatting Services",            href: "/services/formatting-services" },
+  { name: "Book Promotion",                 href: "/services/book-promotion" },
 ];
 
 export default function Navbar() {

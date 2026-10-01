@@ -158,7 +158,7 @@ export default function ServicesPage() {
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Full-Service Publishing</span></FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl font-black text-brand-dark leading-[1.1] mb-5">
-              Every Service You Need<br />
+              <span className="text-black">Every Service You Need</span><br />
               <span className="text-gradient">To Publish Your Book</span>
             </h1>
           </FadeUp>
@@ -284,7 +284,7 @@ export default function ServicesPage() {
             <div className="text-center mb-10">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">We Also Offer</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-brand-dark">
-                More Services for Every Author
+                <span className="text-black">More Services for Every </span><span className="text-primary">Author</span>
               </h2>
             </div>
           </FadeUp>

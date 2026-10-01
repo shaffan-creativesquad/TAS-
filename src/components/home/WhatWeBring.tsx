@@ -58,7 +58,7 @@ export default function WhatWeBring() {
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Commitment</span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-brand-dark mb-4">
-              What We Bring to<br />the Table
+              <span className="text-black">What </span><span className="text-primary">We Bring</span><span className="text-black"> to</span><br /><span className="text-black">the Table</span>
             </h2>
             <p className="text-brand-body text-base leading-relaxed max-w-2xl mx-auto">
               We didn&apos;t earn our reputation as a leading book publishing company by chance. We achieved it through strategic planning and by delivering authors what no one else could.

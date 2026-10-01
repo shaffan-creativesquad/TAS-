@@ -85,7 +85,7 @@ export default function Testimonials() {
             Author Stories
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
-            Real Authors.<br />Real Results.
+            <span className="text-black">Real Authors.</span><br />Real Results.
           </h2>
         </motion.div>
 

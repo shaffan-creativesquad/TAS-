@@ -48,7 +48,7 @@ export default function AboutPage() {
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Our Story</span></FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl font-black text-brand-dark leading-[1.1] mb-6">
-              We Exist to Help<br />
+              <span className="text-black">We Exist to Help</span><br />
               <span className="text-gradient">Authors Succeed</span>
             </h1>
           </FadeUp>
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Mission</span>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-5 leading-tight">
-                  Democratizing Publishing<br />for Every Author
+                  <span className="text-black">Democratizing </span><span className="text-primary">Publishing</span><br /><span className="text-black">for Every Author</span>
                 </h2>
                 <p className="text-brand-body leading-relaxed mb-5">
                   Traditional publishing gatekeepers kept countless great stories from ever reaching readers. We changed that. The Author Success gives every writer — regardless of experience, connections, or background — access to the same professional resources that major publishers use.
@@ -157,7 +157,7 @@ export default function AboutPage() {
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Journey</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark">
-                From 4 People to<br />1,800+ Happy Authors
+                <span className="text-black">From 4 People to</span><br /><span className="text-primary">1,800+</span><span className="text-black"> Happy Authors</span>
               </h2>
             </div>
           </FadeUp>
@@ -193,7 +193,7 @@ export default function AboutPage() {
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">The Team</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark">
-                The Experts Behind<br />Your Success
+                <span className="text-black">The Experts Behind</span><br /><span className="text-black">Your </span><span className="text-primary">Success</span>
               </h2>
             </div>
           </FadeUp>

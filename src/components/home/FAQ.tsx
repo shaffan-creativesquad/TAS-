@@ -50,7 +50,7 @@ export default function FAQ() {
               FAQ
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-brand-dark mb-5 leading-tight">
-              Questions?<br />We Have<br />Answers.
+              Questions?<br /><span className="text-black">We Have</span><br />Answers.
             </h2>
             <p className="text-brand-muted leading-relaxed text-sm mb-8">
               Everything you need to know before taking your first step toward publishing.

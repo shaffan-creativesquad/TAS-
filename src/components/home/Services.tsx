@@ -73,7 +73,7 @@ export default function Services() {
               Our Services
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark leading-tight">
-              Everything You Need<br />to Publish Successfully
+              <span className="text-black">Everything You Need</span><br /><span className="text-black">to </span><span className="text-primary">Publish</span><span className="text-black"> Successfully</span>
             </h2>
           </div>
           <div>

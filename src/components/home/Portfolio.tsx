@@ -55,7 +55,7 @@ export default function Portfolio() {
               Published Works
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
-              2,500+ Books<br />We&apos;ve Published
+              <span className="text-black">2,500+ Books</span><br /><span className="text-black">We&apos;ve </span><span className="text-primary">Published</span>
             </h2>
           </div>
           <Link

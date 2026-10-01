@@ -47,7 +47,7 @@ export default function PortfolioPage() {
           <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Published Works</span></FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl font-black text-brand-dark leading-[1.1] mb-5">
-              2,500+ Books<br />
+              <span className="text-black">2,500+ Books</span><br />
               <span className="text-gradient">Brought to Life</span>
             </h1>
           </FadeUp>
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Results That Matter</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark">
-                Real Numbers,<br />Real Authors
+                <span className="text-black">Real Numbers,</span><br /><span className="text-black">Real </span><span className="text-primary">Authors</span>
               </h2>
             </div>
           </FadeUp>
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
-              Your Book Could Be<br />Our Next Success Story
+              <span className="text-black">Your Book Could Be</span><br /><span className="text-black">Our Next </span><span className="text-primary">Success</span><span className="text-black"> Story</span>
             </h2>
             <p className="text-brand-muted text-sm mb-8">
               Let&apos;s talk about your book and build your publishing plan together.

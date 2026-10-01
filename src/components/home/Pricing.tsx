@@ -72,7 +72,7 @@ export default function Pricing() {
             Pricing
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-            Simple, Transparent<br />Publishing Packages
+            <span className="text-black">Simple, Transparent</span><br /><span className="text-primary">Publishing</span><span className="text-black"> Packages</span>
           </h2>
           <p className="text-brand-muted text-sm max-w-md mx-auto">
             No hidden fees. No royalty splits. Custom quotes available for larger projects.

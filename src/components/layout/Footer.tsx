@@ -1,12 +1,12 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="text-white" style={{ background: "#0a3d4d" }}>
+    <footer className="text-white" style={{ background: "#0891b2" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16 border-b border-white/20">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
@@ -19,7 +19,7 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            <p className="text-white/80 text-sm leading-relaxed mb-6">
               Your trusted partner for end-to-end book publishing. From first draft to global distribution.
             </p>
             <div className="flex gap-2.5">
@@ -33,7 +33,7 @@ export default function Footer() {
                   key={s.title}
                   href="#"
                   title={s.title}
-                  className="w-9 h-9 rounded-xl bg-white/8 hover:bg-primary flex items-center justify-center text-xs font-bold transition-colors border border-white/10"
+                  className="w-9 h-9 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs font-bold transition-colors border border-white/20"
                 >
                   {s.label}
                 </a>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Services</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Services</h4>
             <ul className="flex flex-col gap-3">
               {[
                 { name: "Ghostwriting", href: "/services/ghostwriting" },
@@ -54,7 +54,7 @@ export default function Footer() {
                 { name: "Audiobooks", href: "/services/audiobooks" },
               ].map(s => (
                 <li key={s.name}>
-                  <Link href={s.href} className="text-slate-400 hover:text-white text-sm transition-colors">
+                  <Link href={s.href} className="text-white/80 hover:text-white text-sm transition-colors">
                     {s.name}
                   </Link>
                 </li>
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Company</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Company</h4>
             <ul className="flex flex-col gap-3">
               {[
                 { name: "About Us", href: "/about" },
@@ -75,7 +75,7 @@ export default function Footer() {
                 { name: "Terms of Service", href: "#" },
               ].map(item => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-slate-400 hover:text-white text-sm transition-colors">
+                  <Link href={item.href} className="text-white/80 hover:text-white text-sm transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400 mb-5">Get in Touch</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Get in Touch</h4>
             <ul className="flex flex-col gap-4">
               {[
                 { icon: Phone, value: "+1 (800) 123-4567" },
@@ -93,17 +93,17 @@ export default function Footer() {
                 { icon: MapPin, value: "New York, NY 10001" },
               ].map(({ icon: Icon, value }) => (
                 <li key={value} className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-primary/15 rounded-lg flex items-center justify-center shrink-0">
-                    <Icon size={14} className="text-primary" />
+                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
+                    <Icon size={14} className="text-white" />
                   </div>
-                  <span className="text-slate-400 text-sm pt-1">{value}</span>
+                  <span className="text-white/80 text-sm pt-1">{value}</span>
                 </li>
               ))}
             </ul>
 
             <Link
               href="/contact"
-              className="mt-6 block bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center transition-colors shadow-lg shadow-cyan-900/30"
+              className="mt-6 block bg-white hover:bg-white/90 text-[#0891b2] text-sm font-semibold px-5 py-2.5 rounded-full text-center transition-colors shadow-lg shadow-cyan-900/30"
             >
               Free Consultation
             </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400">
+        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/70">
           <p>© 2024 The Author Success. All rights reserved.</p>
           <p>Crafted with ♥ for Authors Worldwide</p>
         </div>
