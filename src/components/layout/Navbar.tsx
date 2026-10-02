@@ -93,7 +93,6 @@ export default function Navbar() {
             {[
               { label: "Home", href: "/" },
               { label: "About", href: "/about" },
-              { label: "Portfolio", href: "/portfolio" },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -247,7 +246,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-slate-100 px-4 py-5 flex flex-col gap-4 shadow-xl">
-          {["Home", "About", "Portfolio"].map((item) => {
+          {["Home", "About"].map((item) => {
             const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
             return (
               <Link

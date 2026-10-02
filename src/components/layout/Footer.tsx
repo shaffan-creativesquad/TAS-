@@ -67,15 +67,15 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Company</h4>
             <ul className="flex flex-col gap-3">
               {[
-                { name: "About Us", href: "/about" },
-                { name: "Portfolio", href: "/portfolio" },
-                { name: "Testimonials", href: "/#testimonials" },
-                { name: "Who We Help", href: "/who-we-help/consultants" },
-                { name: "Insights", href: "/insights" },
-                { name: "Book a Call", href: "/book-a-call" },
-                { name: "Contact Us", href: "/contact" },
-                { name: "Privacy Policy", href: "#" },
-                { name: "Terms of Service", href: "#" },
+                { name: "About Us",       href: "/about"          },
+                { name: "Our Books",      href: "/our-books"      },
+                { name: "How It Works",   href: "/how-it-works"   },
+                { name: "Portfolio",      href: "/portfolio"      },
+                // { name: "Testimonials",   href: "/#testimonials"  },
+                { name: "Who We Help",    href: "/who-we-help"    },
+                { name: "Insights",       href: "/insights"       },
+                { name: "Book a Call",    href: "/book-a-call"    },
+                { name: "Contact Us",     href: "/contact"        },
               ].map(item => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-white/80 hover:text-white text-sm transition-colors">
@@ -114,9 +114,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/70">
+        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/70">
           <p>© 2024 The Author Success. All rights reserved.</p>
-          <p>Crafted with ♥ for Authors Worldwide</p>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>
+          </div>
         </div>
       </div>
     </footer>
