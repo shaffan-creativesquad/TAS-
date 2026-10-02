@@ -150,18 +150,19 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
-              <span className="text-black">Your Book Could Be</span><br /><span className="text-black">Our Next </span><span className="text-primary">Success</span><span className="text-black"> Story</span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
+              Your Book Could Be Our Next Success Story
             </h2>
-            <p className="text-brand-muted text-sm mb-8">
+            <p className="text-white/70 text-sm mb-8">
               Let&apos;s talk about your book and build your publishing plan together.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-cyan-200 transition-all"
+              className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-xl transition-all"
+              style={{ color: "#089bb2" }}
             >
               Start My Publishing Journey <ArrowRight size={18} />
             </Link>

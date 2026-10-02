@@ -356,18 +356,19 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-brand-dark mt-10">
+      <section className="py-20 mt-10" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
               Not Sure Which Service<br />You Need?
             </h2>
-            <p className="text-[#CFFAFE] text-sm mb-8 max-w-lg mx-auto">
+            <p className="text-white/70 text-sm mb-8 max-w-lg mx-auto">
               Book a free 30-minute consultation. Our publishing experts will review your project and recommend the perfect solution.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-primary font-bold px-10 py-4 rounded-full shadow-xl transition-all"
+              className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-xl transition-all"
+              style={{ color: "#089bb2" }}
             >
               Book Free Consultation <ArrowRight size={18} />
             </Link>

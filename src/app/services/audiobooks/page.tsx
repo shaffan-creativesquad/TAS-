@@ -252,16 +252,16 @@ export default function AudiobooksPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-cyan-50">
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Headphones size={28} className="text-white" /></div>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-black">Ready to Get </span><span style={{ color: COLOR }}>Started?</span>
+              <span className="text-white">Ready to Get Started?</span>
             </h2>
-            <p className="text-brand-body mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-10 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all hover:opacity-90" style={{ background: COLOR }}>Book Free Consultation <ArrowRight size={18} /></Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
               <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
             </div>
           </ScaleIn>

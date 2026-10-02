@@ -294,13 +294,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-brand-dark">
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <FadeUp>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
               Ready to Write Your<br />Success Story?
             </h2>
-            <p className="text-[#CFFAFE] mb-8 text-sm">
+            <p className="text-white/70 mb-8 text-sm">
               Schedule a free consultation. Let&apos;s talk about your book and build your publishing roadmap.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-primary font-bold px-10 py-4 rounded-full shadow-xl transition-all">

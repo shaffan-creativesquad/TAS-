@@ -27,8 +27,6 @@ const verticals = [
       "Launch PR kit and media pitches",
       "Executive bio and speaker one-sheet",
     ],
-    cta: "/our-books/founder-story",
-    ctaLabel: "See Founder Story Books",
     slug: "founders-ceos",
   },
   {
@@ -49,8 +47,6 @@ const verticals = [
       "Case studies from your practice",
       "LinkedIn content series (52 posts)",
     ],
-    cta: "/our-books/authority-book",
-    ctaLabel: "See Authority Books",
     slug: "consultants",
   },
   {
@@ -71,8 +67,6 @@ const verticals = [
       "Companion workbook design",
       "Online course content extraction",
     ],
-    cta: "/our-books/thought-leadership",
-    ctaLabel: "See Thought-Leadership Books",
     slug: "coaches-speakers",
   },
   {
@@ -93,8 +87,6 @@ const verticals = [
       "Practice referral integration",
       "Regulatory disclaimer management",
     ],
-    cta: "/our-books/professional-guide",
-    ctaLabel: "See Professional Guides",
     slug: "professionals",
   },
   {
@@ -115,8 +107,6 @@ const verticals = [
       "40+ media distribution",
       "LinkedIn data post series",
     ],
-    cta: "/our-books/research-report",
-    ctaLabel: "See Research Reports",
     slug: "businesses",
   },
 ];
@@ -207,16 +197,10 @@ export default function WhoWeHelpPage() {
 
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href={v.cta}
+                    href={`/who-we-help/${v.slug}`}
                     className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all"
                   >
-                    {v.ctaLabel} <ArrowRight size={16} />
-                  </Link>
-                  <Link
-                    href={`/who-we-help/${v.slug}`}
-                    className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-900 text-slate-800 font-bold px-6 py-3.5 rounded-full transition-all"
-                  >
-                    Full Detail Page
+                    Full Detail Page <ArrowRight size={16} />
                   </Link>
                 </div>
               </SlideLeft>
@@ -268,7 +252,8 @@ export default function WhoWeHelpPage() {
             <p className="text-white/70 mb-8">30-minute strategy call. No obligation. You leave with a book concept tailored to your vertical.</p>
             <Link
               href="/book-a-call"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-lg transition-all text-lg"
+              className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-lg transition-all text-lg"
+              style={{ color: "#089bb2" }}
             >
               Book a Strategy Call <ArrowRight size={18} />
             </Link>

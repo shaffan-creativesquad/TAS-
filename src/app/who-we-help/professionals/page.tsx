@@ -218,19 +218,20 @@ export default function ProfessionalsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
               <span className="text-black">Ready to Write Your </span>
-              <span className="text-primary">Authority Book?</span>
+              <span className="text-white">Authority Book?</span>
             </h2>
-            <p className="text-slate-600 mb-8 max-w-lg mx-auto">
+            <p className="text-white/70 mb-8 max-w-lg mx-auto">
               Book a free 30-minute strategy call. We&apos;ll map out your book concept, positioning, and a publishing roadmap — at no cost.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-10 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all"
+              className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-lg transition-all"
+              style={{ color: "#089bb2" }}
             >
               Book Your Free Strategy Call <ArrowRight size={18} />
             </Link>
