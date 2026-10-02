@@ -83,7 +83,7 @@ export default function CTABanner() {
                 </Link>
                 <a
                   href="tel:+18001234567"
-                  className="flex items-center justify-center gap-2 border-2 border-slate-200 hover:border-slate-400 text-brand-dark-2 font-semibold py-3 rounded-xl text-sm transition-all"
+                  className="flex items-center justify-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-semibold py-3 rounded-xl text-sm transition-all"
                 >
                   <Phone size={14} /> +1 (800) 123-4567
                 </a>

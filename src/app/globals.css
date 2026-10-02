@@ -92,3 +92,10 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
 }
+
+/* Button float on hover — all <button> and link-buttons */
+button:not([disabled]):hover,
+a[href][class*="rounded-xl"]:hover,
+a[href][class*="rounded-full"]:hover {
+  transform: translateY(-3px);
+}
