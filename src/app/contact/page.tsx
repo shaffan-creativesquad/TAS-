@@ -158,24 +158,14 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Budget Range</label>
+                      <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Book Genre</label>
                       <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors">
-                        <option value="">Select range...</option>
-                        {["Under $1,000","$1,000 – $3,000","$3,000 – $5,000","$5,000 – $10,000","$10,000+"].map(b => (
-                          <option key={b}>{b}</option>
+                        <option value="">Select genre...</option>
+                        {["Thriller","Romance","Fantasy","Sci-Fi","Self-Help","Business","Memoir","Biography","Children's","Young Adult","Historical Fiction","Literary Fiction","Other"].map(g => (
+                          <option key={g}>{g}</option>
                         ))}
                       </select>
                     </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Book Genre</label>
-                    <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors">
-                      <option value="">Select genre...</option>
-                      {["Thriller","Romance","Fantasy","Sci-Fi","Self-Help","Business","Memoir","Biography","Children's","Young Adult","Historical Fiction","Literary Fiction","Other"].map(g => (
-                        <option key={g}>{g}</option>
-                      ))}
-                    </select>
                   </div>
 
                   <div>
