@@ -20,8 +20,8 @@ const services = [
   { name: "Book Marketing",                 href: "/services/marketing" },
   { name: "Audiobooks",                     href: "/services/audiobooks" },
   { name: "Book Publishing",                href: "/services/publishing" },
-  { name: "Digital Marketing",              href: "/services/marketing" },
-  { name: "Author Marketing",               href: "/services/marketing" },
+  { name: "Digital Marketing",              href: "/services/digital-marketing" },
+  { name: "Author Marketing",               href: "/services/author-marketing" },
   { name: "Article Writing & Publishing",   href: "/services/article-writing" },
   { name: "Blog Writing",                   href: "/services/blog-writing" },
   { name: "Book Trailer",                   href: "/services/book-trailer" },
@@ -41,19 +41,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [whoWeHelpOpen, setWhoWeHelpOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
   const dropdownRef = useRef<HTMLDivElement>(null);
   const whoWeHelpRef = useRef<HTMLDivElement>(null);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -70,11 +62,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-black/5 py-0"
-          : "bg-transparent py-2"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg shadow-black/5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[68px]">
