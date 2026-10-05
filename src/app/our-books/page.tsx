@@ -274,7 +274,7 @@ export default function OurBooksPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-primary">
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
