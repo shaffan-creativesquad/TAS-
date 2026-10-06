@@ -12,6 +12,7 @@ const services = [
     tag: "Most Popular",
     span: "lg:col-span-2",
     dark: true,
+    href: "/services/ghostwriting",
   },
   {
     icon: BookOpen,
@@ -20,6 +21,7 @@ const services = [
     tag: null,
     span: "",
     dark: false,
+    href: "/services/editing",
   },
   {
     icon: Palette,
@@ -28,6 +30,7 @@ const services = [
     tag: null,
     span: "",
     dark: false,
+    href: "/services/cover-design",
   },
   {
     icon: Globe,
@@ -36,6 +39,7 @@ const services = [
     tag: "Global Reach",
     span: "",
     dark: false,
+    href: "/services/publishing",
   },
   {
     icon: Megaphone,
@@ -44,6 +48,7 @@ const services = [
     tag: null,
     span: "",
     dark: false,
+    href: "/services/marketing",
   },
   {
     icon: Headphones,
@@ -52,6 +57,7 @@ const services = [
     tag: null,
     span: "lg:col-span-2",
     dark: true,
+    href: "/services/audiobooks",
   },
 ];
 
@@ -98,7 +104,7 @@ export default function Services() {
               className={s.span}
             >
               <Link
-                href="/services"
+                href={s.href}
                 className={`group rounded-2xl p-6 border hover-lift cursor-pointer transition-all block h-full ${
                   s.dark
                     ? "bg-brand-dark border-brand-dark text-white"
