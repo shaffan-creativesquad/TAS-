@@ -6,30 +6,30 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
+    name: "Sarah M. Mitchell",
     role: "Thriller Author",
     book: "The Midnight Verdict",
-    result: "Amazon Top 100 in Week 1",
-    text: "The Author Success transformed my rough concept into a polished thriller. The ghostwriting team nailed my voice on the very first draft. My book hit Amazon Top 100 in its first week — I was speechless.",
+    result: "Amazon Top 100",
+    text: "They took my rough concept and turned it into a polished, gripping manuscript while keeping my style intact. From the first draft to the final pages, the process appeared effortless.",
     initials: "SM",
     color: "#0891B2",
     rating: 5,
   },
   {
     name: "James Rodriguez",
-    role: "Self-Help Author",
+    role: "Contemporary Fiction",
     book: "Beyond the Horizon",
-    result: "#1 in Category on Launch Day",
-    text: "From editing to the Amazon launch campaign — every detail was handled flawlessly. My self-help book hit #1 in its category on launch day. I couldn't have done this without their marketing expertise.",
+    result: "Readers' Favorite",
+    text: "From editing to the Amazon launch campaign — every detail was handled flawlessly. My book hit #1 in its category on launch day. I couldn't have done this without their marketing expertise.",
     initials: "JR",
     color: "#2563EB",
     rating: 5,
   },
   {
-    name: "Emily Chen",
-    role: "Romance Novelist",
+    name: "Emily C. Chen",
+    role: "Fantasy Author",
     book: "Whispers of Eden",
-    result: "10,000 Copies Sold in 3 Months",
+    result: "10,000+ Copies Sold",
     text: "The cover design alone was worth every penny — it perfectly captures the essence of my story. But the entire process, from edits to distribution, was seamless. 10,000 copies in 3 months says it all.",
     initials: "EC",
     color: "#7C3AED",
@@ -37,9 +37,9 @@ const testimonials = [
   },
   {
     name: "David Thompson",
-    role: "Sci-Fi Author",
+    role: "Techno-Thriller Author",
     book: "Silicon Dreams",
-    result: "Audible Bestseller 3 Months Straight",
+    result: "Audible Bestseller",
     text: "The audiobook narrator they matched me with was incredible — my story came alive in ways I never imagined. 3 consecutive months on Audible's bestseller list. Production quality rivals the biggest publishers.",
     initials: "DT",
     color: "#059669",
@@ -47,9 +47,9 @@ const testimonials = [
   },
   {
     name: "Maria Santos",
-    role: "Memoirist",
+    role: "Historical Fiction",
     book: "Roots of Gold",
-    result: "Featured in 3 Newspapers",
+    result: "Featured Title",
     text: "Sharing my personal story was scary, but the team made it feel safe. They handled every sensitive detail with care, and the press coverage we got on launch was beyond my wildest dreams.",
     initials: "MS",
     color: "#D97706",
@@ -57,10 +57,10 @@ const testimonials = [
   },
   {
     name: "Alex Johnson",
-    role: "Fantasy Author",
+    role: "Mystery Author",
     book: "The Last Oracle",
-    result: "Pre-Orders Sold Out Before Launch",
-    text: "Their marketing strategy was precision-engineered. Pre-orders sold out before the book even went live. The social media campaign generated buzz I've never seen for a debut fantasy novel.",
+    result: "Pre-Orders Sold Out",
+    text: "Their marketing strategy was precision-engineered. Pre-orders sold out before the book even went live. The social media campaign generated buzz I've never seen for a debut mystery novel.",
     initials: "AJ",
     color: "#0891B2",
     rating: 5,
@@ -85,7 +85,7 @@ export default function Testimonials() {
             Author Stories
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
-            <span className="text-black">Real Authors.</span><br />Real Results.
+            <span className="text-black">Don&apos;t Trust the Blurb.</span><br /><span className="text-primary">Trust the Authors.</span>
           </h2>
         </motion.div>
 

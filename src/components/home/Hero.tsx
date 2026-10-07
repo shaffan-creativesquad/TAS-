@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Star, CheckCircle, Play } from "lucide-react";
+import { ArrowRight, Star, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 function fadeUp(delay = 0) {
@@ -82,31 +82,32 @@ export default function Hero() {
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}
               </div>
-              <span className="text-xs font-semibold text-slate-700">Trusted by <strong className="text-primary">1,800+ Authors</strong> Worldwide</span>
+              <span className="text-xs font-semibold text-slate-700">Trusted by <strong className="text-primary">Authors</strong> Worldwide</span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1 {...fadeUp(0.08)} className="font-[family-name:var(--font-playfair)] text-[3.2rem] sm:text-[3.75rem] lg:text-[4rem] font-black text-brand-dark leading-[1.08] mb-5">
-              <span className="text-black">We Publish</span>
+              <span className="text-black">Your Head Has a</span>
               <br />
-              <span className="text-gradient">Bestselling</span>
+              <span className="text-gradient">Bestseller</span>
+              <span className="text-black"> in It.</span>
               <br />
-              <span className="text-black">Books for You</span>
+              <span className="text-black">We Know the Way Out.</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.16)} className="text-brand-body text-lg leading-relaxed mb-7 max-w-[480px]">
-              From ghostwriting to global distribution — professional publishing services for ambitious authors. Your story, published right.
+              Do you have a story to tell? We help bring your ideas to life as beautiful books. From writing and editing to cover design and distribution, your voice always comes first.
             </motion.p>
 
             {/* Checklist */}
             <motion.div {...fadeUp(0.24)} className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-9">
               {[
-                "100% Royalty Ownership",
-                "Strict NDA & Confidentiality",
-                "Amazon & 40+ Platforms",
-                "Dedicated Project Manager",
-                "Unlimited Revisions",
-                "24/7 Author Support",
+                "You Keep All Your Royalties",
+                "Featured on Leading Global Platforms",
+                "Careful Editing for Every Sentence",
+                "Your Ideas Stay Confidential",
+                "A Dedicated Project Manager",
+                "Unwavering, Human Support",
               ].map(item => (
                 <div key={item} className="flex items-center gap-2 text-sm font-medium text-brand-dark-2">
                   <CheckCircle size={15} className="text-primary shrink-0" />
@@ -121,13 +122,13 @@ export default function Hero() {
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all text-[0.95rem]"
               >
-                Start Publishing <ArrowRight size={17} />
+                Publish My Book <ArrowRight size={17} />
               </Link>
               <Link
-                href="/portfolio"
+                href="/our-books"
                 className="inline-flex items-center gap-2.5 bg-white border-2 border-slate-200 hover:border-slate-900 text-slate-800 font-bold px-7 py-4 rounded-full transition-all text-[0.95rem]"
               >
-                <Play size={16} className="fill-slate-800" /> See Our Work
+                Browse Our Library
               </Link>
             </motion.div>
 

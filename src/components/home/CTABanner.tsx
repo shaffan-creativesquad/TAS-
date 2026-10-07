@@ -36,19 +36,20 @@ export default function CTABanner() {
                 <div className="flex">
                   {[1,2,3,4,5].map(i => <Star key={i} size={14} className="text-white fill-white" />)}
                 </div>
-                <span className="text-cyan-200 text-sm font-medium">4.9/5 from 1,200+ authors</span>
+                <span className="text-cyan-200 text-sm font-medium">Trusted by Authors, Founders and Industry Experts Worldwide
+</span>
               </div>
 
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white leading-tight mb-4">
-                Your Book Won&apos;t Write<br />Itself. Let&apos;s Fix That.
+                Stop Drafting It in Your Head. Start Publishing It With Us.
               </h2>
               <p className="text-cyan-100 text-lg max-w-lg mb-6">
-                Free 30-minute consultation with a publishing expert. No fluff, no pressure — just a clear roadmap to get your book published.
+                Book a free 30-minute consultation with a publishing specialist. No jargon, no pressure, just a clear roadmap to get a book published that carries your name and your ideas further.
               </p>
 
               {/* Mini badges */}
               <div className="flex flex-wrap gap-3">
-                {["✓ No Commitment", "✓ NDA Signed First", "✓ Results Guaranteed"].map(b => (
+                {["✓ No Commitment", "✓ NDA Signed First", "✓ 100% Royalties Yours"].map(b => (
                   <span key={b} className="text-sm font-semibold text-white/80 bg-white/15 px-3 py-1 rounded-full">
                     {b}
                   </span>
@@ -68,10 +69,10 @@ export default function CTABanner() {
                 <BookOpen size={18} className="text-primary" />
               </div>
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-brand-dark mb-1">
-                Ready to Publish?
+                Ready to Publish My Book?
               </h3>
               <p className="text-slate-500 text-xs mb-5">
-                Limited consultation spots available this week.
+                Tell us where your book stands today, and we'll map the fastest route from draft to bookshelf.
               </p>
 
               <div className="flex flex-col gap-2.5">

@@ -7,52 +7,52 @@ import { motion } from "framer-motion";
 const plans = [
   {
     name: "Starter",
-    price: "$999",
-    desc: "Perfect for first-time authors with a manuscript ready.",
+    price: "Custom Quote",
+    desc: "Ideal for new authors with a completed manuscript, ready to step gracefully into print.",
     highlight: false,
     features: [
-      "Copy Editing (up to 60k words)",
-      "Cover Design (3 concepts)",
+      "Meticulous Copy Editing",
+      "Bespoke Cover Design",
       "eBook Formatting",
       "Amazon KDP Publishing",
       "Author Central Setup",
-      "2 Revision Rounds",
+      "Refinement Rounds Included",
     ],
-    cta: "Get Started",
+    cta: "Begin My Journey",
   },
   {
     name: "Professional",
-    price: "$2,999",
-    desc: "The complete package for serious authors ready to launch big.",
+    price: "Custom Quote",
+    desc: "Professional book publishing for devoted authors set to launch with distinction.",
     highlight: true,
     features: [
-      "Ghostwriting OR Full Editing",
+      "Ghostwriting or Comprehensive Editing",
       "Premium Cover Design",
       "Print & eBook Formatting",
-      "40+ Platform Distribution",
+      "Multi-Platform Distribution",
       "Amazon Launch Marketing",
       "Press Release",
-      "Unlimited Revisions",
-      "Dedicated Project Manager",
+      "Flexible Revisions",
+      "Dedicated Project Steward",
     ],
-    cta: "Most Popular — Start Now",
+    cta: "Publish My Book",
   },
   {
     name: "Premium",
-    price: "$6,999",
-    desc: "Full end-to-end service for authors who want the absolute best.",
+    price: "Custom Quote",
+    desc: "Our complete end-to-end publishing services for authors who accept nothing less than excellence.",
     highlight: false,
     features: [
       "Complete Ghostwriting",
-      "Premium Cover + Interior Design",
-      "Print, eBook & Audiobook",
-      "Global Distribution (40+ platforms)",
-      "6-Month Marketing Campaign",
+      "Premium Cover & Interior Design",
+      "Print, eBook & Audiobook Editions",
+      "Global Distribution",
+      "Sustained Marketing Campaign",
       "Social Media Strategy",
-      "BookTok & Bookstagram",
-      "Monthly Royalty Reporting",
+      "BookTok & Bookstagram Promotion",
+      "Royalty Reporting",
     ],
-    cta: "Get Premium",
+    cta: "Choose Premium",
   },
 ];
 
@@ -72,10 +72,10 @@ export default function Pricing() {
             Pricing
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-            <span className="text-black">Simple, Transparent</span><br /><span className="text-primary">Publishing</span><span className="text-black"> Packages</span>
+            <span className="text-black">Deliberately Curated</span><br /><span className="text-primary">Publishing</span><span className="text-black"> Packages</span>
           </h2>
           <p className="text-brand-muted text-sm max-w-md mx-auto">
-            No hidden fees. No royalty splits. Custom quotes available for larger projects.
+            No hidden fees. No royalty splits. Our book publishing services are offered with complete transparency, with bespoke quotes for more ambitious projects.
           </p>
         </motion.div>
 
@@ -142,9 +142,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.85, delay: 0.3 }}
         >
-          Need something custom?{" "}
+          Envisioning something more distinctive?{" "}
           <Link href="/contact" className="text-primary font-semibold hover:underline">
-            Contact us for a custom quote →
+            Request a bespoke quote →
           </Link>
         </motion.p>
       </div>

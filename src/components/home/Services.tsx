@@ -8,7 +8,7 @@ const services = [
   {
     icon: PenLine,
     title: "Ghostwriting",
-    desc: "Our expert writers craft your entire book in your unique voice — fiction, non-fiction, memoirs, business books. 100% confidential with NDA signed upfront. Your name on the cover, always.",
+    desc: "Our writers can craft your entire book in your distinctive voice, whether it's fiction, memoir, nonfiction, or business. We protect your work with a signed NDA, and only your name appears on the cover.",
     tag: "Most Popular",
     span: "lg:col-span-2",
     dark: true,
@@ -17,7 +17,7 @@ const services = [
   {
     icon: BookOpen,
     title: "Book Editing",
-    desc: "From developmental to proofreading — we polish every sentence until your manuscript is flawless and ready for the world.",
+    desc: "From the first edit to the last proofread, we make sure every sentence is clear and your manuscript is ready to publish.",
     tag: null,
     span: "",
     dark: false,
@@ -26,7 +26,7 @@ const services = [
   {
     icon: Palette,
     title: "Cover Design",
-    desc: "Eye-catching, genre-accurate covers designed to stand out on Amazon and every bookshelf.",
+    desc: "We design covers that stand out, fit your genre, and attract readers both online and in stores.",
     tag: null,
     span: "",
     dark: false,
@@ -35,7 +35,7 @@ const services = [
   {
     icon: Globe,
     title: "Publishing & Distribution",
-    desc: "ISBN, formatting, and global distribution to 40+ platforms. 100% of royalties go directly to you — forever.",
+    desc: "We take care of your ISBN, formatting, and global distribution on leading platforms. You keep all your royalties.",
     tag: "Global Reach",
     span: "",
     dark: false,
@@ -44,7 +44,7 @@ const services = [
   {
     icon: Megaphone,
     title: "Book Marketing",
-    desc: "Amazon SEO, social campaigns, press releases, BookTok — we put your book in front of the right readers.",
+    desc: "We help your book. We help your book find the right readers with Amazon optimization, social media, press outreach, and BookTok promotion.",
     tag: null,
     span: "",
     dark: false,
@@ -53,7 +53,7 @@ const services = [
   {
     icon: Headphones,
     title: "Audiobooks",
-    desc: "Studio-quality narration and production. Reach millions on Audible, Spotify, and Apple Books.",
+    desc: "We provide professional narration and production, so your story comes alive for listeners on Audible, Spotify, and Apple Books.",
     tag: null,
     span: "lg:col-span-2",
     dark: true,
@@ -79,15 +79,15 @@ export default function Services() {
               Our Services
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark leading-tight">
-              <span className="text-black">Everything You Need</span><br /><span className="text-black">to </span><span className="text-primary">Publish</span><span className="text-black"> Successfully</span>
+              <span className="text-black">Everything Your Book Needs.</span><br /><span className="text-black">Nothing You Have to </span><span className="text-primary">Chase.</span>
             </h2>
           </div>
           <div>
             <p className="text-brand-muted max-w-sm mb-4 text-sm leading-relaxed">
-              Six world-class services. One dedicated team. Zero guesswork from draft to global bestseller.
+              We offer six main services and a dedicated team to guide your book from first draft to finished product. You&apos;ll know what to expect at every step.
             </p>
             <Link href="/services" className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:gap-3 transition-all">
-              See all services <ArrowUpRight size={15} />
+              Explore All Services <ArrowUpRight size={15} />
             </Link>
           </div>
         </motion.div>

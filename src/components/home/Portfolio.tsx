@@ -62,17 +62,17 @@ export default function Portfolio() {
               Published Works
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
-              <span className="text-black">2,500+ Books</span><br /><span className="text-black">Real </span><span className="text-primary">Outcomes</span>
+              <span className="text-black">Proof Looks Better</span><br /><span className="text-black">in </span><span className="text-primary">Hardcover</span>
             </h2>
             <p className="text-brand-muted text-sm mt-2 max-w-sm">
-              Every book comes with a result worth celebrating — bestseller ranks, media coverage, and sold-out launches.
+              Each book on our shelf is a success story. These works have earned praise, caught readers&apos; interest, and built loyal followings, all thanks to our book publishing services.
             </p>
           </div>
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm shrink-0"
           >
-            Full Portfolio <ArrowUpRight size={15} />
+            View the Full Portfolio <ArrowUpRight size={15} />
           </Link>
         </div>
 

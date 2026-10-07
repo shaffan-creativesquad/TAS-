@@ -6,28 +6,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "Will my name be on the book if you ghostwrite it?",
-    a: "Yes, absolutely. You are the author — your name goes on the cover, copyright page, and all publishing platforms. Our ghostwriters work completely behind the scenes, protected by a signed NDA.",
+    q: "Will my name appear on the book if you ghostwrite it?",
+    a: "Unequivocally, yes. You are the author in every sense. Your name graces the cover, the copyright page and every retail listing. Our ghostwriters work discreetly behind the scenes, bound by a signed NDA, so the credit remains entirely yours.",
   },
   {
-    q: "How long does the full publishing process take?",
-    a: "Ghostwriting a full-length book takes 6–12 weeks. Editing takes 2–4 weeks, cover design 1–2 weeks, and publishing/distribution 1–2 weeks. Rush timelines are available for most services.",
+    q: "How long does it take to publish a book?",
+    a: "The answer to how long does it take to publish a book depends on where your manuscript begins. Refining a completed draft moves more swiftly than composing a book from inception, but most projects span three to six months from consultation to launch. Your project steward will share a precise timeline at the outset, so you're never left wondering.",
   },
   {
-    q: "Do I keep 100% of my book royalties?",
-    a: "Yes. Once your book is live, all royalties are paid directly to your author account. We take nothing. You own your book completely — rights, royalties, and all.",
+    q: "Do I retain the royalties from my book?",
+    a: "Entirely. As a self publishing company, we never claim a share of your sales. Your book, your rights and your earnings remain yours, now and always.",
   },
   {
-    q: "Which platforms will my book be on?",
-    a: "We distribute to 40+ platforms — Amazon KDP, Barnes & Noble Press, Apple Books, Kobo, Google Play, Audible (ACX), Scribd, IngramSpark, and more.",
+    q: "On which platforms will my book appear?",
+    a: "Wherever discerning readers browse: Amazon, Barnes & Noble, Apple Books, Audible, Kobo, Google Play and other leading retailers, so your work reaches an audience across the globe.",
   },
   {
-    q: "Can I see writing samples before committing?",
-    a: "Absolutely. We provide portfolio samples, a sample chapter written in your genre, and a strategy call before any agreement. We want you 100% confident before we begin.",
+    q: "May I review writing samples before committing?",
+    a: "Of course. Choosing the right writer is a deeply personal decision. During your complimentary consultation, we'll share samples that reflect your genre and style, so you can proceed with complete confidence.",
   },
   {
-    q: "What genres do you work with?",
-    a: "All of them — thrillers, romance, fantasy, sci-fi, literary fiction, self-help, business, memoirs, biographies, children's books, academic, and more.",
+    q: "Which genres do you specialize in?",
+    a: "Virtually every genre: thriller, romance, fantasy, science fiction, memoir, self-help, business, children's literature, historical fiction, true crime and literary fiction. If your story is waiting to be told, our book publishing agency has the expertise to tell it beautifully.",
   },
 ];
 
@@ -50,16 +50,16 @@ export default function FAQ() {
               FAQ
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-brand-dark mb-5 leading-tight">
-              Questions?<br /><span className="text-black">We Have</span><br />Answers.
+              Answers Before<br /><span className="text-primary">You Sign</span><br />Anything.
             </h2>
             <p className="text-brand-muted leading-relaxed text-sm mb-8">
-              Everything you need to know before taking your first step toward publishing.
+              Everything you should know before you publish my book: clear, candid answers for the journey ahead.
             </p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-full text-sm shadow-lg shadow-cyan-200 hover:bg-primary-hover transition-colors"
             >
-              Still have questions? Ask us
+              Still Curious? Ask Us
             </a>
           </motion.div>
 

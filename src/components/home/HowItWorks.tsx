@@ -8,8 +8,8 @@ const steps = [
   {
     num: "01",
     icon: MessageSquare,
-    title: "Free Consultation",
-    desc: "Tell us your book idea and goals. We assign your dedicated team and build a custom publishing roadmap tailored to your vision.",
+    title: "Complimentary Consultation",
+    desc: "Tell us about your vision, goals, and timeline. We'll put together a team and create a publishing plan that works for you.",
     color: "bg-primary",
     light: "bg-cyan-50",
     iconColor: "text-primary",
@@ -18,7 +18,7 @@ const steps = [
     num: "02",
     icon: FileText,
     title: "Writing & Editing",
-    desc: "Our ghostwriters craft or your editors refine the manuscript. Regular chapter-by-chapter reviews keep you in control throughout.",
+    desc: "Our ghostwriters can write your manuscript, or our editors can help you polish your draft. We review each chapter with you to make sure your voice and vision stay at the center of your book.",
     color: "bg-[#1E3A5F]",
     light: "bg-blue-50",
     iconColor: "text-blue-600",
@@ -27,7 +27,7 @@ const steps = [
     num: "03",
     icon: Paintbrush2,
     title: "Design & Formatting",
-    desc: "Stunning cover design and professional interior formatting — print-ready and eBook optimized. Multiple concepts provided.",
+    desc: "We design covers that stand out and format your book for print and all major eReaders, so it looks great wherever it's read.",
     color: "bg-[#7C3AED]",
     light: "bg-purple-50",
     iconColor: "text-purple-600",
@@ -36,7 +36,7 @@ const steps = [
     num: "04",
     icon: Rocket,
     title: "Publish & Launch",
-    desc: "Your book goes live on Amazon and 40+ global platforms. We handle the launch strategy — you collect 100% of royalties.",
+    desc: "This is when your book is published. Your work appears on Amazon and other top global platforms. We handle the launch, and you keep every royalty.",
     color: "bg-[#059669]",
     light: "bg-emerald-50",
     iconColor: "text-emerald-600",
@@ -60,10 +60,10 @@ export default function HowItWorks() {
             Our Process
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-white mb-4">
-            Idea to Bestseller in<br />4 Simple Steps
+            Idea to ISBN in Four Steps
           </h2>
           <p className="text-white/70 text-sm max-w-md mx-auto">
-            A transparent, guided process so you always know what&apos;s happening with your book.
+            We guide you through a clear, transparent process, so you always know where your book stands. Our end-to-end publishing services keep everything simple and easy to follow.
           </p>
         </motion.div>
 
@@ -113,15 +113,15 @@ export default function HowItWorks() {
         >
           <div>
             <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-brand-dark mb-1">
-              Ready to Start Your Publishing Journey?
+              Primed to Begin Your Publishing Journey?
             </h3>
-            <p className="text-brand-muted text-sm">Join 1,800+ authors who trusted us with their story.</p>
+            <p className="text-brand-muted text-sm">Join authors worldwide who have entrusted their stories to a book publishing company devoted to their success.</p>
           </div>
           <Link
             href="/contact"
             className="shrink-0 bg-primary text-white font-bold px-8 py-3.5 rounded-full hover:bg-primary-hover transition-colors shadow-lg whitespace-nowrap"
           >
-            Book Free Consultation
+            Publish My Book
           </Link>
         </motion.div>
       </div>

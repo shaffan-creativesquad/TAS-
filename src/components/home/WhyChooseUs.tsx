@@ -5,21 +5,21 @@ import { Shield, Lock, Users, Clock, Zap, Trophy, CheckCircle } from "lucide-rea
 import { motion } from "framer-motion";
 
 const left = [
-  { icon: Shield, title: "100% Royalty Ownership", desc: "Every dollar from your book sales goes directly to you — no splits." },
-  { icon: Lock, title: "Full Confidentiality", desc: "NDA signed before we start. Your story and identity stay private." },
-  { icon: Users, title: "Dedicated Expert Team", desc: "Writer, editor, designer, and marketer assigned specifically to you." },
+  { icon: Shield, title: "Complete Royalty Ownership", desc: "You keep full ownership of your book and all the money it earns. Every sale goes directly to you, with zero hidden fees." },
+  { icon: Lock, title: "Absolute Confidentiality", desc: "Before we review your work, we sign a confidentiality agreement. Your story, ideas, and identity always belong to you." },
+  { icon: Users, title: "A Devoted Team of Experts", desc: "Your team will include a writer, editor, designer, and marketer, all working together to make your book stand out." },
 ];
 const right = [
-  { icon: Clock, title: "24/7 Author Support", desc: "Real humans available around the clock via chat, phone, or email." },
-  { icon: Zap, title: "Fast Turnaround", desc: "Most projects delivered ahead of schedule — never compromising quality." },
-  { icon: Trophy, title: "Proven Track Record", desc: "2,500+ published books with a 98% satisfaction rate since 2015." },
+  { icon: Clock, title: "Attentive Author Support", desc: "You can reach real, experienced people by chat, phone, or email whenever you have questions." },
+  { icon: Zap, title: "Punctual, Polished Delivery", desc: "We fulfill assigned deadlines and deliver your book on time, without ever sacrificing quality." },
+  { icon: Trophy, title: "A Distinguished Track Record", desc: "Whatever your genre or goals, our results speak for themselves. That’s why authors say we’re the self-publishing company that truly delivers." },
 ];
 
 const bigStats = [
-  { value: "2,500+", label: "Books Published", sub: "Across all genres" },
-  { value: "1,800+", label: "Happy Authors", sub: "Worldwide" },
-  { value: "40+", label: "Platforms", sub: "Global distribution" },
-  { value: "98%", label: "Satisfaction", sub: "5-star average" },
+  { value: "All Genres", label: "We welcome every story.", sub: "" },
+  { value: "Draft to Shelf", label: "We handle your entire publishing journey.", sub: "" },
+  { value: "Your Royalties", label: "You always keep what you earn.", sub: "" },
+  { value: "Global Reach", label: "Your book can reach readers everywhere.", sub: "" },
 ];
 
 export default function WhyChooseUs() {
@@ -38,10 +38,10 @@ export default function WhyChooseUs() {
             Why Authors Trust Us
           </span>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-            <span className="text-black">Built for Authors,</span><br /><span className="text-black">By </span><span className="text-primary">Publishing</span><span className="text-black"> Experts</span>
+            <span className="text-black">We Don&apos;t Ghost.</span><br /><span className="text-primary">We Ghostwrite.</span>
           </h2>
           <p className="text-brand-muted max-w-lg mx-auto text-sm leading-relaxed">
-            We&apos;ve navigated the complex publishing world for 1,800+ authors. Here&apos;s what makes us different.
+            Authors from around the world have trusted our book publishing company with their most important ideas. Here&apos;s what makes us different.
           </p>
         </motion.div>
 
@@ -80,18 +80,18 @@ export default function WhyChooseUs() {
                 <Trophy size={22} className="text-white" />
               </div>
               <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white mb-3">
-                The Complete Author Solution
+                The Complete Author Experience
               </h3>
               <p className="text-[#CFFAFE] text-sm leading-relaxed mb-6">
-                Stop juggling 5 different freelancers. We handle everything under one roof — from your first draft to a global bestseller.
+                Avoid the hassle of managing different freelancers. Our end-to-end publishing services bring everything together and guide you from your first draft to your book&apos;s worldwide release.
               </p>
             </div>
             <div className="flex flex-col gap-2.5">
               {[
-                "One dedicated project manager",
-                "Regular progress updates",
-                "Revision cycles included",
-                "Post-launch support",
+                "A dedicated project steward, start to finish",
+                "We keep you informed at every important step",
+                "You'll have opportunities to review and improve your book along the way",
+                "We continue to support you even after your book is published",
               ].map(item => (
                 <div key={item} className="flex items-center gap-2.5 text-sm text-[#CFFAFE]">
                   <CheckCircle size={14} className="text-white shrink-0" />
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
               href="/contact"
               className="mt-7 block bg-white hover:bg-slate-50 text-primary font-bold py-3 rounded-xl text-center text-sm transition-colors shadow-lg"
             >
-              Get Started Today
+              Publish My Book
             </Link>
           </motion.div>
 
@@ -140,7 +140,7 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.75, ease: "easeOut", delay: i * 0.08 }}
             >
               <div className="font-[family-name:var(--font-playfair)] text-3xl font-black text-primary mb-1">{s.value}</div>
-              <div className="font-semibold text-brand-dark text-sm">{s.label}</div>
+              <div className="font-semibold text-black text-sm">{s.label}</div>
               <div className="text-xs text-brand-muted mt-0.5">{s.sub}</div>
             </motion.div>
           ))}

@@ -7,42 +7,42 @@ const spokes = [
   {
     icon: Award,
     title: "Credibility",
-    desc: "A published book instantly positions you as the authority in your field.",
+    desc: "Publishing a book gives you instant credibility and helps position you as a expert in your field.",
     color: "#0891B2",
     bg: "bg-cyan-50",
   },
   {
     icon: Users,
     title: "Leads",
-    desc: "Your book becomes your best sales tool — attracting high-quality clients 24/7.",
+    desc: "Your book acts as a powerful introduction, attracting new clients who are interested in what you offer.",
     color: "#7C3AED",
     bg: "bg-purple-50",
   },
   {
     icon: Mic,
     title: "Speaking",
-    desc: "Published authors get invited to speak at conferences, podcasts, and events.",
+    desc: "Once you get a book published, invitations follow: conferences, podcasts, and stages eager for your perspective.",
     color: "#D97706",
     bg: "bg-amber-50",
   },
   {
     icon: Globe,
     title: "Media",
-    desc: "Books open doors to press coverage, interviews, and feature stories.",
+    desc: "A book can help you get noticed by the media, leading to interviews, features, and positive coverage.",
     color: "#059669",
     bg: "bg-emerald-50",
   },
   {
     icon: TrendingUp,
     title: "Marketing",
-    desc: "A book fuels your entire content strategy — blogs, social posts, and ads.",
+    desc: "Each chapter gives you new material to share on your blog, social media, and in your marketing for a long time.",
     color: "#BE185D",
     bg: "bg-pink-50",
   },
   {
     icon: BookOpen,
     title: "Distribution",
-    desc: "Global reach across Amazon, Audible, Apple Books, and 40+ platforms.",
+    desc: "We help you publish your book on Amazon, Audible, Apple Books, and other top platforms so you can reach readers everywhere.",
     color: "#1E3A5F",
     bg: "bg-blue-50",
   },
@@ -58,10 +58,10 @@ export default function WhatWeBring() {
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Commitment</span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-brand-dark mb-4">
-              <span className="text-black">What </span><span className="text-primary">Your Book</span><span className="text-black"> Unlocks</span>
+              <span className="text-black">The Only Marketing Asset</span><br /><span className="text-primary">Clients Pay</span><span className="text-black"> to Receive</span>
             </h2>
             <p className="text-brand-body text-base leading-relaxed max-w-2xl mx-auto">
-              A professionally published book is far more than words on a page — it&apos;s a business asset that generates credibility, opportunity, and revenue long after launch.
+              A book produced through professional book publishing is far more than ink on a page. It is an enduring asset that bestows credibility, summons opportunity and cultivates revenue long after its debut.
             </p>
           </div>
         </FadeUp>
@@ -100,7 +100,7 @@ export default function WhatWeBring() {
                     <span className="font-[family-name:var(--font-playfair)] text-2xl font-black text-white leading-tight text-center">
                       Your<br />Book
                     </span>
-                    <span className="text-white/70 text-[10px] uppercase tracking-widest mt-1">The Core Asset</span>
+                    <span className="text-white/70 text-[10px] uppercase tracking-widest mt-1">YOUR permanent legacy</span>
                   </div>
                   {/* Connector lines */}
                   <div className="absolute top-1/2 -left-6 w-6 h-px bg-cyan-200" />

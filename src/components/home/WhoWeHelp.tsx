@@ -5,27 +5,27 @@ const audiences = [
   {
     icon: PenLine,
     title: "Authors",
-    desc: "First-time and seasoned writers ready to publish their next book professionally.",
+    desc: "New writers and experienced storytellers choose us because we give every manuscript the attention it merits.",
   },
   {
     icon: Briefcase,
     title: "Entrepreneurs",
-    desc: "Business leaders who want a published book to build authority and attract clients.",
+    desc: "Leaders with vision use a published book to build authority, attract clients, and grow their business.",
   },
   {
     icon: Mic2,
     title: "Coaches & Speakers",
-    desc: "Thought leaders looking to establish credibility and expand their reach with a book.",
+    desc: "Thought leaders publish books to strengthen their credibility and share their message outside the stage or a single session.",
   },
   {
     icon: UserCheck,
     title: "Professionals",
-    desc: "Doctors, lawyers, and experts who want to share their knowledge with a wider audience.",
+    desc: "Professionals such as doctors, lawyers, and specialists who want to share their knowledge with more people. Our publishing services help you share your knowledge in a way that’s clear, easy to understand, and built to last.",
   },
   {
     icon: Building2,
     title: "Businesses",
-    desc: "Companies and brands using books as a strategic marketing and lead-generation tool.",
+    desc: "Companies and brands use books as valuable assets. As a trusted author services company, we help turn your story into permanent influence and new opportunities.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function WhoWeHelp() {
               <span className="text-primary">Help</span>
             </h2>
             <p className="text-brand-body text-base leading-relaxed max-w-xl mx-auto">
-              We work with a wide range of clients — from first-time writers to seasoned executives — all united by one goal: publishing a book that makes an impact.
+              No matter if you&apos;re new to writing or have years of experience, our authors all want the same thing: a book that makes an impact. We help you turn that dream into a book you&apos;re proud of.
             </p>
           </div>
         </FadeUp>

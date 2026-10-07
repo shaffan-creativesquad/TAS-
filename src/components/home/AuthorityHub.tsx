@@ -74,19 +74,19 @@ export default function AuthorityHub() {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
           >
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">
-              One Book. Every Channel.
+              One Book. Boundless Reach.
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-slate-900 mb-5 leading-tight">
-              We Don&apos;t Just Publish Books.<br />We Build Authority Platforms.
+              Your Book Is the Product.<br />Authority Is the Bonus.
             </h2>
             <p className="text-brand-body mb-4 leading-relaxed">
-              Your book becomes the source material for LinkedIn content, PR, podcast invitations, speaking enquiries and lead generation — for years after publication.
+              Your book can generate LinkedIn posts, press coverage, podcast invites, speaking opportunities, and a steady flow of qualified leads. With the right publishing partner, your influence can last for years after your book comes out.
             </p>
             <p className="text-sm font-bold text-primary mb-8">
-              1 book → 12 chapters → 52 posts → 24 talks → ∞ conversations.
+              One book can lead to new opportunities, a year of engaging content, and many valuable conversations.
             </p>
 
-            <p className="text-sm font-semibold text-slate-700 mb-3">Who we build this for:</p>
+            <p className="text-sm font-semibold text-slate-700 mb-3">We partner with leaders who want to share something meaningful:</p>
             <div className="flex flex-wrap gap-2 mb-8">
               {verticals.map(v => (
                 <Link
@@ -104,13 +104,13 @@ export default function AuthorityHub() {
                 href="/how-it-works"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-cyan-200 transition-all"
               >
-                See How It Works <ArrowRight size={16} />
+                Discover Our Approach <ArrowRight size={16} />
               </Link>
               <Link
                 href="/our-books"
                 className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-900 text-slate-800 font-bold px-6 py-3.5 rounded-full transition-all"
               >
-                Our Book Formats
+                Explore Book Formats
               </Link>
             </div>
           </motion.div>
