@@ -11,61 +11,62 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Most Popular Service";
-const headline = "Turn Your Idea Into a Bestselling Book";
-const subline = "Professional ghostwriters who capture your voice — 100% confidential, 100% yours.";
-const desc = "You have a story worth telling. We have the writers to tell it perfectly. Our team of 50+ professional ghostwriters has published over 1,200 books across every genre — all under our clients' names, all covered by a strict NDA. From a half-formed idea to a fully polished manuscript, we handle every word while you stay in control.";
-const serviceLabel = "Ghostwriting";
+const badge = "GHOSTWRITING";
+const headline = "Ghostwriting Services for People With More Ideas Than Hours";
+const subline = "You know what you want to say. We help you say it in a book that sounds like you and carries your name.";
+const desc = "A lot of people have a book they want to write, but finding the time is another story. Our ghostwriting services help you turn that idea into a finished book. When you hire a ghostwriter, a professional ghostwriter gets to know your voice, ideas, and goals, then works with you chapter by chapter. Everything is covered by a signed NDA, and once the manuscript is finished, it's completely yours.";
 
-const stats = [
-  { value: "1,200+", label: "Books Ghostwritten", Icon: PenLine },
-  { value: "98%", label: "Client Satisfaction", Icon: Award },
-  { value: "8–10 Wks", label: "Average Delivery", Icon: Clock },
-  { value: "100%", label: "NDA Guaranteed", Icon: Users },
+const highlightCards = [
+  { top: "Written in", bottom: "Your Voice", Icon: PenLine },
+  { top: "NDA Signed", bottom: "Before We Begin", Icon: Award },
+  { top: "Full Copyright", bottom: "Ownership", Icon: Clock },
+  { top: "You Approve", bottom: "Every Chapter", Icon: Users },
 ];
 
 const subServices = [
-  { tag: "Fiction", title: "Fiction & Genre Books", desc: "Thrillers, romance, fantasy, sci-fi, literary fiction — our writers are genre specialists who craft stories readers can't put down." },
-  { tag: "Non-Fiction", title: "Business & Self-Help", desc: "Position yourself as an industry authority. We craft compelling, insight-rich non-fiction books that build your brand and generate leads." },
-  { tag: "Personal", title: "Memoir & Biography", desc: "Your life story deserves to be told beautifully. We conduct in-depth interviews and craft deeply personal narratives that resonate with readers." },
-  { tag: "Youth", title: "Children's & Young Adult", desc: "From picture books to YA novels — age-appropriate stories with imagination, heart, and the right developmental voice." },
+  { tag: "FICTION", title: "Fiction & Genre Books", desc: "Thrillers, romance, fantasy, science fiction, and literary fiction. Our fiction ghostwriting services focus on believable characters, good pacing, and stories that keep readers interested from one page to the next." },
+  { tag: "NON-FICTION", title: "Non-Fiction & Self-Help", desc: "From personal development to health, history, and big ideas, our non- fiction ghostwriting services turn your knowledge and research into a book that is clear, credible, and easy to read." },
+  { tag: "BUSINESS", title: "Business Books", desc: "An experienced business book ghostwriter takes your methods, case studies, and lessons learned and turns them into a book that builds your reputation and supports your business." },
+  { tag: "PERSONAL", title: "Memoir & Biography", desc: "Through relaxed, in-depth interviews, our memoir ghostwriting services help you tell your life story honestly and with care, in words that feel like your own." },
+  { tag: "YOUTH", title: "Children's & Young Adult", desc: "From picture books to YA novels, we write stories with imagination and heart, pitched at the right level for young readers." },
 ];
 
 const steps = [
-  { num: "01", title: "Discovery Call", desc: "We learn your vision, voice, target audience, and goals. You sign our NDA and we assign your dedicated ghostwriter." },
-  { num: "02", title: "Outline & Research", desc: "Your writer creates a detailed chapter-by-chapter outline. We research your topic thoroughly before writing a single word." },
-  { num: "03", title: "Chapter-by-Chapter Writing", desc: "Chapters are written and sent to you in batches. You review, give feedback, and we refine until you love every page." },
-  { num: "04", title: "Full Manuscript Review", desc: "Once complete, the full manuscript goes through our internal editorial review for quality, consistency, and flow." },
-  { num: "05", title: "Final Delivery", desc: "You receive the final manuscript in DOCX and PDF format — 100% owned by you, ready for editing or publishing." },
+  { num: "01", title: "Complimentary Consultation", desc: "Tell us about your idea, your audience, and what you want the book to achieve. You sign our NDA, and we match you with a professional ghostwriter suited to your genre and goals." },
+  { num: "02", title: "Writing & Editing", desc: "Your ghostwriter talks with you about the book, puts together the outline, and writes the manuscript chapter by chapter. You review each chapter along the way, while our editors clean up the final draft and make sure it still sounds like you." },
+  { num: "03", title: "Design & Formatting", desc: "Once the manuscript is complete, our designers create a cover that suits your genre and format the interior for print and all major eReaders." },
+  { num: "04", title: "Publish & Launch", desc: "Your book goes live on Amazon and other leading global platforms. We handle the launch, your name goes on the cover, and you keep every royalty." },
 ];
 
 const included = [
-  "Dedicated professional ghostwriter",
-  "NDA signed before project starts",
-  "Free sample chapter (first 3,000 words)",
+  "A dedicated professional ghostwriter matched to your genre",
+  "NDA signed before any work begins",
+  "In-depth interviews to capture your voice",
+  "Topic and background research",
   "Detailed chapter-by-chapter outline",
-  "In-depth topic research",
-  "Unlimited revision rounds",
-  "Chapter-by-chapter review process",
-  "Fiction & non-fiction genres covered",
-  "Memoir & biography interviews",
-  "Children's & YA writing specialists",
-  "Consistent author voice matching",
-  "Final DOCX + PDF delivery",
+  "Chapter-by-chapter review and feedback",
+  "Revision rounds at every stage",
+  "Internal editorial review",
+  "Full copyright and ownership",
+  "Final manuscript in publish-ready formats",
+  "A faithful project manager as your single point of contact",
+  "Writing samples shared during your free consultation",
 ];
 
 const testimonials = [
-  { quote: "I had a story in my head for 10 years. The ghostwriting team turned it into a published novel in 9 weeks. The writer captured my voice so perfectly — my readers had no idea.", name: "Sarah M.", title: "Romance Author · Amazon Top 100", result: "Amazon Top 100" },
-  { quote: "As a business coach, I needed a book that sounded like me. They interviewed me, built the outline, and delivered a manuscript I'm genuinely proud to put my name on.", name: "Dr. James K.", title: "Business Book Author · 8,000 Copies Sold", result: "8,000 Copies Sold" },
-  { quote: "Professional, fast, and completely confidential. My memoir came out exactly as I imagined — emotional, honest, and beautifully written.", name: "Linda R.", title: "Memoir Author · 5-Star Rated", result: "5-Star on Goodreads" },
+  { quote: "I'd had the idea for my book for years, but I just never had the time to sit down and write it. The team helped me organize my thoughts, shape the story, and finally turn the idea into a real book. It still feels completely like my book.", name: "Michael T.", title: "Founder & Author", result: "Business Book" },
+  { quote: "I knew my subject inside and out, but I had no idea how to turn all of that knowledge into a book. My writer asked the right questions, understood what I was trying to say, and made the whole process feel much easier. I was involved without having to do the actual writing.", name: "Rachel D.", title: "Leadership Consultant", result: "Non-Fiction Author" },
+  { quote: "I was nervous that a ghostwriter might make my story sound like someone else wrote it. Thankfully, that never happened. My writer took the time to understand my experiences and the way I speak, and the final manuscript felt natural and true to my story.", name: "Daniel R.", title: "Memoir Author", result: "Personal Story" },
 ];
 
 const faqs = [
-  { q: "Is ghostwriting ethical and legal?", a: "Absolutely. Ghostwriting has been a legitimate profession for centuries. Politicians, CEOs, celebrities, and authors all use ghostwriters. You own the copyright fully and your name appears on the cover." },
-  { q: "Will my name be on the book?", a: "Yes, 100%. The book is published under your name. We sign a strict NDA before starting, and we never disclose our involvement to anyone." },
-  { q: "How do you match me with the right writer?", a: "We review your genre, tone preferences, sample text you admire, and project scope — then match you with a writer from our vetted team whose style and expertise fits your needs." },
-  { q: "What if I don't like the writing?", a: "We provide a free 3,000-word sample chapter before you commit. Once the project starts, unlimited revisions are included until you're 100% satisfied." },
-  { q: "How long does ghostwriting take?", a: "A standard 50,000-word book takes 8–10 weeks. Shorter books (children's, business) can be done in 3–5 weeks. Rush delivery is available." },
+  { q: "Is ghostwriting ethical and legal?", a: "Yes. Ghostwriting has long been used by business leaders, public figures, and authors in every genre. You own the copyright, and only your name appears on the book." },
+  { q: "Will my name appear on the book?", a: "Always. You are the author. Your writer works behind the scenes under a signed NDA, and the credit is entirely yours." },
+  { q: "How do you match me with the right professional ghostwriter?", a: "During the consultation, we talk about your book, your goals, and the kind of voice you want. Then we match you with a professional ghostwriter who's a good fit for your project." },
+  { q: "Can I see writing samples before committing?", a: "Yes. During your free consultation, we'll share samples that reflect your genre and style so that you can move forward with confidence." },
+  { q: "What if I'm not happy with the writing?", a: "You review each chapter as it's written, so nothing is finalized without your approval. If something isn't right, we revise it until it is." },
+  { q: "How long does ghostwriting take?", a: "It depends on the length of your book, the genre, and how much research is involved. Your project manager will share a clear timeline at the start." },
+  { q: "How much do ghostwriting services cost?", a: "Every project is priced individually based on its length, scope, and complexity. The price you're quoted is the price you pay, and we never take a share of your royalties." },
 ];
 
 export default function GhostwritingPage() {
@@ -83,19 +84,19 @@ export default function GhostwritingPage() {
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Talk to a Ghostwriter <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
               </div>
             </SlideLeft>
             <SlideRight delay={0.1}>
               <div className="grid grid-cols-2 gap-4">
-                {stats.map(({ value, label, Icon }, i) => (
-                  <FadeUp key={label} delay={i * 0.08}>
+                {highlightCards.map(({ top, bottom, Icon }, i) => (
+                  <FadeUp key={top} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
-                      <div className="text-xs text-brand-muted mt-0.5">{label}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-xl font-black" style={{ color: COLOR }}>{top}</div>
+                      <div className="text-xs text-brand-muted mt-0.5">{bottom}</div>
                     </div>
                   </FadeUp>
                 ))}
@@ -105,18 +106,19 @@ export default function GhostwritingPage() {
         </div>
       </section>
 
-      {/* WHAT WE OFFER */}
+      {/* WHAT WE WRITE */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Write</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">You Bring the Genre. </span><span style={{ color: COLOR }}>We Bring the Genius.</span>
               </h2>
+              <p className="text-brand-body max-w-2xl mx-auto">We match each project with a writer who knows your genre and understands how to make that type of book work.</p>
             </div>
           </FadeUp>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {subServices.map((sub, i) => (
               <FadeUp key={sub.title} delay={i * 0.08}>
                 <div className="rounded-2xl p-6 border border-slate-100 hover:border-transparent hover:shadow-xl transition-all" style={{ background: LIGHT_BG }}>
@@ -130,20 +132,21 @@ export default function GhostwritingPage() {
         </div>
       </section>
 
-      {/* OUR PROCESS */}
+      {/* HOW IT WORKS */}
       <section className="py-20" style={{ background: LIGHT_BG }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>The Roadmap</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">How Your Book Gets Written </span><span style={{ color: COLOR }}>(Without You Writing It)</span>
               </h2>
+              <p className="text-brand-body max-w-2xl mx-auto">A clear, collaborative process that keeps you involved at every important step, so you always know where your book stands without having to sit down and write it.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -164,14 +167,14 @@ export default function GhostwritingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideLeft>
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">What&apos;s Included</span>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Everything Included.<br />Nothing Tacked On Later.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote covers the full writing process from first conversation to final manuscript. You&apos;ll know exactly what you&apos;re paying for before we start, with no surprise charges along the way.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><PenLine size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to our team about your book before you commit. No obligation, no pressure.</div>
                   </div>
                 </div>
               </div>
@@ -196,9 +199,10 @@ export default function GhostwritingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">The Authors </span><span style={{ color: COLOR }}>Behind the Books</span>
               </h2>
+              <p className="text-brand-body max-w-xl mx-auto">In their own words, from authors who trusted us with their ideas and their names.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -231,7 +235,7 @@ export default function GhostwritingPage() {
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span>
+                <span className="text-black">What Authors Ask Before They </span><span style={{ color: COLOR }}>Hire a Ghostwriter</span>
               </h2>
             </div>
           </FadeUp>
@@ -257,12 +261,12 @@ export default function GhostwritingPage() {
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><PenLine size={28} className="text-white" /></div>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-white">Ready to Get Started?</span>
+              <span className="text-white">Got the Ideas? We&apos;ve Got the Writers.</span>
             </h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with our team. We&apos;ll talk through your idea, answer your questions, and give you an honest picture of what it takes to bring your book to life.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
-              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">Explore All Services</Link>
             </div>
           </ScaleIn>
         </div>

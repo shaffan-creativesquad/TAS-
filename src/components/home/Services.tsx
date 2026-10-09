@@ -48,7 +48,7 @@ const services = [
     tag: null,
     span: "",
     dark: false,
-    href: "/services/marketing",
+    href: "/services/book-marketing",
   },
   {
     icon: Headphones,

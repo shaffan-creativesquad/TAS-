@@ -11,66 +11,66 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Data-Driven Growth";
-const headline = "Digital Marketing That Puts Your Book in Front of Buyers";
-const subline = "Full-funnel digital marketing strategies built specifically for authors and publishers.";
-const desc = "In today's crowded book market, digital marketing is the difference between a book that sells and one that sits. Our team runs comprehensive digital campaigns — Amazon ads, social media, content marketing, email, and paid search — all optimized for the unique dynamics of the book market.";
-const serviceLabel = "Digital Marketing";
+const badge = "DIGITAL MARKETING";
+const headline = "Digital Marketing for Authors That Turns Scrolls Into Sales";
+const subline = "We take responsibility for ads, content, and results tracking so that your book gets to its intended audience while you just have to write.";
+const desc = "These days, readers often find their next book through social media, search, or email. Our book digital marketing services bring ads, social media, content, email, and SEO together to help more of the right people discover your book.";
 
-const stats = [
-  { value: "300+", label: "Campaigns Run", Icon: BarChart2 },
-  { value: "4x", label: "Avg. ROAS", Icon: TrendingUp },
-  { value: "100K+", label: "Monthly Reach", Icon: Users },
-  { value: "4.9/5", label: "Client Rating", Icon: Award },
+const highlightCards = [
+  { top: "Campaigns Built", bottom: "for Your Genre", Icon: BarChart2 },
+  { top: "Ads Aimed at", bottom: "Real Readers", Icon: TrendingUp },
+  { top: "Budgets Managed", bottom: "With Care", Icon: Users },
+  { top: "Clear, Honest", bottom: "Reporting", Icon: Award },
 ];
 
 const subServices = [
-  { tag: "Amazon", title: "Amazon Advertising", desc: "Sponsored Products, Sponsored Brands, and Display ads managed by Amazon Ads specialists who understand book buyer behavior." },
-  { tag: "Social", title: "Social Media Advertising", desc: "Facebook, Instagram, and TikTok ads targeting readers by genre interest, comparable authors, and reading behavior." },
-  { tag: "Content", title: "Content Marketing", desc: "Blog posts, author newsletters, and long-form content that attracts organic readers and builds lasting discoverability." },
-  { tag: "SEO", title: "Author & Book SEO", desc: "Search engine optimization for your author website, Amazon product page, and Google discoverability." },
+  { tag: "AMAZON", title: "Amazon Advertising", desc: "Sponsored Products, Sponsored Brands, and Display ads managed by specialists who understand how book buyers search, browse, and decide what to read next." },
+  { tag: "SOCIAL", title: "Social Media Marketing", desc: "Our social media marketing for authors covers Instagram, TikTok, Facebook, and Pinterest. We create content that feels like you, helps people get to know your work, and keeps your books in front of readers." },
+  { tag: "ADS", title: "Facebook & Instagram Ads", desc: "We run Facebook and Instagram ads for people who are interested in what you write about, like certain authors and genres of books. We want to make sure that you reach the right audience, the one who will be interested in reading your book." },
+  { tag: "CONTENT", title: "Content & Email Marketing", desc: "From blog posts and author newsletters to email campaigns, we create content that keeps readers connected to you and gives them a reason to come back when you have something new to share." },
+  { tag: "SEO", title: "Author & Book SEO", desc: "We optimize your author website and book pages so readers can find you on Google and Amazon, even when you're not running ads." },
 ];
 
 const steps = [
-  { num: "01", title: "Audit & Strategy", desc: "We audit your current digital presence and build a channel-specific strategy with clear KPIs and budget allocation." },
-  { num: "02", title: "Campaign Setup", desc: "All ad accounts, tracking pixels, and campaign structures are set up and configured before any spend begins." },
-  { num: "03", title: "Content Creation", desc: "Ad creatives, copy, and landing pages are produced and A/B tested for maximum click-through and conversion." },
-  { num: "04", title: "Launch & Optimize", desc: "Campaigns go live with daily monitoring and optimization for the first two weeks to maximize early performance." },
-  { num: "05", title: "Monthly Reporting", desc: "Detailed monthly reports with spend, reach, clicks, conversions, and actionable insights for the next period." },
+  { num: "01", title: "Complimentary Consultation", desc: "Tell us about your book, your readers, and your budget. We review your current online presence and build a digital marketing strategy for authors with clear goals for every channel." },
+  { num: "02", title: "Writing & Editing", desc: "Our team writes your ad copy, social posts, email sequences, and website content. Every piece is edited to match your voice and speak directly to the readers you want to reach." },
+  { num: "03", title: "Design & Formatting", desc: "We design ad creatives, social graphics, and landing pages, all formatted for every platform and screen size so your book looks great wherever readers see it." },
+  { num: "04", title: "Publish & Launch", desc: "Your campaigns go live with tracking in place from day one. We monitor performance closely, adjust what isn't working, and send you regular reports so you always know how your book is doing." },
 ];
 
 const included = [
-  "Digital marketing strategy document",
-  "Amazon Ads campaign setup & management",
-  "Facebook & Instagram ad campaigns",
-  "TikTok advertising (optional)",
-  "Email marketing setup (3 sequences)",
-  "Content calendar",
-  "SEO optimization",
-  "Ad creative design",
+  "Amazon Ads campaign setup and management",
+  "Facebook and Instagram ad campaigns",
+  "Social media content calendar",
+  "Email marketing setup",
+  "Author website and book SEO",
+  "Ad creative design and copywriting",
   "Conversion tracking setup",
-  "Weekly performance updates",
+  "Regular performance updates",
   "Monthly detailed reports",
   "Ongoing campaign optimization",
+  "A dedicated project manager as your single point of contact",
 ];
 
 const testimonials = [
-  { quote: "Amazon Ads ROAS of 6x in the first month. They know exactly how to target book buyers — the results spoke for themselves.", name: "Kevin L.", title: "Business Author · Bestseller", result: "6x Amazon Ads ROAS" },
-  { quote: "Facebook campaigns drove 2,000 pre-orders before launch. The targeting was so precise — every click was a reader who actually wanted my book.", name: "Nina P.", title: "Romance Author", result: "2,000 Pre-Orders" },
-  { quote: "Our author website traffic grew 400% in 3 months from the SEO and content strategy. Organic readers now find us every day.", name: "Rebecca S.", title: "Thriller Author", result: "400% Traffic Growth" },
+  { quote: "I had been trying to advertise my own book through ads, but I did not know what was actually working for me. This team helped me figure out my market, sorted out my campaigns, and provided me with a clear direction for my entire launch process.", name: "Sarah M.", title: "Fiction Author", result: "Fiction" },
+  { quote: "What really struck me about the marketing was the focus on my particular genre. Everything seemed to tie together, not just marketing techniques but everything else, too. I noticed that people were showing an interest in my novel and visiting my author page.", name: "Daniel R.", title: "Business Author", result: "Business" },
+  { quote: "I'm a writer, not a marketer, so trying to stay on top of advertising, social media, and analytics was getting to be too much. They handled that for me while still making sure I knew what was going on. It left me with a lot more time for writing.", name: "Emily K.", title: "Non-Fiction Author", result: "Non-Fiction" },
 ];
 
 const faqs = [
-  { q: "What budget do I need for digital marketing?", a: "We work with budgets from $500/month upward. We'll recommend an allocation across channels based on your goals and genre." },
-  { q: "Do you manage Amazon Ads?", a: "Yes — Sponsored Products, Sponsored Brands, and Display campaigns with ongoing bid optimization and keyword management." },
-  { q: "How quickly will I see results?", a: "Amazon Ads typically show results within 1–2 weeks. Social ads take 2–4 weeks to optimize. SEO results build over 3–6 months." },
-  { q: "Can you market a book in any genre?", a: "Yes. We have experience marketing books across all genres — fiction, non-fiction, self-help, business, children's, and more." },
-  { q: "Do you create the ad creatives?", a: "Yes. Our design team produces all ad graphics, copy, and video creatives as part of the service." },
+  { q: "What budget do I need for digital marketing?", a: "This is based on what you want, what you write, and how we distribute it. We will advise on a budget that fits your book in your consultation, and we will never try to force you to spend more than you wish." },
+  { q: "Do you manage Amazon Ads?", a: "Yes. We handle keyword research, campaign setup, and ongoing management, adjusting your ads based on performance so your budget goes toward what's working." },
+  { q: "Do Facebook ads work for books?", a: "They can work very well when they're targeted properly. Our Facebook ads for authors focus on readers who already enjoy your genre or similar authors, which helps keep costs down and sales steady." },
+  { q: "How quickly will I see results?", a: "Some campaigns generate clicks and conversions within a couple of weeks, while SEO and content marketing take time to develop. We will set realistic expectations from the beginning and update you on our progress as we go." },
+  { q: "Can you market a book in any genre?", a: "Yes. We work with fiction, non-fiction, business, memoir, and children's books, and we tailor every campaign to the readers of that genre." },
+  { q: "Do you create the ad creatives?", a: "Yes. Our team writes the ad copy and designs the visuals, then tests different versions to see which ones bring in the most readers." },
 ];
 
 export default function DigitalMarketingPage() {
   return (
     <>
+      {/* HERO */}
       <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: `linear-gradient(145deg, ${COLOR}22 0%, #ffffff 50%, ${COLOR}12 100%)` }}>
         <div className="absolute inset-0 opacity-[0.025] pointer-events-none" style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,19 +82,19 @@ export default function DigitalMarketingPage() {
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Free Quote <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
               </div>
             </SlideLeft>
             <SlideRight delay={0.1}>
               <div className="grid grid-cols-2 gap-4">
-                {stats.map(({ value, label, Icon }, i) => (
-                  <FadeUp key={label} delay={i * 0.08}>
+                {highlightCards.map(({ top, bottom, Icon }, i) => (
+                  <FadeUp key={top} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
-                      <div className="text-xs text-brand-muted mt-0.5">{label}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-xl font-black" style={{ color: COLOR }}>{top}</div>
+                      <div className="text-xs text-brand-muted mt-0.5">{bottom}</div>
                     </div>
                   </FadeUp>
                 ))}
@@ -103,15 +103,20 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* WHAT WE OFFER */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">Every Platform Your Readers </span><span style={{ color: COLOR }}>Scroll, Covered</span>
+              </h2>
+              <p className="text-brand-body max-w-2xl mx-auto">We focus on the platforms where your readers already spend their time, and we make every channel work toward the same goal: selling more books.</p>
             </div>
           </FadeUp>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {subServices.map((sub, i) => (
               <FadeUp key={sub.title} delay={i * 0.08}>
                 <div className="rounded-2xl p-6 border border-slate-100 hover:border-transparent hover:shadow-xl transition-all" style={{ background: LIGHT_BG }}>
@@ -124,17 +129,22 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* HOW IT WORKS */}
       <section className="py-20" style={{ background: LIGHT_BG }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span></h2>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How We Grow Your Readership</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">Four Steps From </span><span style={{ color: COLOR }}>Scroll to Sold</span>
+              </h2>
+              <p className="text-brand-body max-w-2xl mx-auto">A clear, organized process so you always know where your budget is going and what it&apos;s bringing back.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -148,19 +158,21 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* WHAT'S INCLUDED */}
       <section className="py-20 bg-brand-dark">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideLeft>
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">What&apos;s Included</span>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Strategy, Ads, Content,<br />and Reports. All Included.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote includes everything listed below, from strategy and content to reporting. You’ll know what you’re paying for from the start, with no surprise costs added later. A digital marketing strategy built for your genre and goals</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><BarChart2 size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to our team about your book and your budget before you commit. No obligation, no pressure.</div>
                   </div>
                 </div>
               </div>
@@ -178,12 +190,17 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+                <span className="text-black">What Authors Say After the </span><span style={{ color: COLOR }}>Reports Come In</span>
+              </h2>
+              <p className="text-brand-body max-w-xl mx-auto">In their own words, from authors who trusted us to grow their readership online.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -208,12 +225,16 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
+                <span className="text-black">Everything You&apos;d Ask Before </span><span style={{ color: COLOR }}>Your First Campaign</span>
+              </h2>
             </div>
           </FadeUp>
           <div className="flex flex-col gap-3">
@@ -231,15 +252,19 @@ export default function DigitalMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><BarChart2 size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
+              <span className="text-white">Your Readers Are Scrolling. Let&apos;s Make Them Stop.</span>
+            </h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with our team. We’ll look at your book, talk through your goals, and give you an honest picture of what it will take to grow your readership online.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
-              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book a Free Consultation <ArrowRight size={18} /></Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">Explore All Services</Link>
             </div>
           </ScaleIn>
         </div>

@@ -175,7 +175,7 @@ export default function ServicesPage() {
                 { title: "Book Editing", slug: "editing" },
                 { title: "Cover Design", slug: "cover-design" },
                 { title: "Publishing", slug: "publishing" },
-                { title: "Book Marketing", slug: "marketing" },
+                { title: "Book Marketing", slug: "book-marketing" },
                 { title: "Audiobooks", slug: "audiobooks" },
               ].map(s => (
                 <Link
@@ -262,7 +262,7 @@ export default function ServicesPage() {
                       <span className="text-xs font-semibold text-brand-muted">{s.result}</span>
                     </div>
                     <Link
-                      href={`/services/${s.id === "design" ? "cover-design" : s.id}`}
+                      href={`/services/${s.id === "design" ? "cover-design" : s.id === "marketing" ? "book-marketing" : s.id}`}
                       className="inline-flex items-center gap-2 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-lg transition-all hover:opacity-90"
                       style={{ background: s.color }}
                     >

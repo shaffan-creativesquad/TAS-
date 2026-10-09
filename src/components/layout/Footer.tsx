@@ -50,7 +50,7 @@ export default function Footer() {
                 { name: "Book Editing", href: "/services/editing" },
                 { name: "Cover Design", href: "/services/cover-design" },
                 { name: "Publishing", href: "/services/publishing" },
-                { name: "Book Marketing", href: "/services/marketing" },
+                { name: "Book Marketing", href: "/services/book-marketing" },
                 { name: "Audiobooks", href: "/services/audiobooks" },
               ].map(s => (
                 <li key={s.name}>

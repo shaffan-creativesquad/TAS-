@@ -17,7 +17,7 @@ const services = [
   { name: "Ghostwriting",                   href: "/services/ghostwriting" },
   { name: "Book Editing",                   href: "/services/editing" },
   { name: "Cover Design",                   href: "/services/cover-design" },
-  { name: "Book Marketing",                 href: "/services/marketing" },
+  { name: "Book Marketing",                 href: "/services/book-marketing" },
   { name: "Audiobooks",                     href: "/services/audiobooks" },
   { name: "Book Publishing",                href: "/services/publishing" },
   { name: "Digital Marketing",              href: "/services/digital-marketing" },
