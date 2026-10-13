@@ -84,14 +84,6 @@ export default function Portfolio() {
           {books.slice(6).map(b => <BookCover key={b.title} b={b} />)}
         </div>
 
-        {/* Genre tags */}
-        <div className="flex flex-wrap gap-2 mt-8 justify-center">
-          {["Thriller","Romance","Self-Help","Fantasy","Sci-Fi","Memoir","Business","Children's","Historical","Psychology","Literary Fiction","True Crime"].map(g => (
-            <span key={g} className="bg-slate-100 text-slate-600 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-colors cursor-pointer">
-              {g}
-            </span>
-          ))}
-        </div>
 
         {/* Platform row */}
         <div className="mt-12 bg-slate-50 border border-slate-100 rounded-2xl p-6">
