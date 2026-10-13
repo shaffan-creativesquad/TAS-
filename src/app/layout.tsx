@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "The Author Success | Professional Book Publishing Services",
   description:
     "Transform your manuscript into a bestseller. Expert ghostwriting, editing, design, publishing, and marketing services for authors worldwide.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
