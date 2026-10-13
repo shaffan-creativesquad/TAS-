@@ -63,7 +63,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          
           <div>
             <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Company</h4>
             <ul className="flex flex-col gap-3">
@@ -72,7 +72,6 @@ export default function Footer() {
                 { name: "Our Books",      href: "/our-books"      },
                 { name: "How It Works",   href: "/how-it-works"   },
                 { name: "Portfolio",      href: "/portfolio"      },
-                // { name: "Testimonials",   href: "/#testimonials"  },
                 { name: "Who We Help",    href: "/who-we-help"    },
                 { name: "Insights",       href: "/insights"       },
                 { name: "Book a Call",    href: "/book-a-call"    },
