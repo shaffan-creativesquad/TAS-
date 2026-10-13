@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, FileText, Award, Clock, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, FileText, Mic, Search, CheckSquare } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Professional Article Writing Services | The Author Success",
@@ -11,61 +12,60 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Content Authority";
-const headline = "Professional Article Writing That Builds Your Authority";
-const subline = "SEO-optimized articles and guest posts that establish you as the expert in your field.";
-const desc = "High-quality articles are the most sustainable way to build online authority and attract readers organically. Our writers produce well-researched, SEO-optimized articles for your blog, industry publications, and guest post placements — all written in your voice and under your name.";
-const serviceLabel = "Article Writing";
+const badge = "ARTICLE WRITING & PUBLISHING";
+const headline = "Your Expertise, Published Where It Matters";
+const subline = "Our article writing services turn your expertise into well-researched articles that build authority.";
+const desc = "Good articles can keep bringing people to your website long after you publish them. We write articles that sound like you and reflect your knowledge, whether they're for your blog, industry publications, or guest posts. Each one is written in your name and with SEO in mind.";
 
 const stats = [
-  { value: "5,000+", label: "Articles Written", Icon: FileText },
-  { value: "24–48h", label: "Turnaround", Icon: Clock },
-  { value: "Top 3", label: "Avg. Google Ranking", Icon: TrendingUp },
-  { value: "98%", label: "Client Approval Rate", Icon: Award },
+  { value: "Written in Your Voice", label: "Every Article Sounds Like You", Icon: Mic },
+  { value: "SEO-Ready Structure", label: "Built to Be Found on Google", Icon: Search },
+  { value: "Original & Checked", label: "Plagiarism-Free Every Time", Icon: CheckSquare },
+  { value: "Editor Reviewed", label: "Before Every Delivery", Icon: FileText },
 ];
 
 const subServices = [
-  { tag: "SEO", title: "SEO Blog Articles", desc: "Keyword-targeted articles structured for search engine ranking — proper headers, meta descriptions, and internal linking included." },
-  { tag: "Guest Posts", title: "Guest Post Writing", desc: "Authority-building articles written for placement in industry publications, major blogs, and media outlets in your niche." },
-  { tag: "Publishing", title: "Article Publishing", desc: "We pitch and place your articles on high-DA websites and publications in the book, publishing, and author space." },
-  { tag: "Thought Leadership", title: "Thought Leadership Content", desc: "LinkedIn articles and long-form thought leadership pieces that build your professional reputation and reader trust." },
+  { tag: "SEO", title: "SEO Articles", desc: "Keyword-focused articles with clear headings, meta descriptions, and internal links, written to help the right readers find you through search." },
+  { tag: "GUEST POSTS", title: "Guest Post Writing", desc: "Our guest post writing services create articles tailored to the style and audience of industry blogs and publications in your field." },
+  { tag: "PUBLISHING", title: "Article Publishing", desc: "Our article publishing services pitch your articles to relevant websites and publications, giving your work the best chance of being accepted and seen." },
+  { tag: "THOUGHT LEADERSHIP", title: "LinkedIn & Thought Leadership", desc: "Long-form articles and LinkedIn pieces that share your ideas, build trust, and keep your name in front of the people who matter." },
 ];
 
 const steps = [
-  { num: "01", title: "Topic & Keyword Research", desc: "We identify the highest-traffic, lowest-competition keywords and topics for your niche and audience." },
-  { num: "02", title: "Article Brief", desc: "A detailed article brief is created covering title, target keyword, structure, and key points to cover." },
-  { num: "03", title: "Writing & Research", desc: "Your dedicated writer produces a well-researched, engaging article optimized for both readers and search engines." },
-  { num: "04", title: "Editorial Review", desc: "A senior editor reviews for clarity, accuracy, SEO optimization, and brand voice consistency." },
-  { num: "05", title: "Delivery & Publishing", desc: "Final article delivered in your preferred format, ready to publish or submit for placement." },
+  { num: "01", title: "Topic & Keyword Research", desc: "We find the topics and keywords your audience is searching for, so every article has a clear purpose." },
+  { num: "02", title: "Article Brief", desc: "We create a brief covering the title, target keyword, structure, and key points, and share it with you for approval." },
+  { num: "03", title: "Writing & Editorial Review", desc: "Your writer researches and writes the article in your voice, then a senior editor reviews it for clarity, accuracy, and SEO." },
+  { num: "04", title: "Delivery & Publishing", desc: "You receive the final article ready to publish, or we pitch it to relevant publications on your behalf." },
 ];
 
 const included = [
   "SEO keyword research",
-  "Topic ideation",
+  "Topic ideas",
   "Fully researched article writing",
   "SEO optimization",
-  "Meta title & description",
+  "Meta title and description",
   "Internal linking suggestions",
   "Image alt text recommendations",
   "Editorial review",
   "Plagiarism check",
-  "Unlimited revisions",
-  "Publishing support",
+  "Revision rounds included",
+  "Publishing and pitching support",
   "Performance tracking",
 ];
 
 const testimonials = [
-  { quote: "Three of my articles are now ranking on page one of Google. The organic traffic from those pieces alone generates 50+ new email subscribers every month.", name: "Sarah M.", title: "Business Author & Coach", result: "Page 1 Google Rankings" },
-  { quote: "Guest posts placed on Forbes, Entrepreneur, and Inc. The credibility boost was immediate — people started reaching out for speaking engagements.", name: "John K.", title: "Self-Help Author", result: "Forbes & Entrepreneur Placement" },
-  { quote: "Consistent LinkedIn articles have made me the most recognized name in my niche. My book sales track directly to article performance.", name: "Dr. Amy R.", title: "Business Book Author", result: "Niche Authority" },
+  { quote: "I had plenty of ideas but struggled to turn them into articles that sounded like me. They took the time to understand my work and what I wanted to say. The articles were clear, easy to read, and felt like something I would actually write.", name: "Oliver W.", title: "Business Consultant", result: "Voice Matched" },
+  { quote: "Guest posts take a lot of time, especially when every website has its own way of doing things. Getting help with that made my life a lot easier, and the articles still fit my industry and the people I wanted to reach.", name: "Priya N.", title: "Marketing Professional", result: "Guest Posts Done" },
+  { quote: "I kept telling myself I needed to post more on my website, but I never seemed to have the time. Having someone take care of the content made it much easier to stay on track.", name: "Marcus E.", title: "Entrepreneur", result: "Consistent Content" },
 ];
 
 const faqs = [
-  { q: "How long are your articles?", a: "We write articles from 500 to 5,000+ words. SEO articles typically perform best at 1,500–2,500 words depending on the topic." },
-  { q: "Do you publish the articles?", a: "We offer a publishing add-on where we pitch and place your articles on high-authority websites. Placement is not guaranteed but we have strong relationships." },
-  { q: "Will the articles rank on Google?", a: "We optimize every article for search engines using proper keyword targeting, structure, and on-page SEO. Rankings depend on competition in your niche." },
-  { q: "Can you write in my voice?", a: "Yes. We study your existing content, conduct a voice interview, and match your tone, style, and vocabulary throughout." },
-  { q: "How many articles do I need per month?", a: "For meaningful SEO impact, we recommend at least 4 articles per month. We offer monthly content packages at discounted rates." },
+  { q: "How long are your articles?", a: "Most articles run between 800 and 2,000 words, depending on the topic and where they'll be published. We'll recommend the right length for your goals." },
+  { q: "Do you publish the articles for me?", a: "We can. We'll publish on your blog or pitch your articles to relevant publications. Final acceptance is always up to each publication's editors, but we give every pitch the best possible chance." },
+  { q: "Will my articles rank on Google?", a: "No one can guarantee rankings, but every article is built on keyword research and SEO best practices to give it the strongest chance of being found." },
+  { q: "Can you write in my voice?", a: "Yes. We study your existing content, ask about your views, and write so that every article sounds like it came from you." },
+  { q: "How many articles do I need each month?", a: "It depends on your goals. Many authors start with two to four articles a month, and we'll suggest a pace that fits your budget and plans." },
+  { q: "How much do article writing services cost?", a: "Every project is quoted individually based on article length, research, and publishing needs. The price you're quoted is the price you pay, with no hidden fees." },
 ];
 
 export default function ArticleWritingPage() {
@@ -78,7 +78,7 @@ export default function ArticleWritingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Your Expertise,</span><br /><span className="text-primary">Published Where It Matters</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -93,7 +93,7 @@ export default function ArticleWritingPage() {
                   <FadeUp key={label} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-base font-black text-brand-dark leading-snug">{value}</div>
                       <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
                   </FadeUp>
@@ -108,7 +108,8 @@ export default function ArticleWritingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Articles for Every Goal </span><span style={{ color: COLOR }}>and Platform</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">Whether you want to rank on Google, appear in respected publications, or grow your reputation on LinkedIn, we write the articles that get you there.</p>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -129,12 +130,13 @@ export default function ArticleWritingPage() {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">From Idea to Published Article </span><span style={{ color: COLOR }}>in Four Steps</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">We keep things simple, so you know what&apos;s happening with your articles at every step.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -154,8 +156,8 @@ export default function ArticleWritingPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Research, Writing, and Publishing,<br />All Included</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">We&apos;ll go over the cost with you before starting, so you know what&apos;s included and what you&apos;ll be paying. No hidden fees or unexpected charges later.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><FileText size={22} className="text-white" /></div>
                   <div>
@@ -183,7 +185,8 @@ export default function ArticleWritingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">What Authors Say About </span><span style={{ color: COLOR }}>Their Articles</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">In their own words, from authors and experts who trusted us to share their ideas.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,37 +212,25 @@ export default function ArticleWritingPage() {
         </div>
       </section>
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions Experts Ask Before </span><span style={{ color: COLOR }}>Their First Article</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><FileText size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Let&apos;s Get Your Ideas Published</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with our team. We&apos;ll talk through your expertise, your audience, and the articles that will help you grow your authority.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
-              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book a Free Consultation <ArrowRight size={18} /></Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">View All Services</Link>
             </div>
           </ScaleIn>
         </div>

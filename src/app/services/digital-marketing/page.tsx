@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Star, BarChart2, TrendingUp, Users, Award } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Digital Marketing for Authors & Books | The Author Success",
@@ -78,7 +79,7 @@ export default function DigitalMarketingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Digital Marketing for Authors</span><br /><span className="text-primary">That Turns Scrolls Into Sales</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -228,28 +229,16 @@ export default function DigitalMarketingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
                 <span className="text-black">Everything You&apos;d Ask Before </span><span style={{ color: COLOR }}>Your First Campaign</span>
               </h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

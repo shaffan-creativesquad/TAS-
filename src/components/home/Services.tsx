@@ -21,7 +21,7 @@ const services = [
     tag: null,
     span: "",
     dark: false,
-    href: "/services/editing",
+    href: "/services/book-editing",
   },
   {
     icon: Palette,
@@ -39,7 +39,7 @@ const services = [
     tag: "Global Reach",
     span: "",
     dark: false,
-    href: "/services/publishing",
+    href: "/services/book-publishing",
   },
   {
     icon: Megaphone,
@@ -75,9 +75,9 @@ export default function Services() {
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+            {/* <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
               Our Services
-            </span>
+            </span> */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark leading-tight">
               <span className="text-black">Everything Your Book Needs.</span><br /><span className="text-black">Nothing You Have to </span><span className="text-primary">Chase.</span>
             </h2>

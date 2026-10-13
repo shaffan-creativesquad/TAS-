@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Star, PenLine, Award, Clock, Users } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Professional Ghostwriting Services | The Author Success",
@@ -60,13 +61,15 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "Is ghostwriting ethical and legal?", a: "Yes. Ghostwriting has long been used by business leaders, public figures, and authors in every genre. You own the copyright, and only your name appears on the book." },
-  { q: "Will my name appear on the book?", a: "Always. You are the author. Your writer works behind the scenes under a signed NDA, and the credit is entirely yours." },
-  { q: "How do you match me with the right professional ghostwriter?", a: "During the consultation, we talk about your book, your goals, and the kind of voice you want. Then we match you with a professional ghostwriter who's a good fit for your project." },
-  { q: "Can I see writing samples before committing?", a: "Yes. During your free consultation, we'll share samples that reflect your genre and style so that you can move forward with confidence." },
-  { q: "What if I'm not happy with the writing?", a: "You review each chapter as it's written, so nothing is finalized without your approval. If something isn't right, we revise it until it is." },
-  { q: "How long does ghostwriting take?", a: "It depends on the length of your book, the genre, and how much research is involved. Your project manager will share a clear timeline at the start." },
-  { q: "How much do ghostwriting services cost?", a: "Every project is priced individually based on its length, scope, and complexity. The price you're quoted is the price you pay, and we never take a share of your royalties." },
+  { q: "What things to consider before choosing a ghostwriter?", a: "The internet is crowded with online editing and writing services, so it is really tricky to find out the best ghostwriter that does the job perfectly. Here are some things to consider: Price factor — developing a good book takes several days and a lot of hard work, so keep in mind it also needs a good sum of money; don't be coaxed by affordable or third-rate ghostwriters. Who owns the rights — it's your idea and your book, so don't give your rights to ghostwriters, as some writers ask for partial rights. Payment Arrangement — pay ghostwriters in installments and only pay the remaining amount if you feel satisfied with their work. Who is In-Charge — make sure the ghostwriter writes content according to your requirement and that you have final say on adding or removing content. Firm or Freelancer — we advise you to choose a firm as they are slightly more trustworthy and ensure efficiency within the given time period. Reputation — always check the reputation of the writing service by evaluating their writers, editors, and connections." },
+  { q: "What to do if I don't need your complete ghostwriting package?", a: "Our company provides ultimate convenience to our users and clients. Feel safe and free to choose our services because we accommodate our clients. We also reduce the rate if you only need fewer services. We will love to fulfill all your requirements to achieve your goals." },
+  { q: "Do I have to grant the credit to the ghostwriter?", a: "No! That's why it is named as ghostwriting. No one will ever know that you got help in the writing process. Our firm provides 100% privacy and is completely confidential. We don't demand any ownership rights of your content. Even if you earn millions or billions with the help of your book, we are not related to any kind of rights or extra credit. Be aware of some ghostwriters that require extra compensation if your book earns a huge sum." },
+  { q: "Are your services 100% private?", a: "Yes. We offer complete privacy to our clients and our services are 100 percent secret. We will never exploit your data or information for any other purpose. Our privacy policy is very reliable and comprehensive. We can also provide a non-disclosure agreement to our clients." },
+  { q: "Is ghostwriting process time-consuming?", a: "Well, it depends on the amount of your content and requirement. It is obvious a high-quality book takes hundreds of hours and several weeks. There are plenty of processes such as gathering of material, planning, writing sessions, and editing. It is necessary for the uniqueness of the book. A 200-page book will take 5–8 months to complete. However, we can do this quickly for you on your requirement if you pay a handsome amount." },
+  { q: "Can I add my own writing? Will this help me save money?", a: "Of course, yes. We will happily include and edit the content that you give. It needs little creativity, so if you are creative then you can write too and this thing also helps to save your money." },
+  { q: "What if I only need consultation and feedback on my manuscript?", a: "If you are searching for someone to improve and provide feedback on your work, then our firm also provides these services. We have a qualified team of editors and senior editors who specialize in this work and give their precious opinion about your work. We can also fix certain problems in our review on your request." },
+  { q: "Do you offer research services?", a: "Yes, we also offer research services to our clients. Our ghostwriting packages include this service. We have a team of scholars and internet researchers that will review your work and synthesize it." },
+  { q: "Can I choose my preferred ghostwriter? Can I check the sample of their writing?", a: "Generally, we are highly qualified and expert at matching users with the best writers. We can provide samples of our best ghostwriters for client satisfaction. We will make sure that you are completely satisfied with our ghostwriting services." },
 ];
 
 export default function GhostwritingPage() {
@@ -80,7 +83,7 @@ export default function GhostwritingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Ghostwriting Services</span><br /><span className="text-primary">for People With More Ideas Than Hours</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -230,28 +233,16 @@ export default function GhostwritingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
                 <span className="text-black">What Authors Ask Before They </span><span style={{ color: COLOR }}>Hire a Ghostwriter</span>
               </h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

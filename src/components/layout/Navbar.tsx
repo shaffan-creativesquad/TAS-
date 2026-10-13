@@ -15,11 +15,11 @@ const whoWeHelp = [
 
 const services = [
   { name: "Ghostwriting",                   href: "/services/ghostwriting" },
-  { name: "Book Editing",                   href: "/services/editing" },
+  { name: "Book Editing",                   href: "/services/book-editing" },
   { name: "Cover Design",                   href: "/services/cover-design" },
   { name: "Book Marketing",                 href: "/services/book-marketing" },
   { name: "Audiobooks",                     href: "/services/audiobooks" },
-  { name: "Book Publishing",                href: "/services/publishing" },
+  { name: "Book Publishing",                href: "/services/book-publishing" },
   { name: "Digital Marketing",              href: "/services/digital-marketing" },
   { name: "Author Marketing",               href: "/services/author-marketing" },
   { name: "Article Writing & Publishing",   href: "/services/article-writing" },
@@ -30,9 +30,9 @@ const services = [
   { name: "Children's Book Illustrations",  href: "/services/book-illustrations" },
   { name: "Web Content Writing",            href: "/services/web-content" },
   { name: "Author Website Design",          href: "/services/author-website" },
-  { name: "Children Book Writing",          href: "/services/children-book-writing" },
+  { name: "Children's Book Editing",        href: "/services/childrens-book-editing" },
   { name: "Book Printing",                  href: "/services/book-printing" },
-  { name: "Formatting Services",            href: "/services/formatting-services" },
+  { name: "Formatting Services",            href: "/services/book-formatting" },
   { name: "Book Promotion",                 href: "/services/book-promotion" },
 ];
 
@@ -128,9 +128,13 @@ export default function Navbar() {
                         key={s.name}
                         href={s.href}
                         onClick={() => setServicesOpen(false)}
-                        className="flex items-center gap-2 px-2.5 py-2 text-xs font-semibold text-brand-dark-2 hover:bg-cyan-50 hover:text-primary rounded-lg transition-colors"
+                        className={`flex items-center gap-2 px-2.5 py-2 text-xs font-semibold rounded-lg transition-colors ${
+                          pathname === s.href
+                            ? "bg-cyan-50 text-primary"
+                            : "text-brand-dark-2 hover:bg-cyan-50 hover:text-primary"
+                        }`}
                       >
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${pathname === s.href ? "bg-primary" : "bg-primary/40"}`} />
                         {s.name}
                       </Link>
                     ))}
@@ -143,7 +147,7 @@ export default function Navbar() {
             <div className="relative" ref={whoWeHelpRef}>
               <div className="flex items-center gap-0.5">
                 <Link
-                  href="/who-we-help/consultants"
+                  href="/who-we-help"
                   className={`relative text-sm font-semibold transition-colors ${
                     isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2 hover:text-primary"
                   }`}
@@ -170,9 +174,13 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         onClick={() => setWhoWeHelpOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-xs font-semibold text-brand-dark-2 hover:bg-cyan-50 hover:text-primary rounded-lg transition-colors"
+                        className={`flex items-center gap-2 px-3 py-2.5 text-xs font-semibold rounded-lg transition-colors ${
+                          pathname === item.href
+                            ? "bg-cyan-50 text-primary"
+                            : "text-brand-dark-2 hover:bg-cyan-50 hover:text-primary"
+                        }`}
                       >
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${pathname === item.href ? "bg-primary" : "bg-primary/40"}`} />
                         {item.name}
                       </Link>
                     ))}
@@ -269,7 +277,8 @@ export default function Navbar() {
           {servicesOpen && (
             <div className="pl-4 flex flex-col gap-2">
               {services.map((s) => (
-                <Link key={s.name} href={s.href} className="text-sm text-brand-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link key={s.name} href={s.href} onClick={() => setIsOpen(false)}
+                  className={`text-sm font-medium transition-colors ${pathname === s.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
                   {s.name}
                 </Link>
               ))}
@@ -279,7 +288,7 @@ export default function Navbar() {
           {/* Who We Help mobile */}
           <div className={`flex items-center justify-between border-l-2 pl-3 ${isActive("/who-we-help") ? "border-primary" : "border-transparent"}`}>
             <Link
-              href="/who-we-help/consultants"
+              href="/who-we-help"
               onClick={() => setIsOpen(false)}
               className={`font-semibold py-0.5 transition-colors ${isActive("/who-we-help") ? "text-primary" : "text-brand-dark-2"}`}
             >
@@ -295,7 +304,8 @@ export default function Navbar() {
           {whoWeHelpOpen && (
             <div className="pl-4 flex flex-col gap-2">
               {whoWeHelp.map((item) => (
-                <Link key={item.name} href={item.href} className="text-sm text-brand-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                <Link key={item.name} href={item.href} onClick={() => setIsOpen(false)}
+                  className={`text-sm font-medium transition-colors ${pathname === item.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
                   {item.name}
                 </Link>
               ))}

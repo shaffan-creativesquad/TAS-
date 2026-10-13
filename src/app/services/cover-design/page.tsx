@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, Palette, Award, Clock, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, Palette, Monitor, Layers, RotateCcw } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Professional Book Cover Design Services | The Author Success",
@@ -11,61 +12,59 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Visual Impact";
-const headline = "Covers That Stop the Scroll and Sell the Book";
-const subline = "Genre-accurate, eye-catching designs that convert browsers into buyers.";
-const desc = "Readers judge books by their covers — and that's not a problem when your cover is exceptional. Our designers study bestseller aesthetics in your genre to create covers that feel instantly familiar yet completely unique. We deliver print-ready files, eBook covers, 3D mockups, and full series branding.";
-const serviceLabel = "Cover Design";
+const badge = "VISUAL IMPACT";
+const headline = "Covers So Striking, Readers Can't Scroll Past";
+const subline = "Captivating, genre-savvy designs that transform curious glances into confident purchases.";
+const desc = "Every reader makes a snap judgment before turning a single page, and an exceptional cover makes that moment work in your favor. Our book cover design services bring together accomplished designers who understand the visual cues that make bestsellers irresistible in your genre. Each custom book cover design strikes a rare balance — recognizable to your ideal reader yet distinctly yours.";
 
 const stats = [
-  { value: "3,000+", label: "Covers Designed", Icon: Palette },
-  { value: "92%", label: "First-Concept Approval", Icon: Award },
-  { value: "10–14d", label: "Average Delivery", Icon: Clock },
-  { value: "400%", label: "Avg. Sales Lift", Icon: TrendingUp },
+  { value: "Designed for Your Genre", label: "Images That Connect with Readers", Icon: Palette },
+  { value: "Shines on Amazon", label: "Holds Its Own at Thumbnail Size", Icon: Monitor },
+  { value: "Complete Format Coverage", label: "eBook, Print, Spine & Back Cover", Icon: Layers },
+  { value: "Refined to Perfection", label: "Until You're Completely Happy", Icon: RotateCcw },
 ];
 
 const subServices = [
-  { tag: "Digital", title: "eBook Cover Design", desc: "Amazon-optimized eBook covers designed to pop at thumbnail size. We analyze your genre's bestseller shelf to ensure yours stands out and fits in." },
-  { tag: "Print", title: "Full Print Package", desc: "Complete print cover including front, spine, and back cover — sized to your exact page count and trim size, print-ready at 300dpi CMYK." },
-  { tag: "Series", title: "Series Branding", desc: "Building a series? We create a consistent visual identity across all books so readers can instantly recognize your brand on the shelf." },
-  { tag: "Marketing", title: "3D Mockup Renders", desc: "Photorealistic 3D renders of your book for social media, press releases, author website, and Amazon A+ content pages." },
+  { tag: "EBOOK", title: "eBook Cover Design", desc: "Our eBook cover design services produce digital covers that stay vivid and legible even at the smallest thumbnail. We study your genre's bestselling titles so your cover feels right at home among them, yet still rises above them." },
+  { tag: "PRINT", title: "Full Print Package", desc: "A complete print cover with front, spine, and back, precisely sized to your page count and trim size. Every file is delivered print-ready at 300 dpi in CMYK, with no last-minute surprises at the printer." },
+  { tag: "SERIES", title: "Series Branding", desc: "Writing a series? We create a cohesive visual identity that carries across every installment, so readers recognize your books on sight and reach for the next one without hesitation." },
+  { tag: "MOCKUPS", title: "3D Mockup Renders", desc: "Lifelike 3D renders of your book, made for social media, press releases, your author website, and Amazon A+ Content pages. They help your launch look polished everywhere it appears." },
 ];
 
 const steps = [
-  { num: "01", title: "Design Brief", desc: "You complete our detailed design brief covering genre, comparable titles, mood, color preferences, and any specific imagery ideas." },
-  { num: "02", title: "Concept Research", desc: "Our designer analyzes your genre's bestsellers and develops 3 distinct cover concepts with different visual approaches." },
-  { num: "03", title: "Concept Presentation", desc: "We present all 3 concepts with a rationale for each design decision. You choose your favorite direction." },
-  { num: "04", title: "Design Refinement", desc: "We refine the chosen concept through as many revision rounds as needed until you love every detail." },
-  { num: "05", title: "Final File Delivery", desc: "You receive print-ready CMYK PDF, eBook RGB JPG/PNG, and editable layered files — everything you need." },
+  { num: "01", title: "Complimentary Consultation", desc: "We begin by understanding your story, genre, comparable titles, preferred mood and palette, and any imagery you envision. This becomes the creative compass for your cover." },
+  { num: "02", title: "Writing & Editing", desc: "We distill your book's essence into a sharp design brief, then refine your title treatment, tagline, and back-cover copy so every word on the cover earns its place." },
+  { num: "03", title: "Design & Formatting", desc: "Your designer researches your genre's bestsellers and presents distinct concepts, each with its own creative direction. You choose your favorite, and we refine it through revision rounds until every detail feels exactly right." },
+  { num: "04", title: "Publish & Launch", desc: "You receive everything you need to go live: a print-ready CMYK PDF, eBook files in RGB JPG or PNG, and editable layered files. Your cover is ready for Amazon, bookstores, and beyond." },
 ];
 
 const included = [
-  "3 initial design concepts",
-  "Genre bestseller research",
-  "eBook cover (RGB, Amazon specs)",
-  "Print front cover (CMYK 300dpi)",
-  "Spine design (sized to page count)",
-  "Back cover with blurb layout",
-  "Author photo placement",
-  "Barcode & ISBN placement",
-  "Unlimited revision rounds",
-  "3D photorealistic mockup renders",
-  "Social media sizing variants",
-  "Editable layered source files",
+  "Multiple initial design concepts",
+  "In-depth genre bestseller research",
+  "eBook cover formatted to Amazon specifications (RGB)",
+  "Print-ready front cover (CMYK, 300 dpi)",
+  "Spine design sized to your exact page count",
+  "Back cover with an elegant blurb layout",
+  "Seamless author photo placement",
+  "Barcode and ISBN placement",
+  "Thoughtful revision rounds until it's perfect",
+  "Photorealistic 3D mockup renders",
+  "Social media sizing variations",
+  "Editable, layered source files",
 ];
 
 const testimonials = [
-  { quote: "My cover stopped people scrolling on Amazon. Sales jumped 400% in week one. The designer nailed the thriller aesthetic perfectly — dark, tense, and impossible to ignore.", name: "Lisa P.", title: "Thriller Author · Amazon Top 100", result: "Amazon Top 100" },
-  { quote: "Three concepts to choose from, all of them stunning. The final design looks like it belongs next to James Patterson on the shelf. This team gets book covers.", name: "Ryan B.", title: "Crime Fiction Author", result: "Bestseller Week 1" },
+  { quote: "My cover stopped people scrolling on Amazon. Sales jumped in week one. The designer nailed the thriller aesthetic perfectly — dark, tense, and impossible to ignore.", name: "Lisa P.", title: "Thriller Author · Amazon Top 100", result: "Amazon Top 100" },
+  { quote: "Multiple concepts to choose from, all of them stunning. The final design looks like it belongs next to the biggest names on the shelf. This team gets book covers.", name: "Ryan B.", title: "Crime Fiction Author", result: "Bestseller Week 1" },
   { quote: "My series now has a consistent, professional look that readers immediately recognize. Branding across 5 books — all perfect.", name: "Sofia K.", title: "Fantasy Series Author · 20K Copies", result: "20,000 Copies Sold" },
 ];
 
 const faqs = [
-  { q: "How do I communicate what I want?", a: "We provide a detailed design brief form asking about your genre, comparable covers you love, mood, color preferences, and any specific ideas. The more detail you give us, the better the concepts." },
-  { q: "What if I don't like any of the 3 initial concepts?", a: "In the rare case none of the concepts work for you, we'll create new directions at no extra charge. Our goal is a cover you love — we won't stop until we get there." },
-  { q: "Do you provide the spine and back cover too?", a: "Yes, our full print package includes front cover, spine (sized to your exact page count), and back cover with blurb, author bio, and barcode placement." },
-  { q: "What files do I receive?", a: "You receive: print-ready PDF (CMYK 300dpi), eBook JPG/PNG (RGB, Amazon optimized), 3D mockup renders, and the editable source files (PSD/AI)." },
-  { q: "Can you design a cover for a book in a series I've already started?", a: "Absolutely. Send us your existing covers and we'll create a new cover that matches your established series aesthetic perfectly." },
+  { q: "How do I share my vision for the cover?", a: "Through a detailed design brief. You tell us about your genre, comparable titles, preferred mood and colors, and any imagery you have in mind. If you're unsure, our designers will guide you with thoughtful questions and visual references." },
+  { q: "What if none of the initial concepts feel right?", a: "That's perfectly fine. We'll discuss what didn't resonate, refine our understanding of your vision, and develop fresh directions until something truly clicks." },
+  { q: "Do you design the spine and back cover as well?", a: "Yes. Every print package includes a spine sized to your exact page count and a back cover with an elegant blurb layout, barcode, and ISBN placement." },
+  { q: "Which files will I receive?", a: "You'll receive a print-ready CMYK PDF, eBook files in RGB JPG or PNG, social media size variations, and editable layered source files. Everything you need for print, digital, and promotion is included." },
+  { q: "Can you design a cover for a series I've already started?", a: "Absolutely. We study your existing covers and create a new design that feels like a natural continuation, keeping your series visually consistent on every shelf." },
 ];
 
 export default function CoverDesignPage() {
@@ -79,7 +78,7 @@ export default function CoverDesignPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Covers So Striking,</span><br /><span className="text-primary">Readers Can't Scroll Past</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -94,7 +93,7 @@ export default function CoverDesignPage() {
                   <FadeUp key={label} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-base font-black text-brand-dark leading-snug">{value}</div>
                       <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
                   </FadeUp>
@@ -111,9 +110,8 @@ export default function CoverDesignPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span>
-              </h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">A Cover for Every Format, </span><span style={{ color: COLOR }}>Shelf, and Screen</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">Our book cover design services span every edition your story will ever need, each one crafted with the same uncompromising attention to detail.</p>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -136,14 +134,13 @@ export default function CoverDesignPage() {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span>
-              </h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">From First Sketch to </span><span style={{ color: COLOR }}>Shelf-Ready Cover</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">A clear, collaborative process that keeps your vision at the heart of every design decision.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -165,8 +162,8 @@ export default function CoverDesignPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Transparent Pricing.<br />Not a Single Surprise.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Every element below comes standard in your quoted price. We believe great design deserves honest pricing, so there are no hidden fees and no unexpected add-ons.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Palette size={22} className="text-white" /></div>
                   <div>
@@ -226,28 +223,14 @@ export default function CoverDesignPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span>
-              </h2>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions </span><span style={{ color: COLOR }}>Worth Asking</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -256,10 +239,8 @@ export default function CoverDesignPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Palette size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-white">Ready to Get Started?</span>
-            </h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Your Story Deserves a Cover Worth Judging</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment, just candid, thoughtful advice about bringing your cover to life.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
               <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>

@@ -81,9 +81,9 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+          {/* <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Author Stories
-          </span>
+          </span> */}
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark">
             <span className="text-black">Don&apos;t Trust the Blurb.</span><br /><span className="text-primary">Trust the Authors.</span>
           </h2>

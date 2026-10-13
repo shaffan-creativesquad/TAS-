@@ -1,70 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle, BookOpen, Users, Mic, Presentation, Mail, Globe, MessageCircle, Lightbulb, Clock } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
 
 export const metadata: Metadata = {
   title: "How It Works | The Author Success",
-  description: "Our 8-step process turns your expertise into an authority book — then the book works for you: leads, speaking invites, consulting clients.",
+  description: "Our book publishing process keeps your time commitment light, while our team handles the writing, design, publishing, and promotion.",
 };
 
-const process = [
-  { n: "01", title: "Strategy",   desc: "We map your positioning, audience and goals. You leave with a book concept no one else owns.",              time: "2 hrs your time"  },
-  { n: "02", title: "Interviews", desc: "8–12 recorded sessions where we extract your expertise, stories and proprietary frameworks.",                time: "8–10 hrs your time"},
-  { n: "03", title: "Research",   desc: "Our team handles all market research, data gathering and source verification.",                              time: "0 hrs your time"  },
-  { n: "04", title: "Writing",    desc: "Ghostwritten chapter by chapter in your voice. You review and approve — we iterate.",                        time: "Review only"      },
-  { n: "05", title: "Editing",    desc: "Developmental, copy and proofread passes. Polished to a commercial standard.",                              time: "Approve only"     },
-  { n: "06", title: "Design",     desc: "Interior formatting + cover design. Print-ready and eBook optimised. Multiple concepts provided.",           time: "Approve only"     },
-  { n: "07", title: "Publishing", desc: "Amazon KDP, IngramSpark and 40+ global platforms. ISBN, ASIN, BISAC — all handled.",                         time: "0 hrs your time"  },
-  { n: "08", title: "Marketing",  desc: "Launch PR, LinkedIn content, podcast pitches and lead-gen setup. We build the runway before you land.",      time: "Show up"          },
+const highlights = [
+  { big: "Light Lift",  small: "For You",         Icon: Lightbulb },
+  { big: "Full Team",   small: "Behind You",       Icon: Users     },
+  { big: "Your Voice",  small: "Every Chapter",    Icon: Mic       },
+  { big: "3–6 Months",  small: "Idea to Launch",   Icon: Clock     },
 ];
 
-const b2bSteps = [
-  { step: "Expert knowledge",          desc: "You already have this — we help package it" },
-  { step: "Book strategy",             desc: "Positioning, audience, concept" },
-  { step: "Ghostwriting",              desc: "Written in your voice, under your name" },
-  { step: "Editing",                   desc: "Polished to a commercial standard" },
-  { step: "Book design",               desc: "Cover + interior formatting" },
-  { step: "Publishing",                desc: "Amazon, IngramSpark, 40+ platforms" },
-  { step: "Amazon / distribution",     desc: "Available worldwide on day one" },
-  { step: "PR",                        desc: "Press coverage & media placements" },
-  { step: "LinkedIn thought leadership", desc: "52 posts extracted from 12 chapters" },
-  { step: "Lead generation",           desc: "Book as a consultation funnel" },
-  { step: "Speaking / podcasts",       desc: "Podcast invites + speaker enquiries" },
-  { step: "Consulting clients",        desc: "Inbound, pre-qualified, premium" },
+const steps = [
+  { n: "01", role: "Plan",        desc: "We shape your idea, your readers, and your goals into a clear book concept."                          },
+  { n: "02", role: "Interviews",  desc: "Relaxed conversations where we capture your stories, ideas, and methods."                             },
+  { n: "03", role: "Research",    desc: "Our team gathers the facts, data, and sources that support your book."                                },
+  { n: "04", role: "Writing",     desc: "Your book is written in your voice, chapter by chapter, with your feedback along the way."            },
+  { n: "05", role: "Editing",     desc: "Careful editing polishes every page until it reads smoothly from start to finish."                    },
+  { n: "06", role: "Design",      desc: "Your cover and interior are designed for print and eBook, with options to choose from."               },
+  { n: "07", role: "Publishing",  desc: "We take care of your ISBN, setup, and distribution to major retailers."                               },
+  { n: "08", role: "Launch",      desc: "Launch support, content, and outreach to help your book find its readers."                            },
+];
+
+const afterLaunch = [
+  { step: "Your Expertise",        desc: "The knowledge you already have"           },
+  { step: "Book Strategy",         desc: "A clear idea and audience"                },
+  { step: "Writing",               desc: "Your voice, your name"                    },
+  { step: "Editing",               desc: "Every page polished and ready"            },
+  { step: "Book Design",           desc: "A cover and layout readers notice"        },
+  { step: "Publishing",            desc: "Your book, officially out in the world"   },
+  { step: "Distribution",          desc: "Available wherever readers shop"          },
+  { step: "Media & PR",            desc: "Interviews and press attention"           },
+  { step: "Content & Social Media",desc: "Posts drawn from your chapters"           },
+  { step: "Lead Generation",       desc: "Readers who want to work with you"        },
+  { step: "Speaking & Podcasts",   desc: "Invitations to share your story"          },
+  { step: "New Clients",           desc: "Opportunities that come to you"           },
 ];
 
 const hub = [
-  { label: "LinkedIn",        icon: "💼" },
-  { label: "PR & Media",      icon: "📰" },
-  { label: "Podcast Invites", icon: "🎙️" },
-  { label: "Speaking",        icon: "🎤" },
-  { label: "Lead Magnet",     icon: "🧲" },
-  { label: "Email Sequences", icon: "✉️" },
-  { label: "Sales Decks",     icon: "📊" },
-  { label: "Webinars",        icon: "💻" },
+  { label: "LinkedIn Posts",       Icon: MessageCircle },
+  { label: "Press & Media",        Icon: Globe         },
+  { label: "Podcast Guesting",     Icon: Mic           },
+  { label: "Speaking",             Icon: Presentation  },
+  { label: "Free Guides",          Icon: BookOpen      },
+  { label: "Email Newsletters",    Icon: Mail          },
+  { label: "Sales Presentations",  Icon: Presentation  },
+  { label: "Webinars",             Icon: Users         },
 ];
 
-const contentMath = [
-  { value: "1",   label: "Book",          sub: "16 weeks to build"   },
-  { value: "12",  label: "Chapters",      sub: "your full framework" },
-  { value: "52",  label: "LinkedIn Posts",sub: "a year of content"   },
-  { value: "24",  label: "Talks / Pitches",sub: "podcast & speaking" },
-  { value: "∞",   label: "Conversations", sub: "with ideal clients"  },
+const contentFlow = [
+  "Your Book",
+  "Chapters",
+  "Social Posts",
+  "Talks & Interviews",
+  "New Conversations",
 ];
 
 const faqs = [
-  { q: "How much of my time does this take?",           a: "About 12 hours total — 2 for strategy and 8–10 for recorded interviews. We handle everything else: research, writing, editing, design, publishing and marketing." },
-  { q: "Will the book sound like me?",                  a: "Yes. Our ghostwriting process starts by capturing your voice through interviews. Every chapter goes through your review, and we iterate until it sounds exactly like you — only more polished." },
-  { q: "Do I own the IP?",                              a: "100%. You are the sole author and copyright owner. We sign a full NDA before we start. The book is yours forever — royalties, rights, everything." },
-  { q: "How long does the full process take?",          a: "Typically 14–18 weeks from kickoff to published book. A Lead-gen eBook can be ready in 6 weeks; a Research Report campaign can run to 6 months." },
-  { q: "Can I publish under my own name on Amazon?",   a: "Yes. Your name is on the cover, spine and copyright page. The ghostwriting relationship is completely confidential." },
+  { q: "How much of my time will this take?",     a: "Just a few planning and interview sessions. Our team handles the research, writing, editing, design, and publishing, and we'll give you a clear picture of your time commitment upfront." },
+  { q: "Will the book sound like me?",            a: "Yes. We capture your voice through our interviews, and you review every chapter, so the final book sounds like you at your best." },
+  { q: "Do I own my book?",                       a: "Completely. You're the author and copyright owner; you keep all your royalties, and we sign an NDA before we begin." },
+  { q: "How long does the whole process take?",   a: "Most projects take 3 to 6 months from the first consultation to launch, depending on the length of your book and the services you choose." },
+  { q: "Can I publish under my own name?",        a: "Absolutely. Your name goes on the cover, and our role stays completely behind the scenes." },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      {/* ── HERO ── */}
       <section className="relative pt-36 pb-24 overflow-hidden bg-white">
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -74,21 +80,21 @@ export default function HowItWorksPage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <div className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-6">
-              The Process
+              Our Process
             </div>
             <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.5rem] font-black leading-[1.08] mb-6">
-              <span className="text-black">12 Hours of Your Time.</span>
+              <span className="text-black">Becoming an Author Is</span>
               <br />
-              <span className="text-primary">We Do the Rest.</span>
+              <span className="text-primary">Easier Than You Think</span>
             </h1>
             <p className="text-brand-body text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              Our 8-step process extracts your expertise, writes your book, and turns it into a platform that generates leads, speaking invites and consulting clients — for years.
+              Our book publishing process keeps your time commitment light, while our team handles the writing, design, publishing, and promotion.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/book-a-call"
                 className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all"
-              style={{ background: "#089bb2" }}
+                style={{ background: "#089bb2" }}
               >
                 Book a Strategy Call <ArrowRight size={17} />
               </Link>
@@ -96,54 +102,54 @@ export default function HowItWorksPage() {
                 href="/our-books"
                 className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-900 text-slate-800 font-bold px-7 py-4 rounded-full transition-all"
               >
-                See Our Book Formats
+                Explore Book Formats
               </Link>
             </div>
           </FadeUp>
         </div>
       </section>
 
-      {/* ── STATS BANNER ── */}
-      <section className="py-10" style={{ background: "#089bb2" }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-            {[
-              { value: "2 hrs",      label: "Strategy sessions"     },
-              { value: "8–10 hrs",   label: "Interviews (recorded)" },
-              { value: "0 hrs",      label: "Research & writing"    },
-              { value: "14–18 wks",  label: "Published book"        },
-            ].map(s => (
-              <div key={s.label}>
-                <div className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-black text-white mb-1">{s.value}</div>
-                <div className="text-white/60 text-sm">{s.label}</div>
-              </div>
+      <section className="py-12" style={{ background: "#0891b2" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {highlights.map(({ big, small, Icon }, i) => (
+              <FadeUp key={big} delay={i * 0.08}>
+                <div className="text-center">
+                  <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
+                    <Icon size={18} className="text-white" />
+                  </div>
+                  <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-white">{big}</div>
+                  <div className="text-white/80 text-sm mt-1">{small}</div>
+                </div>
+              </FadeUp>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── OUR 8-STEP PROCESS ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">Step by Step</span>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-slate-900 mb-4">
-              Our 8-Step Process
-            </h2>
-            <p className="text-brand-body max-w-xl mx-auto">From strategy session to published book — every step handled by specialists.</p>
+          <FadeUp>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">The Roadmap</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+                Your Path to Becoming an Author
+              </h2>
+              <p className="text-brand-body max-w-xl mx-auto">Here&apos;s how to publish a book step by step with our team, with specialists guiding you through every stage.</p>
+            </div>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {process.map((step, i) => (
+            {steps.map((step, i) => (
               <FadeUp key={step.n} delay={i * 0.06}>
                 <div className="relative bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary/20 transition-all h-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                       <span className="text-white text-xs font-black">{step.n}</span>
                     </div>
-                    <span className="text-[10px] font-semibold text-primary bg-cyan-50 px-2 py-1 rounded-full">{step.time}</span>
+                    <span className="text-[10px] font-semibold text-primary bg-cyan-50 px-2 py-1 rounded-full">Your Role</span>
                   </div>
-                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-slate-900 mb-2">{step.role}</h3>
                   <p className="text-brand-muted text-sm leading-relaxed">{step.desc}</p>
                   {i < 3 && (
                     <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-primary/30 text-2xl font-light">›</div>
@@ -152,35 +158,30 @@ export default function HowItWorksPage() {
               </FadeUp>
             ))}
           </div>
-
-          {/* second row connector */}
-          <div className="hidden lg:flex justify-center my-2">
-            <div className="text-primary/30 text-2xl font-light rotate-90">›</div>
-          </div>
         </div>
       </section>
 
-      {/* ── BOOK TO BUSINESS ── */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">After the Book</span>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-slate-900 mb-4">
-              A Book Is the Beginning, Not the End.
-            </h2>
-            <p className="text-brand-body max-w-xl mx-auto">Every step below is built on top of your book. With one, everything compounds.</p>
+          <FadeUp>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">After the Launch</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-slate-900 mb-4">
+                The Real Story Starts After Publishing
+              </h2>
+              <p className="text-brand-body max-w-xl mx-auto">Once your book is out, it becomes the foundation for everything that comes next.</p>
+            </div>
           </FadeUp>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Staircase */}
             <SlideLeft>
               <div className="relative">
                 <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/40 to-transparent" />
                 <div className="space-y-3">
-                  {b2bSteps.map((item, i) => (
+                  {afterLaunch.map((item, i) => (
                     <div key={item.step} className="flex items-center gap-4 pl-12 relative">
                       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border-2 border-primary/30 rounded-full flex items-center justify-center text-xs font-black text-primary shadow-sm">
-                        {i + 1}
+                        {String(i + 1).padStart(2, "0")}
                       </div>
                       <div className="bg-white border border-slate-100 rounded-xl px-4 py-3 flex-1 shadow-sm hover:shadow-md hover:border-primary/20 transition-all">
                         <div className="font-semibold text-slate-900 text-sm">{item.step}</div>
@@ -192,32 +193,30 @@ export default function HowItWorksPage() {
               </div>
             </SlideLeft>
 
-            {/* Hub & spokes list */}
             <SlideRight>
               <div className="sticky top-28">
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">One Book. Every Channel.</span>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">One Book, More Reach</span>
                 <h3 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-slate-900 mb-4">
-                  We Build the Platform Around It.
+                  Your Book Is Your Best Marketer
                 </h3>
                 <p className="text-brand-body mb-8 text-sm leading-relaxed">
-                  Your book becomes the source material for every marketing channel — content, PR, speaking, leads. We build all of it.
+                  The ideas in your book can fuel your marketing for years, and we help you put them to work.
                 </p>
 
-                {/* Center hub card */}
                 <div className="bg-primary rounded-2xl p-5 flex items-center gap-4 mb-5 shadow-lg shadow-cyan-200">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                     <BookOpen size={22} className="text-white" />
                   </div>
                   <div>
                     <div className="text-white font-black text-lg font-[family-name:var(--font-playfair)]">Your Book</div>
-                    <div className="text-white/70 text-xs">The asset that powers everything</div>
+                    <div className="text-white/70 text-xs">The heart of your brand</div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
-                  {hub.map(item => (
-                    <div key={item.label} className="flex items-center gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3 shadow-sm hover:shadow-md hover:border-primary/20 transition-all">
-                      <span className="text-xl">{item.icon}</span>
+                  {hub.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3 shadow-sm hover:shadow-md hover:border-primary/20 transition-all">
+                      <item.Icon size={15} className="text-primary shrink-0" />
                       <span className="text-sm font-semibold text-slate-800">{item.label}</span>
                     </div>
                   ))}
@@ -225,7 +224,7 @@ export default function HowItWorksPage() {
 
                 <div className="mt-6 bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
                   <p className="text-sm text-brand-body">
-                    <span className="font-bold text-slate-900">Not just a book.</span> A reason for every ideal client to call — for years after publication.
+                    <span className="font-bold text-slate-900">More than a book.</span> A lasting reason for the right people to reach out.
                   </p>
                 </div>
               </div>
@@ -234,26 +233,22 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* ── CONTENT MATH ── */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-3">
-              One Book = 12 Months of Content.
+              One Book, Months of Content
             </h2>
-            <p className="text-white/70 mb-12">And a reason for every ideal client to call.</p>
+            <p className="text-white/70 mb-12">And plenty of reasons for the right people to get in touch.</p>
           </FadeUp>
-
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            {contentMath.map((item, i) => (
-              <FadeUp key={item.label} delay={i * 0.08}>
+            {contentFlow.map((item, i) => (
+              <FadeUp key={item} delay={i * 0.08}>
                 <div className="flex items-center gap-3">
-                  <div className="bg-white/15 border border-white/25 rounded-2xl p-5 text-center w-[110px]">
-                    <div className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-1">{item.value}</div>
-                    <div className="text-white/90 text-xs font-bold leading-tight">{item.label}</div>
-                    <div className="text-white/50 text-[10px] mt-1 leading-tight">{item.sub}</div>
+                  <div className="bg-white/15 border border-white/25 rounded-2xl px-6 py-4 text-center min-w-[110px]">
+                    <div className="text-white font-black text-sm font-[family-name:var(--font-playfair)]">{item}</div>
                   </div>
-                  {i < contentMath.length - 1 && (
+                  {i < contentFlow.length - 1 && (
                     <div className="text-white/30 text-2xl font-light hidden sm:block">→</div>
                   )}
                 </div>
@@ -263,14 +258,14 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp className="text-center mb-14">
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-slate-900 mb-3">Common Questions</h2>
-            <p className="text-brand-body">Everything you need to know before you start.</p>
+          <FadeUp>
+            <div className="text-center mb-14">
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-slate-900 mb-3">Questions Before You Begin</h2>
+              <p className="text-brand-body">Straight answers to what authors ask us most.</p>
+            </div>
           </FadeUp>
-
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <FadeUp key={i} delay={i * 0.06}>
@@ -287,14 +282,13 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
-              Ready to Turn Your Expertise Into Authority?
+              Ready to Take the First Step?
             </h2>
-            <p className="text-white/70 mb-8">30-minute strategy call. No obligation. You leave with a book concept.</p>
+            <p className="text-white/80 mb-8">Book a free strategy call and leave with a clear idea for your book. No obligation.</p>
             <Link
               href="/book-a-call"
               className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-lg transition-all text-lg"

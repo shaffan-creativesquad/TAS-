@@ -1,6 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { PenLine, BookOpen, Palette, Globe, Megaphone, Headphones, CheckCircle, ArrowRight, Star, FileText, Rss, Video, Briefcase, Baby, Image, Monitor, Laptop, Printer, TrendingUp, BarChart2, Mic, BookMarked } from "lucide-react";
+import { PenLine, BookOpen, Palette, Globe, Megaphone, Headphones, CheckCircle, ArrowRight, Star, FileText, Rss, Video, Briefcase, Baby, Image, Monitor, Laptop, Printer, TrendingUp, BarChart2 } from "lucide-react";
 import { FadeUp, ScaleIn } from "@/components/ui/Animate";
 import BookCoversStrip from "@/components/ui/BookCoversStrip";
 
@@ -13,135 +13,152 @@ const services = [
   {
     id: "ghostwriting",
     icon: PenLine,
-    badge: "Most Popular",
+    badge: "MOST POPULAR",
     title: "Ghostwriting",
-    subtitle: "Your story, written by experts — in your voice",
-    desc: "Our team of professional ghostwriters crafts your entire book from scratch. Whether you have a fully developed outline or just a spark of an idea, we transform it into a compelling, publish-ready manuscript. Every project is covered by a signed NDA — your name on the cover, and your story stays yours forever.",
+    subtitle: "Your ideas, written in your voice",
+    desc: "Our ghostwriters write your book from start to finish, whether you have a detailed outline or just an idea. A signed NDA protects every project, and yours is the only name on the cover.",
     features: [
       "Fiction, Non-Fiction & Memoirs",
       "Children's & Young Adult Books",
       "Business & Self-Help Books",
       "Biography & Autobiography",
-      "NDA signed before we start",
-      "Sample chapter before commitment",
-      "Chapter-by-chapter reviews",
-      "Unlimited revision rounds",
+      "NDA Signed Before We Start",
+      "Writing Samples During Consultation",
+      "Chapter-by-Chapter Reviews",
+      "Revision Rounds Included",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Avg. delivery: 8–10 weeks",
+    result: "NDA signed before we begin",
   },
   {
     id: "editing",
     icon: BookOpen,
     badge: null,
     title: "Book Editing",
-    subtitle: "Flawless manuscripts that editors love",
-    desc: "Our editorial team provides multi-level editing — from structural development all the way to final proofreading. We make sure your book reads with clarity, flow, and the kind of polish that convinces readers to leave five-star reviews.",
+    subtitle: "Where good drafts become great books",
+    desc: "Our editors work through every layer of your manuscript, from big-picture structure to the final proofread, so your book reads smoothly and feels professionally finished.",
     features: [
-      "Developmental Editing",
-      "Structural Editing",
-      "Line Editing & Copy Editing",
-      "Proofreading",
-      "Beta Reader Coordination",
-      "Style Guide Adherence",
-      "Tracked Changes with Notes",
-      "Editorial Letter Included",
+      "Big-Picture Story Development",
+      "Chapter and Structure Review",
+      "Line-by-Line Polishing",
+      "Final Proofread Before Publishing",
+      "Feedback From Beta Readers",
+      "Consistent Style Throughout",
+      "Clear Edits With Helpful Notes",
+      "Detailed Summary of Our Feedback",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Avg. delivery: 2–4 weeks",
+    result: "Editorial letter with every project",
   },
   {
     id: "design",
     icon: Palette,
     badge: null,
     title: "Cover Design",
-    subtitle: "Covers that stop the scroll and sell the book",
-    desc: "A professional cover is the single most powerful marketing tool for your book. Our designers create genre-accurate, eye-catching covers that stand out in Amazon search results, on bookstore shelves, and across social media.",
+    subtitle: "Finally, a book worth judging by its cover",
+    desc: "Your cover is the first thing readers notice. Our designers create original, genre-right covers that stand out on Amazon, on bookstore shelves, and across social media.",
     features: [
-      "Custom Original Artwork",
-      "Genre-Specific Aesthetics",
-      "Print-Ready Files (CMYK 300dpi)",
+      "Original Custom Artwork",
+      "Genre-Specific Design",
+      "Print-Ready Files (CMYK 300 dpi)",
       "eBook Cover (RGB)",
       "Spine & Back Cover Design",
-      "3D Book Mockup Renders",
-      "3 Initial Concepts Provided",
-      "Unlimited Revisions",
+      "3D Book Mockups",
+      "Multiple Initial Concepts",
+      "Revision Rounds Included",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Avg. delivery: 10–14 days",
+    result: "Designed for print, eBook, and online stores",
   },
   {
     id: "publishing",
     icon: Globe,
-    badge: "Global Reach",
+    badge: "GLOBAL REACH",
     title: "Publishing & Distribution",
-    subtitle: "From manuscript to global bookstores",
-    desc: "We handle the complete publishing process — interior formatting for print and digital, ISBN registration, copyright filing, and global distribution to over 40 major platforms. You keep 100% of your royalties, paid directly to your author account.",
+    subtitle: "Formatted, published, and ready to sell",
+    desc: "We handle formatting, ISBN registration, copyright, and distribution to major retailers around the world. Your royalties go straight to your own author account.",
     features: [
       "ISBN & Copyright Registration",
       "Print Interior Formatting",
-      "eBook Formatting (EPUB/MOBI)",
+      "eBook Formatting (EPUB)",
       "Amazon KDP Setup & Optimization",
       "IngramSpark Distribution",
-      "40+ Platform Distribution",
+      "Global Retailer Distribution",
       "Amazon Author Central Setup",
       "100% Royalty Ownership",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Live on Amazon in 72 hours",
+    result: "You keep 100% of your royalties",
   },
   {
-    id: "marketing",
+    id: "book-marketing",
     icon: Megaphone,
     badge: null,
     title: "Book Marketing",
-    subtitle: "Get your book in front of the right readers",
-    desc: "A great book without marketing stays undiscovered. Our data-driven marketing strategies combine Amazon optimization, social media campaigns, email marketing, press releases, and BookTok influencer outreach to maximize your book's visibility and sales from day one.",
+    subtitle: "Marketing that sells books worldwide",
+    desc: "Great books still need help being found. We combine Amazon optimization, social media, email, press outreach, and BookTok campaigns to build interest before launch and keep sales moving after it.",
     features: [
-      "Amazon SEO & Keyword Optimization",
-      "Book Launch Strategy",
-      "Social Media Marketing",
-      "Email Marketing Campaigns",
-      "Press Release Writing & Distribution",
-      "ARC (Advance Review Copy) Program",
-      "BookTok & Bookstagram Campaigns",
-      "Post-Launch Analytics Reports",
+      "Amazon Listing and Keyword Setup",
+      "Custom Launch Plan for Your Genre",
+      "Social Media Content and Campaigns",
+      "Reader Email Sequences",
+      "Press Releases Sent to Media",
+      "Early Reader Review Program",
+      "BookTok and Bookstagram Outreach",
+      "Clear Reports After Launch",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Avg. 3x sales increase at launch",
+    result: "Strategy built around your genre",
   },
   {
     id: "audiobooks",
     icon: Headphones,
     badge: null,
     title: "Audiobooks",
-    subtitle: "Reach millions of listeners worldwide",
-    desc: "The audiobook market is the fastest growing segment in publishing. We handle professional narration casting, studio-quality recording, post-production mastering, and distribution to Audible, Spotify, Apple Books, and all major audio platforms.",
+    subtitle: "Audiobooks that keep listeners hooked",
+    desc: "We cast the right narrator, record in professional studios, and handle post-production, then distribute your audiobook to Audible, Spotify, Apple Books, and other major audio platforms.",
     features: [
-      "Professional Narrator Casting",
-      "Studio-Quality Recording",
-      "Full Post-Production & Mastering",
-      "ACX (Audible) Distribution",
-      "Findaway Voices Distribution",
-      "Multiple Narrator Options",
-      "Royalty Share or Flat Fee",
-      "Spanish & French Narration Available",
+      "Hand-Picked Narrator for Your Book",
+      "Recording in Professional Studios",
+      "Editing and Final Sound Polish",
+      "Publishing on Audible Through ACX",
+      "Wider Release Through Findaway Voices",
+      "Single or Multi-Voice Narration",
+      "Flexible Royalty or One-Time Payment",
+      "Narration in Spanish and French",
     ],
     color: "#0891B2",
     iconBg: "bg-cyan-50",
     iconColor: "text-primary",
-    result: "Avg. delivery: 3–5 weeks",
+    result: "Distributed to all major audio platforms",
   },
+];
+
+const moreServices = [
+  { icon: BarChart2,  title: "Digital Marketing",              desc: "Online campaigns that help readers find and buy your book.",                          href: "/services/digital-marketing" },
+  { icon: Megaphone,  title: "Author Marketing",               desc: "Build your author brand and a loyal reader community.",                               href: "/services/author-marketing" },
+  { icon: FileText,   title: "Article Writing & Publishing",   desc: "Well-researched articles and guest posts that build your authority.",                  href: "/services/article-writing" },
+  { icon: Rss,        title: "Blog Writing",                   desc: "Blog posts readers want to keep reading.",                                             href: "/services/blog-writing" },
+  { icon: Video,      title: "Book Trailer",                   desc: "Short videos that bring your story to life.",                                          href: "/services/book-trailer" },
+  { icon: Briefcase,  title: "Business Proposal Writing",      desc: "Clear, convincing proposals and white papers.",                                        href: "/services/business-proposal" },
+  { icon: Baby,       title: "Children's Book Publication",    desc: "Publishing support for children's books.",                                             href: "/services/childrens-book-publication" },
+  { icon: Image,      title: "Children's Book Illustrations",  desc: "Original artwork for your characters and story.",                                      href: "/services/book-illustrations" },
+  { icon: Monitor,    title: "Web Content Writing",            desc: "Website copy that sounds like you and connects with readers.",                         href: "/services/web-content" },
+  { icon: Laptop,     title: "Author Website Design",          desc: "Professional author websites built to showcase your books.",                           href: "/services/author-website" },
+  { icon: PenLine,    title: "Children's Book Editing",        desc: "Children's stories written for every age group and format.",                           href: "/services/childrens-book-editing" },
+  { icon: Printer,    title: "Book Printing",                  desc: "Print-on-demand and bulk printing in professional quality.",                           href: "/services/book-printing" },
+  { icon: Globe,      title: "Formatting Services",            desc: "Clean print and eBook interiors that meet every platform's standards.",                href: "/services/book-formatting" },
+  { icon: TrendingUp, title: "Book Promotion",                 desc: "Targeted promotions that get readers talking about your book.",                        href: "/services/book-promotion" },
 ];
 
 export default function ServicesPage() {
@@ -155,28 +172,28 @@ export default function ServicesPage() {
           style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }}
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">Full-Service Publishing</span></FadeUp>
+          <FadeUp delay={0}><span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4 block">WRITE. PUBLISH. SELL.</span></FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl font-black text-brand-dark leading-[1.1] mb-5">
-              <span className="text-black">Every Service You Need</span><br />
-              <span className="text-gradient">To Publish Your Book</span>
+              <span className="text-black">Professional Publishing Services,</span><br />
+              <span className="text-primary">From Writing to Marketing</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.16}>
             <p className="text-brand-body text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              Six world-class publishing services under one roof. No juggling freelancers, no guesswork — just professional results from start to finish.
+              Getting a book published involves a lot of moving parts. We handle everything from writing and editing to design, publishing, and marketing, so you don&apos;t have to find and manage different people for every step.
             </p>
           </FadeUp>
 
           <FadeUp delay={0.24}>
             <div className="flex flex-wrap justify-center gap-2 mb-12">
               {[
-                { title: "Ghostwriting", slug: "ghostwriting" },
-                { title: "Book Editing", slug: "editing" },
-                { title: "Cover Design", slug: "cover-design" },
-                { title: "Publishing", slug: "publishing" },
+                { title: "Ghostwriting",   slug: "ghostwriting" },
+                { title: "Book Editing",   slug: "editing" },
+                { title: "Cover Design",   slug: "cover-design" },
+                { title: "Publishing",     slug: "publishing" },
                 { title: "Book Marketing", slug: "book-marketing" },
-                { title: "Audiobooks", slug: "audiobooks" },
+                { title: "Audiobooks",     slug: "audiobooks" },
               ].map(s => (
                 <Link
                   key={s.slug}
@@ -186,10 +203,16 @@ export default function ServicesPage() {
                   {s.title}
                 </Link>
               ))}
+              <Link
+                href="#more-services"
+                className="border border-slate-200 hover:border-primary hover:text-primary text-slate-600 text-xs font-semibold px-4 py-2 rounded-full transition-colors"
+              >
+                Explore More
+              </Link>
             </div>
             <FadeUp delay={0.36}>
               <div className="pt-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">Books We&apos;ve Helped Publish</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-5">Stories We&apos;ve Brought to Life</p>
                 <BookCoversStrip count={7} width={68} />
               </div>
             </FadeUp>
@@ -262,7 +285,7 @@ export default function ServicesPage() {
                       <span className="text-xs font-semibold text-brand-muted">{s.result}</span>
                     </div>
                     <Link
-                      href={`/services/${s.id === "design" ? "cover-design" : s.id === "marketing" ? "book-marketing" : s.id}`}
+                      href={`/services/${s.id === "design" ? "cover-design" : s.id}`}
                       className="inline-flex items-center gap-2 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-lg transition-all hover:opacity-90"
                       style={{ background: s.color }}
                     >
@@ -293,7 +316,7 @@ export default function ServicesPage() {
                       <span className="text-xs font-semibold text-brand-dark">4.9/5 satisfaction</span>
                     </div>
                     <p className="text-xs text-brand-muted">
-                      Hundreds of authors have used this service. See their results in our{" "}
+                      See the books our authors have published in our{" "}
                       <Link href="/portfolio" className="text-primary font-semibold hover:underline">portfolio →</Link>
                     </p>
                   </div>
@@ -305,36 +328,18 @@ export default function ServicesPage() {
       </section>
 
       {/* ── MORE SERVICES GRID ── */}
-      <section className="py-16 bg-slate-50">
+      <section id="more-services" className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-10">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">We Also Offer</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">WE ALSO OFFER</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-brand-dark">
-                <span className="text-black">More Services for Every </span><span className="text-primary">Author</span>
+                <span className="text-black">More Ways We </span><span className="text-primary">Help Authors</span>
               </h2>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {[
-              { icon: BookMarked, title: "Book Publishing",               desc: "End-to-end book publishing on Amazon KDP and global platforms.",         href: "/services/book-publishing" },
-              { icon: TrendingUp, title: "Book Promotion",                desc: "Strategic promotion campaigns to boost visibility and sales.",            href: "/services/book-promotion" },
-              { icon: FileText,   title: "eBook Writing",                 desc: "Professional eBook writing for any topic, niche, or audience.",          href: "/services/ebook-writing" },
-              { icon: Globe,      title: "Formatting Services",           desc: "Print and digital interior formatting to industry standards.",            href: "/services/formatting-services" },
-              { icon: BarChart2,  title: "Digital Marketing",             desc: "Full-funnel digital marketing campaigns for authors and books.",          href: "/services/digital-marketing" },
-              { icon: Megaphone,  title: "Author Marketing",              desc: "Build your author brand and grow a loyal reader community.",              href: "/services/author-marketing" },
-              { icon: Mic,        title: "Audio Book Recording",          desc: "Studio-quality narration and full post-production mastering.",            href: "/services/audio-book-recording" },
-              { icon: FileText,   title: "Article Writing & Publishing",  desc: "SEO-optimized articles and guest posts to build your authority.",         href: "/services/article-writing" },
-              { icon: Rss,        title: "Blog Writing",                  desc: "Consistent, engaging blog content that attracts readers.",                href: "/services/blog-writing" },
-              { icon: Video,      title: "Book Trailer",                  desc: "Cinematic book trailers for social media and Amazon pages.",              href: "/services/book-trailer" },
-              { icon: Briefcase,  title: "Business Proposal Writing",     desc: "Persuasive, polished business proposals and white papers.",               href: "/services/business-proposal" },
-              { icon: Baby,       title: "Children Book Publication",     desc: "Complete publishing service for children's picture books.",               href: "/services/childrens-book-publication" },
-              { icon: Image,      title: "Children's Book Illustrations", desc: "Vibrant, age-appropriate illustrations for children's books.",            href: "/services/book-illustrations" },
-              { icon: Monitor,    title: "Web Content Writing",           desc: "Website copy, landing pages, and brand messaging that converts.",         href: "/services/web-content" },
-              { icon: Laptop,     title: "Author Website Design",         desc: "Beautiful, professional author websites built to grow your brand.",       href: "/services/author-website" },
-              { icon: PenLine,    title: "Children Book Writing",         desc: "Expert children's book writing across all age groups and formats.",       href: "/services/children-book-writing" },
-              { icon: Printer,    title: "Book Printing",                 desc: "High-quality print-on-demand and bulk printing solutions.",               href: "/services/book-printing" },
-            ].map((s, i) => (
+            {moreServices.map((s, i) => (
               <FadeUp key={s.title} delay={(i % 4) * 0.07}>
                 <Link
                   href={s.href}
@@ -356,14 +361,14 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 mt-10" style={{ background: "#089bb2" }}>
+      <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
-              Not Sure Which Service<br />You Need?
+              Still Deciding? Let&apos;s Talk It Through.
             </h2>
-            <p className="text-white/70 text-sm mb-8 max-w-lg mx-auto">
-              Book a free 30-minute consultation. Our publishing experts will review your project and recommend the perfect solution.
+            <p className="text-white/80 text-sm mb-8 max-w-lg mx-auto">
+              Book a free consultation. Our team will look at your project and recommend the services that fit your goals and budget.
             </p>
             <Link
               href="/contact"

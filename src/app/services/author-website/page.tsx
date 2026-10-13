@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Laptop, Clock, Award, TrendingUp } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Professional Author Website Design Services | The Author Success",
@@ -12,130 +13,133 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Your Digital Home";
-const headline = "Professional Author Websites That Build Your Brand";
+const badge = "Author Website Design";
+const headline = "Author Websites That Win Readers";
 const subline =
-  "Beautiful, functional author websites designed to grow your audience and sell your books.";
+  "Your author website gives you a place that's truly yours online. We'll create a simple, welcoming site that shows off your books, helps readers get to know you, and makes it easy for them to find and buy your next book.";
 const desc =
-  "Your author website is the one platform you truly own — unlike social media, it can't be taken away or changed by an algorithm. We design and build professional author websites that look stunning, load fast, and convert visitors into readers, subscribers, and buyers.";
+  "Social media is always changing, and you never know when the rules might change too. Your author website gives you a place that's yours. Readers can learn about you, sign up for your emails, and easily find and buy your books.";
 
 const stats = [
-  { value: "400+", label: "Author Websites Built", Icon: Laptop },
-  { value: "2–3 Wks", label: "Average Delivery", Icon: Clock },
-  { value: "99%", label: "Client Satisfaction", Icon: Award },
-  { value: "2x", label: "Avg. Email List Growth", Icon: TrendingUp },
+  { value: "Custom", label: "Designs", Icon: Laptop },
+  { value: "Mobile", label: "Ready Builds", Icon: TrendingUp },
+  { value: "Email List", label: "Signup", Icon: Award },
+  { value: "SEO", label: "Foundations", Icon: Clock },
 ];
 
 const subServices = [
   {
     tag: "Custom",
     title: "Custom Author Website",
-    desc: "Fully custom designed website built to your brand — unique design, professional photography integration, and seamless user experience.",
+    desc: "We build your website around you and your books. The design, pages, and content are made to fit your style and give your readers a place that feels like you.",
   },
   {
     tag: "Template",
     title: "Template Author Website",
-    desc: "Professionally customized website from premium templates — launched in 1–2 weeks with your branding, content, and book pages.",
+    desc: "Want to get your website up and running sooner? We start with a ready-made design and customize it with your branding, content, and book pages. It's simple, professional, and made for your needs.",
   },
   {
-    tag: "Book Landing",
+    tag: "Landing Page",
     title: "Book Launch Landing Pages",
-    desc: "High-converting standalone landing pages for book launches — pre-order links, email capture, review requests, and press kit.",
+    desc: "Focused book website design for a single title, with pre-order links, email signup, review requests, and a press kit to support your launch.",
   },
   {
     tag: "Redesign",
     title: "Website Redesign",
-    desc: "Modernize an existing author website — improved design, faster loading, mobile optimization, and better conversion structure.",
+    desc: "A fresh look for an existing author website, with cleaner design, faster loading, better mobile performance, and a layout that guides visitors to buy.",
   },
 ];
 
 const steps = [
   {
     num: "01",
-    title: "Discovery & Planning",
-    desc: "We define your brand, audience, required pages, functionality, and design direction before any work begins.",
+    title: "Complimentary Consultation",
+    desc: "We talk about your brand, your readers, and what you want your website to do. Together, we decide on the pages, features, and design direction before any work begins.",
   },
   {
     num: "02",
-    title: "Design Mockup",
-    desc: "A full homepage mockup is presented for approval before development — ensuring the vision is right before we build.",
+    title: "Writing & Editing",
+    desc: "Whether you have copy ready or need us to write it, our team prepares your homepage, author bio, and book descriptions so every page sounds like you and speaks to your readers.",
   },
   {
     num: "03",
-    title: "Development",
-    desc: "Your site is built on WordPress or Squarespace with mobile responsiveness, fast loading, and SEO foundations.",
+    title: "Design & Formatting",
+    desc: "Your author website designer creates a homepage mockup for your approval, then builds the full site on WordPress or Squarespace, making sure it looks great and loads quickly on every device.",
   },
   {
     num: "04",
-    title: "Content Integration",
-    desc: "All copy, images, book covers, and media are integrated and the site is tested across all devices.",
-  },
-  {
-    num: "05",
-    title: "Launch & Training",
-    desc: "Site goes live with a custom domain and you receive a training session to manage content updates.",
+    title: "Publish & Launch",
+    desc: "Your website goes live on your own domain after full testing. We then walk you through a training session, so you can update your content with confidence whenever you need to.",
   },
 ];
 
 const included = [
-  "Custom design (up to 8 pages)",
+  "Custom website design",
   "Mobile-responsive build",
   "WordPress or Squarespace setup",
   "Book pages with purchase links",
-  "About & bio page",
-  "Email capture integration",
+  "About and author bio page",
+  "Email signup integration",
   "Blog setup",
   "Contact form",
   "Social media integration",
   "Basic SEO setup",
-  "Google Analytics",
-  "Training session & documentation",
+  "Google Analytics setup",
+  "Training session and documentation",
 ];
 
 const testimonials = [
   {
     quote:
-      "My website went from embarrassing to stunning in 2 weeks. My email list doubled in the first month from the improved signup forms and UX.",
-    name: "Sandra K.",
-    title: "Romance Author · 2x Email Growth",
-    result: "2x Email Growth",
+      "I knew that I needed an author website, but I wasn't sure what it should contain. The team helped me convert my books, bio, and ideas into a website that remains professional yet doesn't lose the personal aspect of my brand. Now it finally seems as though I have a proper online home.",
+    name: "Rebecca M.",
+    title: "Fiction Author",
+    result: "Online Home",
   },
   {
     quote:
-      "Professional, fast, and exactly what I envisioned. The team built my author brand online and I've had press inquiries I never expected.",
-    name: "Dr. Lee H.",
-    title: "Non-Fiction Author",
-    result: "Press Inquiries",
+      "The website I used to have seemed out of date and was hard to use on a mobile device. The redesign had a major impact; everything now looks neater, and readers no longer have to search around in order to find my books and the purchase links.",
+    name: "Thomas R.",
+    title: "Business Author",
+    result: "Redesigned",
   },
   {
     quote:
-      "My book landing page converted 18% of visitors to pre-orders. The design and copy worked together perfectly.",
-    name: "Chris M.",
-    title: "Thriller Author · 18% Conversion",
-    result: "18% Conversion Rate",
+      "What I enjoyed most was that I could take an active role without needing to deal with all the technical aspects; they listened to my requirements, showed me the design before carrying out the build, and made the entire process easy to follow.",
+    name: "Claire D.",
+    title: "Memoir Author",
+    result: "Launched",
   },
 ];
 
 const faqs = [
   {
-    q: "Do I need a website as an author?",
-    a: "Yes — it's the only online platform you fully own. It builds SEO, captures emails, and serves as your professional home base.",
+    q: "Do I really need a website as an author?",
+    a: "Yes. Readers, journalists, and event organizers often search for you online before they buy your book or reach out. A website gives them one trusted place to find your books, your story, and a way to contact you.",
   },
   {
     q: "What platform do you build on?",
-    a: "We primarily build on WordPress (most flexible) and Squarespace (easiest to manage). We recommend based on your technical comfort level.",
+    a: "We build on WordPress or Custom, depending on your needs and how hands-on you'd like to be with updates. We'll recommend the best fit during your consultation.",
   },
   {
-    q: "Can I update it myself?",
-    a: "Yes. We build with easy-to-edit page builders and provide training so you can update content without needing a developer.",
+    q: "Can I update the website myself?",
+    a: "Absolutely. Every site comes with a training session and simple documentation, so you can add books, blog posts, and news without needing a developer.",
   },
   {
-    q: "Do you provide the copy?",
-    a: "Copywriting is available as an add-on. We can write all page content, or you can provide your own for us to design around.",
+    q: "Do you write the website copy?",
+    a: "We can. Our writers can prepare your homepage, author bio, and book descriptions, or polish copy you've already written.",
   },
   {
-    q: "What about hosting and domain?",
-    a: "We help you set up and configure hosting and your domain. Ongoing hosting costs are typically $10–20/month, paid directly to the host.",
+    q: "What about hosting and my domain name?",
+    a: "We'll help you choose and connect your domain and hosting. Any third-party costs are explained upfront, so there are no surprises.",
+  },
+  {
+    q: "Can you redesign my existing author website?",
+    a: "Yes. We review your current site, keep what works, and rebuild the rest with a cleaner design, faster loading, and a clearer path for readers to buy your books.",
+  },
+  {
+    q: "How much do author website design services cost?",
+    a: "Every project is quoted individually based on the number of pages, features, and whether you choose a custom or template design. The price you're quoted is the price you pay, with no hidden fees.",
   },
 ];
 
@@ -206,7 +210,7 @@ export default function AuthorWebsitePage() {
                 What We Offer
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Author Website Design Services
+                Your Author Brand Deserves Its Own Address
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-gray-600">{desc}</p>
             </div>
@@ -236,8 +240,9 @@ export default function AuthorWebsitePage() {
                 Our Process
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                How We Build Your Website
+                Four Steps From Big Idea to Live Website
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">We keep the process simple and keep you involved along the way, so you always know what&apos;s happening with your website.</p>
             </div>
           </FadeUp>
           <div className="relative">
@@ -270,8 +275,9 @@ export default function AuthorWebsitePage() {
                 What's Included
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Everything You Get
+                Every Page, Perfectly Placed
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">From the time we have that first conversation until your project is ready for its big launch, your quotation will cover all that you require. We will discuss the price and services before getting started, so there are no unpleasant surprises down the road.</p>
             </div>
           </FadeUp>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -295,11 +301,12 @@ export default function AuthorWebsitePage() {
           <FadeUp>
             <div className="mb-12 text-center">
               <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                Client Results
+                Author Stories
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Websites That Grow Audiences
+                What Authors Say About Their New Websites
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">In their own words, from authors who trusted us to build their home online.</p>
             </div>
           </FadeUp>
           <div className="grid gap-6 md:grid-cols-3">
@@ -327,27 +334,15 @@ export default function AuthorWebsitePage() {
         <div className="mx-auto max-w-3xl px-6">
           <FadeUp>
             <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
+              {/* <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
                 FAQ
-              </span>
+              </span> */}
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Frequently Asked Questions
+                Questions Authors Ask Before Going Live
               </h2>
             </div>
           </FadeUp>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group rounded-2xl border border-gray-100 bg-white shadow-sm">
-                  <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900 marker:content-none">
-                    {faq.q}
-                    <span className="ml-4 shrink-0 text-xl transition group-open:rotate-45" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <p className="px-6 pb-6 text-gray-600 leading-relaxed">{faq.a}</p>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -356,9 +351,9 @@ export default function AuthorWebsitePage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <ScaleIn>
             <Laptop className="mx-auto mb-6 h-16 w-16 opacity-90" />
-            <h2 className="text-3xl font-extrabold md:text-5xl">Ready for Your Author Website?</h2>
+            <h2 className="text-3xl font-extrabold md:text-5xl">Readers Are Googling You. Be Worth Finding.</h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-              Own your platform. Build your audience. Sell your books — starting with a stunning author website.
+              Book a free consultation with our team. We&apos;ll talk through your books, your goals, and what your author website needs to bring in more readers.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link

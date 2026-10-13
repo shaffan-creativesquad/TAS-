@@ -1,42 +1,42 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, Video, Award, Clock, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, Video, PenLine, Music, Globe, Mic } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Book Trailer Production Services | The Author Success",
-  description: "Cinematic book trailers for TikTok, Instagram, Amazon, and more. 500+ trailers produced. Script, production, all platform formats included. 7–14 day delivery.",
+  description: "Cinematic book trailers for TikTok, Instagram, Amazon, and more. Script, production, all platform formats included. Book a free consultation today.",
 };
 
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Visual Storytelling";
-const headline = "Cinematic Book Trailers That Sell Your Story";
-const subline = "Compelling video trailers that bring your book to life on social media and Amazon.";
-const desc = "A great book trailer doesn't just describe your book — it makes viewers feel it. Our video production team creates cinematic trailers that capture the essence, mood, and excitement of your story, optimized for TikTok, Instagram, Amazon A+ pages, and your author website.";
+const badge = "BOOK TRAILERS";
+const headline = "Readers Judge a Book by Its Trailer, Too";
+const subline = "Short, cinematic videos that make people stop, watch, and want your book.";
+const desc = "A good book trailer should give people a feel for your story and make them want to know more. We create short videos that bring out the mood of your book and are easy to share on TikTok, Instagram, YouTube, Amazon, or your author website.";
 const serviceLabel = "Book Trailer";
 
 const stats = [
-  { value: "500+", label: "Trailers Produced", Icon: Video },
-  { value: "7–14 Days", label: "Average Delivery", Icon: Clock },
-  { value: "2M+", label: "Total Views Generated", Icon: TrendingUp },
-  { value: "4.9/5", label: "Client Rating", Icon: Award },
+  { value: "Script & Storyboard", label: "Included in Every Package", Icon: PenLine },
+  { value: "Licensed Music", label: "& Footage", Icon: Music },
+  { value: "Every Platform", label: "Format Delivered", Icon: Globe },
+  { value: "Voice-Over", label: "Optional Add-On", Icon: Mic },
 ];
 
 const subServices = [
-  { tag: "Social", title: "Social Media Trailer", desc: "Short-form 30–60 second trailers optimized for TikTok, Instagram Reels, and YouTube Shorts with platform-specific dimensions." },
-  { tag: "Amazon", title: "Amazon Book Trailer", desc: "Professional book trailers formatted for Amazon A+ content pages to increase conversion on your book's product listing." },
-  { tag: "Cinematic", title: "Full Cinematic Trailer", desc: "90–120 second cinematic trailers with original music, voice-over narration, and professional video production values." },
-  { tag: "Series", title: "Series & Author Branding", desc: "Branded video content for author websites, book series announcements, and multi-book launch campaigns." },
+  { tag: "SOCIAL", title: "Social Media Trailers", desc: "Short vertical trailers made for TikTok, Instagram Reels, and YouTube Shorts, designed to grab attention in the first few seconds." },
+  { tag: "AMAZON", title: "Amazon Book Trailers", desc: "Polished trailers formatted for your Amazon product page, giving browsers one more reason to click \"Buy.\"" },
+  { tag: "CINEMATIC", title: "Cinematic Trailers", desc: "A custom book trailer with music, voice-over, and film-quality visuals that give your book the feel of a major release." },
+  { tag: "ANIMATED", title: "Animated Book Trailers", desc: "An animated book trailer uses motion graphics and illustrated scenes, a great fit for children's books, fantasy, and non-fiction." },
 ];
 
 const steps = [
-  { num: "01", title: "Creative Brief", desc: "We learn your book's genre, tone, target audience, and key selling points to guide the trailer concept." },
-  { num: "02", title: "Script & Storyboard", desc: "We write the trailer script and present a visual storyboard for your approval before production begins." },
-  { num: "03", title: "Production", desc: "Video production using licensed footage, original graphics, typography animation, and music selection." },
-  { num: "04", title: "Review & Revisions", desc: "You review the cut and request any changes to pacing, music, text, or visuals." },
-  { num: "05", title: "Final Delivery", desc: "Final trailer delivered in all required formats and dimensions for each platform." },
+  { num: "01", title: "Creative Brief", desc: "We learn about your book's genre, tone, readers, and strongest selling points to shape the trailer concept." },
+  { num: "02", title: "Script & Storyboard", desc: "We write the script and create a visual storyboard for your approval before production begins." },
+  { num: "03", title: "Production", desc: "Our team brings the trailer to life with licensed footage, animation, typography, music, and voice-over if needed." },
+  { num: "04", title: "Review & Delivery", desc: "You review the cut and request any changes. Once approved, we deliver your trailer in every format your platforms need." },
 ];
 
 const included = [
@@ -48,24 +48,25 @@ const included = [
   "Licensed background music",
   "Professional voice-over (optional)",
   "Color grading",
-  "Sound mixing & mastering",
-  "All platform formats (vertical, square, wide)",
-  "Amazon A+ format",
-  "2 rounds of revisions",
+  "Sound mixing and mastering",
+  "Vertical, square, and widescreen formats",
+  "Amazon-ready format",
+  "Revision rounds included",
 ];
 
 const testimonials = [
-  { quote: "My book trailer got 500,000 views on TikTok in the first week. Pre-orders spiked 300% and the book went to #1 in its category on launch day.", name: "Tyler S.", title: "YA Author · 500K Views", result: "500K TikTok Views" },
-  { quote: "The cinematic quality of the trailer made my indie novel look like it had a Big Five budget behind it. Readers keep sharing it organically.", name: "Rachel M.", title: "Thriller Author", result: "Organic Virality" },
-  { quote: "Amazon A+ trailer increased my conversion rate by 22%. That's thousands of extra copies sold just from the video on the product page.", name: "David K.", title: "Self-Help Author", result: "22% Conversion Increase" },
+  { quote: "I had no clue how to turn my book into a video. They took the story, picked out the parts that would work best, and turned them into a trailer without giving the whole story away. I was really happy with how it turned out and couldn't wait to share it.", name: "Rachel M.", title: "Fiction Author", result: "Story Captured" },
+  { quote: "They really understood what my book was about. There was nice music and pictures that fit. The timing was great too. It did not come off as a commercial just advertising my book.", name: "Daniel K.", title: "Mystery Author", result: "Authentic Feel" },
+  { quote: "I wanted a trailer I could use on social media, my website, and Amazon. They made the different versions for me, so I didn't have to worry about sizes or anything technical. I could just post it wherever I needed it.", name: "Emily S.", title: "Romance Author", result: "All Platforms Covered" },
 ];
 
 const faqs = [
-  { q: "How long should a book trailer be?", a: "Social media trailers perform best at 30–60 seconds. Amazon trailers work well at 60–90 seconds. Full cinematic trailers run 90–120 seconds." },
-  { q: "Do you use actors?", a: "We primarily use licensed stock footage and animation. Live-action with actors is available as a premium option." },
-  { q: "Can I use my own music?", a: "Yes, if you have licensed music you want to use. We can also select from our library of royalty-free licensed tracks." },
-  { q: "What formats do you deliver?", a: "MP4 in all required resolutions — 9:16 (TikTok/Reels), 1:1 (Instagram), 16:9 (YouTube/Amazon), and 4:5 (Facebook)." },
-  { q: "Will the trailer work for a series?", a: "Yes. We create series trailers and individual book trailers that share visual branding for consistency across all titles." },
+  { q: "How long should a book trailer be?", a: "Most book trailers are around 30 to 60 seconds, especially for social media. If you want something more cinematic, it can be a little longer. We'll help you choose a length that fits your book and where you plan to share it." },
+  { q: "Do you use actors?", a: "Usually, we use licensed footage, animation, and text to bring the trailer together. If you want real actors in your trailer, we can discuss that with you and see what would work best." },
+  { q: "Can I use my own music?", a: "Yes, as long as you hold the rights to it. Otherwise, we'll choose licensed music that matches your book's tone." },
+  { q: "What formats do you deliver?", a: "You'll receive vertical, square, and widescreen versions, plus a version ready for your Amazon product page." },
+  { q: "Can you create trailers for a book series?", a: "Absolutely. We can create a consistent look across every book in your series, along with a trailer that introduces the whole collection." },
+  { q: "How much do book trailer services cost?", a: "Every project is quoted individually based on length, style, and features like voice-over or animation. The price you're quoted is the price you pay, with no hidden fees." },
 ];
 
 export default function BookTrailerPage() {
@@ -78,7 +79,7 @@ export default function BookTrailerPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Readers Judge a Book</span><br /><span className="text-primary">by Its Trailer, Too</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -93,7 +94,7 @@ export default function BookTrailerPage() {
                   <FadeUp key={label} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-base font-black text-brand-dark leading-snug">{value}</div>
                       <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
                   </FadeUp>
@@ -108,7 +109,8 @@ export default function BookTrailerPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Story Deserves Its </span><span style={{ color: COLOR }}>Own Trailer</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">Whether you need a quick social clip or a full cinematic piece, we create trailers that fit your book and the platforms your readers use.</p>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -129,12 +131,13 @@ export default function BookTrailerPage() {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">From Script to Screen in </span><span style={{ color: COLOR }}>Four Steps</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">We keep things simple, so you know what&apos;s happening with your trailer at every step.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -154,8 +157,8 @@ export default function BookTrailerPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Lights, Camera,<br />Everything Included</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote covers the full production from first idea to final cut. You&apos;ll know exactly what you&apos;re paying for before we start, with no surprise charges along the way.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Video size={22} className="text-white" /></div>
                   <div>
@@ -183,7 +186,8 @@ export default function BookTrailerPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">What Authors Said After </span><span style={{ color: COLOR }}>the Premiere</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">In their own words, from authors who trusted us to put their stories on screen.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,34 +213,22 @@ export default function BookTrailerPage() {
         </div>
       </section>
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions Before </span><span style={{ color: COLOR }}>the Cameras Roll</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Video size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Put Your Book on Screen?</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with our team. We&apos;ll talk through your book, your audience, and the trailer that will bring your story to life.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
               <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>

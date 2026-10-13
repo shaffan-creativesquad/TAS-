@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { ArrowRight, Phone, BookOpen, Star } from "lucide-react";
+import { ArrowRight, Phone, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function CTABanner() {
@@ -31,13 +31,13 @@ export default function CTABanner() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
             >
-              {/* Stars */}
-              <div className="flex items-center gap-2 mb-5">
-                <div className="flex">
-                  {[1,2,3,4,5].map(i => <Star key={i} size={14} className="text-white fill-white" />)}
+              {/* Trustpilot */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="bg-white rounded-lg px-3 py-1.5 shrink-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/trustpilot.png" alt="Trustpilot" style={{ height: "18px", width: "auto", display: "block" }} />
                 </div>
-                <span className="text-cyan-200 text-sm font-medium">Trusted by Authors, Founders and Industry Experts Worldwide
-</span>
+                <span className="text-cyan-200 text-sm font-medium">Trusted by Authors, Founders and Industry Experts Worldwide</span>
               </div>
 
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white leading-tight mb-4">

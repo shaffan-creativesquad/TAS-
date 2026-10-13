@@ -68,9 +68,9 @@ export default function Pricing() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+          {/* <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Pricing
-          </span>
+          </span> */}
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
             <span className="text-black">Deliberately Curated</span><br /><span className="text-primary">Publishing</span><span className="text-black"> Packages</span>
           </h2>

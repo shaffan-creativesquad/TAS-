@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Star, Users, Award, Clock, TrendingUp } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Author Marketing & Brand Building Services | The Author Success",
@@ -11,61 +12,61 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Build Your Brand";
-const headline = "Build an Author Brand That Readers Remember";
-const subline = "Strategic author marketing to grow your audience, platform, and long-term book sales.";
-const desc = "Your author brand is your most valuable long-term asset. We help authors build a compelling, consistent brand identity across their website, social media, email list, and public presence — creating the kind of reader loyalty that turns one book into a multi-book career.";
+const badge = "Author Marketing";
+const headline = "Author Marketing That Makes Your Name the Bestseller.";
+const subline = "Author marketing services that turn one book into a recognizable name, a loyal audience, and a lasting career.";
+const desc = "A great book can get noticed once. A great author brand keeps readers coming back for every launch after it. Our author branding services shape how readers, media, and clients see you across your website, social media, email list, and public presence, so your name carries weight long before your next book drops.";
 const serviceLabel = "Author Marketing";
 
 const stats = [
-  { value: "250+", label: "Authors Branded", Icon: Users },
-  { value: "10K+", label: "Avg. Email List Built", Icon: Award },
-  { value: "6 Mos", label: "Brand Build Timeline", Icon: Clock },
-  { value: "5x", label: "Repeat Reader Rate", Icon: TrendingUp },
+  { value: "Brand", label: "Identity — Voice, bio, and visuals that fit you", Icon: Users },
+  { value: "Platform", label: "Built — Website, social, and email, connected", Icon: TrendingUp },
+  { value: "Media", label: "Ready — PR outreach and press kits", Icon: Award },
+  { value: "Built", label: "to Last — An audience that grows with every book", Icon: Clock },
 ];
 
 const subServices = [
-  { tag: "Identity", title: "Author Brand Identity", desc: "Author name positioning, bio writing, brand voice definition, and visual identity system — logo, colors, and typography." },
-  { tag: "Website", title: "Author Website", desc: "Professional author website built on your brand — with book pages, press kit, contact form, and email capture." },
-  { tag: "Social", title: "Social Media Strategy", desc: "Platform selection, profile optimization, content strategy, and posting calendar tailored to your genre's reader community." },
-  { tag: "Email", title: "Reader Email List Building", desc: "Lead magnet creation, email signup optimization, and automated welcome sequences to build and nurture your reader list." },
+  { tag: "Identity", title: "Author Brand Identity", desc: "Positioning, bio writing, brand voice, and a visual identity built around you. Our author branding services make sure readers recognize you at a glance, whether they find you on a shelf, a feed, or a stage." },
+  { tag: "Platform", title: "Website & Social Presence", desc: "Our author platform building gives you a professional author website with book pages, a press kit, and email capture, plus optimized social profiles and a content strategy tailored to your readers." },
+  { tag: "Audience", title: "Reader Email List Building", desc: "Lead magnets, signup optimization, and welcome sequences that turn casual readers into a loyal list you own, ready for every launch." },
+  { tag: "PR", title: "Author PR & Media Outreach", desc: "Our author PR services put your name in front of journalists, podcast hosts, and event organizers, with press kits and pitching that position you as the go-to voice in your space." },
 ];
 
 const steps = [
-  { num: "01", title: "Brand Discovery", desc: "We learn your story, genre, target readers, comparable authors, and long-term career goals to anchor the brand strategy." },
-  { num: "02", title: "Brand Identity", desc: "Author bio, positioning statement, visual identity, and brand voice guidelines are developed and approved." },
-  { num: "03", title: "Platform Build", desc: "Website, social profiles, and email system are built and branded consistently across all touchpoints." },
-  { num: "04", title: "Content Strategy", desc: "A 90-day content calendar is built with post templates, email sequences, and engagement strategies." },
-  { num: "05", title: "Launch & Grow", desc: "Brand launches across all platforms with an initial growth push — social follows, email subscribers, and PR outreach." },
+  { num: "01", title: "Brand Discovery", desc: "We learn your story, genre, readers, and career goals, then study comparable authors to find the space your brand should own." },
+  { num: "02", title: "Brand Identity", desc: "Your positioning, author bio, brand voice, and visual identity are developed and refined with you until they feel unmistakably yours." },
+  { num: "03", title: "Platform Building", desc: "Our author platform building brings your website, social profiles, and email system to life, all branded consistently across every touchpoint." },
+  { num: "04", title: "Launch & Grow", desc: "Your brand goes live with a content strategy, email sequences, and author PR services that build momentum and put your name in front of the right audiences." },
 ];
 
 const included = [
   "Author brand strategy document",
-  "Professional author bio (short + long)",
+  "Professional author bio (short and long)",
   "Brand voice guidelines",
+  "Visual identity system",
   "Social media profile optimization",
-  "90-day content calendar",
-  "Email list setup & welcome sequence",
+  "Content calendar and post templates",
+  "Email list setup and welcome sequence",
   "Reader community strategy",
   "Press kit design",
   "Media appearance preparation",
   "Comparable author analysis",
-  "Genre reader community mapping",
-  "Ongoing monthly brand report",
+  "Progress reporting and brand reviews",
 ];
 
 const testimonials = [
-  { quote: "My email list went from 200 to 8,000 subscribers in 4 months. The brand strategy they built completely transformed how readers see me.", name: "Emily C.", title: "Romance Author · 8K Email List", result: "8,000 Subscribers" },
-  { quote: "I went from unknown indie author to a recognized name in my niche. The brand consistency across website, social, and email makes all the difference.", name: "Dr. Robert M.", title: "Business Author", result: "Recognized Niche Expert" },
-  { quote: "My second book launch was 10x bigger than my first because the audience was already there. Building the brand first was the best investment I made.", name: "Lisa K.", title: "Self-Help Author", result: "10x Second Launch" },
+  { quote: "Before working with the team, I was promoting my book without a clear direction. They helped me shape a consistent author brand, refine my message, and reach readers who genuinely connect with my work. I now feel confident showing up online as an author.", name: "Olivia Grant", title: "Contemporary Fiction Author", result: "Author Brand Strategy" },
+  { quote: "My launch had momentum because every part of the campaign worked together from my author website and social content to reader outreach and promotional planning. I didn't just sell a book; I built an audience I can keep growing with future releases.", name: "James Whitmore", title: "Nonfiction & Business Author", result: "Book Launch Campaign" },
+  { quote: "The marketing strategy gave my books the visibility they had been missing. I finally understood how to position myself, speak directly to my ideal readers, and create a professional presence that makes people remember my name.", name: "Sienna Morales", title: "Romance Author", result: "Reader Growth Program" },
 ];
 
 const faqs = [
-  { q: "What's included in an author brand?", a: "Your name positioning, bio, visual identity, website, social media presence, email list, and the consistent voice across all platforms." },
-  { q: "Which social platforms should I focus on?", a: "It depends on your genre. BookTok (TikTok) and Instagram work well for fiction. LinkedIn and Twitter work for business/non-fiction. We recommend the right ones for you." },
-  { q: "Do I need a website as an author?", a: "Yes — it's your home base that you own. Unlike social media, your website can't be taken away and it builds long-term SEO value." },
-  { q: "How long does it take to build an author brand?", a: "The initial brand build takes 4–6 weeks. Building an audience takes 3–6 months of consistent content and community engagement." },
-  { q: "Can you help with an existing author brand?", a: "Absolutely. We offer brand audits and refreshes for established authors looking to strengthen or update their presence." },
+  { q: "What's included in an author brand?", a: "Your positioning, author bio, brand voice, visual identity, website, social presence, and email list, all working together so readers recognize and trust your name wherever they find you." },
+  { q: "Which social platforms should I focus on?", a: "The ones where your readers already spend time. Our author marketing services start by mapping where your audience lives, so you invest in the right platforms instead of chasing all of them." },
+  { q: "Do I need a website as an author?", a: "Yes. Your website is the one platform you fully own. It's home base for your books, your press kit, and your email list, and a core part of author platform building." },
+  { q: "How long does it take to build an author brand?", a: "It depends on where you're starting and how many platforms are involved. We'll share a clear timeline after your consultation." },
+  { q: "Can you help with an existing author brand?", a: "Absolutely. Our author branding services can refresh, refocus, or expand a brand you've already started, without losing the readers you've earned." },
+  { q: "Do you offer PR on its own?", a: "Yes. Our author PR services are available as a standalone service for authors who already have a strong brand and want more media visibility." },
 ];
 
 export default function AuthorMarketingPage() {
@@ -78,11 +79,11 @@ export default function AuthorMarketingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Author Marketing</span><br /><span className="text-primary">That Makes Your Name the Bestseller.</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Free Quote <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
               </div>
@@ -108,7 +109,7 @@ export default function AuthorMarketingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of Your </span><span style={{ color: COLOR }}>Author Brand, Covered</span></h2>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -134,7 +135,7 @@ export default function AuthorMarketingPage() {
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -154,13 +155,13 @@ export default function AuthorMarketingPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Your Whole Brand.<br />One Clear Price.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Our author marketing services include everything listed below in your quoted price. No hidden add-ons, no surprise invoices.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Users size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to an author marketing specialist before you commit. No pressure, no obligation.</div>
                   </div>
                 </div>
               </div>
@@ -183,7 +184,7 @@ export default function AuthorMarketingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Their Names. Our Marketing. </span><span style={{ color: COLOR }}>Real Wins.</span></h2>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,34 +210,22 @@ export default function AuthorMarketingPage() {
         </div>
       </section>
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions Before </span><span style={{ color: COLOR }}>You Go Public</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Users size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Your Readers Are Searching. Be There.</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with an author marketing specialist and get a clear plan for your brand, platform, and visibility. No commitment, just honest advice.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
               <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>

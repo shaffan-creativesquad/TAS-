@@ -6,7 +6,7 @@ import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
 
 export const metadata: Metadata = {
   title: "Who We Help | The Author Success",
-  description: "Authority books for founders, consultants, coaches, professional services firms and B2B companies. Find your vertical and see what we build.",
+  description: "Our book publishing services for authors fit who you are and what you want your book to do. Find your path below.",
 };
 
 type Vertical = {
@@ -18,7 +18,10 @@ type Vertical = {
   pipeline: string[];
   books: { title: string; badge: string }[];
   features: string[];
+  quote: string;
+  quoteBy: string;
   slug: string;
+  ctaLabel: string;
 };
 
 const verticals: Vertical[] = [
@@ -26,108 +29,122 @@ const verticals: Vertical[] = [
     id: "founders-ceos",
     label: "Founders & CEOs",
     Icon: Building2,
-    headline: "The Book That Tells Your Story Before You Enter the Room.",
-    sub: "Investors read it before meetings. Clients read it before engagements. Journalists quote it. A founder book is the highest-leverage credibility asset you can own.",
-    pipeline: ["Founder Story", "Credibility", "Press Coverage", "Inbound Deals"],
+    headline: "Let Your Book Make the Introduction",
+    sub: "A book lets you share your story, your vision, and what matters to you, helping investors, partners, and clients get to know you before you meet.",
+    pipeline: ["Your Story", "Trust", "Visibility", "New Opportunities"],
     books: [
-      { title: "The Founding Vision",           badge: "Category Defining" },
-      { title: "Built to Last",                 badge: "Amazon #1" },
-      { title: "The Executive Framework",       badge: "10K+ Copies" },
+      { title: "Founder Story Books",        badge: "FOUNDER STORY"     },
+      { title: "Leadership & Strategy Books", badge: "THOUGHT LEADERSHIP" },
+      { title: "Legacy & Memoir Books",       badge: "LEGACY"            },
     ],
     features: [
-      "Ghostwritten narrative in your voice",
-      "Hardcover + eBook + audiobook",
-      "Launch PR kit and media pitches",
-      "Executive bio and speaker one-sheet",
+      "Ghostwriting in your voice",
+      "Print, eBook, and audiobook editions",
+      "Launch and media support",
+      "Author bio and speaker profile",
     ],
+    quote: "The book helped me communicate my vision and build trust with potential partners.",
+    quoteBy: "Founder & CEO",
     slug: "founders-ceos",
+    ctaLabel: "See Founder Books",
   },
   {
     id: "consultants",
     label: "Consultants",
     Icon: Target,
-    headline: "Stop Relying on Referrals. Write the Book That Brings Clients to You.",
-    sub: "Your methodology deserves a book. Once it's published, it generates warm inbound leads, raises your positioning and sells your high-ticket engagements.",
-    pipeline: ["Authority Book", "Inbound Leads", "Premium Enquiries", "High-Ticket Clients"],
+    headline: "Write the Book That Makes Clients Choose You First",
+    sub: "A book explains your method before the first call, so prospects show up ready to work with you. It helps you stand out in a crowded market and win clients without depending only on referrals.",
+    pipeline: ["Your Method", "Credibility", "Warm Leads", "Better Clients"],
     books: [
-      { title: "The 7-Figure Consulting Framework", badge: "Amazon #1"     },
-      { title: "The 90-Day Transformation",         badge: "10K Copies"    },
-      { title: "Your Signature Method",             badge: "Speaker Invite" },
+      { title: "Framework Books",       badge: "SIGNATURE METHOD"  },
+      { title: "Case Study Books",      badge: "CLIENT LESSONS"    },
+      { title: "Industry Insight Books", badge: "THOUGHT LEADERSHIP" },
     ],
     features: [
-      "Framework extraction and naming",
-      "Lead-gen optimised CTA structure",
-      "Case studies from your practice",
-      "LinkedIn content series (52 posts)",
+      "Framework development and naming",
+      "Real client case studies",
+      "Calls to action that bring in leads",
+      "LinkedIn content from your chapters",
     ],
+    quote: "My book paid off by helping potential clients understand my expertise before our first call.",
+    quoteBy: "Business Consultant",
     slug: "consultants",
+    ctaLabel: "See Consultant Books",
   },
   {
     id: "coaches-speakers",
     label: "Coaches & Speakers",
     Icon: Mic2,
-    headline: "The Book That Gets You Booked.",
-    sub: "Conference organisers, podcast hosts and event bookers look for published authors first. A well-positioned book turns speaking from something you chase into something you get offered.",
-    pipeline: ["Signature Book", "Speaking Enquiries", "Podcast Invites", "Program Launches"],
+    headline: "Inspire More People With One Book",
+    sub: "Having a published book can help you get noticed by event organizers and podcast hosts, giving you more chances to share your ideas and speak to new audiences.",
+    pipeline: ["Your Message", "Speaking Invites", "Podcast Features", "Program Growth"],
     books: [
-      { title: "The Inner Game of Leadership",  badge: "TEDx Speaker"  },
-      { title: "Unblock: The Coaching Method",  badge: "5K+ Copies"    },
-      { title: "Your Transformational Journey", badge: "Program Launch" },
+      { title: "Signature Method Books",    badge: "SIGNATURE METHOD" },
+      { title: "Personal Growth Books",     badge: "SELF-HELP"        },
+      { title: "Keynote-to-Book Projects",  badge: "KEYNOTE TO BOOK"  },
     ],
     features: [
-      "Speaker abstract and stage biography",
-      "Podcast pitch kit",
-      "Companion workbook design",
-      "Online course content extraction",
+      "Speaker bio and talk descriptions",
+      "Podcast pitch materials",
+      "Companion workbook",
+      "Course content drawn from your book",
     ],
+    quote: "The book opened new opportunities to share my message with a wider audience.",
+    quoteBy: "Coach & Speaker",
     slug: "coaches-speakers",
+    ctaLabel: "See Coach & Speaker Books",
   },
   {
     id: "professionals",
-    label: "Professional Services",
+    label: "Professionals",
     Icon: Scale,
-    headline: "Build the Credibility That Justifies Premium Fees.",
-    sub: "Lawyers, accountants, financial advisors and clinicians who publish build trust faster, attract better clients and command higher rates — in every market.",
-    pipeline: ["Professional Guide", "Client Trust", "Referral Velocity", "Premium Engagements"],
+    headline: "Be the Name Clients Recommend",
+    sub: "Lawyers, accountants, advisors, and clinicians who publish give clients a clear look at how they think and work. A helpful book builds trust, answers common questions, and brings in clients who value your expertise.",
+    pipeline: ["Helpful Guide", "Client Trust", "Referrals", "Growing Practice"],
     books: [
-      { title: "The Estate Planning Playbook",    badge: "Client Gift"   },
-      { title: "Business Exit Strategies",        badge: "Firm Referrals" },
-      { title: "The Patient's Financial Roadmap", badge: "5-Star Rating" },
+      { title: "Client & Patient Guides",    badge: "CLIENT EDUCATION"    },
+      { title: "Industry Expertise Books",   badge: "PROFESSIONAL INSIGHT" },
+      { title: "Practical How-To Guides",    badge: "PRACTICAL GUIDE"      },
     ],
     features: [
-      "Compliance review by industry specialist",
-      "Client welcome guide version",
-      "Practice referral integration",
-      "Regulatory disclaimer management",
+      "Content shaped for your profession",
+      "Client welcome guide edition",
+      "Referral-friendly formats",
+      "Help with disclaimers and sensitive wording",
     ],
+    quote: "My book makes it easier for clients to understand my expertise and approach.",
+    quoteBy: "Professional Services Client",
     slug: "professionals",
+    ctaLabel: "See Professional Books",
   },
   {
     id: "businesses",
-    label: "B2B & SaaS",
+    label: "Businesses",
     Icon: Network,
-    headline: "The Research Report That Makes Your Category.",
-    sub: "B2B companies and SaaS businesses that publish original research earn media mentions, conference invitations and the kind of brand authority that paid media can't buy.",
-    pipeline: ["Research Report", "PR Coverage", "Category Leadership", "Enterprise Sales"],
+    headline: "Turn Your Brand Into an Authority",
+    sub: "A book or report about your company will give people an opportunity to get insight into what knowledge and values your company holds. It will help you create trust beyond marketing tools.",
+    pipeline: ["Brand Book", "Media Attention", "Market Authority", "Bigger Deals"],
     books: [
-      { title: "State of B2B Sales 2026",           badge: "40 Press Mentions" },
-      { title: "The SaaS Benchmark Report",          badge: "500+ Downloads"    },
-      { title: "10 Companies Transforming Healthcare", badge: "Award Winning"   },
+      { title: "Thought Leadership Books",    badge: "THOUGHT LEADERSHIP" },
+      { title: "Industry Reports & Research", badge: "RESEARCH REPORT"    },
+      { title: "Company Story Books",         badge: "BRAND STORY"        },
     ],
     features: [
-      "Survey design and field management",
-      "Data visualisation and infographics",
-      "40+ media distribution",
-      "LinkedIn data post series",
+      "Research and survey support",
+      "Charts and infographics",
+      "Press release and media outreach",
+      "LinkedIn content series",
     ],
+    quote: "The book paid for itself by giving our team a powerful tool to build client trust.",
+    quoteBy: "B2B Business Client",
     slug: "businesses",
+    ctaLabel: "See Business Books",
   },
 ];
 
 export default function WhoWeHelpPage() {
   return (
     <>
-      {/* ── HERO ── */}
       <section className="relative pt-36 pb-20 overflow-hidden bg-white">
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -140,15 +157,13 @@ export default function WhoWeHelpPage() {
               Who We Help
             </div>
             <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.5rem] font-black leading-[1.08] mb-6">
-              <span className="text-black">Books for People</span>
+              <span className="text-black">Your Expertise Deserves</span>
               <br />
-              <span className="text-primary">Whose Expertise Is the Product.</span>
+              <span className="text-primary">Its Own Book.</span>
             </h1>
             <p className="text-brand-body text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              We work with five types of professional. Pick yours to see the books we build, the pipeline it creates and the results our clients get.
+              Our book publishing services for authors fit who you are and what you want your book to do, including publishing help for self published authors. Pick your path below.
             </p>
-
-            {/* Quick-jump chips */}
             <div className="flex flex-wrap gap-2.5 justify-center">
               {verticals.map(v => (
                 <a
@@ -164,7 +179,6 @@ export default function WhoWeHelpPage() {
         </div>
       </section>
 
-      {/* ── VERTICALS ── */}
       {verticals.map((v, idx) => (
         <section
           key={v.id}
@@ -174,62 +188,59 @@ export default function WhoWeHelpPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid lg:grid-cols-2 gap-14 items-start ${idx % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}`}>
 
-              {/* ── Text side ── */}
               <SlideLeft delay={0}>
-                <div
-                  className="inline-flex items-center gap-2 text-white rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5"
-                  style={{ background: "#0891B2" }}
-                >
-                  <v.Icon size={14} /> {v.label}
-                </div>
-
-                <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-slate-900 mb-4 leading-tight">
-                  {v.headline}
-                </h2>
-                <p className="text-brand-body mb-6 leading-relaxed">{v.sub}</p>
-
-                {/* Pipeline flow */}
-                <div className="flex flex-wrap items-center gap-2 mb-8">
-                  {v.pipeline.map((step, i) => (
-                    <div key={step} className="flex items-center gap-2">
-                      <span className="bg-white border border-slate-200 text-slate-800 font-semibold text-xs px-3 py-1.5 rounded-full shadow-sm">{step}</span>
-                      {i < v.pipeline.length - 1 && <span className="text-primary/40 font-light">→</span>}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
-                  {v.features.map(f => (
-                    <div key={f} className="flex items-start gap-2 text-sm text-slate-800">
-                      <CheckCircle size={15} className="text-primary shrink-0 mt-0.5" />
-                      {f}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <Link
-                    href={`/who-we-help/${v.slug}`}
-                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all"
+                <div>
+                  <div
+                    className="inline-flex items-center gap-2 text-white rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5"
+                    style={{ background: "#0891B2" }}
                   >
-                    Full Detail Page <ArrowRight size={16} />
-                  </Link>
+                    <v.Icon size={14} /> {v.label}
+                  </div>
+
+                  <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-slate-900 mb-4 leading-tight">
+                    {v.headline}
+                  </h2>
+                  <p className="text-brand-body mb-6 leading-relaxed">{v.sub}</p>
+
+                  <div className="flex flex-wrap items-center gap-2 mb-8">
+                    {v.pipeline.map((step, i) => (
+                      <div key={step} className="flex items-center gap-2">
+                        <span className="bg-white border border-slate-200 text-slate-800 font-semibold text-xs px-3 py-1.5 rounded-full shadow-sm">{step}</span>
+                        {i < v.pipeline.length - 1 && <span className="text-primary/40 font-light">→</span>}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
+                    {v.features.map(f => (
+                      <div key={f} className="flex items-start gap-2 text-sm text-slate-800">
+                        <CheckCircle size={15} className="text-primary shrink-0 mt-0.5" />
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={`/who-we-help/${v.slug}`}
+                      className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all"
+                    >
+                      {v.ctaLabel} <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
               </SlideLeft>
 
-              {/* ── Book cards ── */}
               <SlideRight delay={0.1}>
                 <div className="space-y-4">
-                  {v.books.map((book, i) => (
+                  {v.books.map((book) => (
                     <div
                       key={book.title}
                       className="flex items-center gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-primary/20 transition-all"
                     >
-                      {/* Mini book spine */}
                       <div
                         className="w-12 h-16 rounded-lg flex items-center justify-center text-white shadow-md shrink-0"
-                        style={{ background: `linear-gradient(135deg, #0891B2, #0369a1)` }}
+                        style={{ background: "linear-gradient(135deg, #0891B2, #0369a1)" }}
                       >
                         <BookOpen size={20} />
                       </div>
@@ -240,13 +251,12 @@ export default function WhoWeHelpPage() {
                     </div>
                   ))}
 
-                  {/* Quote card */}
                   <div className="bg-primary rounded-2xl p-6 text-white">
                     <div className="text-3xl text-white/20 font-serif mb-2">&ldquo;</div>
                     <p className="font-[family-name:var(--font-playfair)] font-bold text-base leading-snug mb-3">
-                      The book paid for itself in the first two engagements.
+                      {v.quote}
                     </p>
-                    <cite className="text-white/50 text-xs not-italic">— {v.label} Client</cite>
+                    <cite className="text-white/50 text-xs not-italic">— {v.quoteBy}</cite>
                   </div>
                 </div>
               </SlideRight>
@@ -255,16 +265,15 @@ export default function WhoWeHelpPage() {
         </section>
       ))}
 
-      {/* ── CTA ── */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">
-              Ready to Turn Your Expertise Into Authority?
+              Not Sure Which Fits You? Let&apos;s Talk.
             </h2>
-            <p className="text-white/70 mb-8">30-minute strategy call. No obligation. You leave with a book concept tailored to your vertical.</p>
+            <p className="text-white/80 mb-8">Book a free 30-minute call and leave with a book idea built around your goals. No obligation.</p>
             <Link
-              href="/book-a-call"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white hover:bg-white/90 font-bold px-10 py-4 rounded-full shadow-lg transition-all text-lg"
               style={{ color: "#089bb2" }}
             >

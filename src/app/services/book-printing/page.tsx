@@ -1,80 +1,41 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { Printer, Clock, Award, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, Printer, Globe, Eye, Package } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Professional Book Printing Services | The Author Success",
-  description:
-    "High-quality book printing — print-on-demand setup, bulk offset printing, hardcover editions. 500,000+ books printed. Fast turnaround, global fulfillment.",
+  title: "Book Printing Services | The Author Success",
+  description: "Book printing services that turn your files into beautifully bound books, from a single proof copy to a full print run.",
 };
 
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Print Quality";
-const headline = "Professional Book Printing for Every Project and Budget";
-const subline =
-  "High-quality print-on-demand and bulk printing with global fulfillment.";
-const desc =
-  "Whether you need 10 copies for a launch event or 10,000 for a retail distribution campaign, we source the right printing solution for your project. We manage print specifications, file preparation, quality checking, and fulfillment — so your books arrive looking exactly as you envisioned.";
+const badge = "PRINT QUALITY";
+const headline = "Book Printing That Feels Like a Bestseller.";
+const subline = "Book printing services that turn your files into beautifully bound books, from a single proof copy to a full print run.";
+const desc = "From one copy to thousands, we match your project with the right printing solution. Our book printing services cover specifications, file preparation, quality control, and fulfillment, so you never have to wrestle with printer jargon.";
 
 const stats = [
-  { value: "500K+", label: "Books Printed", Icon: Printer },
-  { value: "5–10 Days", label: "Standard Delivery", Icon: Clock },
-  { value: "50+", label: "Binding Options", Icon: Award },
-  { value: "100%", label: "Quality Guaranteed", Icon: TrendingUp },
+  { value: "Paperback &", label: "Hardcover", Icon: Printer },
+  { value: "Print on", label: "Demand", Icon: Globe },
+  { value: "Proof", label: "First", Icon: Eye },
+  { value: "Tracked", label: "Delivery", Icon: Package },
 ];
 
 const subServices = [
-  {
-    tag: "POD",
-    title: "Print-on-Demand Setup",
-    desc: "Amazon KDP and IngramSpark print-on-demand configuration — sell physical copies worldwide with zero inventory and upfront printing cost.",
-  },
-  {
-    tag: "Bulk",
-    title: "Bulk Offset Printing",
-    desc: "Cost-effective bulk printing for 500+ copies — perfect for author events, bookstore stocking, and direct sales.",
-  },
-  {
-    tag: "Specialty",
-    title: "Specialty & Hardcover",
-    desc: "Premium hardcover, case laminate, and special format printing for gift books, collector editions, and premium publications.",
-  },
-  {
-    tag: "Proof",
-    title: "Author Proof Copies",
-    desc: "Physical proof copies before mass printing to verify print quality, color accuracy, and binding before committing to a print run.",
-  },
+  { tag: "ON DEMAND", title: "Print-on-Demand Setup", desc: "Our print-on-demand book printing setup lets you sell physical copies worldwide with no inventory and no upfront printing costs. Each book is printed only when a reader orders it." },
+  { tag: "PAPERBACK", title: "Paperback Printing", desc: "Crisp, durable paperback book printing for launch events, bookstore stock, and direct sales, with your choice of trim size, paper stock, and matte or gloss cover." },
+  { tag: "HARDCOVER", title: "Hardcover & Specialty Editions", desc: "Premium hardcover book printing for gift books, collector editions, and keepsakes, including case-laminate covers and special formats that feel truly elevated." },
+  { tag: "PROOF", title: "Author Proof Copies", desc: "Hold a physical proof before the full run, so you can check print quality, color accuracy, and binding before committing to a single extra copy." },
 ];
 
 const steps = [
-  {
-    num: "01",
-    title: "Print Specifications",
-    desc: "We define trim size, binding, paper stock, cover finish, and print quantity based on your goals and budget.",
-  },
-  {
-    num: "02",
-    title: "File Preparation",
-    desc: "Your files are checked and prepared to the exact printer's specifications — cover bleed, resolution, color profile.",
-  },
-  {
-    num: "03",
-    title: "Proof Review",
-    desc: "A digital proof is approved and physical proof copies are sent to you before any full print run.",
-  },
-  {
-    num: "04",
-    title: "Print Production",
-    desc: "Full production run with quality control checkpoints throughout the printing and binding process.",
-  },
-  {
-    num: "05",
-    title: "Delivery & Fulfillment",
-    desc: "Books are shipped directly to you or to your distribution partner — tracked delivery to any location.",
-  },
+  { num: "01", title: "Print Specifications", desc: "We help you choose trim size, binding, paper stock, cover finish, and quantity, all matched to your goals and budget." },
+  { num: "02", title: "File Preparation", desc: "We check and prepare your interior and cover files to exact printer specifications, from bleed and resolution to color profiles." },
+  { num: "03", title: "Proof & Approval", desc: "You approve a digital proof, then review a physical proof copy before any full print run begins." },
+  { num: "04", title: "Print & Deliver", desc: "Your books are printed and bound with quality checks at every stage, then shipped with tracking to you or your distribution partner." },
 ];
 
 const included = [
@@ -82,302 +43,218 @@ const included = [
   "File preflight check",
   "Print-ready file preparation",
   "Digital proof approval",
-  "Physical proof copy (1 copy)",
+  "Physical proof copy",
   "Quality control review",
-  "Bulk print production",
-  "Binding options (perfect, case, saddle)",
+  "Paperback and hardcover printing",
+  "Binding options (perfect, case, saddle stitch)",
   "Multiple paper stock options",
-  "Matte or gloss cover options",
+  "Matte or gloss cover finish",
   "Tracked delivery",
   "Fulfillment to multiple addresses",
 ];
 
 const testimonials = [
   {
-    quote:
-      "1,000 copies for my launch event and not a single defect. The print quality was stunning — readers couldn't believe it was self-published.",
-    name: "Karen M.",
-    title: "Memoir Author · 1,000 Copy Launch",
-    result: "Zero Defects",
+    quote: "I wanted my debut novel to feel like a real bookstore book, not just a printed manuscript. The finished paperback exceeded my expectations; the cover was sharp, the pages were clean, and the binding felt strong and professional. Seeing my name on the spine was unforgettable.",
+    name: "Grace Holloway",
+    title: "Contemporary Fiction Author",
+    result: "Paperback Book Printing",
   },
   {
-    quote:
-      "My hardcover collector edition sold out in a week. The premium quality justified the higher price point and readers loved the physical book.",
-    name: "Robert T.",
-    title: "History Author · Sold Out Edition",
-    result: "Sold Out",
+    quote: "The print quality brought my children's book to life. The illustrations came out bright and detailed, the colors matched my vision, and the hardcover feels durable enough for little hands. Parents at my launch immediately commented on how beautiful it looked.",
+    name: "Owen Mitchell",
+    title: "Children's Picture Book Author",
+    result: "Full-Color Hardcover",
   },
   {
-    quote:
-      "Print-on-demand setup meant I could sell physical copies worldwide with zero upfront cost. Now I earn print royalties every month passively.",
-    name: "Sandra L.",
-    title: "Fiction Author",
-    result: "Passive Print Income",
+    quote: "I needed a high-quality print run for my speaking events and client gifts. From the first proof to the delivered boxes, everything was handled carefully. My books arrived looking polished, consistent, and ready to put directly into readers' hands.",
+    name: "Nadia Patel",
+    title: "Business & Leadership Author",
+    result: "Professional Print Run",
   },
 ];
 
 const faqs = [
-  {
-    q: "What's the minimum print quantity for bulk printing?",
-    a: "Offset bulk printing starts at 250–500 copies. For smaller quantities, print-on-demand is more cost-effective.",
-  },
-  {
-    q: "What's the difference between POD and offset printing?",
-    a: "POD prints one copy at a time with no upfront cost but higher per-unit cost. Offset printing has setup costs but lower per-unit pricing at volume.",
-  },
-  {
-    q: "How long does bulk printing take?",
-    a: "Standard: 10–15 business days. Rush options are available for time-sensitive events.",
-  },
-  {
-    q: "Can you match the quality of traditionally published books?",
-    a: "Yes. We use the same printing vendors used by major publishers — the quality is indistinguishable.",
-  },
-  {
-    q: "Do you ship internationally?",
-    a: "Yes. We fulfill to any country with tracked international shipping. We also set up distribution for bookstores in your target markets.",
-  },
+  { q: "Is there a smallest quantity you print in bulk?", a: "Minimums depend on the format and printing method. Our book printing services cover everything from small runs to large orders, and we'll recommend the most cost-effective option for your quantity." },
+  { q: "What's the difference between print on demand and bulk printing?", a: "Print-on-demand book printing prints each copy as it's ordered, so there's no inventory or upfront cost. Bulk printing produces a larger run at once, which lowers the cost per copy and works well for events, bookstores, and direct sales." },
+  { q: "How long does printing take?", a: "Timelines depend on quantity, format, and finishing options. Once your specs are set, we'll share a clear production and delivery schedule." },
+  { q: "Can my book match the quality of traditionally published titles?", a: "Yes. With the right paper, binding, and finish, our paperback book printing and hardcover book printing deliver books that look and feel just as polished as anything on a bookstore shelf." },
+  { q: "Do you ship internationally?", a: "Yes. We offer tracked delivery to locations around the world, including fulfillment to multiple addresses." },
+  { q: "Can I see a copy before the full print run?", a: "Absolutely. You'll approve a digital proof and receive a physical proof copy before we print the full order." },
 ];
 
 export default function BookPrintingPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* ── HERO ── */}
-      <section
-        className="relative overflow-hidden py-24 md:py-32"
-        style={{ background: `linear-gradient(135deg, ${COLOR} 0%, #0e7490 100%)` }}
-      >
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px" }}
-        />
-        <div className="relative mx-auto max-w-6xl px-6 text-center text-white">
-          <FadeUp>
-            <span className="mb-4 inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest backdrop-blur">
-              {badge}
-            </span>
-          </FadeUp>
-          <FadeUp delay={0.1}>
-            <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
-              {headline}
-            </h1>
-          </FadeUp>
-          <FadeUp delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl">{subline}</p>
-          </FadeUp>
-          <FadeUp delay={0.3}>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="rounded-full px-8 py-4 text-base font-bold shadow-lg transition hover:scale-105 hover:opacity-90"
-                style={{ background: "white", color: COLOR }}
-              >
-                Get a Printing Quote
-              </Link>
-              <Link
-                href="#process"
-                className="rounded-full border border-white/40 bg-white/10 px-8 py-4 text-base font-semibold backdrop-blur transition hover:bg-white/20"
-              >
-                See How It Works
-              </Link>
-            </div>
-          </FadeUp>
-        </div>
-
-        {/* Stats bar */}
-        <div className="relative mx-auto mt-16 max-w-5xl px-6">
-          <div className="grid grid-cols-2 gap-4 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur md:grid-cols-4">
-            {stats.map(({ value, label, Icon }) => (
-              <div key={label} className="text-center text-white">
-                <Icon className="mx-auto mb-2 h-6 w-6 opacity-80" />
-                <div className="text-2xl font-extrabold md:text-3xl">{value}</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider opacity-70">{label}</div>
+    <>
+      <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: `linear-gradient(145deg, ${COLOR}22 0%, #ffffff 50%, ${COLOR}12 100%)` }}>
+        <div className="absolute inset-0 opacity-[0.025] pointer-events-none" style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <SlideLeft>
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Book Printing</span><br /><span className="text-primary">That Feels Like a Bestseller.</span></h1>
+                <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
+                <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Printing Quote <ArrowRight size={16} /></Link>
+                  <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See How It Works</Link>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHAT WE OFFER ── */}
-      <section className="py-20" style={{ background: LIGHT_BG }}>
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                What We Offer
-              </span>
-              <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Book Printing Services
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-gray-600">{desc}</p>
-            </div>
-          </FadeUp>
-          <div className="grid gap-6 md:grid-cols-2">
-            {subServices.map((s, i) => (
-              <SlideLeft key={s.title} delay={i * 0.1}>
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md">
-                  <span className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider text-white" style={{ background: COLOR }}>
-                    {s.tag}
-                  </span>
-                  <h3 className="mb-2 text-lg font-bold text-gray-900">{s.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
-                </div>
-              </SlideLeft>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── OUR PROCESS ── */}
-      <section id="process" className="py-20 bg-white">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                Our Process
-              </span>
-              <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                From Files to Finished Books
-              </h2>
-            </div>
-          </FadeUp>
-          <div className="relative">
-            <div className="absolute left-8 top-0 hidden h-full w-0.5 md:block" style={{ background: `linear-gradient(to bottom, ${COLOR}, transparent)` }} />
-            <div className="space-y-8">
-              {steps.map((step, i) => (
-                <SlideRight key={step.num} delay={i * 0.1}>
-                  <div className="flex gap-6">
-                    <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-white font-extrabold text-lg shadow-lg" style={{ background: COLOR }}>
-                      {step.num}
+            </SlideLeft>
+            <SlideRight delay={0.1}>
+              <div className="grid grid-cols-2 gap-4">
+                {stats.map(({ value, label, Icon }, i) => (
+                  <FadeUp key={label} delay={i * 0.08}>
+                    <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
+                      <div className="font-[family-name:var(--font-playfair)] text-base font-black text-brand-dark leading-snug">{value}</div>
+                      <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
-                    <div className="flex-1 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                      <h3 className="mb-2 text-lg font-bold text-gray-900">{step.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{step.desc}</p>
-                    </div>
-                  </div>
-                </SlideRight>
-              ))}
-            </div>
+                  </FadeUp>
+                ))}
+              </div>
+            </SlideRight>
           </div>
         </div>
       </section>
 
-      {/* ── WHAT'S INCLUDED ── */}
-      <section className="py-20" style={{ background: LIGHT_BG }}>
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeUp>
-            <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                What's Included
-              </span>
-              <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Everything You Get
-              </h2>
-            </div>
-          </FadeUp>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {included.map((item, i) => (
-              <ScaleIn key={item} delay={i * 0.05}>
-                <div className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full" style={{ background: LIGHT_BG }}>
-                    <Printer className="h-4 w-4" style={{ color: COLOR }} />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">{item}</span>
-                </div>
-              </ScaleIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
-            <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                Client Results
-              </span>
-              <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Books Printed to Perfection
-              </h2>
+            <div className="text-center mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Way to </span><span style={{ color: COLOR }}>Print Your Book</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">From one copy to thousands, we match your project with the right printing solution.</p>
             </div>
           </FadeUp>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <SlideLeft key={t.name} delay={i * 0.1}>
-                <div className="flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <div className="mb-4 text-3xl" style={{ color: COLOR }}>&ldquo;</div>
-                  <p className="flex-1 text-gray-700 leading-relaxed italic">{t.quote}</p>
-                  <div className="mt-6 border-t border-gray-100 pt-4">
-                    <div className="font-bold text-gray-900">{t.name}</div>
-                    <div className="text-sm text-gray-500">{t.title}</div>
-                    <div className="mt-2 inline-block rounded-full px-3 py-1 text-xs font-bold text-white" style={{ background: COLOR }}>
-                      {t.result}
-                    </div>
-                  </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {subServices.map((sub, i) => (
+              <FadeUp key={sub.title} delay={i * 0.08}>
+                <div className="rounded-2xl p-6 border border-slate-100 hover:border-transparent hover:shadow-xl transition-all" style={{ background: LIGHT_BG }}>
+                  <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full text-white inline-block mb-4" style={{ background: COLOR }}>{sub.tag}</span>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-brand-dark mb-2">{sub.title}</h3>
+                  <p className="text-sm text-brand-body leading-relaxed">{sub.desc}</p>
                 </div>
-              </SlideLeft>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ ── */}
-      <section className="py-20" style={{ background: LIGHT_BG }}>
-        <div className="mx-auto max-w-3xl px-6">
-          <FadeUp>
-            <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                FAQ
-              </span>
-              <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Frequently Asked Questions
-              </h2>
-            </div>
-          </FadeUp>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group rounded-2xl border border-gray-100 bg-white shadow-sm">
-                  <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900 marker:content-none">
-                    {faq.q}
-                    <span className="ml-4 shrink-0 text-xl transition group-open:rotate-45" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <p className="px-6 pb-6 text-gray-600 leading-relaxed">{faq.a}</p>
-                </details>
               </FadeUp>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-24 text-white" style={{ background: `linear-gradient(135deg, ${COLOR} 0%, #0e7490 100%)` }}>
-        <div className="mx-auto max-w-4xl px-6 text-center">
+      <section className="py-20" style={{ background: LIGHT_BG }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-14">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">From Files to </span><span style={{ color: COLOR }}>Finished Books</span></h2>
+            </div>
+          </FadeUp>
+          <div className="relative">
+            <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steps.map((step, i) => (
+                <FadeUp key={step.num} delay={i * 0.08}>
+                  <div className="relative">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 font-[family-name:var(--font-playfair)] text-xl font-black text-white shadow-lg" style={{ background: COLOR }}>{step.num}</div>
+                    <h4 className="font-bold text-brand-dark text-center text-sm mb-2">{step.title}</h4>
+                    <p className="text-xs text-brand-muted text-center leading-relaxed">{step.desc}</p>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-brand-dark">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <SlideLeft>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">What&apos;s Included</span>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Everything Your Book<br />Deserves, Included</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote covers the work from the first planning session to the final delivery. We&apos;ll go over the costs before getting started, so you know what you&apos;re paying for. No extra charges later.</p>
+                <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Printer size={22} className="text-white" /></div>
+                  <div>
+                    <div className="text-white font-semibold text-sm">Free Consultation Included</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to a printing expert before you commit — no obligation.</div>
+                  </div>
+                </div>
+              </div>
+            </SlideLeft>
+            <SlideRight delay={0.1}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {included.map((item) => (
+                  <div key={item} className="flex items-start gap-2.5">
+                    <CheckCircle size={15} className="shrink-0 mt-0.5 text-white" />
+                    <span className="text-[#CFFAFE] text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </SlideRight>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Client Results</span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Printed, Bound, </span><span style={{ color: COLOR }}>and Beloved</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">Authors who held their finished books in their hands and loved what they saw.</p>
+            </div>
+          </FadeUp>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <FadeUp key={t.name} delay={i * 0.1}>
+                <div className="bg-white border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                  <div className="flex mb-4">{[1,2,3,4,5].map(j => <Star key={j} size={13} className="text-amber-400 fill-amber-400" />)}</div>
+                  <p className="font-[family-name:var(--font-playfair)] text-base italic text-brand-dark-2 mb-6 leading-relaxed">&quot;{t.quote}&quot;</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold text-xs shrink-0" style={{ background: COLOR }}>{t.name.split(" ").map(n => n[0]).join("")}</div>
+                      <div>
+                        <div className="font-bold text-sm text-brand-dark">{t.name}</div>
+                        <div className="text-xs text-brand-muted">{t.title}</div>
+                      </div>
+                    </div>
+                    <span className="text-[9px] font-black uppercase px-2.5 py-1 rounded-full whitespace-nowrap" style={{ background: `${COLOR}15`, color: COLOR }}>{t.result}</span>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-12">
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions Before </span><span style={{ color: COLOR }}>We Hit Print</span></h2>
+            </div>
+          </FadeUp>
+          <FAQAccordion faqs={faqs} />
+        </div>
+      </section>
+
+      <section className="py-20" style={{ background: "#089bb2" }}>
+        <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
-            <Printer className="mx-auto mb-6 h-16 w-16 opacity-90" />
-            <h2 className="text-3xl font-extrabold md:text-5xl">Ready to Print Your Book?</h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-              Get a custom printing quote and hold your professionally printed book in your hands.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="rounded-full px-10 py-4 text-base font-bold shadow-xl transition hover:scale-105 hover:opacity-90"
-                style={{ background: "white", color: COLOR }}
-              >
-                Get Started Today
-              </Link>
-              <Link
-                href="/services"
-                className="rounded-full border border-white/40 bg-white/10 px-10 py-4 text-base font-semibold backdrop-blur transition hover:bg-white/20"
-              >
-                View All Services
-              </Link>
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Printer size={28} className="text-white" /></div>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Let&apos;s Print the Book You Dreamed Of.</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Get a custom quote for book printing services and hold your professionally printed book in your hands.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Get Started Today <ArrowRight size={18} /></Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">View All Services</Link>
             </div>
           </ScaleIn>
         </div>
       </section>
-    </main>
+    </>
   );
 }

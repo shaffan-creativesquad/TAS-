@@ -1,45 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, BookOpen, TrendingUp, Users, Clock } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, BookOpen, Shield, Calendar, Award } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
 
 export const metadata: Metadata = {
   title: "Books for Consultants | The Author Success",
-  description: "Stop relying on referrals. A professionally published book makes you the obvious choice in your niche. 400+ consultant books published.",
+  description: "For consultants who want to share what they know, get noticed by the right people, and bring in more clients without depending on referrals alone.",
 };
 
 const COLOR = "#0891b2";
 
-const stats = [
-  { value: "400+", label: "Consultant Books", Icon: BookOpen },
-  { value: "3×", label: "Avg. Inbound Increase", Icon: TrendingUp },
-  { value: "89%", label: "Close Rate Post-Book", Icon: Users },
-  { value: "12 Wks", label: "Avg. Delivery", Icon: Clock },
+const highlights = [
+  { big: "Your Framework", small: "Clearly Explained", Icon: BookOpen },
+  { big: "NDA First", small: "Before Day One", Icon: Shield },
+  { big: "Busy Schedule?", small: "We Work Around It", Icon: Calendar },
+  { big: "100% Yours", small: "Rights & Royalties", Icon: Award },
 ];
 
 const features = [
-  "Makes your methodology visible and sellable to premium clients",
-  "Positions you as the authority — not just another consultant",
-  "Generates warm inbound leads while you sleep",
+  "Turns your method into something clients can see and trust",
+  "Sets you apart from other consultants in your niche",
+  "Brings in warm leads who already understand your value",
 ];
 
 const flow = [
-  { label: "Book", desc: "Your lead-gen asset" },
-  { label: "Credibility", desc: "Instant authority" },
-  { label: "Inbound Leads", desc: "Warm enquiries" },
-  { label: "High-Ticket Clients", desc: "Premium engagements" },
+  { label: "Book", desc: "Your method, in print" },
+  { label: "Credibility", desc: "Trust before the first call" },
+  { label: "Inbound", desc: "Clients who come to you" },
+  { label: "Premium Work", desc: "Bigger, better-fit projects" },
 ];
 
 const bookExamples = [
-  { title: "The 7-Figure Consulting Framework", badge: "Amazon #1", desc: "A step-by-step system used by elite consultants to scale past seven figures." },
-  { title: "The 90-Day Transformation", badge: "10K Copies Sold", desc: "How to deliver measurable client results in less than three months." },
-  { title: "Your Signature Method", badge: "Speaker Invite", desc: "How to package your expertise into a proprietary framework clients pay premium for." },
+  { title: "Framework Books", badge: "YOUR APPROACH", desc: "A clear, step-by-step look at your approach and how you help clients get results." },
+  { title: "Case Study Books", badge: "REAL CLIENT STORIES", desc: "Real stories from your work that show how you solve problems and help clients." },
+  { title: "Industry Insight Books", badge: "INDUSTRY INSIGHTS", desc: "Your take on industry changes, what they mean, and what businesses can do about them." },
 ];
 
 export default function ConsultantsPage() {
   return (
     <>
-      {/* HERO */}
       <section className="relative pt-36 pb-20 overflow-hidden bg-white">
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -56,24 +55,24 @@ export default function ConsultantsPage() {
                 Consultants
               </div>
               <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-5">
-                <span className="text-black">A Book That Brings You Consulting Clients </span>
-                <span className="text-primary">— On Autopilot</span>
+                <span className="text-black">Become the Consultant </span>
+                <span className="text-primary">Everyone Wants to Hire</span>
               </h1>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto">
-                Stop relying on referrals. A professionally published book makes you the obvious choice in your niche.
+                For consultants who want to share what they know, get noticed by the right people, and bring in more clients without depending on referrals alone.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link
-                  href="/book-a-call"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all"
                 >
-                  Book Strategy Call <ArrowRight size={16} />
+                  Book a Strategy Call <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="/portfolio"
                   className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all"
                 >
-                  See Portfolio
+                  See Our Work
                 </Link>
               </div>
             </FadeUp>
@@ -81,18 +80,17 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* STATS STRIP */}
       <section className="py-12" style={{ background: "#0891b2" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map(({ value, label, Icon }, i) => (
-              <FadeUp key={label} delay={i * 0.08}>
+            {highlights.map(({ big, small, Icon }, i) => (
+              <FadeUp key={big} delay={i * 0.08}>
                 <div className="text-center">
                   <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
                     <Icon size={18} className="text-white" />
                   </div>
-                  <div className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white">{value}</div>
-                  <div className="text-white/80 text-sm mt-1">{label}</div>
+                  <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-white">{big}</div>
+                  <div className="text-white/80 text-sm mt-1">{small}</div>
                 </div>
               </FadeUp>
             ))}
@@ -100,19 +98,18 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* THE BOOK WE BUILD */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <SlideLeft>
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">The Book We Build For You</span>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Built For Consultants</span>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-5">
-                  <span className="text-black">Framework &amp; </span>
-                  <span className="text-primary">Lead-Generation Books</span>
+                  <span className="text-black">Show Clients </span>
+                  <span className="text-primary">Why You&apos;re Worth It</span>
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-8">
-                  Consultant books that work as your best salesperson — establishing your methodology, building trust with prospects, and closing deals before you even get on a call.
+                  A book gives potential clients a chance to get to know how you work before they ever speak with you. We help turn your knowledge and experience into a book that explains what you do, builds trust, and helps the right clients see the value you bring.
                 </p>
               </div>
             </SlideLeft>
@@ -132,15 +129,14 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* OUTCOME FLOW */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Your Journey</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">The Roadmap</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">From Book to </span>
-                <span className="text-primary">High-Ticket Clients</span>
+                <span className="text-black">From Expert to </span>
+                <span className="text-primary">In-Demand Consultant</span>
               </h2>
             </div>
           </FadeUp>
@@ -163,15 +159,14 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* BOOK EXAMPLES */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Portfolio</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Books We&apos;ve </span>
-                <span className="text-primary">Built</span>
+                <span className="text-black">Books Clients </span>
+                <span className="text-primary">Trust</span>
               </h2>
             </div>
           </FadeUp>
@@ -194,7 +189,6 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
       <section className="py-20 bg-cyan-50 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
@@ -204,12 +198,12 @@ export default function ConsultantsPage() {
               ))}
             </div>
             <blockquote className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-black italic text-slate-800 leading-relaxed mb-6">
-              &quot;The book paid for itself in the first two engagements.&quot;
+              &quot;My book helped me showcase my expertise, build client trust, and attract better-fit projects.&quot;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">SM</div>
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">JP</div>
               <div className="text-left">
-                <div className="font-bold text-slate-800 text-sm">Sarah M.</div>
+                <div className="font-bold text-slate-800 text-sm">Jordan P.</div>
                 <div className="text-xs text-slate-500">Business Consultant</div>
               </div>
             </div>
@@ -217,16 +211,15 @@ export default function ConsultantsPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-black">Ready to Write Your </span>
-              <span className="text-white">Consulting Book?</span>
+              <span className="text-white">Let&apos;s Turn Your Expertise </span>
+              <span className="text-white">Into a Book</span>
             </h2>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
-              Book a free 30-minute strategy call. We&apos;ll map out your book concept, positioning, and a publishing roadmap — at no cost.
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">
+              Book a free call to talk through your book idea, how to position it, and the steps to get it published.
             </p>
             <Link
               href="/contact"

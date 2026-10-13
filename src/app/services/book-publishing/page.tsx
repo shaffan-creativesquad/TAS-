@@ -1,76 +1,78 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, BookMarked, Award, Clock, Globe } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, BookMarked, Award, BookOpen, Globe } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Professional Book Publishing Services | The Author Success",
-  description: "Complete book publishing on Amazon KDP and 40+ global platforms. ISBN, formatting, distribution — 100% royalties kept by you. Live on Amazon in 72 hours.",
+  description: "Self-publishing services that take your manuscript worldwide, with every royalty paid to you. Formatting, ISBNs, platform setup, and global book distribution.",
 };
 
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Full-Service Publishing";
-const headline = "Your Book Published Professionally on Every Platform";
-const subline = "Complete book publishing from manuscript to global retail — fast, affordable, and 100% royalty-owned.";
-const desc = "We manage the entire publishing process so you can focus on writing. From Amazon KDP and IngramSpark setup to global distribution across 40+ platforms, we handle every technical detail. Your book reaches readers worldwide while every royalty flows directly to your account.";
-const serviceLabel = "Book Publishing";
+const badge = "Book Publishing Services";
+const headline = "Book Publishing From First Proof to Worldwide Release.";
+const subline = "Self-publishing services that take your manuscript worldwide, with every royalty paid to you.";
+const desc = "Publishing shouldn't feel like a second full-time job. We handle formatting, ISBNs, platform setup, and global book distribution, so you can publish a book online without decoding dashboards or chasing deadlines. Your book looks professional, reaches readers everywhere, and stays yours entirely.";
 
 const stats = [
-  { value: "2,500+", label: "Books Published", Icon: BookMarked },
-  { value: "40+", label: "Global Platforms", Icon: Globe },
-  { value: "72 hrs", label: "Live on Amazon", Icon: Clock },
-  { value: "100%", label: "Royalty Ownership", Icon: Award },
+  { value: "100% Royalties", label: "Every sale paid to you", Icon: Award },
+  { value: "Print + eBook", label: "Formatted for every format", Icon: BookOpen },
+  { value: "Amazon Ready", label: "Full KDP setup handled", Icon: BookMarked },
+  { value: "Worldwide Reach", label: "Online stores, bookstores, libraries", Icon: Globe },
 ];
 
 const subServices = [
-  { tag: "Amazon", title: "Amazon KDP Publishing", desc: "Kindle and paperback publishing with fully optimized metadata, categories, and keywords for maximum discoverability." },
-  { tag: "Global", title: "IngramSpark Distribution", desc: "Bookstore and library distribution worldwide through IngramSpark's global network of 40,000+ retailers." },
-  { tag: "Digital", title: "eBook Publishing", desc: "EPUB formatting and distribution to Kindle, Apple Books, Kobo, Nook, and all major e-reader platforms." },
-  { tag: "Print", title: "Print-on-Demand Setup", desc: "Professional print-on-demand configuration so readers can order physical copies with no inventory risk to you." },
+  { tag: "AMAZON", title: "Amazon KDP Publishing", desc: "Our Amazon KDP publishing services set up your Kindle eBook and paperback with optimized titles, descriptions, categories, and keywords, plus your Amazon Author Central profile and Kindle Direct Publishing help, minus the headaches." },
+  { tag: "GLOBAL", title: "Worldwide Distribution", desc: "Our book publishing and distribution setup places your title with online retailers, bookstores, and libraries around the world, so readers can find it wherever they shop." },
+  { tag: "DIGITAL", title: "eBook Formatting", desc: "Clean, reflowable eBook files that read beautifully on Kindle, Apple Books, Kobo, and other major e-readers." },
+  { tag: "PRINT", title: "Print Interior Formatting", desc: "Print-ready interiors with proper margins, fonts, headers, page numbers, and chapter styling, so your paperback or hardcover looks bookstore-ready." },
 ];
 
 const steps = [
-  { num: "01", title: "Manuscript Review", desc: "We check your manuscript and cover files for publishing readiness before beginning the setup process." },
-  { num: "02", title: "Formatting", desc: "Interior formatting for both print PDF and digital EPUB, styled to professional publishing standards." },
-  { num: "03", title: "ISBN & Metadata", desc: "ISBN registration, copyright setup, book description copywriting, and keyword/category research." },
-  { num: "04", title: "Platform Setup", desc: "Amazon KDP and IngramSpark accounts configured and your book submitted for review." },
-  { num: "05", title: "Live & Distributed", desc: "Your book goes live on Amazon within 72 hours and reaches global retailers within 4–6 weeks." },
+  { num: "01", title: "Manuscript Review & Consultation", desc: "Tell us about your book and your goals. We review your manuscript for publishing readiness, flag anything that needs fixing, and recommend the right package for your project." },
+  { num: "02", title: "Formatting & Design", desc: "We format your interior for print and eBook, making sure your book looks polished and professional on every page and every screen." },
+  { num: "03", title: "ISBN & Platform Setup", desc: "Our ISBN publishing services register your ISBNs and set up your publisher details. We then build and optimize your Amazon KDP listing and configure your wider distribution channels." },
+  { num: "04", title: "Publish & Distribute", desc: "Your book goes live on Amazon and rolls out through our global book distribution network to retailers, bookstores, and libraries, while you keep every royalty." },
 ];
 
 const included = [
+  "Print interior formatting",
+  "eBook formatting for all major e-readers",
+  "ISBN registration (print and digital)",
+  "Copyright guidance",
   "Amazon KDP account setup",
-  "Kindle + paperback publishing",
-  "ISBN registration",
+  "Kindle eBook and paperback publishing",
   "Book description copywriting",
-  "Category & keyword research",
-  "eBook formatting (EPUB)",
-  "Print interior formatting (PDF)",
-  "IngramSpark distribution",
-  "40+ platform global reach",
+  "Category and keyword research",
   "Amazon Author Central setup",
-  "100% royalties to your account",
-  "Publishing timeline report",
+  "Wide distribution setup",
+  "Global retail and library reach",
+  "100% royalties paid to your account",
 ];
 
 const testimonials = [
-  { quote: "Published on Amazon in 48 hours and live in Barnes & Noble within a month. The whole process was handled without me lifting a finger.", name: "Daniel H.", title: "Business Author · Wall Street Pick", result: "Wall Street Pick" },
-  { quote: "Everything was taken care of — ISBN, formatting, all platforms. Professional quality that rivals Big Five publishers.", name: "Lisa P.", title: "Self-Help Author · 12K Copies", result: "12,000 Copies Sold" },
-  { quote: "My book is now in 40+ countries. The global reach they set up has brought in readers I never expected.", name: "Maria G.", title: "Memoir Author", result: "Global Distribution" },
+  { quote: "Publishing my first book felt overwhelming until I had a team guiding every step. From preparing the manuscript and finalizing the cover to setting up the files for print and eBook, the process was clear, organized, and much easier than I expected.", name: "Hannah Reed", title: "Self-Help Author", result: "First Book Published" },
+  { quote: "I wanted a book that looked professional in readers' hands and online. The attention to formatting, cover design, and publishing details gave my manuscript a polished final result that truly reflects the quality of my work.", name: "Victor Hayes", title: "Business Author", result: "Print & eBook Release" },
+  { quote: "The best part was seeing my book move from a finished draft to a title available for readers to purchase. The team explained distribution in simple terms, kept me informed, and made sure every launch detail was handled with care.", name: "Amara Wells", title: "Memoir Author", result: "Distribution & Launch" },
 ];
 
 const faqs = [
-  { q: "Do I keep my royalties?", a: "100%. All publishing accounts are set up in your name and royalties flow directly to your bank account. We never take a cut." },
-  { q: "How fast will my book be live?", a: "Amazon Kindle goes live in 24–72 hours. Paperback takes 5–7 days. Global distribution via IngramSpark takes 4–6 weeks." },
-  { q: "Do I need my own KDP account?", a: "We recommend your own account so royalties go directly to you. We handle all the technical setup — you just provide access." },
-  { q: "What platforms will my book be on?", a: "Amazon, Barnes & Noble, Apple Books, Kobo, Google Play, Scribd, and 35+ more through IngramSpark." },
-  { q: "Can you publish a book I already have?", a: "Yes. If you have a finished manuscript and cover, we can publish it immediately. We also offer formatting and cover design if needed." },
+  { q: "How long does it take to publish a book?", a: "This depends on where your manuscript starts. A finished, edited manuscript moves quickly through formatting and setup, while projects that include writing or editing take longer. Most full projects span three to six months from consultation to launch, and we'll give you a clear timeline upfront." },
+  { q: "How much does it cost to publish a book?", a: "Book publishing costs depend on your format, page count, and the services you need. We offer custom book publishing packages so you only pay for what your book actually requires, with no hidden fees." },
+  { q: "Do I keep my royalties?", a: "Yes, all of them. Our self-publishing services never take a share of your sales. Your book, your rights, your earnings." },
+  { q: "Where will my book be available?", a: "Through our book publishing and distribution setup, your book can reach Amazon, Barnes & Noble, Apple Books, Kobo, and other leading online retailers, along with bookstores and libraries worldwide." },
+  { q: "Will my book be in physical bookstores?", a: "Your book becomes available for bookstores and libraries to order through global distribution channels. Shelf placement is up to individual stores, but we make sure your book is listed and easy to find." },
+  { q: "Do I need my own Amazon account?", a: "Your book is published under your own KDP account, so the royalties and rights stay with you. If you don't have one yet, our Kindle Direct Publishing help covers the full setup." },
+  { q: "Can you help me publish a book online if I've never done it before?", a: "Absolutely. We guide first-time authors through every step to publish a book online, from formatting to launch, so nothing feels confusing or overwhelming." },
 ];
 
 export default function BookPublishingPage() {
   return (
     <>
+      {/* HERO */}
       <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: `linear-gradient(145deg, ${COLOR}22 0%, #ffffff 50%, ${COLOR}12 100%)` }}>
         <div className="absolute inset-0 opacity-[0.025] pointer-events-none" style={{ backgroundImage: "radial-gradient(#0891B2 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,11 +80,11 @@ export default function BookPublishingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Book Publishing</span><br /><span className="text-primary">From First Proof to Worldwide Release.</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Free Quote <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
               </div>
@@ -93,7 +95,7 @@ export default function BookPublishingPage() {
                   <FadeUp key={label} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-brand-dark">{value}</div>
                       <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
                   </FadeUp>
@@ -103,12 +105,14 @@ export default function BookPublishingPage() {
           </div>
         </div>
       </section>
+
+      {/* WHAT WE OFFER */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">All Your Publishing Needs, </span><span style={{ color: COLOR }}>Covered</span></h2>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -124,6 +128,8 @@ export default function BookPublishingPage() {
           </div>
         </div>
       </section>
+
+      {/* HOW IT WORKS */}
       <section className="py-20" style={{ background: LIGHT_BG }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
@@ -134,7 +140,7 @@ export default function BookPublishingPage() {
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -148,19 +154,21 @@ export default function BookPublishingPage() {
           </div>
         </div>
       </section>
+
+      {/* EVERYTHING INCLUDED */}
       <section className="py-20 bg-brand-dark">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Zero Hidden Fees.<br />Zero Royalty Cuts.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Our book publishing packages include everything below in your quoted price. You get affordable publishing services with transparent book publishing costs, with no hidden fees, no royalty splits, and no surprise invoices.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><BookMarked size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing specialist before you commit. No pressure, no obligation.</div>
                   </div>
                 </div>
               </div>
@@ -178,12 +186,14 @@ export default function BookPublishingPage() {
           </div>
         </div>
       </section>
+
+      {/* AUTHOR STORIES */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Authors Who </span><span style={{ color: COLOR }}>Hit Publish</span></h2>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -208,38 +218,28 @@ export default function BookPublishingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Straight Answers, </span><span style={{ color: COLOR }}>Ready to Print</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
+
+      {/* CTA */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
-            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><BookMarked size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Your Book Is Ready.</span><br /><span className="text-white">The World Is Waiting.</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with a publishing specialist and get a clear plan, timeline, and quote for book publishing and distribution that fits your goals.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
-              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
             </div>
           </ScaleIn>
         </div>

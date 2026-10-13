@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Star, Megaphone, Award, Clock, TrendingUp, Users } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Book Marketing Services | The Author Success",
@@ -59,12 +60,11 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "When should I start marketing my book?", a: "The earlier, the better. Starting before your release date gives us time to build an audience, gather early reviews, and set up pre-orders, which all help your book launch with momentum." },
-  { q: "Do you run Amazon Ads?", a: "Yes. We handle keyword research, campaign setup, and ongoing management, adjusting your ads based on performance so your budget goes toward what's working." },
-  { q: "What is an ARC program?", a: "ARC stands for Advance Review Copy. We share early copies of your book with selected readers before launch, so your book has honest reviews in place when it goes live." },
-  { q: "Can you help with a book that's already published?", a: "Absolutely. Many authors come to us after launch. We review your listing, pricing, and current marketing, then build a plan to bring your book back in front of readers." },
-  { q: "Do you guarantee bestseller status?", a: "We will not lie to you by saying that our team can guarantee that the book will be successful in reaching the top sales list position, but what we will assure you is the proper marketing strategy and communication regarding the process." },
-  { q: "How much do book marketing services cost?", a: "Every campaign is quoted based on your goals, timeline, and the channels involved. The price you're quoted is the price you pay, and you always keep 100% of your royalties." },
+  { q: "How many books will I sell as a result of a book marketing campaign?", a: "There is not a reliable way to predict book sales. With variables out of anyone's control, such as media reaction to a book and author performance on interviews, predicting book or e-book sales is not precise. However, reputable marketing firms like ours only take on books that they believe, based on experience, have good potential for media coverage, which is the key to sparking book sales." },
+  { q: "If I need consulting rather than a full campaign, can The Author Success help?", a: "Yes! We offer consulting services for authors at various stages of the publishing process. It can include support in developing a pre- and post-publication plan for the long haul, team brainstorming for book titles and cover designs, advice on website content, Amazon optimization, assistance with Goodreads and other book support services, and many other areas where authors may need help." },
+  { q: "Can you get me interviewed on major national shows or reviewed in major publications?", a: "Major shows and publications are inundated with hundreds, sometimes thousands, of publicist pitches and books every day. However, the fact is we've placed both self-published and traditional authors on these shows numerous times. It's never easy to get an author on a national TV show, but if your book is a good fit for a major show, we will make every effort to interest its producers. Big things happen for our authors every day." },
+  { q: "Do you promote controversial books?", a: "Typically, yes. The controversy is often helpful to publicity. It sparks debate, makes for exciting interviews, and can help a book stand out from the crowd. However, we do not promote books that contain hateful messages, encourage violence, etc." },
+  { q: "My book is self-published. Is that a problem?", a: "Absolutely not. We have more experience promoting self-published books than any other agency in the publishing industry. We were one of the first book publicity agencies to work with e-book only self-published books and e-book publishers." },
 ];
 
 export default function MarketingPage() {
@@ -78,7 +78,7 @@ export default function MarketingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Book Marketing for Authors</span><br /><span className="text-primary">Who Want Readers, Not Just Reviews</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -228,28 +228,16 @@ export default function MarketingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
                 <span className="text-black">Questions Authors Ask Before </span><span style={{ color: COLOR }}>Hitting &quot;Publish&quot;</span>
               </h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 

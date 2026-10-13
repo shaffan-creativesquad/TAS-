@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Baby, Clock, Award, Globe } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Children's Book Publication Services | The Author Success",
@@ -12,130 +13,133 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "For Young Readers";
-const headline = "Complete Children's Book Publishing From Concept to Shelf";
+const badge = "Children's Book Publishing";
+const headline = "Children's Book Publishing for Bedtime Favorites";
 const subline =
-  "End-to-end publication for picture books, early readers, and middle grade — beautifully crafted.";
+  "From writing and illustration to design and distribution, our children's book publishing services turn your story into a book young readers will want to hear again and again.";
 const desc =
-  "Children's books require a unique blend of storytelling, illustration, and production expertise. We offer a complete children's book publication service — from writing and illustration to formatting, printing, and global distribution — producing books that parents, teachers, and children love.";
+  "As a full-service children's book publishing company, we know that a book for a toddler and a book for a ten-year-old are completely different projects. Each one gets a team that understands its readers.";
 
 const stats = [
-  { value: "300+", label: "Children's Books Published", Icon: Baby },
-  { value: "8–12 Wks", label: "Average Delivery", Icon: Clock },
-  { value: "4.9/5", label: "Parent & Teacher Rating", Icon: Award },
-  { value: "40+", label: "Distribution Platforms", Icon: Globe },
+  { value: "Original", label: "Illustrations", Icon: Baby },
+  { value: "Age-Right", label: "Writing", Icon: Award },
+  { value: "Print + eBook", label: "Editions", Icon: Globe },
+  { value: "100%", label: "Royalties Yours", Icon: Clock },
 ];
 
 const subServices = [
   {
     tag: "Picture Books",
     title: "Picture Book Publishing",
-    desc: "Full publication for 32–48 page picture books — writing, illustration, layout, printing, and distribution to Amazon and 40+ retailers.",
+    desc: "Complete publishing for picture books, including writing, illustration, layout, printing, and distribution, so your story looks as good as it reads.",
   },
   {
-    tag: "Early Reader",
+    tag: "Early Readers",
     title: "Early Reader Books",
-    desc: "Age-appropriate chapter books for emerging readers with illustrations, proper vocabulary leveling, and educational alignment.",
+    desc: "Chapter books for children who are just finding their feet as readers, with the right vocabulary level, short chapters, and illustrations that keep them turning pages.",
   },
   {
     tag: "Middle Grade",
     title: "Middle Grade Publishing",
-    desc: "Complete publishing service for longer-form middle grade fiction and non-fiction targeting readers aged 8–12.",
+    desc: "Longer fiction and non-fiction for readers aged 8 to 12, with the pacing, characters, and themes that keep this age group hooked.",
   },
   {
     tag: "Board Books",
     title: "Board Books & Activity Books",
-    desc: "Durable board books, activity books, and educational titles formatted for the youngest readers.",
+    desc: "Sturdy board books, activity books, and learning titles designed for little hands and the youngest readers.",
   },
 ];
 
 const steps = [
   {
     num: "01",
-    title: "Concept Development",
-    desc: "We finalize your story concept, target age group, page count, and illustration style.",
+    title: "Complimentary Consultation",
+    desc: "We start by talking about your story, the age group you're writing for, and how you want the book to look. From there, we'll decide on the page count, format, and illustration style before we get started.",
   },
   {
     num: "02",
     title: "Writing & Editing",
-    desc: "Story writing or editing with age-appropriate language, pacing, and developmental considerations.",
+    desc: "Whether we write your story or polish your draft, our editors make sure the language, pacing, and vocabulary suit your young readers, while keeping your voice and message front and center.",
   },
   {
     num: "03",
-    title: "Illustration",
-    desc: "Professional illustrators create original artwork matched to your story's tone, characters, and world.",
+    title: "Design & Formatting",
+    desc: "Our illustrators create original artwork that brings your characters and world to life. Then we lay out the text and pictures together into a print-ready book and eBook.",
   },
   {
     num: "04",
-    title: "Layout & Design",
-    desc: "Text and illustration are designed together into a beautiful, print-ready book layout.",
-  },
-  {
-    num: "05",
-    title: "Publishing & Distribution",
-    desc: "Your book is published to Amazon, bookstores, school distributors, and 40+ global platforms.",
+    title: "Publish & Launch",
+    desc: "We register your ISBN and publish a children's book that's ready for Amazon, bookstores, and library and school suppliers. Your name goes on the cover, and you keep every royalty.",
   },
 ];
 
 const included = [
   "Story writing or editing",
   "Age-appropriate language review",
-  "Professional illustration (12+ pages)",
-  "Full book layout & design",
+  "Original, professional illustrations",
+  "Character design",
+  "Full book layout and design",
+  "Custom cover design",
   "ISBN registration",
   "Print-on-demand setup",
   "Amazon KDP publishing",
-  "IngramSpark distribution",
-  "School & library distribution",
+  "School and library distribution support",
   "eBook version (optional)",
-  "3D mockup renders",
-  "Marketing materials",
+  "3D book mockups",
 ];
 
 const testimonials = [
   {
     quote:
-      "My picture book is now in 200 school libraries across the country. The illustration quality is stunning — parents keep buying copies as gifts.",
-    name: "Michelle T.",
-    title: "Children's Author · 200 School Libraries",
-    result: "200 School Libraries",
+      "For years, I had written the story but didn't know how to turn it into a real children's book. The team assisted me in shaping the story, in developing the characters, and in putting all the elements together in a visual format. It was a very special experience when I first saw the completed pages.",
+    name: "Amanda R.",
+    title: "Children's Book Author",
+    result: "Published",
   },
   {
     quote:
-      "From rough concept to published book in 10 weeks. The illustrator they assigned captured my characters perfectly.",
-    name: "Peter L.",
+      "These illustrations played a very important role in the perception of my story because the characters looked exactly like I expected, and they were really patient with all my suggestions. The book looks very personal and polished, and it really fits the needs of children.",
+    name: "James T.",
     title: "Picture Book Author",
-    result: "Published in 10 Weeks",
+    result: "Illustrated",
   },
   {
     quote:
-      "My early reader series is now in Barnes & Noble. The production quality and distribution setup made the difference.",
-    name: "Sandra K.",
-    title: "Early Reader Series Author",
-    result: "Barnes & Noble Listed",
+      "I was concerned that getting the book published would be a complicated matter, particularly since it was my first book. They made it clear to me at every stage, starting with formatting and the arrangement of the ISBN and going on to distribution. I always knew exactly what was going on and what required my approval.",
+    name: "Sophie M.",
+    title: "First-Time Author",
+    result: "First Book Published",
   },
 ];
 
 const faqs = [
   {
-    q: "How many illustrations do I need for a picture book?",
-    a: "A standard 32-page picture book has 14–16 full spreads (illustrations). We provide a complete illustration plan before starting.",
+    q: "How many illustrations does a picture book need?",
+    a: "It depends on the length and format of your book. Before any artwork begins, we create an illustration plan that maps out every page, so you know exactly what to expect.",
   },
   {
     q: "Can I provide my own illustrations?",
-    a: "Yes. If you have an illustrator, we handle writing, editing, layout, and publishing. Or we can provide illustration separately.",
+    a: "Yes. If you already have artwork, we'll review it, prepare it for print, and design the layout around it.",
   },
   {
-    q: "How do I get my book into schools?",
-    a: "We set up distribution through Follett and Baker & Taylor, the two largest school and library distributors in North America.",
+    q: "How do I get my book into schools and libraries?",
+    a: "We distribute through IngramSpark, which makes your book available to the suppliers many schools and libraries order from. We can also prepare marketing materials to help you reach educators directly.",
   },
   {
-    q: "What age group do you write for?",
-    a: "0–3 (board books), 3–6 (picture books), 6–9 (early readers), 8–12 (middle grade). We tailor content to the exact age group.",
+    q: "What age groups do you publish for?",
+    a: "We publish for every stage of childhood, from board books for toddlers to picture books, early readers, and middle grade titles for readers up to age 12.",
   },
   {
-    q: "Can the book be printed in color?",
-    a: "Yes — full color print-on-demand is available through Amazon KDP and IngramSpark. We recommend full color for picture books.",
+    q: "Can the book be printed in full color?",
+    a: "Yes. We set up full-color printing for both paperback and hardcover editions, along with an eBook version if you'd like one.",
+  },
+  {
+    q: "Can I self-publish a children's book and still keep my rights?",
+    a: "Absolutely. When you self publish a children's book with us, you keep full ownership of your story, your illustrations, and every royalty it earns.",
+  },
+  {
+    q: "How much do children's book publishing services cost?",
+    a: "Every project is quoted individually based on length, format, and illustration needs. The price you're quoted is the price you pay, with no hidden fees.",
   },
 ];
 
@@ -197,16 +201,16 @@ export default function ChildrensBookPublicationPage() {
         </div>
       </section>
 
-      {/* ── WHAT WE OFFER ── */}
+      {/* ── What We Publish ── */}
       <section className="py-20" style={{ background: LIGHT_BG }}>
         <div className="mx-auto max-w-6xl px-6">
           <FadeUp>
             <div className="mb-12 text-center">
               <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                What We Offer
+                What We Publish
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Children's Book Publishing Services
+                Little Hands, Growing Minds, One Publishing Team
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-gray-600">{desc}</p>
             </div>
@@ -236,8 +240,9 @@ export default function ChildrensBookPublicationPage() {
                 Our Process
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                From Concept to Published Book
+                From Idea to Illustrated Book in Four Simple Steps
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">We keep the process simple and keep you involved along the way, so you always know what&apos;s happening with your book.</p>
             </div>
           </FadeUp>
           <div className="relative">
@@ -270,8 +275,9 @@ export default function ChildrensBookPublicationPage() {
                 What's Included
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Everything You Get
+                All It Takes to Land on Bedtime Shelves
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">From our first conversation to holding the finished book in your hands, your quote covers the whole process. We’ll make sure you know what’s included and what it will cost before we get started, so there are no unexpected charges later.</p>
             </div>
           </FadeUp>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -295,11 +301,12 @@ export default function ChildrensBookPublicationPage() {
           <FadeUp>
             <div className="mb-12 text-center">
               <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
-                Client Results
+                Author Stories
               </span>
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Books That Reach Young Readers
+                Happy Authors, Happier Little Readers
               </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">In their own words, from authors who trusted us to bring their stories to young readers.</p>
             </div>
           </FadeUp>
           <div className="grid gap-6 md:grid-cols-3">
@@ -327,27 +334,15 @@ export default function ChildrensBookPublicationPage() {
         <div className="mx-auto max-w-3xl px-6">
           <FadeUp>
             <div className="mb-12 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
+              {/* <span className="mb-3 inline-block rounded-full px-4 py-1 text-sm font-semibold uppercase tracking-widest" style={{ background: COLOR, color: "white" }}>
                 FAQ
-              </span>
+              </span> */}
               <h2 className="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-                Frequently Asked Questions
+                Questions Every Children&apos;s Author Asks
               </h2>
             </div>
           </FadeUp>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group rounded-2xl border border-gray-100 bg-white shadow-sm">
-                  <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900 marker:content-none">
-                    {faq.q}
-                    <span className="ml-4 shrink-0 text-xl transition group-open:rotate-45" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <p className="px-6 pb-6 text-gray-600 leading-relaxed">{faq.a}</p>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -356,9 +351,9 @@ export default function ChildrensBookPublicationPage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <ScaleIn>
             <Baby className="mx-auto mb-6 h-16 w-16 opacity-90" />
-            <h2 className="text-3xl font-extrabold md:text-5xl">Bring Your Children's Book to Life</h2>
+            <h2 className="text-3xl font-extrabold md:text-5xl">Let&apos;s Turn Your Story Into Someone&apos;s Favorite Book</h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-              Start your journey from concept to shelf with our complete children's book publishing team.
+              Book a free consultation with our team. We&apos;ll talk through your story, answer your questions, and show you what it takes to bring your children&apos;s book to life.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link

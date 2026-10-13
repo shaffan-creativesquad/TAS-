@@ -1,45 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, BookOpen, Mic, Users, Clock } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, BookOpen, Mic, Shield, Award } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
 
 export const metadata: Metadata = {
   title: "Books for Coaches & Speakers | The Author Success",
-  description: "Published coaches and speakers command higher fees, fill more programs, and get booked on bigger stages. 500+ coach and speaker books published.",
+  description: "For coaches and speakers who want to reach more people, fill their programs, and get invited to the stages that matter.",
 };
 
 const COLOR = "#0891b2";
 
-const stats = [
-  { value: "500+", label: "Coach & Speaker Books", Icon: BookOpen },
-  { value: "2.4×", label: "Higher Speaking Fees", Icon: Mic },
-  { value: "600+", label: "Stage Bookings", Icon: Users },
-  { value: "10 Wks", label: "Avg. Delivery", Icon: Clock },
+const highlights = [
+  { big: "Your Message", small: "In Your Words", Icon: Mic },
+  { big: "From Talks", small: "To Chapters", Icon: BookOpen },
+  { big: "NDA First", small: "Before Day One", Icon: Shield },
+  { big: "100% Yours", small: "Rights & Royalties", Icon: Award },
 ];
 
 const features = [
-  "Your coaching philosophy in print — scalable beyond 1:1 sessions",
-  "Sells your programs before you pitch them — clients arrive pre-sold",
-  "Gets you booked on podcasts and stages as a recognised expert",
+  "Shares your coaching method beyond one-on-one sessions",
+  "Helps clients understand your programs before they sign up",
+  "Opens doors to podcasts, events, and bigger stages",
 ];
 
 const flow = [
-  { label: "Book", desc: "Your signature asset" },
-  { label: "Speaking Bookings", desc: "Stage invitations" },
-  { label: "Program Launches", desc: "Higher-ticket sales" },
-  { label: "Legacy", desc: "Lasting impact" },
+  { label: "Book", desc: "Your signature message" },
+  { label: "Speaking", desc: "More stage invitations" },
+  { label: "Programs", desc: "Clients who already trust you" },
+  { label: "Legacy", desc: "Impact that keeps growing" },
 ];
 
 const bookExamples = [
-  { title: "The Breakthrough Method", badge: "TEDx Referenced", desc: "The coaching framework behind hundreds of client transformations, now in print." },
-  { title: "Own the Room", badge: "#1 Self-Help", desc: "A speaking coach shares the exact system for commanding any stage with confidence." },
-  { title: "Limitless Living", badge: "Podcast Hit", desc: "The mindset and method that helped thousands break through their biggest barriers." },
+  { title: "Signature Method Books", badge: "SIGNATURE METHOD", desc: "Your coaching framework, explained step by step so readers can see how you help people change." },
+  { title: "Personal Growth Books", badge: "SELF-HELP", desc: "Practical guidance and real stories that help readers move past what's holding them back." },
+  { title: "Keynote-to-Book Projects", badge: "KEYNOTE TO BOOK", desc: "Your best talks expanded into a full book that audiences can take home after the event." },
 ];
 
 export default function CoachesSpeakersPage() {
   return (
     <>
-      {/* HERO */}
       <section className="relative pt-36 pb-20 overflow-hidden bg-white">
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -56,24 +55,24 @@ export default function CoachesSpeakersPage() {
                 Coaches &amp; Speakers
               </div>
               <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-5">
-                <span className="text-black">Your Book Is Your Stage </span>
-                <span className="text-primary">— Every Day, Everywhere</span>
+                <span className="text-black">Your Wisdom Deserves </span>
+                <span className="text-primary">to Reach the World</span>
               </h1>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto">
-                Published coaches and speakers command higher fees, fill more programs, and get booked on bigger stages.
+                For coaches and speakers who want to reach more people, fill their programs, and get invited to the stages that matter.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link
-                  href="/book-a-call"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all"
                 >
-                  Book Strategy Call <ArrowRight size={16} />
+                  Book a Strategy Call <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="/portfolio"
                   className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all"
                 >
-                  See Portfolio
+                  See Our Work
                 </Link>
               </div>
             </FadeUp>
@@ -81,18 +80,17 @@ export default function CoachesSpeakersPage() {
         </div>
       </section>
 
-      {/* STATS STRIP */}
       <section className="py-12" style={{ background: "#0891b2" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map(({ value, label, Icon }, i) => (
-              <FadeUp key={label} delay={i * 0.08}>
+            {highlights.map(({ big, small, Icon }, i) => (
+              <FadeUp key={big} delay={i * 0.08}>
                 <div className="text-center">
                   <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
                     <Icon size={18} className="text-white" />
                   </div>
-                  <div className="font-[family-name:var(--font-playfair)] text-3xl font-black text-white">{value}</div>
-                  <div className="text-white/80 text-sm mt-1">{label}</div>
+                  <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-white">{big}</div>
+                  <div className="text-white/80 text-sm mt-1">{small}</div>
                 </div>
               </FadeUp>
             ))}
@@ -100,19 +98,18 @@ export default function CoachesSpeakersPage() {
         </div>
       </section>
 
-      {/* THE BOOK WE BUILD */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <SlideLeft>
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">The Book We Build For You</span>
+                <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Built For Coaches</span>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-5">
-                  <span className="text-black">Signature </span>
-                  <span className="text-primary">Method Books</span>
+                  <span className="text-black">One Book. </span>
+                  <span className="text-primary">Countless Lives Changed.</span>
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-8">
-                  Your book is the foundation of your coaching empire — a platform that works around the clock, converting readers into clients and getting you in front of the audiences that matter most.
+                  A book lets your ideas keep working long after the session or talk ends. We help coaches and speakers turn their methods, stories, and lessons into books that build trust, bring in new clients, and lead to more speaking invitations.
                 </p>
               </div>
             </SlideLeft>
@@ -132,15 +129,14 @@ export default function CoachesSpeakersPage() {
         </div>
       </section>
 
-      {/* OUTCOME FLOW */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Your Journey</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">What&apos;s Next</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">From Book to </span>
-                <span className="text-primary">Legacy</span>
+                <span className="text-black">From Author to </span>
+                <span className="text-primary">In-Demand Speaker</span>
               </h2>
             </div>
           </FadeUp>
@@ -163,15 +159,14 @@ export default function CoachesSpeakersPage() {
         </div>
       </section>
 
-      {/* BOOK EXAMPLES */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Portfolio</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Books We&apos;ve </span>
-                <span className="text-primary">Built</span>
+                <span className="text-black">Books That Inspire </span>
+                <span className="text-primary">and Transform</span>
               </h2>
             </div>
           </FadeUp>
@@ -194,7 +189,6 @@ export default function CoachesSpeakersPage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
       <section className="py-20 bg-cyan-50 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
@@ -204,29 +198,28 @@ export default function CoachesSpeakersPage() {
               ))}
             </div>
             <blockquote className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-black italic text-slate-800 leading-relaxed mb-6">
-              &quot;My fees tripled after I published. The book did the selling for me.&quot;
+              &quot;My book helped me share my message with a wider audience, build credibility, and create new speaking opportunities.&quot;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">JT</div>
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">SR</div>
               <div className="text-left">
-                <div className="font-bold text-slate-800 text-sm">James T.</div>
-                <div className="text-xs text-slate-500">Executive Coach</div>
+                <div className="font-bold text-slate-800 text-sm">Samantha R.</div>
+                <div className="text-xs text-slate-500">Coach &amp; Keynote Speaker</div>
               </div>
             </div>
           </FadeUp>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-black">Ready to Write Your </span>
+              <span className="text-white">Ready to Write Your </span>
               <span className="text-white">Signature Book?</span>
             </h2>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
-              Book a free 30-minute strategy call. We&apos;ll map out your book concept, positioning, and a publishing roadmap — at no cost.
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">
+              Book a free call to talk through your book idea, how to position it, and the steps to get it published.
             </p>
             <Link
               href="/contact"

@@ -6,28 +6,56 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "Will my name appear on the book if you ghostwrite it?",
-    a: "Unequivocally, yes. You are the author in every sense. Your name graces the cover, the copyright page and every retail listing. Our ghostwriters work discreetly behind the scenes, bound by a signed NDA, so the credit remains entirely yours.",
+    q: "How do I set up an account?",
+    a: "The main things you'll need are a valid email address, signed agreements allowing us to print and distribute your book for you, and payment information so you can pay us to print and we can pay you for your book sales.",
   },
   {
-    q: "How long does it take to publish a book?",
-    a: "The answer to how long does it take to publish a book depends on where your manuscript begins. Refining a completed draft moves more swiftly than composing a book from inception, but most projects span three to six months from consultation to launch. Your project steward will share a precise timeline at the outset, so you're never left wondering.",
+    q: "What formats do my books need to be in?",
+    a: "For print books, you need a PDF of the cover and a separate PDF of the interior content. Ebooks require an EPUB file of the interior content and a JPEG of the cover.",
   },
   {
-    q: "Do I retain the royalties from my book?",
-    a: "Entirely. As a self publishing company, we never claim a share of your sales. Your book, your rights and your earnings remain yours, now and always.",
+    q: "What do I need to publish a book with The Author Success?",
+    a: "You'll need a fully setup account (meaning you've completed all steps of the account setup process) and your book's cover and interior files. You'll also need an ISBN for each format of your book if you'd like to make your book available for distribution. We can get your ISBN as you set up a title with us.",
   },
   {
-    q: "On which platforms will my book appear?",
-    a: "Wherever discerning readers browse: Amazon, Barnes & Noble, Apple Books, Audible, Kobo, Google Play and other leading retailers, so your work reaches an audience across the globe.",
+    q: "Do you offer any guarantees?",
+    a: "Please review our Terms and Conditions for details. Our crystal clear process ensures client's security, therefore before proceeding with any order, we make sure we have sent a legal binding contract and a non-disclosure agreement stating the services you are entitled to and the terms and conditions.",
   },
   {
-    q: "May I review writing samples before committing?",
-    a: "Of course. Choosing the right writer is a deeply personal decision. During your complimentary consultation, we'll share samples that reflect your genre and style, so you can proceed with complete confidence.",
+    q: "What if I don't need every service in your comprehensive packages?",
+    a: "Feel free to pick and choose which services you want from us. We can often reduce the pricing if you want to drop any of the service options. We're happy to customize our services to meet your needs. You can get in touch with any of our online consultants who will guide you on the suitable service you need and the customized quotation.",
   },
   {
-    q: "Which genres do you specialize in?",
-    a: "Virtually every genre: thriller, romance, fantasy, science fiction, memoir, self-help, business, children's literature, historical fiction, true crime and literary fiction. If your story is waiting to be told, our book publishing agency has the expertise to tell it beautifully.",
+    q: "What if I just want a feedback or consultation on my book?",
+    a: "Our editing and coaching services are perfectly suited for writers who are looking to improve their work. We can give input at whatever level of detail you'd like—feedback on the structure and concept of the book, critical review on the flow and transitions, or copyediting changes to the text itself. We can also address specific issues, as per your request, in our review of your work. If you recommend our editors will make the changes and improve the work for you.",
+  },
+  {
+    q: "How involved would I need to be in the process?",
+    a: "Your level of involvement is entirely up to you. You can opt to work closely with your ghostwriter, or simply provide them with basic information and let them do the rest of the work. This is your book, which means that you have final say on the content and it's your decision how and when you give your input and approval. We'll work with you to customize the process so that it fits your schedule and preferred working style. Although in an autobiography/memoir it is highly recommended to work side by side with your ghostwriter.",
+  },
+  {
+    q: "Can I meet and discuss my book with the ghostwriter face to face?",
+    a: "We do not entertain walk-in customers, we are an online business and the process is convenient with telephonic interviews and chat sessions. Meeting with the clients would affect the productivity of the team and delay the time. However under uncertain situation we meet clients if the order amount exceeds $30,000, to meet the special needs of the customer. Although, you can always come and visit our office and have a cup of coffee with us.",
+  },
+  {
+    q: "How long does The Author Success process normally take?",
+    a: "The duration of The Author Success process is partly up to you—the author! Depending on your schedule and desired level of involvement, your ghostwriter will develop material for you to review and approve on a weekly or biweekly basis.",
+  },
+  {
+    q: "How are writers screened to make sure they qualify for this network?",
+    a: "All applicants are screened and tested. Their credentials are checked. Writers and developmental editors need a track record of published books that they've written and edited. Based on that we will assign the writer to the task at hand.",
+  },
+  {
+    q: "Are your services 100% confidential?",
+    a: "Yes, of course! Our services are 100% confidential. We will never use any of the information you provide us for any other purpose, nor will we use the writing developed for your book ever again. We have a very comprehensive privacy policy posted on our website, and we are also happy to send you a non-disclosure agreement. If you are happy and with your consent, you can leave a testimonial and we will use it on the website.",
+  },
+  {
+    q: "Do I have to give the ghostwriter any credit or co-authorship?",
+    a: "No! No one will know you had help with the writing process unless you choose to tell them. Our services are 100% confidential. The story we help you to tell will always be your story. You are 100% the author of your book. We do not retain any rights or ownership of your book whatsoever. Even if your book earns a million dollars, you will never owe us any credit or extra compensation unless you choose to do so. While credit is appreciated, it is never required.",
+  },
+  {
+    q: "I had a great/bad experience with the writer I selected. Should I tell the network coordinator?",
+    a: "Absolutely (in either case). Any writer who has several legitimate negative feedback reports will be removed from the network. Note: An editor refusing to work without prepayment or to do free additional work (above and beyond the scope outlined in the agreement) are not legitimate complaints; an editor missing a contractual deadline or becoming unavailable is. Because of the ethical guidelines of this network and the collection of feedback from network clients, legitimate complaints have rarely occurred since the company was formed in 2014. Please let the network coordinator know about your experience with your editor(s).",
   },
 ];
 
@@ -46,9 +74,9 @@ export default function FAQ() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 block">
+            {/* <span className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 block">
               FAQ
-            </span>
+            </span> */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-brand-dark mb-5 leading-tight">
               Answers Before<br /><span className="text-primary">You Sign</span><br />Anything.
             </h2>

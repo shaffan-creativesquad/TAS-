@@ -1,74 +1,75 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, FileText, Award, Clock, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, BookOpen, Award, Clock, Globe } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Professional eBook Writing Services | The Author Success",
-  description: "Expert eBook writers for Kindle, lead magnets, authority content, and course companions. 800+ eBooks written. Fast delivery, unlimited revisions, 100% yours.",
+  title: "Professional Book Formatting Services | The Author Success",
+  description: "Print and eBook interior formatting for Amazon KDP, IngramSpark, and all platforms. 3,000+ books formatted. Fast delivery, platform-approved files guaranteed.",
 };
 
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Digital Publishing";
-const headline = "Professional eBook Writing for Any Topic or Niche";
-const subline = "Expert eBook writers who craft compelling digital content that informs, engages, and converts.";
-const desc = "Whether you're building an authority eBook, a lead magnet, a Kindle bestseller, or a digital course companion, our writers produce polished, well-researched eBooks that deliver real value to your readers. All projects come with full NDA coverage and 100% copyright ownership.";
-const serviceLabel = "eBook Writing";
+const badge = "Book Formatting";
+const headline = "Book Formatting, From Draft to Bookshelf";
+const subline = "Publish-ready interiors for print and eBook, built to meet the requirements of every major platform.";
+const desc = "Good formatting can make a big difference in how your book looks and feels. Our book formatting services turn your manuscript into clean, ready-to-publish print and eBook files that work with Amazon KDP, IngramSpark, and other platforms. Your book will look good and be easy to read on every page and screen.";
+const serviceLabel = "Formatting";
 
 const stats = [
-  { value: "800+", label: "eBooks Written", Icon: FileText },
-  { value: "2–6 Wks", label: "Average Delivery", Icon: Clock },
-  { value: "98%", label: "Client Satisfaction", Icon: Award },
-  { value: "100%", label: "Copyright Yours", Icon: Users },
+  { value: "Print-Ready", label: "PDF Files", Icon: BookOpen },
+  { value: "Every", label: "eReader Supported", Icon: Globe },
+  { value: "KDP +", label: "IngramSpark Ready", Icon: Award },
+  { value: "Genre", label: "Typography", Icon: Clock },
 ];
 
 const subServices = [
-  { tag: "Kindle", title: "Kindle eBook Writing", desc: "Amazon Kindle-optimized eBooks written for specific niches and genres, structured for maximum reader engagement and review generation." },
-  { tag: "Lead Magnet", title: "Lead Magnet eBooks", desc: "Short, high-value eBooks designed to attract and convert leads for your business, email list, or online course funnel." },
-  { tag: "Authority", title: "Authority eBooks", desc: "Long-form eBooks that establish you as an expert in your field — ideal for consultants, coaches, and thought leaders." },
-  { tag: "Course", title: "Course Companion eBooks", desc: "Digital workbooks and companion guides for online courses, workshops, and coaching programs." },
+  { tag: "Print", title: "Print Interior Formatting", desc: "Professional print layouts with the right margins, fonts, headers, page numbers, and chapter styling, so your paperback or hardcover feels like it came from a major publisher." },
+  { tag: "eBook", title: "Kindle & eBook Formatting", desc: "Our Kindle formatting services and eBook formatting services produce clean, reflowable files that read smoothly on Kindle, Apple Books, Kobo, Nook, and every major eReader." },
+  { tag: "Complex", title: "Complex Layout Formatting", desc: "Cookbooks, workbooks, children's books, and illustrated guides with images, tables, and special layouts that need extra care to get right." },
+  { tag: "Series", title: "Series Formatting", desc: "Matching styles across every book in your series, so readers get the same polished, consistent look from book one to the latest release." },
 ];
 
 const steps = [
-  { num: "01", title: "Topic & Outline", desc: "We research your topic and create a detailed chapter outline for your approval before writing begins." },
-  { num: "02", title: "Research & Writing", desc: "Your dedicated writer researches thoroughly and writes each chapter to your outline, voice, and style." },
-  { num: "03", title: "Draft Review", desc: "You receive the full draft and provide feedback. We revise until every chapter meets your expectations." },
-  { num: "04", title: "Editing & Polish", desc: "A senior editor reviews the final draft for clarity, flow, grammar, and consistency." },
-  { num: "05", title: "Final Delivery", desc: "You receive the finished eBook in DOCX and PDF formats, ready for publishing or distribution." },
+  { num: "01", title: "File Review", desc: "Our manuscript formatting services start with a full review of your file, so we can catch and fix any issues before the formatting begins." },
+  { num: "02", title: "Style Setup", desc: "We choose your typography, spacing, chapter headings, and overall style based on your genre and the look you have in mind." },
+  { num: "03", title: "Print & eBook Formatting", desc: "We build your print interior to your chosen trim size and create your eBook files, making sure both meet each platform's technical requirements." },
+  { num: "04", title: "Quality Check & Delivery", desc: "Every file goes through a final quality check before delivery, along with guidance to help you upload to each platform with confidence." },
 ];
 
 const included = [
-  "Dedicated eBook writer assigned",
-  "Topic research & outline",
-  "NDA signed before project",
-  "Chapter-by-chapter writing",
-  "Unlimited revision rounds",
-  "Senior editorial review",
-  "SEO-optimized if required",
-  "Formatted PDF version",
-  "DOCX source file",
-  "Cover design available",
-  "100% copyright ownership",
-  "Kindle publishing support",
+  "Print interior formatting (PDF)",
+  "eBook formatting (EPUB)",
+  "Kindle-ready files",
+  "Trim size setup",
+  "Font and typography setup",
+  "Chapter heading design",
+  "Page numbers, headers, and footers",
+  "Table of contents for print and digital",
+  "Front matter formatting",
+  "Back matter formatting",
+  "Amazon KDP and IngramSpark specification compliance",
+  "Platform upload guidance",
 ];
 
 const testimonials = [
-  { quote: "My lead magnet eBook gets 200+ downloads a week and converts at 40% to my email list. The writer nailed the tone perfectly.", name: "Jessica M.", title: "Business Coach · Lead Gen Expert", result: "40% Conversion Rate" },
-  { quote: "Kindle eBook written, published, and hitting Top 100 in my niche within 2 weeks. The research quality was outstanding.", name: "Tom H.", title: "Fitness Author · Kindle Top 100", result: "Kindle Top 100" },
-  { quote: "Three authority eBooks written in 6 months. Each one has positioned me as the go-to expert in my consulting niche.", name: "Dr. Sarah L.", title: "Business Consultant", result: "3 Published eBooks" },
+  { quote: "I honestly didn't realize how much formatting could change the look of a book. Once they worked on my manuscript, it just looked so much better. The pages, spacing, fonts, and chapter headings all felt right. It no longer looked like something I had typed up in Word.", name: "David M.", title: "Fiction Author", result: "Print Ready" },
+  { quote: "I thought the eBook part would be simple, but there was a lot more to it than I expected. They took care of the Kindle version and made sure it looked good on different screens. I didn't have to worry about the technical side, and they kept things easy for me.", name: "Laura R.", title: "Romance Author", result: "Kindle Ready" },
+  { quote: "I had tables, pictures, and quite a few different sections in my book, so I was worried the formatting would be all over the place. They took their time with it and got everything sorted out. When I got the final files, everything looked the way it should.", name: "James T.", title: "Non-Fiction Author", result: "Complex Layout" },
 ];
 
 const faqs = [
-  { q: "How long can an eBook be?", a: "We write eBooks of any length — from 5,000-word lead magnets to 80,000-word Kindle novels and comprehensive guides." },
-  { q: "What topics do you cover?", a: "Any topic — business, self-help, health, fitness, finance, technology, fiction, parenting, cooking, travel, and more." },
-  { q: "Will the eBook be optimized for Kindle?", a: "Yes. We write with Kindle structure in mind — proper chapter breaks, reading flow, and formatting for the best reader experience." },
-  { q: "Can I use the eBook as a lead magnet?", a: "Absolutely. We write eBooks specifically designed to convert — with the right hook, value delivery, and call-to-action structure." },
-  { q: "Do you provide the cover design?", a: "Cover design is an optional add-on. We can create a professional cover optimized for your platform and use case." },
+  { q: "What file should I send you?", a: "A Word document works best, but we can also work with Google Docs and most other common formats. We'll let you know if anything needs adjusting before we begin." },
+  { q: "What trim sizes do you support?", a: "We format for all standard trim sizes offered by Amazon KDP and IngramSpark, and we can recommend the best size for your genre if you're unsure." },
+  { q: "Does formatting include cover design?", a: "Cover design is a separate service, but we can handle both together so your cover and interior work as one finished book." },
+  { q: "Will my eBook work on all eReaders?", a: "Yes. We create EPUB files and check them for Kindle, Apple Books, Kobo, Nook, and other major eReaders, so your book reads smoothly on any device." },
+  { q: "How do I know my files will be accepted by KDP?", a: "Every file is built to Amazon KDP and IngramSpark specifications and checked before delivery. We also guide you through the upload, so there are no surprises." },
+  { q: "How much do book formatting services cost?", a: "Every project is quoted individually based on your book's length, layout, and the formats you need. The price you're quoted is the price you pay, with no hidden fees." },
 ];
 
-export default function EbookWritingPage() {
+export default function FormattingServicesPage() {
   return (
     <>
       <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: `linear-gradient(145deg, ${COLOR}22 0%, #ffffff 50%, ${COLOR}12 100%)` }}>
@@ -78,11 +79,11 @@ export default function EbookWritingPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Book Formatting,</span><br /><span className="text-primary">From Draft to Bookshelf</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Free Quote <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
               </div>
@@ -108,7 +109,8 @@ export default function EbookWritingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Print, Kindle, or Complex Layouts, </span><span style={{ color: COLOR }}>We Handle It All</span></h2>
+              <p className="text-brand-body mt-3 max-w-2xl mx-auto">Whether you&apos;re publishing a novel, memoir, business book, or something completely different, we make sure your book is properly formatted, easy to read, and ready to publish.</p>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -130,11 +132,12 @@ export default function EbookWritingPage() {
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span></h2>
+              <p className="text-brand-body mt-3 max-w-xl mx-auto">A clear, organized process so you always know where your files stand and what&apos;s coming next.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -154,13 +157,13 @@ export default function EbookWritingPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Everything Your Book<br />Needs to Go Live</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote includes everything, from file analysis right up to delivery. There will be no surprises as to what your costs will be before we even begin.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><FileText size={22} className="text-white" /></div>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><BookOpen size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to our team about your book before you commit. No obligation, no pressure.</div>
                   </div>
                 </div>
               </div>
@@ -183,7 +186,8 @@ export default function EbookWritingPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Well-Formatted Books, </span><span style={{ color: COLOR }}>Well-Pleased Authors</span></h2>
+              <p className="text-brand-body mt-3 max-w-xl mx-auto">In their own words, from authors who trusted us to get their pages ready for readers.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,32 +213,20 @@ export default function EbookWritingPage() {
         </div>
       </section>
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
-            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><FileText size={28} className="text-white" /></div>
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><BookOpen size={28} className="text-white" /></div>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
             <div className="flex flex-wrap justify-center gap-3">

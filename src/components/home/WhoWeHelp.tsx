@@ -37,9 +37,9 @@ export default function WhoWeHelp() {
         {/* Header */}
         <FadeUp>
           <div className="text-center mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+            {/* <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
               Our Authors
-            </span>
+            </span> */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-brand-dark mb-4">
               <span className="text-black">Who We </span>
               <span className="text-primary">Help</span>

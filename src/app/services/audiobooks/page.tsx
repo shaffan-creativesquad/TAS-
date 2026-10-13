@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Star, Headphones, Award, Clock, Globe, TrendingUp } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Audiobook Production & Distribution Services | The Author Success",
@@ -11,61 +12,60 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Fastest Growing Format";
-const headline = "Reach Millions of Listeners Worldwide";
-const subline = "Studio-quality audiobook production and distribution to Audible, Spotify & beyond.";
-const desc = "The audiobook market is growing 25% year over year and now represents over $6 billion in annual revenue. Don't miss this audience. We handle professional narrator casting, studio-quality recording, post-production mastering, and distribution to all major audio platforms — with a finished product that rivals anything from a Big Five publisher.";
+const badge = "Audiobook Production Services";
+const headline = "Your Book Has a Voice. Let It Be Heard.";
+const subline = "Audiobook production services that turn your pages into a polished listen for Audible, Spotify, Apple Books, and beyond.";
+const desc = "Your readers are already listening on their commutes, at the gym, and between meetings. We handle everything it takes to reach them, from narrator casting and studio recording to mastering and release. The result is a professionally produced audiobook that sounds like it belongs on the bestseller shelf, because it does.";
 const serviceLabel = "Audiobooks";
 
 const stats = [
-  { value: "400+", label: "Audiobooks Produced", Icon: Headphones },
-  { value: "3–5 Wks", label: "Average Delivery", Icon: Clock },
-  { value: "15+", label: "Audio Platforms", Icon: Globe },
-  { value: "25%", label: "Market Growth YoY", Icon: TrendingUp },
+  { value: "Human", label: "Voices — Professional narrators, never robotic", Icon: Headphones },
+  { value: "Studio", label: "Quality — Recorded, edited, and mastered", Icon: Award },
+  { value: "Major", label: "Platforms — Audible, Spotify, Apple Books & more", Icon: Globe },
+  { value: "Your", label: "Royalties — Every earning stays yours", Icon: TrendingUp },
 ];
 
 const subServices = [
-  { tag: "Narration", title: "Professional Human Narration", desc: "We cast the perfect narrator for your book's genre and tone from our network of 200+ professional voice artists with studio-quality home setups." },
-  { tag: "Production", title: "Full Post-Production", desc: "Audio editing, noise reduction, mastering, chapter splitting, and ACX/Audible quality control — every file meets platform technical standards." },
-  { tag: "Distribution", title: "Audible & Platform Distribution", desc: "ACX distribution to Audible, Amazon, and Apple Books. Findaway Voices distribution to Spotify, Scribd, Libro.fm, and 30+ additional platforms." },
-  { tag: "Multilingual", title: "Multilingual Narration", desc: "Expand your audience globally with Spanish, French, German, and Portuguese narration options from native-speaking professional voice artists." },
+  { tag: "Narration", title: "Professional Human Narration", desc: "Our audiobook narration services match your book with a professional voice artist suited to its genre, tone, and audience. Fiction gets characters with presence, and business books get a voice with authority." },
+  { tag: "Production", title: "Full Post-Production", desc: "Editing, noise reduction, mastering, and chapter splitting, all handled by audio professionals. Every file is prepared to meet the technical standards of Audible audiobook production and other leading platforms." },
+  { tag: "Distribution", title: "Audible & Platform Distribution", desc: "Our audiobook distribution services place your title on Audible, Amazon, Apple Books, Spotify, and other major listening platforms, so your book reaches listeners wherever they press play." },
+  { tag: "Multilingual", title: "Multilingual Narration", desc: "Take your book beyond English with narration in additional languages from native-speaking voice artists, and open the door to entirely new audiences." },
 ];
 
 const steps = [
-  { num: "01", title: "Script Preparation", desc: "We prepare your manuscript as a clean narration script with pronunciation guides, character notes, and pacing instructions for the narrator." },
-  { num: "02", title: "Narrator Casting", desc: "We present 3–5 narrator auditions matched to your book's genre and tone. You choose your voice, or we find additional options." },
-  { num: "03", title: "Studio Recording", desc: "Your narrator records in a professional studio or acoustically-treated home studio. Each chapter is delivered as a raw audio file." },
-  { num: "04", title: "Post-Production & Mastering", desc: "Audio editing, noise removal, breath reduction, leveling, and mastering to -23 LUFS — meeting every platform's technical specifications." },
-  { num: "05", title: "Distribution & Go Live", desc: "We distribute to ACX (Audible) and Findaway Voices, handling all metadata, cover art sizing, and platform submissions." },
+  { num: "01", title: "Consultation & Script Preparation", desc: "Share your book and goals with us. You sign our NDA, and we turn your manuscript into a clean narration script with pronunciation and character notes." },
+  { num: "02", title: "Narrator Casting & Recording", desc: "Our audiobook narration services start with auditions matched to your genre. You pick the voice, and your narrator records chapter by chapter in a professional studio." },
+  { num: "03", title: "Post-Production & Mastering", desc: "Our audiobook production services edit, clean, and master every chapter to meet the standards of Audible audiobook production and other major platforms." },
+  { num: "04", title: "Publish & Distribute", desc: "Our audiobook distribution services handle metadata and submissions, taking your title live on Audible, Spotify, Apple Books, and beyond while you keep every royalty." },
 ];
 
 const included = [
-  "Professional narrator casting (3 auditions)",
-  "Script preparation & pronunciation guide",
+  "Professional narrator casting with auditions",
+  "Script preparation and pronunciation guide",
   "Studio-quality recording sessions",
-  "Audio editing & cleanup",
-  "Noise reduction & mastering",
-  "ACX technical quality check",
-  "Chapter splitting & file labeling",
-  "Audible & Amazon distribution via ACX",
-  "Findaway Voices distribution (30+ platforms)",
-  "Audiobook cover art (ACX specifications)",
+  "Audio editing and cleanup",
+  "Noise reduction and mastering",
+  "Platform technical quality checks",
+  "Chapter splitting and file labeling",
+  "Audible and Amazon distribution",
+  "Distribution to additional listening platforms",
+  "Audiobook cover art sized to platform specs",
   "Metadata and platform optimization",
   "Royalty setup in your account",
 ];
 
 const testimonials = [
-  { quote: "The narrator they chose sounded exactly like I'd always imagined my protagonist. The production quality is on par with audiobooks from major publishers. I couldn't be more impressed.", name: "Elena V.", title: "Horror Author · Audible Bestseller", result: "Audible Bestseller" },
-  { quote: "On Audible in 4 weeks from submission. The narration quality rivals anything from a Big Five publisher. My listeners keep saying it's the best audiobook they've heard.", name: "Daniel H.", title: "Thriller Author · 5,000+ Listens", result: "5,000+ Listens in Month 1" },
-  { quote: "The Spanish narration opened up an entirely new market for my book. Sales from Spanish-speaking listeners now account for 30% of my total revenue.", name: "Carlos M.", title: "Self-Help Author · Bilingual Release", result: "30% Revenue from New Market" },
+  { quote: "Hearing the first finished chapter was an unforgettable moment. The narrator captured the emotion and personality of my characters better than I could have hoped, and the sound quality was exceptional from beginning to end.", name: "Natalie Harper", title: "Contemporary Romance Author", result: "Audiobook Launch Success" },
+  { quote: "The team made what felt like a complicated process incredibly easy. They helped me choose the right narrator, prepared my manuscript for recording, and delivered a polished audiobook that was ready for Audible without any stress on my side.", name: "Ethan Cole", title: "Business & Leadership Author", result: "Professional Production" },
+  { quote: "I wanted my nonfiction book to sound clear, credible, and engaging for busy listeners. The production team delivered exactly that. Every chapter was clean, consistent, and professionally mastered for release across multiple platforms.", name: "Priya Lawson", title: "Personal Development Author", result: "Multi-Platform Release" },
 ];
 
 const faqs = [
-  { q: "How do I choose between royalty share and flat fee?", a: "Flat fee means you pay the narrator upfront and keep 100% of royalties. Royalty share means no upfront cost but you split royalties 50/50 with the narrator. We recommend flat fee if you expect strong sales." },
-  { q: "Can I choose my own narrator?", a: "Yes. We provide auditions and you make the final choice. If you have a specific narrator in mind, we can reach out to them directly as well." },
-  { q: "What's the difference between ACX and Findaway Voices?", a: "ACX distributes exclusively to Audible, Amazon, and Apple Books. Findaway Voices distributes to 30+ platforms including Spotify, Scribd, and Libro.fm — but without Audible exclusivity." },
-  { q: "How long is the average audiobook?", a: "A 60,000-word book produces approximately 6–7 hours of audio. Shorter books (30,000 words) produce 3–4 hours. Length affects production time and narrator fees." },
-  { q: "Do you offer author-narrated audiobooks?", a: "Yes. If you want to narrate your own book, we provide the recording guide, technical setup advice, and full post-production services to make your recording sound professional." },
+  { q: "How do I choose between royalty share and a flat fee?", a: "A flat fee means you pay for production upfront and keep your full audiobook royalties. Royalty share lowers your upfront cost but splits earnings with the narrator. We'll walk you through both during your consultation so you can choose what fits your goals." },
+  { q: "Can I choose my own narrator?", a: "Yes. You'll hear auditions matched to your book and make the final choice. If none feel right, we'll find more options." },
+  { q: "Where will my audiobook be available?", a: "Our audiobook distribution services cover Audible, Amazon, Apple Books, Spotify, and other leading platforms, so listeners can find you wherever they listen." },
+  { q: "How long is the average audiobook?", a: "It depends on your word count. As a rough guide, about 9,000 to 10,000 words make one finished hour of audio." },
+  { q: "Do you offer author-narrated audiobooks?", a: "Yes. If you'd like to narrate your own book, our team can guide your recording and handle the full post-production and Audible audiobook production process." },
 ];
 
 export default function AudiobooksPage() {
@@ -79,12 +79,12 @@ export default function AudiobooksPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Your Book Has a Voice.</span><br /><span className="text-primary">Let It Be Heard.</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
-                  <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get a Free Quote <ArrowRight size={16} /></Link>
+                  <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">Hear Our Work</Link>
                 </div>
               </div>
             </SlideLeft>
@@ -112,7 +112,7 @@ export default function AudiobooksPage() {
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span>
+                <span className="text-black">Your Book Deserves </span><span style={{ color: COLOR }}>to Be Heard</span>
               </h2>
             </div>
           </FadeUp>
@@ -143,7 +143,7 @@ export default function AudiobooksPage() {
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -165,13 +165,13 @@ export default function AudiobooksPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Crystal-Clear Audio.<br />Crystal-Clear Pricing.</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Our audiobook production services include everything listed below in your quoted price. No hidden add-ons, no surprise invoices.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Headphones size={22} className="text-white" /></div>
                   <div>
                     <div className="text-white font-semibold text-sm">Free Consultation Included</div>
-                    <div className="text-[#CFFAFE] text-xs">Talk to a publishing expert before you commit — no obligation.</div>
+                    <div className="text-[#CFFAFE] text-xs">Talk to an audiobook specialist before you commit. No pressure, no obligation.</div>
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function AudiobooksPage() {
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span>
+                <span className="text-black">Heard by Listeners. </span><span style={{ color: COLOR }}>Loved by Authors.</span>
               </h2>
             </div>
           </FadeUp>
@@ -226,28 +226,16 @@ export default function AudiobooksPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black">
-                <span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span>
+                <span className="text-black">Asked Often. </span><span style={{ color: COLOR }}>Answered Clearly.</span>
               </h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -257,9 +245,9 @@ export default function AudiobooksPage() {
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Headphones size={28} className="text-white" /></div>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4">
-              <span className="text-white">Ready to Get Started?</span>
+              <span className="text-white">Your Story Is Ready to Be Heard.</span>
             </h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with an audiobook specialist. We&apos;ll map out narration, production, and release, with no commitment and only honest advice.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
               <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>

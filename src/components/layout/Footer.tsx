@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -15,27 +16,27 @@ export default function Footer() {
                 <img
                   src="/logo.png"
                   alt="The Author Success"
-                  style={{ height: "40px", width: "auto", display: "block" }}
+                  style={{ height: "52px", width: "auto", display: "block" }}
                 />
               </div>
             </Link>
-            <p className="text-white/80 text-sm leading-relaxed mb-6">
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-[200px]">
               Your trusted partner for end-to-end book publishing. From first draft to global distribution.
             </p>
             <div className="flex gap-2.5 justify-center md:justify-start">
               {[
-                { label: "f", title: "Facebook" },
-                { label: "in", title: "LinkedIn" },
-                { label: "𝕏", title: "X" },
-                { label: "▶", title: "YouTube" },
-              ].map(s => (
+                { Icon: FaFacebookF, title: "Facebook" },
+                { Icon: FaLinkedinIn, title: "LinkedIn" },
+                { Icon: FaXTwitter, title: "X" },
+                { Icon: FaInstagram, title: "Instagram" },
+              ].map(({ Icon, title }) => (
                 <a
-                  key={s.title}
+                  key={title}
                   href="#"
-                  title={s.title}
-                  className="w-9 h-9 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center text-xs font-bold transition-colors border border-white/20"
+                  title={title}
+                  className="w-9 h-9 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors border border-white/20"
                 >
-                  {s.label}
+                  <Icon size={15} className="text-white" />
                 </a>
               ))}
             </div>
@@ -47,9 +48,9 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {[
                 { name: "Ghostwriting", href: "/services/ghostwriting" },
-                { name: "Book Editing", href: "/services/editing" },
+                { name: "Book Editing", href: "/services/book-editing" },
                 { name: "Cover Design", href: "/services/cover-design" },
-                { name: "Publishing", href: "/services/publishing" },
+                { name: "Publishing", href: "/services/book-publishing" },
                 { name: "Book Marketing", href: "/services/book-marketing" },
                 { name: "Audiobooks", href: "/services/audiobooks" },
               ].map(s => (

@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Star, Megaphone, TrendingUp, Users, Award } from "lucide-react";
+import { CheckCircle, ArrowRight, Star, Megaphone, Target, Mail, BarChart2 } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
+import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Book Promotion Services | The Author Success",
@@ -11,61 +12,60 @@ export const metadata: Metadata = {
 const COLOR = "#0891B2";
 const LIGHT_BG = "#ECFEFF";
 
-const badge = "Boost Your Sales";
-const headline = "Promote Your Book to Thousands of Readers";
-const subline = "Strategic book promotion campaigns that drive reviews, rankings, and sustained sales.";
-const desc = "Publishing a book is just the beginning — getting it in front of readers is where we come in. Our book promotion strategies combine Amazon ranking campaigns, influencer outreach, email promotions, and reader community engagement to create lasting visibility for your title.";
-const serviceLabel = "Book Promotion";
+const badge = "BOOK PROMOTION";
+const headline = "Don't Let Your Book Be Amazon's Best-Kept Secret";
+const subline = "Our book promotion services put your book in front of readers who are ready to buy.";
+const desc = "Publishing your book is a big step, but readers still need a way to find it. We run promotions that get your book noticed through Amazon book promotion, reader newsletters, BookTok creators, and media outreach, so it keeps selling long after launch day.";
 
 const stats = [
-  { value: "500+", label: "Books Promoted", Icon: Megaphone },
-  { value: "3x", label: "Avg. Sales Lift", Icon: TrendingUp },
-  { value: "50K+", label: "Reader Reach", Icon: Users },
-  { value: "4.8/5", label: "Client Rating", Icon: Award },
+  { value: "Genre-Focused", label: "Campaigns for Your Readers", Icon: Target },
+  { value: "Honest Reviews", label: "From Real Readers", Icon: Star },
+  { value: "Newsletter &", label: "Influencer Reach", Icon: Mail },
+  { value: "Clear Results", label: "Reports Every Campaign", Icon: BarChart2 },
 ];
 
 const subServices = [
-  { tag: "Amazon", title: "Amazon Rank Campaigns", desc: "Coordinated free/discount promotions timed to push your book up Amazon's bestseller charts in your target categories." },
-  { tag: "Reviews", title: "ARC & Review Programs", desc: "Advance Review Copy distribution to verified reader communities to generate authentic reviews before and after launch." },
-  { tag: "Social", title: "BookTok & Bookstagram", desc: "Influencer outreach to BookTok creators and Bookstagram accounts with audiences matching your book's genre and readership." },
-  { tag: "Email", title: "Reader Newsletter Blasts", desc: "Featured placement in curated book promotion newsletters reaching tens of thousands of active genre readers." },
+  { tag: "AMAZON", title: "Amazon Promotions", desc: "Free and discounted price promotions, timed carefully to lift your book's visibility in the categories where your readers are browsing." },
+  { tag: "REVIEWS", title: "ARC & Review Programs", desc: "We share early copies of your book with real readers in your genre, so honest reviews are in place when your promotion goes live." },
+  { tag: "EBOOK", title: "Reader Newsletter Features", desc: "Our ebook promotion services place your discounted eBook in curated reader newsletters that genre fans check for their next great read." },
+  { tag: "SOCIAL", title: "BookTok & Bookstagram", desc: "We connect with BookTok and Bookstagram creators whose followers already love books like yours." },
 ];
 
 const steps = [
-  { num: "01", title: "Book Assessment", desc: "We review your book's genre, audience, current rankings, and existing reviews to build the right promotion strategy." },
-  { num: "02", title: "Campaign Planning", desc: "We design a multi-channel promotion calendar with specific actions, timelines, and expected outcomes." },
-  { num: "03", title: "ARC Distribution", desc: "Your book is sent to early reader communities to generate authentic reviews ahead of the main promotion push." },
-  { num: "04", title: "Campaign Execution", desc: "All promotion channels go live simultaneously — Amazon ads, newsletter blasts, influencer posts, and social media." },
-  { num: "05", title: "Results Report", desc: "You receive a full analytics report showing ranking movement, review growth, and sales performance." },
+  { num: "01", title: "Book Review & Strategy", desc: "We look at your book's genre, readers, current rankings, and reviews, then plan the promotions most likely to work for your title." },
+  { num: "02", title: "Early Reviews & Buzz", desc: "We send your book to early readers and line up creators and newsletters, so your book has reviews and attention ready before the main push." },
+  { num: "03", title: "Campaign Launch", desc: "Price promotions, newsletter features, creator posts, ads, and media outreach all go live together for the strongest possible impact." },
+  { num: "04", title: "Results & Next Steps", desc: "You receive a clear report on rankings, reviews, and sales, along with recommendations to keep your book's momentum going." },
 ];
 
 const included = [
-  "90-day promotion strategy",
-  "Amazon category optimization",
+  "Custom promotion strategy",
+  "Amazon category and keyword review",
   "ARC reader distribution",
-  "BookTok influencer outreach",
-  "Bookstagram campaign",
-  "Newsletter blast placements",
-  "Amazon Ads campaign",
   "Review request sequences",
+  "BookTok creator outreach",
+  "Bookstagram campaign",
+  "Reader newsletter placements",
+  "Amazon Ads campaign",
   "Social media content",
-  "Press release distribution",
-  "Ranking tracking reports",
-  "Post-campaign analytics",
+  "Press release writing and distribution",
+  "Ranking tracking",
+  "Post-campaign results report",
 ];
 
 const testimonials = [
-  { quote: "My book jumped from #12,000 to #47 in my category within a week of the promotion campaign. The ARC readers delivered 80 reviews in the first two weeks.", name: "Rachel T.", title: "Romance Author · Amazon Top 100", result: "Amazon Top 100" },
-  { quote: "The BookTok campaign alone drove 3,000 sales in 5 days. I had no idea that platform could move that kind of volume for an indie author.", name: "Marcus L.", title: "YA Author · 15K Copies", result: "15,000 Copies Sold" },
-  { quote: "Consistent, sustained sales 6 months after launch because of the promotion infrastructure they built. My book keeps selling.", name: "Carol W.", title: "Self-Help Author", result: "Sustained Bestseller" },
+  { quote: "I always believed in my book, but I struggled to get people to notice it. The team helped me reach readers who enjoy my kind of book, and I finally felt like my work was getting seen by the right people.", name: "Amanda R.", title: "Fiction Author", result: "Right Readers Reached" },
+  { quote: "The team made the entire promotion process feel organized and manageable. They explained each step, kept me updated throughout the campaign, and gave me a clear report afterward so I could understand what had been done.", name: "James P.", title: "Business Author", result: "Clear Campaign Results" },
+  { quote: "My book had been published for a while, and I wasn't sure how to create new interest around it. The team helped build a fresh campaign with reader features and promotional opportunities that gave the book a new push.", name: "Laura B.", title: "Romance Author", result: "New Momentum" },
 ];
 
 const faqs = [
-  { q: "When should I start book promotion?", a: "Ideally 6–8 weeks before launch for new books, or immediately for existing books that need a sales boost." },
-  { q: "Can you promote a book that's already published?", a: "Absolutely. We run promotion campaigns for existing titles at any stage — launch, mid-life, or relaunch." },
-  { q: "Do you guarantee bestseller status?", a: "We can't guarantee rankings, but our campaigns have achieved Amazon category bestseller status for hundreds of authors." },
-  { q: "What genres do you promote?", a: "All genres — fiction, non-fiction, romance, thriller, self-help, business, children's, and more." },
-  { q: "How is book promotion different from book marketing?", a: "Marketing builds long-term brand awareness. Promotion focuses on short-term sales spikes through specific campaigns and placements." },
+  { q: "When should I start promoting my book?", a: "Ideally, a few weeks before launch, so early reviews and buzz are ready on release day. That said, it's never too late to start." },
+  { q: "Can you promote a book that's already published?", a: "Yes. Many authors come to us months or even years after launch. A well-planned promotion can bring an older book back in front of new readers." },
+  { q: "Are the reviews real?", a: "Always. Early readers receive a copy of your book and leave honest reviews in their own words. We never buy reviews or offer anything in exchange for positive ones, which keeps your book in line with Amazon's rules." },
+  { q: "Do you guarantee bestseller status?", a: "An honest promoter cannot guarantee anything regarding rankings, and we won't pretend that we can. All we do promise is a well-thought-out campaign and transparent reporting of how your book is performing." },
+  { q: "What genres do you promote?", a: "We promote fiction, non-fiction, business, memoir, and children's books, and we tailor every campaign to the readers of that genre." },
+  { q: "How is book promotion different from book marketing?", a: "Book marketing is your long-term strategy as a whole, while book promotion involves specific campaigns such as price reductions, highlighting the book in a newsletter, and contacting creators designed to give your book a significant boost in visibility." },
 ];
 
 export default function BookPromotionPage() {
@@ -78,7 +78,7 @@ export default function BookPromotionPage() {
             <SlideLeft>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-black leading-[1.1] mb-4">{headline}</h1>
+                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Don't Let Your Book Be</span><br /><span className="text-primary">Amazon's Best-Kept Secret</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
                 <div className="flex flex-wrap gap-3">
@@ -93,7 +93,7 @@ export default function BookPromotionPage() {
                   <FadeUp key={label} delay={i * 0.08}>
                     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${COLOR}15` }}><Icon size={18} style={{ color: COLOR }} /></div>
-                      <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark">{value}</div>
+                      <div className="font-[family-name:var(--font-playfair)] text-base font-black text-brand-dark leading-snug">{value}</div>
                       <div className="text-xs text-brand-muted mt-0.5">{label}</div>
                     </div>
                   </FadeUp>
@@ -108,7 +108,8 @@ export default function BookPromotionPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>What We Offer</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Every Type of </span><span style={{ color: COLOR }}>{serviceLabel}</span><span className="text-black"> Covered</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Promotions That Put Your Book </span><span style={{ color: COLOR }}>in the Spotlight</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">We focus on the promotions that make sense for your genre and your goals, so every effort brings your book closer to the right readers.</p>
             </div>
           </FadeUp>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -129,12 +130,13 @@ export default function BookPromotionPage() {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>How It Works</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Our Proven </span><span style={{ color: COLOR }}>Process</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">The Promotion Playbook, </span><span style={{ color: COLOR }}>in Four Steps</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">We keep things simple, so you know what&apos;s happening with your promotion at every step.</p>
             </div>
           </FadeUp>
           <div className="relative">
             <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed" style={{ borderColor: `${COLOR}40` }} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (
                 <FadeUp key={step.num} delay={i * 0.08}>
                   <div className="relative">
@@ -154,8 +156,8 @@ export default function BookPromotionPage() {
             <SlideLeft>
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-[#CFFAFE]">Everything Included</span>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">No Hidden Fees.<br />No Surprises.</h2>
-                <p className="text-[#CFFAFE] leading-relaxed mb-8">When you work with us, you get everything listed below — included in your quoted price. We believe in transparent pricing with no unexpected add-ons.</p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-white mb-4">Your Full Promotion Plan,<br />All Included</h2>
+                <p className="text-[#CFFAFE] leading-relaxed mb-8">Your quote covers the work from the first planning session to the final report. We&apos;ll go over the costs before getting started, so you know what you&apos;re paying for. No extra charges later.</p>
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-white/20 bg-white/10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/20"><Megaphone size={22} className="text-white" /></div>
                   <div>
@@ -183,7 +185,8 @@ export default function BookPromotionPage() {
           <FadeUp>
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>Author Stories</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Real Results, Real </span><span style={{ color: COLOR }}>Authors</span></h2>
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">What Authors Say After </span><span style={{ color: COLOR }}>the Spotlight</span></h2>
+              <p className="text-brand-muted mt-3 max-w-xl mx-auto text-sm">In their own words, from authors who trusted us to introduce their books to more readers.</p>
             </div>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
@@ -209,37 +212,25 @@ export default function BookPromotionPage() {
         </div>
       </section>
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Common </span><span style={{ color: COLOR }}>Questions</span></h2>
+              {/* <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block" style={{ color: COLOR }}>FAQ</span> */}
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black"><span className="text-black">Questions Authors Ask </span><span style={{ color: COLOR }}>Before They Promote</span></h2>
             </div>
           </FadeUp>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <FadeUp key={faq.q} delay={i * 0.07}>
-                <details className="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-semibold text-brand-dark text-sm gap-4">
-                    {faq.q}
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 border border-slate-200 group-open:rotate-45 transition-transform" style={{ color: COLOR }}>+</span>
-                  </summary>
-                  <div className="px-6 pb-5 text-sm text-brand-body leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
-                </details>
-              </FadeUp>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
       <section className="py-20" style={{ background: "#089bb2" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScaleIn>
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: COLOR }}><Megaphone size={28} className="text-white" /></div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Get Started?</span></h2>
-            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free 30-minute consultation with one of our publishing experts. No commitment — just honest advice about your project.</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-4"><span className="text-white">Ready to Put Your Book in the Spotlight?</span></h2>
+            <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free consultation with our team. We&apos;ll go over your book, hear what you want to achieve, and help you figure out which promotions make sense for you.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book Free Consultation <ArrowRight size={18} /></Link>
-              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">All Services</Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-white font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:bg-white/90" style={{ color: "#089bb2" }}>Book a Free Consultation <ArrowRight size={18} /></Link>
+              <Link href="/services" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-bold px-8 py-4 rounded-full transition-all">View All Services</Link>
             </div>
           </ScaleIn>
         </div>
