@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, CheckCircle, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, Star, X } from "lucide-react";
 import Link from "next/link";
 import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
 import BookCoversStrip from "@/components/ui/BookCoversStrip";
@@ -39,8 +39,38 @@ export default function ContactPage() {
       setStatus("error");
     }
   };
+
   return (
     <>
+      {/* Success Popup */}
+      {status === "success" && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" style={{ background: "rgba(0,0,0,0.5)" }}>
+          <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full text-center relative animate-in fade-in zoom-in duration-300">
+            <button
+              onClick={() => setStatus("idle")}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"
+            >
+              <X size={16} className="text-slate-500" />
+            </button>
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+              <CheckCircle size={32} className="text-green-500" />
+            </div>
+            <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-black text-brand-dark mb-3">
+              Message Sent!
+            </h3>
+            <p className="text-brand-muted text-sm leading-relaxed mb-6">
+              Thank you for reaching out. Our team will review your inquiry and get back to you within <strong className="text-brand-dark">24 hours</strong>.
+            </p>
+            <button
+              onClick={() => setStatus("idle")}
+              className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <section className="relative pt-36 pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-slate-50/30 pointer-events-none" />
         <div
@@ -137,7 +167,7 @@ export default function ContactPage() {
                       <input
                         type="text" name="firstName" placeholder="Jane" required
                         value={form.firstName} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                     <div>
@@ -145,7 +175,7 @@ export default function ContactPage() {
                       <input
                         type="text" name="lastName" placeholder="Smith"
                         value={form.lastName} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                   </div>
@@ -156,7 +186,7 @@ export default function ContactPage() {
                       <input
                         type="email" name="email" placeholder="jane@email.com" required
                         value={form.email} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                     <div>
@@ -164,7 +194,7 @@ export default function ContactPage() {
                       <input
                         type="tel" name="phone" placeholder="Your phone number"
                         value={form.phone} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                   </div>
@@ -175,7 +205,7 @@ export default function ContactPage() {
                       <select
                         name="service" required
                         value={form.service} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors"
                       >
                         <option value="">Choose a service</option>
                         {["Ghostwriting", "Book Editing", "Cover Design", "Publishing & Distribution", "Book Marketing", "Audiobooks", "Children's Books", "Other Services", "Not Sure Yet"].map(s => (
@@ -188,7 +218,7 @@ export default function ContactPage() {
                       <select
                         name="genre"
                         value={form.genre} onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors"
                       >
                         <option value="">Choose a genre</option>
                         {["Thriller", "Romance", "Fantasy", "Science Fiction", "Self-Help", "Business", "Memoir", "Biography", "Children's", "Young Adult", "Historical Fiction", "Literary Fiction", "Other"].map(g => (
@@ -205,15 +235,10 @@ export default function ContactPage() {
                       placeholder="Tell us what your book is about, who it's for, and where you are in the process."
                       rows={5}
                       value={form.message} onChange={handleChange}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400 resize-none"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400 resize-none"
                     />
                   </div>
 
-                  {status === "success" && (
-                    <div className="bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm font-medium">
-                      Thank you! Your message has been sent. We&apos;ll get back to you shortly.
-                    </div>
-                  )}
                   {status === "error" && (
                     <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm font-medium">
                       Something went wrong. Please try again or email us directly at support@theauthorsuccess.com
