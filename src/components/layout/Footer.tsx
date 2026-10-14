@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
@@ -11,14 +12,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
-              <div className="bg-white rounded-xl px-3 py-2 inline-block">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/logo.png"
-                  alt="The Author Success"
-                  style={{ height: "52px", width: "auto", display: "block" }}
-                />
-              </div>
+              <Image
+                src="/footer-logo.png"
+                alt="The Author Success"
+                width={200}
+                height={65}
+                className="h-16 w-auto object-contain"
+              />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-[200px]">
               Your trusted partner for end-to-end book publishing. From first draft to global distribution.
