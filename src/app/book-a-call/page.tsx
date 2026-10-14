@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle, Star, Users, Clock, Award, MessageCircle, ArrowRight } from "lucide-react";
 import { FadeUp, SlideLeft, SlideRight, ScaleIn } from "@/components/ui/Animate";
@@ -39,6 +40,14 @@ const testimonials = [
 ];
 
 export default function BookACallPage() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
   return (
     <>
       <section className="relative pt-36 pb-12 overflow-hidden bg-white">
@@ -122,13 +131,11 @@ export default function BookACallPage() {
             </SlideLeft>
 
             <SlideRight delay={0.1}>
-              <div style={{ minHeight: "600px" }} className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
-                <iframe
-                  src="https://calendly.com/theauthorsuccess/strategy-call"
-                  width="100%"
-                  height="700"
-                  frameBorder={0}
-                  title="Book a Strategy Call"
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/theauthorsuccess-support/30min?text_color=0891b2&primary_color=0891b2"
+                  style={{ minWidth: "320px", height: "700px" }}
                 />
               </div>
             </SlideRight>

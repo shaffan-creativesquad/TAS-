@@ -1,15 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",   bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B",   outcome: "Amazon Top 100" },
-  { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",    bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5",   outcome: "10K Copies Sold" },
-  { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",  bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD",   outcome: "#1 Category" },
-  { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",    bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD",   outcome: "Pre-Orders Sold Out" },
-  { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",     bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC",   outcome: "Audible Bestseller" },
-  { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",     bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D",   outcome: "Press Coverage" },
-  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",   bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC",   outcome: "Wall St. Pick" },
-  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74",   outcome: "Award Winner" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",   bg: "#0891B2", spine: "#0c2340", text: "#f8fafc", accent: "#F59E0B",   outcome: "Amazon Top 100", image: "/midnight-verdict.jpeg" },
+  { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",    bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5",   outcome: "10K Copies Sold", image:"/Beyond the Horizon.jpeg" },
+  { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",  bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD",   outcome: "#1 Category",image: "/Roots of Gold.jpeg" },
+  { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",    bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD",   outcome: "Pre-Orders Sold Out",image: "/The Last Oracle.jpeg" },
+  { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",     bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC",   outcome: "Audible Bestseller",image: "/Silicon Dreams.jpeg" },
+  { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",     bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D",   outcome: "Press Coverage",image: "/Whispers of Eden.jpeg"  },
+  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",   bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC",   outcome: "Wall St. Pick",},
+  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74",   outcome: "Award Winner",},
   { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology", bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC",   outcome: "5K+ Reviews" },
   { title: "Little Wonders",       author: "S. Park",     genre: "Children's", bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7",   outcome: "School Favourite" },
 ];
@@ -20,30 +21,35 @@ function BookCover({ b }: { b: typeof books[0] }) {
       className="relative group rounded-[3px_8px_8px_3px] overflow-hidden shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
       style={{ aspectRatio: "2/3", minHeight: 140 }}
     >
-      <div className="absolute left-0 top-0 bottom-0 w-3 z-10" style={{ background: b.spine }} />
-      <div className="absolute inset-0" style={{ background: `linear-gradient(150deg, ${b.bg} 0%, ${b.bg}e0 100%)` }} />
-      <div className="absolute inset-0 left-3 flex flex-col justify-between p-2.5 z-10">
-        <span
-          className="text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full self-start"
-          style={{ background: `${b.accent}25`, color: b.accent }}
-        >
-          {b.genre}
-        </span>
-        <div>
-          {/* Outcome badge */}
-          <div
-            className="text-[6px] font-bold uppercase tracking-widest mb-1.5 px-1.5 py-0.5 rounded-full self-start inline-flex items-center gap-0.5"
-            style={{ background: `${b.accent}20`, color: b.accent }}
-          >
-            {b.outcome}
+      {b.image ? (
+        <Image src={b.image} alt={b.title} fill className="object-cover" sizes="200px" />
+      ) : (
+        <>
+          <div className="absolute left-0 top-0 bottom-0 w-3 z-10" style={{ background: b.spine }} />
+          <div className="absolute inset-0" style={{ background: `linear-gradient(150deg, ${b.bg} 0%, ${b.bg}e0 100%)` }} />
+          <div className="absolute inset-0 left-3 flex flex-col justify-between p-2.5 z-10">
+            <span
+              className="text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full self-start"
+              style={{ background: `${b.accent}25`, color: b.accent }}
+            >
+              {b.genre}
+            </span>
+            <div>
+              <div
+                className="text-[6px] font-bold uppercase tracking-widest mb-1.5 px-1.5 py-0.5 rounded-full self-start inline-flex items-center gap-0.5"
+                style={{ background: `${b.accent}20`, color: b.accent }}
+              >
+                {b.outcome}
+              </div>
+              <div className="h-px opacity-20 mb-1.5" style={{ background: b.text }} />
+              <div className="font-[family-name:var(--font-playfair)] text-[10px] font-bold leading-tight mb-1" style={{ color: b.text }}>
+                {b.title}
+              </div>
+              <div className="text-[7px] uppercase tracking-wider opacity-50" style={{ color: b.text }}>{b.author}</div>
+            </div>
           </div>
-          <div className="h-px opacity-20 mb-1.5" style={{ background: b.text }} />
-          <div className="font-[family-name:var(--font-playfair)] text-[10px] font-bold leading-tight mb-1" style={{ color: b.text }}>
-            {b.title}
-          </div>
-          <div className="text-[7px] uppercase tracking-wider opacity-50" style={{ color: b.text }}>{b.author}</div>
-        </div>
-      </div>
+        </>
+      )}
       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/70 transition-all duration-300 z-20 flex items-center justify-center">
         <ArrowUpRight size={22} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>

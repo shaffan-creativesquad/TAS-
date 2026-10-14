@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { FadeUp } from "@/components/ui/Animate";
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0891B2", spine: "#0891B2", text: "#f8fafc", accent: "#F59E0B", result: "Amazon Top 100" },
+  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0891B2", spine: "#0c2340", text: "#f8fafc", accent: "#F59E0B", result: "Amazon Top 100", image: "/1.jpg.jpeg" },
   { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",     bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5", result: "10K Copies Sold" },
   { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",   bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD", result: "#1 Category" },
   { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD", result: "Pre-Orders Sold Out" },
@@ -28,29 +29,35 @@ function BookCard({ b }: { b: typeof books[0] }) {
       className="relative group rounded-[3px_10px_10px_3px] overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
       style={{ aspectRatio: "2/3" }}
     >
-      <div className="absolute left-0 top-0 bottom-0 w-3 z-10" style={{ background: b.spine }} />
-      <div className="absolute inset-0" style={{ background: `linear-gradient(150deg, ${b.bg} 0%, ${b.bg}dd 100%)` }} />
-      <div className="absolute inset-0 left-3 flex flex-col justify-between p-3 z-10">
-        <span
-          className="text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full self-start"
-          style={{ background: `${b.accent}28`, color: b.accent }}
-        >
-          {b.genre}
-        </span>
-        <div>
-          <div
-            className="text-[7px] font-bold uppercase tracking-widest mb-1.5 px-1.5 py-0.5 rounded-full self-start inline-block"
-            style={{ background: `${b.accent}15`, color: b.accent }}
-          >
-            {b.result}
+      {b.image ? (
+        <Image src={b.image} alt={b.title} fill className="object-cover" sizes="200px" />
+      ) : (
+        <>
+          <div className="absolute left-0 top-0 bottom-0 w-3 z-10" style={{ background: b.spine }} />
+          <div className="absolute inset-0" style={{ background: `linear-gradient(150deg, ${b.bg} 0%, ${b.bg}dd 100%)` }} />
+          <div className="absolute inset-0 left-3 flex flex-col justify-between p-3 z-10">
+            <span
+              className="text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full self-start"
+              style={{ background: `${b.accent}28`, color: b.accent }}
+            >
+              {b.genre}
+            </span>
+            <div>
+              <div
+                className="text-[7px] font-bold uppercase tracking-widest mb-1.5 px-1.5 py-0.5 rounded-full self-start inline-block"
+                style={{ background: `${b.accent}15`, color: b.accent }}
+              >
+                {b.result}
+              </div>
+              <div className="h-px opacity-20 mb-2" style={{ background: b.text }} />
+              <div className="font-[family-name:var(--font-playfair)] text-[10px] font-bold leading-tight mb-1" style={{ color: b.text }}>
+                {b.title}
+              </div>
+              <div className="text-[7px] uppercase tracking-wider opacity-50" style={{ color: b.text }}>{b.author}</div>
+            </div>
           </div>
-          <div className="h-px opacity-20 mb-2" style={{ background: b.text }} />
-          <div className="font-[family-name:var(--font-playfair)] text-[10px] font-bold leading-tight mb-1" style={{ color: b.text }}>
-            {b.title}
-          </div>
-          <div className="text-[7px] uppercase tracking-wider opacity-50" style={{ color: b.text }}>{b.author}</div>
-        </div>
-      </div>
+        </>
+      )}
       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/75 transition-all duration-300 z-20 flex items-center justify-center">
         <ArrowUpRight size={22} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>

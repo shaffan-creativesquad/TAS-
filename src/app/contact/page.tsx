@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star } from "lucide-react";
 import Link from "next/link";
 import { FadeUp, SlideLeft, SlideRight } from "@/components/ui/Animate";
 import BookCoversStrip from "@/components/ui/BookCoversStrip";
-
-export const metadata: Metadata = {
-  title: "Contact Us | The Author Success",
-  description: "Whether you have a finished manuscript or just an idea, our author consultation services help you find the right next step.",
-};
 
 const reasons = [
   "Free 30-minute call",
@@ -17,6 +14,31 @@ const reasons = [
 ];
 
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "", phone: "", service: "", genre: "", message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      setForm({ firstName: "", lastName: "", email: "", phone: "", service: "", genre: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
+  };
   return (
     <>
       <section className="relative pt-36 pb-16 bg-white overflow-hidden">
@@ -81,7 +103,7 @@ export default function ContactPage() {
                     { icon: Phone, label: "Phone", value: "+1 (800) 123-4567", sub: "Mon–Fri, 9 AM–6 PM EST" },
                     { icon: Mail, label: "Email", value: "info@theauthorsuccess.com", sub: "We reply as soon as possible." },
                     { icon: MapPin, label: "Office", value: "123 Publishing Lane", sub: "New York, NY 10001" },
-                    { icon: Clock, label: "Hours", value: "Mon–Fri: 9 AM – 6 PM", sub: "Eastern Standard Time" },
+                    { icon: Clock, label: "Hours", value: "Mon–Fri: 9 AM – 5 PM", sub: "Eastern Standard Time" },
                   ].map(({ icon: Icon, label, value, sub }) => (
                     <div key={label} className="flex items-start gap-3.5">
                       <div className="w-9 h-9 bg-cyan-50 rounded-xl flex items-center justify-center shrink-0">
@@ -108,19 +130,21 @@ export default function ContactPage() {
                   A few quick details help us prepare a free publishing plan that fits your goals.
                 </p>
 
-                <form className="flex flex-col gap-5">
+                <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">First Name *</label>
                       <input
-                        type="text" placeholder="Jane"
+                        type="text" name="firstName" placeholder="Jane" required
+                        value={form.firstName} onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Last Name *</label>
+                      <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Last Name</label>
                       <input
-                        type="text" placeholder="Smith"
+                        type="text" name="lastName" placeholder="Smith"
+                        value={form.lastName} onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
@@ -130,14 +154,16 @@ export default function ContactPage() {
                     <div>
                       <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Email Address *</label>
                       <input
-                        type="email" placeholder="jane@email.com"
+                        type="email" name="email" placeholder="jane@email.com" required
+                        value={form.email} onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Phone Number</label>
                       <input
-                        type="tel" placeholder="Your phone number"
+                        type="tel" name="phone" placeholder="Your phone number"
+                        value={form.phone} onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
                       />
                     </div>
@@ -146,7 +172,11 @@ export default function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Service Needed *</label>
-                      <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors">
+                      <select
+                        name="service" required
+                        value={form.service} onChange={handleChange}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors"
+                      >
                         <option value="">Choose a service</option>
                         {["Ghostwriting", "Book Editing", "Cover Design", "Publishing & Distribution", "Book Marketing", "Audiobooks", "Children's Books", "Other Services", "Not Sure Yet"].map(s => (
                           <option key={s}>{s}</option>
@@ -155,7 +185,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">Book Genre</label>
-                      <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors">
+                      <select
+                        name="genre"
+                        value={form.genre} onChange={handleChange}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-500 focus:outline-none focus:border-primary focus:bg-white transition-colors"
+                      >
                         <option value="">Choose a genre</option>
                         {["Thriller", "Romance", "Fantasy", "Science Fiction", "Self-Help", "Business", "Memoir", "Biography", "Children's", "Young Adult", "Historical Fiction", "Literary Fiction", "Other"].map(g => (
                           <option key={g}>{g}</option>
@@ -167,17 +201,31 @@ export default function ContactPage() {
                   <div>
                     <label className="block text-xs font-bold text-brand-dark-2 uppercase tracking-wider mb-2">What&apos;s Your Book About?</label>
                     <textarea
+                      name="message"
                       placeholder="Tell us what your book is about, who it's for, and where you are in the process."
                       rows={5}
+                      value={form.message} onChange={handleChange}
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400 resize-none"
                     />
                   </div>
 
+                  {status === "success" && (
+                    <div className="bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm font-medium">
+                      Thank you! Your message has been sent. We&apos;ll get back to you shortly.
+                    </div>
+                  )}
+                  {status === "error" && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm font-medium">
+                      Something went wrong. Please try again or email us directly at support@theauthorsuccess.com
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary-hover text-white font-black py-4 rounded-xl shadow-lg shadow-cyan-100 transition-all text-[1rem] tracking-wide"
+                    disabled={status === "loading"}
+                    className="w-full bg-primary hover:bg-primary-hover text-white font-black py-4 rounded-xl shadow-lg shadow-cyan-100 transition-all text-[1rem] tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Get My Free Publishing Plan
+                    {status === "loading" ? "Sending..." : "Get My Free Publishing Plan"}
                   </button>
 
                 </form>
