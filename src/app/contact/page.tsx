@@ -130,8 +130,8 @@ export default function ContactPage() {
 
                 <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 flex flex-col gap-4">
                   {[
-                    { icon: Phone, label: "Phone", value: "+1 (800) 123-4567", sub: "Mon–Fri, 9 AM–6 PM EST" },
-                    { icon: Mail, label: "Email", value: "info@theauthorsuccess.com", sub: "We reply as soon as possible." },
+                    { icon: Phone, label: "Phone", value: "+1 (307) 316-6909", sub: "Mon–Fri, 9 AM–6 PM EST" },
+                    { icon: Mail, label: "Email", value: "support@theauthorsuccess.com", sub: "We reply as soon as possible." },
                     { icon: MapPin, label: "Office", value: "123 Publishing Lane", sub: "New York, NY 10001" },
                     { icon: Clock, label: "Hours", value: "Mon–Fri: 9 AM – 5 PM", sub: "Eastern Standard Time" },
                   ].map(({ icon: Icon, label, value, sub }) => (
@@ -291,7 +291,7 @@ export default function ContactPage() {
               Still have questions?{" "}
               <Link href="/#faq" className="text-primary font-bold hover:underline">Browse our FAQ</Link>
               {" "}or call us at{" "}
-              <a href="tel:+18001234567" className="text-primary font-bold hover:underline">+1 (800) 123-4567</a>
+              <a href="tel:+13073166909" className="text-primary font-bold hover:underline">+1 (307) 316-6909</a>
             </p>
           </FadeUp>
         </div>

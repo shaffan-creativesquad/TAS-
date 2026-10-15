@@ -219,10 +219,10 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="tel:+18001234567"
+              href="tel:+13073166909"
               className="text-sm font-medium text-brand-dark-2 hover:text-primary transition-colors"
             >
-              +1 (800) 123-4567
+              +1 (307) 316-6909
             </Link>
             <Link
               href="/book-a-call"

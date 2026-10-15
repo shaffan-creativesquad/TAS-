@@ -91,8 +91,8 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/60 mb-5">Get in Touch</h4>
             <ul className="flex flex-col gap-4">
               {[
-                { icon: Phone, value: "+1 (800) 123-4567" },
-                { icon: Mail, value: "info@theauthorsuccess.com" },
+                { icon: Phone, value: "+1 (307) 316-6909" },
+                { icon: Mail, value: "support@theauthorsuccess.com" },
                 { icon: MapPin, value: "New York, NY 10001" },
               ].map(({ icon: Icon, value }) => (
                 <li key={value} className="flex items-start gap-3 justify-center md:justify-start">

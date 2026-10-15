@@ -83,10 +83,10 @@ export default function CTABanner() {
                   Book Free Consultation <ArrowRight size={15} />
                 </Link>
                 <a
-                  href="tel:+18001234567"
+                  href="tel:+13073166909"
                   className="flex items-center justify-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark-2 font-semibold py-3 rounded-xl text-sm transition-all"
                 >
-                  <Phone size={14} /> +1 (800) 123-4567
+                  <Phone size={14} /> +1 (307) 316-6909
                 </a>
               </div>
             </motion.div>
