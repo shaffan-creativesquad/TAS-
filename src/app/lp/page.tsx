@@ -7,17 +7,33 @@ import {
   PenLine, SpellCheck, Palette, BookOpen, Headphones, TrendingUp,
   Clock, Trophy, Users, Mic, Globe, BarChart2, CheckCircle,
   X, ArrowRight, Star, Shield, Zap,
+  Newspaper, Rss, Video, Briefcase, BookMarked, Layers,
+  Code, Monitor, Printer, AlignLeft, Share2, FileCheck,
 } from 'lucide-react'
 
 /* ─── Data ─────────────────────────────────────────────────── */
 
 const services = [
-  { icon: PenLine,    title: 'Book Writing & Ghostwriting',    desc: 'We write your book entirely in your voice, capturing your ideas and story with precision.' },
-  { icon: SpellCheck, title: 'Editing & Proofreading',         desc: 'Professional editing that sharpens your manuscript without losing your unique voice.' },
-  { icon: Palette,    title: 'Cover & Interior Design',        desc: 'Award-worthy covers and interiors that make readers stop and reach for your book.' },
-  { icon: BookOpen,   title: 'Book Publishing',                desc: 'We handle every step of publishing your book on Amazon, KDP, and global platforms.' },
-  { icon: Headphones, title: 'Audiobook Production',           desc: 'Studio-quality audiobook production that brings your words to life for listeners everywhere.' },
-  { icon: TrendingUp, title: 'Book Marketing',                 desc: 'Targeted campaigns that put your book in front of the right readers at the right time.' },
+  { icon: PenLine,     title: 'Ghostwriting',                    desc: 'We write your book in your voice — capturing your story, expertise, and personality on every page.' },
+  { icon: SpellCheck,  title: 'Book Editing',                    desc: 'Professional editing that sharpens your manuscript without losing your unique voice.' },
+  { icon: Palette,     title: 'Cover Design',                    desc: 'Award-worthy covers that make readers stop and reach for your book.' },
+  { icon: TrendingUp,  title: 'Book Marketing',                  desc: 'Targeted campaigns that put your book in front of the right readers at the right time.' },
+  { icon: Headphones,  title: 'Audiobooks',                      desc: 'Studio-quality audiobook production that brings your words to life for listeners everywhere.' },
+  { icon: BookOpen,    title: 'Book Publishing',                  desc: 'We handle every step of publishing your book on Amazon, KDP, and global platforms.' },
+  { icon: BarChart2,   title: 'Digital Marketing',               desc: 'Data-driven digital campaigns that grow your author brand and book visibility online.' },
+  { icon: Users,       title: 'Author Marketing',                desc: 'Build your personal brand as an author with strategies tailored to your audience and goals.' },
+  { icon: Newspaper,   title: 'Article Writing & Publishing',    desc: 'Professional articles that position you as a thought leader in your industry.' },
+  { icon: Rss,         title: 'Blog Writing',                    desc: 'Engaging blog content that builds your audience and drives organic traffic to your platform.' },
+  { icon: Video,       title: 'Book Trailer',                    desc: 'Compelling video trailers that capture attention and drive pre-orders for your book.' },
+  { icon: Briefcase,   title: 'Business Proposal Writing',       desc: 'Polished, persuasive proposals that win clients and communicate your value clearly.' },
+  { icon: BookMarked,  title: 'Children Book Publication',       desc: "End-to-end publishing for children's books — from illustrations to global distribution." },
+  { icon: Layers,      title: "Children's Book Illustrations",   desc: "Vibrant, professionally crafted illustrations that bring your children's book to life." },
+  { icon: Code,        title: 'Web Content Writing',             desc: 'Compelling website copy that converts visitors into readers, clients, and fans.' },
+  { icon: Monitor,     title: 'Author Website Design',           desc: 'Beautiful, professional author websites that showcase your books and build your brand.' },
+  { icon: FileCheck,   title: "Children's Book Editing",         desc: "Specialized editing for children's books ensuring age-appropriate language and flow." },
+  { icon: Printer,     title: 'Book Printing',                   desc: 'High-quality print-on-demand and bulk printing options for your published book.' },
+  { icon: AlignLeft,   title: 'Formatting Services',             desc: 'Professional interior formatting for print and digital editions that meet platform standards.' },
+  { icon: Share2,      title: 'Book Promotion',                  desc: 'Strategic promotional campaigns that drive reviews, rankings, and long-term book sales.' },
 ]
 
 const genres = [
@@ -318,56 +334,116 @@ export default function LandingPage() {
       {/* ── SERVICES ── */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[420px_1fr] gap-14 items-center">
 
-            {/* Typewriter visual */}
-            <div className="relative flex items-center justify-center">
-              {/* Glow behind */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-slate-50 rounded-3xl" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
-              <Image
-                src="/landing%20page%20Images/typewritter.png"
-                alt="Vintage typewriter"
-                width={420} height={420}
-                className="relative drop-shadow-2xl hover:scale-[1.03] transition-transform duration-500"
-                style={{ objectFit: 'contain' }}
-              />
-              {/* Floating badge */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-brand-dark text-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-3 whitespace-nowrap">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-xs font-semibold">3,000+ Books Written &amp; Published</span>
-              </div>
-            </div>
-
-            {/* Services */}
+          {/* Header */}
+          <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-14">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">What We Do</span>
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-3">
+              <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black leading-tight">
                 <span className="text-black">Everything You Need to</span><br />
                 <span className="text-primary">Write, Publish &amp; Market</span>
               </h2>
-              <p className="text-brand-muted text-sm mb-8 leading-relaxed">
+            </div>
+            <div className="lg:text-right">
+              <p className="text-brand-muted text-sm leading-relaxed max-w-sm lg:ml-auto mb-4">
                 From your first idea to a professionally published book — we handle every step so you can focus on your story.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                {services.map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-md hover:border-slate-200 hover:-translate-y-0.5 transition-all group">
-                    <div className="w-9 h-9 bg-cyan-50 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary transition-colors">
-                      <Icon size={17} className="text-primary group-hover:text-white transition-colors" />
-                    </div>
-                    <h3 className="font-semibold text-brand-dark mb-1 text-sm">{title}</h3>
-                    <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
-                  </div>
-                ))}
-              </div>
               <button
                 onClick={() => setPopup(true)}
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-cyan-200 transition-colors text-sm"
               >
-                Book a Free Consultation <ArrowRight size={16} />
+                Book a Free Consultation <ArrowRight size={15} />
               </button>
             </div>
           </div>
+
+          {/* Services grid
+              Layout (4-col):
+              [0 ][1 ][2 ][3 ]   row 1
+              [4 ][5 ][6 ][7 ]   row 2
+              [8 ][IMG   ][9 ]   row 3  ← image is col-span-2 row-span-2
+              [10][IMG   ][11]   row 4
+              [12][13][14][15]   row 5
+              [16][17][18][19]   row 6
+          */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {services.slice(0, 8).map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+
+            {/* card[8] — row 3, col 1 */}
+            {[services[8]].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+
+            {/* center image — col-span-2 row-span-2: rows 3-4, cols 2-3 */}
+            <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden h-[420px] bg-slate-50 flex items-center justify-center">
+              <Image
+                src="/landing page Images/typewritter.png"
+                alt="Professional book writing services"
+                width={600}
+                height={310}
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* card[9] — row 3, col 4 */}
+            {[services[9]].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+
+            {/* card[10] — row 4, col 1 */}
+            {[services[10]].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+
+            {/* card[11] — row 4, col 4 */}
+            {[services[11]].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+
+            {/* cards 12-19 — rows 5-6 */}
+            {services.slice(12).map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+                <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
+                  <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-brand-dark mb-1.5 text-sm leading-snug">{title}</h3>
+                <p className="text-brand-muted text-xs leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
