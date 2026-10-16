@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Script from 'next/script'
 import {
   PenLine, SpellCheck, Palette, BookOpen, Headphones, TrendingUp,
   Clock, Trophy, Users, Mic, Globe, BarChart2, CheckCircle,
@@ -175,11 +176,20 @@ function Popup({ onClose }: { onClose: () => void }) {
 
 /* ─── Page ──────────────────────────────────────────────────── */
 
+function openCalendly() {
+  if (typeof window !== 'undefined' && (window as any).Calendly) {
+    (window as any).Calendly.initPopupWidget({ url: 'https://calendly.com/theauthorsuccess-support/30min' })
+  }
+}
+
 export default function LandingPage() {
   const [popup, setPopup] = useState(false)
 
   return (
     <>
+      <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
+
       {popup && <Popup onClose={() => setPopup(false)} />}
 
       {/* ── HERO ── */}
@@ -277,7 +287,7 @@ export default function LandingPage() {
                 Book a Free Consultation <ArrowRight size={16} />
               </button>
               <button
-                onClick={() => setPopup(true)}
+                onClick={openCalendly}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-bold px-7 py-4 rounded-full transition-colors text-[0.95rem]"
               >
                 Schedule a Call
@@ -424,7 +434,7 @@ export default function LandingPage() {
                 <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full transition-colors text-sm shadow-lg shadow-cyan-200">
                   Book Free Consultation <ArrowRight size={15} />
                 </button>
-                <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark font-bold px-6 py-3.5 rounded-full transition-colors text-sm">
+                <button onClick={openCalendly} className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark font-bold px-6 py-3.5 rounded-full transition-colors text-sm">
                   Schedule a Call
                 </button>
               </div>
@@ -475,7 +485,7 @@ export default function LandingPage() {
             <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 font-bold px-8 py-4 rounded-full shadow-lg transition-colors" style={{ color: '#089bb2' }}>
               Book a Free Consultation <ArrowRight size={16} />
             </button>
-            <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-7 py-4 rounded-full transition-colors">
+            <button onClick={openCalendly} className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-7 py-4 rounded-full transition-colors">
               Schedule a Call
             </button>
           </div>

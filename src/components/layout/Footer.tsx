@@ -72,7 +72,6 @@ export default function Footer() {
                 { name: "Our Books",      href: "/our-books"      },
                 { name: "How It Works",   href: "/how-it-works"   },
                 { name: "Portfolio",      href: "/portfolio"      },
-
                 { name: "Who We Help",    href: "/who-we-help"    },
                 { name: "Insights",       href: "/insights"       },
                 { name: "Book a Call",    href: "/book-a-call"    },
