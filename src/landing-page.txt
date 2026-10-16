@@ -1,0 +1,776 @@
+'use client'
+
+import Script from 'next/script'
+import { useEffect } from 'react'
+import Image from 'next/image'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
+const BASE = '/assets/landing%20page%20Images'
+
+const testimonials = [
+  { initial: 'M', name: 'Marcus Reid', role: 'Founder & CEO, ApexPrep', quote: 'A book is one of the most powerful lead generators for businesses out there. The amount that we spent on The Author Success project has generated a 10x plus return — if not 20x.' },
+  { initial: 'J', name: 'James Caldwell', role: 'Founder & CEO, Global Immersion Co.', quote: "I wasn't a 'writer.' The Author Success turned years of workshops into a clear book — and the book turned into credibility, revenue, and relationships I couldn't have reached any other way." },
+  { initial: 'V', name: 'Victor Harlen', role: 'Former Federal Agent', quote: "Something that I can tell you now because of how great an experience it was — I am crazily thinking about writing a second book. There's no way, if the process wasn't anything but great, that I would say I want to do this again." },
+  { initial: 'E', name: 'Elijah Moore', role: 'Business Strategist & Speaker', quote: "The launch strategy The Author Success built for me was exceptional. New business started coming in immediately after launch — and it kept coming." },
+]
+
+const genres = [
+  { num: '01', title: 'Business Books', desc: 'Position yourself as the authority in your industry with a book that opens doors and builds lasting credibility.' },
+  { num: '02', title: 'Memoir & Bio', desc: 'Your story, professionally told. We capture your voice, your journey, and your lessons in a narrative readers remember.' },
+  { num: '03', title: 'Self-Help', desc: 'Turn your framework into an actionable book that transforms readers and grows your coaching or consulting brand.' },
+  { num: '04', title: 'Entrepreneurship', desc: 'Document your journey and inspire others. We help founders craft books that teach, motivate, and build loyal followings.' },
+  { num: '05', title: 'Thought Leadership', desc: 'Put your ideas in front of the people who matter. A well-crafted book makes you the go-to expert in your field.' },
+  { num: '06', title: 'Expert Guides', desc: 'Turn your expertise into a definitive guide. We work with doctors, lawyers, and consultants to make complex knowledge accessible.' },
+]
+
+const whyItems = [
+  { img: 'why-1', title: 'Save Time & Focus', desc: "Writing a book takes hundreds of hours. We handle every word so you can stay focused on your business, clients, and what you do best." },
+  { img: 'why-2', title: 'Professional Quality', desc: 'Our writers, editors, and designers are publishing industry veterans — your book will look, read, and sell like it was made for bestseller shelves.' },
+  { img: 'why-3', title: 'One Team, Full Service', desc: 'From writing to publishing to marketing — everything is handled under one roof. No juggling vendors, no gaps, no surprises.' },
+  { img: 'why-4', title: 'Your Voice, Your Book', desc: 'We study how you speak, think, and communicate. The finished book sounds exactly like you — because it is you, just professionally written.' },
+]
+
+const exceptionalServices = [
+  { icon: 'exceptional-icon1', title: 'Ghostwriting', desc: 'We write your book in your voice — capturing your story, expertise, and personality on every page.' },
+  { icon: 'exceptional-icon2', title: 'Publishing', desc: 'From formatting to distribution, we get your book onto Amazon, Barnes & Noble, and bookstores worldwide.' },
+  { icon: 'exceptional-icon3', title: 'Audiobook Production', desc: 'Reach listeners everywhere. We produce professional-quality audiobooks that bring your words to life.' },
+  { icon: 'exceptional-icon4', title: 'Book Marketing', desc: 'We build your author brand and get your book in front of the right readers through targeted marketing strategies.' },
+]
+
+function PopupButtons({ availText = 'Book a Schedule', pricingText = 'View Pricing', consultLink = true }) {
+  return (
+    <div className="btn-block" data-aos="fade-up" data-aos-duration="1000">
+      {consultLink
+        ? <a href="/consult" className="btn btn-dark various avail-now">{availText}</a>
+        : <a href="#" name="0" data-fancybox="" data-touch="false" data-src="#popupform" className="btn btn-dark various avail-now">{availText}</a>
+      }
+      <a href="#" name="0" data-fancybox="" data-touch="false" data-src="#popupform" className="btn btn-light various view-pricing">
+        {pricingText}
+      </a>
+    </div>
+  )
+}
+
+const LP1_SERVICES = [
+  'Book Publishing',
+  'Ghostwriting / Book Writing',
+  'Book Coaching (Guided Author)',
+  'Book Marketing',
+  'Audiobook Production',
+  'Other',
+]
+
+function LeadForm({ formClass, action = '/order/mail.php' }) {
+  return (
+    <form action={action} method="post" className={formClass} noValidate>
+      <ul>
+        <li className="first">
+          <input type="text" className="required" required placeholder="Full Name *" name="cn" />
+        </li>
+        <li>
+          <input type="email" className="required email" required placeholder="Email Address *" name="em" />
+        </li>
+        <li>
+          <input type="text" className="required number" minLength={10} required placeholder="Phone No. *" name="pn" />
+        </li>
+        <li>
+          <select name="service" style={{ width: '100%' }}>
+            <option value="">Select a service…</option>
+            {LP1_SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </li>
+        <li>
+          <textarea name="msg" className="required" required placeholder="Enter a brief description about your book"></textarea>
+        </li>
+        <li className="last">
+          <button className="btn btn-blue" type="submit">Submit Now</button>
+          <input type="hidden" name="send" value="1" />
+          <input type="hidden" name="nosc" value="1" />
+          <input type="hidden" name="lb_source" value="Direct" />
+          <input type="hidden" name="lb_source_cat" value="" />
+          <input type="hidden" name="lb_source_nam" value="" />
+          <input type="hidden" name="lb_source_ema" value="" />
+          <input type="hidden" name="lb_source_con" value="" />
+          <input type="hidden" name="lb_source_pho" value="" />
+          <input type="hidden" name="lb_source_off" value="" />
+          <input type="hidden" name="fullpageurl" value="https://www.thelegacyghostwriters.com/lp/" />
+          <input type="hidden" name="pageurl" value="https://www.thelegacyghostwriters.com" />
+          <input type="hidden" name="ip2loc_ip" value="" />
+          <input type="hidden" name="ip2loc_isp" value="" />
+          <input type="hidden" name="ip2loc_org" value="" />
+          <input type="hidden" name="ip2loc_country" value="" />
+          <input type="hidden" name="ip2loc_region" value="" />
+          <input type="hidden" name="ip2loc_city" value="" />
+          <input type="hidden" name="token" value="2tvy0cva3sysccg8ok8cs4sko4g8gk0" />
+        </li>
+      </ul>
+    </form>
+  )
+}
+
+export default function LP1() {
+  useEffect(() => {
+    const externalLinks = [
+      { href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity: 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossOrigin: 'anonymous' },
+      { href: 'https://www.thelegacyghostwriters.com/lp/assets/css/style.css' },
+      { href: 'https://www.thelegacyghostwriters.com/lp/assets/css/style-web.css?v=1787945005' },
+      { href: 'https://www.thelegacyghostwriters.com/lp/assets/css/responsive.css?v=3' },
+      { href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700;900&display=swap' },
+      { href: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900' },
+    ]
+
+    externalLinks.forEach(({ href, integrity, crossOrigin: co }) => {
+      if (document.querySelector(`link[href="${href}"]`)) return
+      const el = document.createElement('link')
+      el.rel = 'stylesheet'
+      el.href = href
+      if (integrity) el.integrity = integrity
+      if (co) el.crossOrigin = co
+      document.head.appendChild(el)
+    })
+  }, [])
+
+  return (
+    <>
+      {/* External scripts — libs.js bundles jQuery, OWL Carousel, AOS, Fancybox */}
+      <Script
+        src="https://www.thelegacyghostwriters.com/lp/assets/js/libs.js"
+        strategy="afterInteractive"
+        id="lp1-libs"
+      />
+      <Script
+        src="https://www.thelegacyghostwriters.com/lp/assets/js/functions.js"
+        strategy="afterInteractive"
+        id="lp1-functions"
+      />
+      <Script id="lp1-init" strategy="afterInteractive">{`
+        (function() {
+          var attempts = 0;
+          var MAX = 80;
+
+          function forceReveal() {
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+              el.classList.add('aos-animate');
+            });
+          }
+
+          function init() {
+            attempts++;
+            if (attempts > MAX) { forceReveal(); return; }
+            if (typeof window.$ === 'undefined' || typeof window.$.fn.owlCarousel === 'undefined' || !window.AOS) {
+              return setTimeout(init, 150);
+            }
+            window.AOS.init({ once: true, offset: 60 });
+            window.AOS.refresh();
+            if ($('.owl-testimonial').length) {
+              $('.owl-testimonial').owlCarousel({
+                loop: true, margin: 10, nav: false, dots: true,
+                responsive: { 0: { items: 1 }, 768: { items: 2 }, 1024: { items: 3 } }
+              });
+            }
+            $('.chat').off('click').on('click', function () {
+              if (window.LiveChatWidget) LiveChatWidget.call('maximize');
+              return false;
+            });
+            $('.avail-now').off('click').on('click', function () {
+              $('.popup-content .btn-blue').html('Activate Now');
+            });
+            $('.view-pricing').off('click').on('click', function () {
+              $('.popup-content .btn-blue').html('View Pricing');
+            });
+          }
+
+          init();
+
+          // Hard fallback: if AOS never loads within 3s, reveal everything
+          setTimeout(forceReveal, 3000);
+        })();
+      `}</Script>
+
+      {/* AOS CSS fallback: if AOS JS never fires, reveal elements after 3s */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes lp1-aos-reveal { to { opacity: 1; transform: none; } }
+        [data-aos]:not(.aos-animate) { animation: lp1-aos-reveal 0.5s ease 3s forwards; }
+      ` }} />
+
+      {/* Brand theme overrides — #E02D2D red, #0D0D0D black, #FFFFFF white */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        /* Topbar */
+        .topbar { background: #0D0D0D !important; }
+        .topbar h5 { color: #FFFFFF !important; }
+
+        /* Header */
+        header { background: #0D0D0D !important; border-bottom: 1px solid rgba(224,45,45,0.2) !important; }
+        header ul li a { color: #ccc !important; }
+        header ul li a:hover { color: #E02D2D !important; }
+
+        /* Banner */
+        .our-banner { background: #0D0D0D url('/assets/landing%20page%20Images/landing-page-banner.jpg') no-repeat center center !important; background-size: cover !important; }
+        .our-banner .info-banner h1 { color: #FFFFFF !important; }
+        .our-banner .info-banner h5 { color: #E02D2D !important; }
+        .our-banner .info-banner p { color: #ccc !important; }
+
+        /* Buttons */
+        .btn.btn-dark, .btn.btn-dark.various { background: #E02D2D !important; border-color: #E02D2D !important; color: #fff !important; }
+        .btn.btn-dark:hover { background: #c42424 !important; border-color: #c42424 !important; }
+        .btn.btn-light, .btn.btn-light.various { background: transparent !important; border: 2px solid #E02D2D !important; color: #E02D2D !important; }
+        .btn.btn-light:hover { background: #E02D2D !important; color: #fff !important; }
+
+        /* Services section dark background */
+        .services-looking { background: #0D0D0D !important; background-image: none !important; }
+        .services-looking h2 { color: #E02D2D !important; }
+        .services-looking p { color: #aaa !important; }
+        .services-looking ul li { background: #fff !important; border: 2px solid #E02D2D !important; }
+        .services-looking ul li strong { color: #0D0D0D !important; }
+        .services-looking ul li img { filter: brightness(0) !important; }
+
+        /* Equalize service rows height and alignment (fixes uneven last row) */
+        @media (min-width: 768px) {
+          .services-looking ul li,
+          .services-looking ul.right li,
+          .services-looking ul li:last-child,
+          .services-looking ul.right li:last-child,
+          .services-looking ul li:nth-child(3),
+          .services-looking ul.right li:nth-child(3) {
+            height: 88px !important;
+            min-height: 88px !important;
+            max-height: 88px !important;
+            padding-top: 18px !important;
+            padding-bottom: 18px !important;
+            box-sizing: border-box !important;
+          }
+        }
+        .services-looking ul.right li:last-child,
+        .services-looking ul.right li:nth-child(3) {
+          height: 88px !important;
+          min-height: 0 !important;
+          padding-top: 18px !important;
+          padding-bottom: 18px !important;
+        }
+        .services-looking ul.right li:last-child::before,
+        .services-looking ul.right li:last-child::after {
+          display: none !important;
+          content: none !important;
+        }
+        .services-looking ul.right li:last-child img,
+        .services-looking ul.right li:last-child strong {
+          margin-top: 0 !important;
+        }
+
+        /* Headings accent */
+        .genre-sec h2 { color: #E02D2D !important; }
+        /* Ensure section dark background */
+        .ensure-sec { background: #0D0D0D !important; background-image: none !important; }
+        .ensure-sec h2 { color: #E02D2D !important; }
+        .ensure-sec h6 { color: #fff !important; }
+        .ensure-sec p { color: #aaa !important; }
+        /* Exceptional section */
+        .exceptional-sec { background: #0D0D0D !important; background-image: none !important; }
+        .exceptional-sec h2 { color: #E02D2D !important; }
+        .exceptional-sec ul li h5 { color: #fff !important; }
+        .exceptional-sec ul li p { color: #aaa !important; }
+        .exceptional-sec .except-thumb { display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
+        .exceptional-sec .except-thumb img { width: 34px !important; height: 34px !important; max-width: 34px !important; max-height: 34px !important; object-fit: contain !important; margin: auto !important; }
+        .why-sec h2 { color: #E02D2D !important; }
+        .why-sec .box { border-color: #E02D2D !important; }
+        .why-sec .box h3 { color: #E02D2D !important; }
+        .why-sec .box img { width: 48px !important; height: auto !important; max-width: 48px !important; object-fit: contain !important; }
+        .why-sec::before, .why-sec::after { background: #E02D2D !important; }
+        .why-sec .sep, .why-sec hr, .why-sec .line { background: #E02D2D !important; border-color: #E02D2D !important; }
+        /* Kill yellow decorators in why-sec */
+        .why-sec *::before, .why-sec *::after { background-color: #E02D2D !important; border-color: #E02D2D !important; }
+        .testimonial-sec { background: #0D0D0D !important; background-image: none !important; }
+        .testimonial-sec h2 { color: #E02D2D !important; }
+        .testimonial-sec > .container > p { color: #aaa !important; }
+        .testimonial-sec .box { background: var(--color-icon) !important; border: 1px solid rgba(224,45,45,0.2) !important; }
+        .testimonial-sec .box p { color: #ccc !important; }
+        .testimonial-sec .box h4 { color: #FFFFFF !important; }
+        .testimonial-sec .box h6 { color: #888 !important; }
+
+        /* CTA offer section */
+        .cta-offer { background: #E02D2D !important; background-image: none !important; }
+        .cta-offer h2, .cta-offer h4 { color: #FFFFFF !important; }
+        .cta-offer h2 img, .cta-offer .cta-off-tag { display: none !important; }
+        .cta-offer .btn.btn-dark, .cta-offer .btn.btn-dark.various { background: #0D0D0D !important; border-color: #0D0D0D !important; color: #fff !important; }
+        .cta-offer .btn.btn-dark:hover { background: #222 !important; border-color: #222 !important; }
+        .cta-offer .btn.btn-light, .cta-offer .btn.btn-light.various { background: transparent !important; border: 2px solid #0D0D0D !important; color: #0D0D0D !important; }
+        .cta-offer .btn.btn-light:hover { background: #0D0D0D !important; color: #fff !important; }
+        .cta-stare h2, .cta-stare h4 { color: #FFFFFF !important; }
+        .cta-stare .cta-off-tag, .cta-stare img { display: none !important; }
+        .cta-stare::before, .cta-stare::after { display: none !important; content: none !important; background: none !important; }
+        .cta-success img { display: none !important; }
+        .cta-stare .btn.btn-dark, .cta-stare .btn.btn-dark.various { background: #E02D2D !important; border-color: #E02D2D !important; color: #fff !important; }
+        .cta-stare .btn.btn-light, .cta-stare .btn.btn-light.various { background: transparent !important; border: 2px solid rgba(255,255,255,0.6) !important; color: #fff !important; }
+        .cta-stare .btn.btn-light:hover { background: rgba(255,255,255,0.1) !important; }
+        .cta-success { background: #0D0D0D !important; }
+        .cta-success h2 { color: #E02D2D !important; }
+
+        /* Testimonial circles */
+        .testim-circle { background: #E02D2D !important; color: #fff !important; }
+
+        /* Testimonials fallback — show cards even if OWL Carousel doesn't init */
+        .owl-testimonial:not(.owl-loaded) { display: flex !important; flex-wrap: wrap !important; gap: 20px !important; overflow: visible !important; }
+        .owl-testimonial:not(.owl-loaded) .item { flex: 1 1 260px !important; max-width: 380px !important; }
+
+        /* Genre boxes number */
+        .genre-sec .box h5.pull-right { color: #E02D2D !important; }
+
+        /* Remove orange/yellow decorative lines above headings */
+        h2::before, h2::after,
+        h3::before, h3::after { display: none !important; content: none !important; }
+
+        /* Remove dots/bullets injected by external CSS on buttons */
+        .btn::before, .btn::after,
+        .btn-block a::before, .btn-block a::after { display: none !important; content: none !important; }
+
+        /* Popup submit button */
+        .popupform.thanksopop button.btn.btn-blue { background: #E02D2D !important; border-color: #E02D2D !important; }
+        .popupform.thanksopop button.btn.btn-blue:hover { background: #c42424 !important; }
+
+        /* TAS Popup — two-column dark theme */
+        .tas-popup { width: 880px; max-width: 96vw; background: #0D0D0D; border-radius: 14px; overflow: hidden; border: 1px solid rgba(224,45,45,0.2); box-shadow: 0 24px 80px rgba(0,0,0,0.7); }
+        .tas-popup__inner { display: flex; min-height: 500px; }
+
+        /* Left panel */
+        .tas-popup__left { flex: 0 0 44%; background: linear-gradient(160deg, #111 0%, var(--color-bg) 100%); border-right: 1px solid rgba(224,45,45,0.15); padding: 52px 38px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .tas-popup__left::before { content: ''; position: absolute; top: -60px; left: -60px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(224,45,45,0.08) 0%, transparent 70%); pointer-events: none; }
+
+        /* Fancybox close button — inside popup top-right corner */
+        .fancybox-close-small { width: 36px !important; height: 36px !important; top: 12px !important; right: 12px !important; padding: 0 !important; background: rgba(224,45,45,0.15) !important; border-radius: 50% !important; border: 1px solid rgba(224,45,45,0.4) !important; opacity: 1 !important; display: flex !important; align-items: center !important; justify-content: center !important; z-index: 9999 !important; }
+        .fancybox-close-small:hover { background: #E02D2D !important; border-color: #E02D2D !important; }
+        .fancybox-close-small svg { width: 16px !important; height: 16px !important; }
+        .fancybox-close-small svg path { fill: #fff !important; stroke: #fff !important; stroke-width: 1px !important; }
+
+        /* Kill any yellow/gold decorators the external CSS injects */
+        .tas-popup h2::before, .tas-popup h2::after,
+        .tas-popup h3::before, .tas-popup h3::after,
+        .tas-popup h4::before, .tas-popup h4::after { display: none !important; content: none !important; background: transparent !important; }
+
+        .tas-popup__eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #E02D2D; margin-bottom: 0.5rem; }
+        .tas-popup__eyebrow::after { content: ''; display: block; width: 32px; height: 2px; background: #E02D2D; margin-top: 6px; border-radius: 2px; }
+        .tas-popup__heading { font-size: 1.6rem; font-weight: 700; color: #fff !important; line-height: 1.22; margin: 0.6rem 0 0.8rem; }
+        .tas-popup__sub { font-size: 0.85rem; color: #777 !important; line-height: 1.65; margin: 0 0 1.5rem; }
+        .tas-popup__perks { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+        .tas-popup__perks li { font-size: 0.84rem !important; color: #c0c0c0 !important; padding: 0.42rem 0 0.42rem 0.6rem !important; border-bottom: 1px solid rgba(255,255,255,0.05) !important; border-left: 2px solid rgba(224,45,45,0.5) !important; margin-bottom: 6px !important; background: transparent !important; }
+        .tas-popup__perks li:last-child { border-bottom: none !important; }
+
+        /* Right panel */
+        .tas-popup__right { flex: 1; background: #111; padding: 52px 40px; display: flex; flex-direction: column; justify-content: center; }
+        .tas-popup__field { margin-bottom: 11px; }
+        .tas-popup__field input, .tas-popup__field textarea { width: 100%; border: 1px solid var(--color-border); border-radius: 7px; padding: 12px 15px; font-size: 0.875rem; color: #eee !important; background: var(--color-icon) !important; outline: none; font-family: inherit; transition: border-color 0.2s, background 0.2s; box-sizing: border-box; }
+        .tas-popup__field input::placeholder, .tas-popup__field textarea::placeholder { color: #555 !important; }
+        .tas-popup__field input:focus, .tas-popup__field textarea:focus { border-color: #E02D2D !important; background: #1e1e1e !important; box-shadow: 0 0 0 3px rgba(224,45,45,0.1); }
+        .tas-popup__field textarea { resize: vertical; min-height: 82px; }
+        .tas-popup__submit { width: 100%; padding: 13px; background: #E02D2D; color: #fff !important; font-size: 0.95rem; font-weight: 600; border: none; border-radius: 7px; cursor: pointer; transition: background 0.2s, box-shadow 0.2s, transform 0.15s; font-family: inherit; letter-spacing: 0.02em; margin-top: 6px; }
+        .tas-popup__submit:hover { background: #c42424; box-shadow: 0 6px 24px rgba(224,45,45,0.4); transform: translateY(-1px); }
+        .tas-popup__note { font-size: 0.74rem; color: #444 !important; text-align: center; margin: 9px 0 0; }
+
+        @media (max-width: 660px) {
+          .tas-popup { width: 96vw; border-radius: 10px; }
+          .tas-popup__inner { flex-direction: column; min-height: auto; }
+          .tas-popup__left { flex: none; padding: 30px 24px; border-right: none; border-bottom: 1px solid rgba(224,45,45,0.15); }
+          .tas-popup__right { padding: 26px 24px; }
+          .tas-popup__heading { font-size: 1.3rem; }
+        }
+      ` }} />
+
+      {/* Popup inline styles */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        .popupform.thanksopop { padding: 30px 40px 50px 40px; border: none; width: 100%; max-width: 892px; overflow: unset; position: relative; background: url(/assets/images/pop-chris-08-755.png) no-repeat scroll center top; height: auto; }
+        .popupform.thanksopop h2:before,.popupform.thanksopop h2:after { display: none; }
+        .hallow-ico { position: absolute; left: -30px; top: 34%; display: none; }
+        .popupform.thanksopop .fancybox-close-small { border: none; background: red; color: #fff; right: -10px; top: -10px; }
+        .popupform.thanksopop .form-control { height: 46px; font-size: 14px; margin-bottom: 10px; }
+        .popupform.thanksopop textarea.form-control { height: 80px; }
+        .popupform.thanksopop button.btn.btn-blue { background: #292929; display: block; width: 100%; border-radius: 5px; color: #fff !important; font-weight: 500; border-color: #292929; font-size: 18px; letter-spacing: normal; padding: 12px; text-transform: uppercase; }
+        .popupform.thanksopop button.btn.btn-blue:hover,.popupform.thanksopop button.btn.btn-blue:focus,.popupform.thanksopop button.btn.btn-blue:active { background: #000; border-color: #000; color: #fff !important; }
+        .popupform.thanksopop ul li.last { margin-bottom: 0; }
+        .popupform ul li input[type="text"],.popupform ul li input[type="email"],.popupform ul li textarea { background: #fafafa; border: #dcdcdc 1px solid; padding: 10px; width: 100%; border-radius: 3px; color: #000; box-shadow: none !important; outline: none 0px !important; font-size: 14px; }
+        .popupform.thanksopop ul li { width: 100%; margin-right: 0; margin-bottom: 10px; margin-left: 0 !important; }
+        .popupform.thanksopop ul li textarea { height: 90px; }
+        .popupform.thanksopop h2 { text-align: center; font-family: ibm plex serif; font-weight: 500; font-size: 34px; text-transform: uppercase; padding: 4px 12px; border: none; letter-spacing: -0.5px; color: #e22f07; margin: 0 auto; display: table; }
+        .popupform.thanksopop h3 { color: #fff; font-weight: normal; text-align: center; font-family: 'IBM Plex Serif'; font-size: 16px; padding: 2px 9px; margin: 0 auto; float: none; width: auto; background: #8c2106; border-radius: 30px; display: table; text-transform: uppercase; letter-spacing: 6px; }
+        .popupform.thanksopop .popup-content { padding: 0; margin: 0; max-width: 100%; }
+        .popupform.thanksopop form { padding: 0px 0 15px 0; width: 100%; margin-top: 0; }
+        .popupform.thanksopop p { color: #000; text-align: center; font-family: 'IBM Plex Serif'; font-size: 17px; line-height: 22px; margin-top: 0; }
+        .popupform.thanksopop li i.fa { display: none; }
+        .popupform ul li { margin-top: 0; }
+        .popupform.thanksopop .cst-pop { border: none; width: 100%; max-width: 340px; position: relative; border-radius: 0; overflow: hidden; right: 50px; margin-top: 0; margin-bottom: 0; float: right; }
+        img.hallow-mob-ico { position: absolute; left: -20px; top: -40px; z-index: 1; display: none; }
+        .popupform.thanksopop h2 strong { color: #fff10f; font-size: inherit; vertical-align: baseline; text-transform: uppercase; }
+        .popupform.thanksopop .fancybox-close-small { right: 20px; }
+        .popupform::after,.popupform::before { display: none !important; }
+        @media only screen and (max-width:850px) {
+          .popupform.thanksopop { max-width: 90%; padding: 20px; transform: none; border-radius: 20px; background: #fff; }
+          .popupform.thanksopop .cst-pop { left: 0; margin: 0; padding-top: 0px; }
+          .popupform.thanksopop h2 { font-size: 22px; }
+          .popupform.thanksopop h3 { font-size: 14px; }
+          .popupform.thanksopop .fancybox-close-small { right: -10px; top: -20px; }
+          img.hallow-ico { display: none; }
+          img.hallow-mob-ico { display: block; }
+          .popupform ul li input[type="text"],.popupform ul li input[type="email"],.popupform ul li textarea { font-size: 13px; }
+          .cst-pop-img { display: none; }
+          .popupform.thanksopop p { line-height: normal; }
+          .popupform.thanksopop br { display: none; }
+        }
+      ` }} />
+
+      {/* Light theme overrides — skip sections with background images */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        [data-theme="light"] .services-looking { background: var(--color-bg-alt) !important; }
+        [data-theme="light"] .services-looking p { color: var(--color-text-muted) !important; }
+        [data-theme="light"] .services-looking ul li { background: var(--color-surface) !important; }
+        [data-theme="light"] .services-looking ul li strong { color: var(--color-text) !important; }
+
+        [data-theme="light"] .genre-sec .box { background: var(--color-surface) !important; border-color: var(--color-border-strong) !important; }
+        [data-theme="light"] .genre-sec .box h4 { color: var(--color-text) !important; }
+        [data-theme="light"] .genre-sec .box p { color: var(--color-text-subtle) !important; }
+
+        [data-theme="light"] .ensure-sec { background: var(--color-bg-alt) !important; }
+        [data-theme="light"] .ensure-sec h6 { color: var(--color-text) !important; }
+        [data-theme="light"] .ensure-sec p { color: var(--color-text-subtle) !important; }
+
+        [data-theme="light"] .exceptional-sec { background: var(--color-bg-alt) !important; }
+        [data-theme="light"] .exceptional-sec ul li h5 { color: var(--color-text) !important; }
+        [data-theme="light"] .exceptional-sec ul li p { color: var(--color-text-subtle) !important; }
+
+        [data-theme="light"] .why-sec .box { background: var(--color-surface) !important; }
+        [data-theme="light"] .why-sec .box p { color: var(--color-text-subtle) !important; }
+
+        [data-theme="light"] .testimonial-sec { background: var(--color-bg-alt) !important; }
+        [data-theme="light"] .testimonial-sec > .container > p { color: var(--color-text-subtle) !important; }
+        [data-theme="light"] .testimonial-sec .box { background: var(--color-surface) !important; border: 1px solid var(--color-border-strong) !important; }
+        [data-theme="light"] .testimonial-sec .box p { color: var(--color-text-muted) !important; }
+        [data-theme="light"] .testimonial-sec .box h4 { color: var(--color-text) !important; }
+        [data-theme="light"] .testimonial-sec .box h6 { color: var(--color-text-subtle) !important; }
+
+        [data-theme="light"] .cta-success { background: var(--color-bg-alt) !important; }
+        [data-theme="light"] .cta-success h2 { color: var(--color-text) !important; }
+      ` }} />
+
+      <Navbar />
+
+      {/* Banner */}
+      <section className="our-banner">
+        <div className="container" data-aos="fade-up" data-aos-duration="1000">
+          <div className="info-banner">
+            <h1>
+              Write the Book That Becomes<br />
+              Your Greatest Business Asset
+            </h1>
+            <h5>Expert Ghostwriting &amp; Publishing Services</h5>
+            <p>The Author Success guides entrepreneurs, executives, and experts<br /> from first idea to published book — in your voice, under your name.</p>
+            <PopupButtons availText="Book a Free Consultation" pricingText="View Pricing" consultLink />
+          </div>
+        </div>
+        <Image src="/assets/Book Covers/003.png" alt="Book Cover" className="banner-book-left" data-aos="fade-up" data-aos-duration="1000" width={200} height={300} />
+        <Image src="/assets/Book Covers/004.png" alt="Book Cover" className="banner-book-right" data-aos="fade-up" data-aos-duration="1000" width={200} height={300} />
+      </section>
+
+      {/* Services */}
+      <section className="services-looking">
+        <div className="container">
+          <h2 className="center" data-aos="fade-up" data-aos-duration="1000">
+            Everything You Need to Write,<br />Publish &amp; Market Your Book.
+          </h2>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            From your first idea to a professionally published book — The Author Success handles every step so you can focus on what matters most: your story.
+          </p>
+          <div className="row rowtypew">
+            <div className="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+              <ul>
+                <li><Image src={`${BASE}/serv-icon.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Book Writing &amp; <br />Ghostwriting</strong></li>
+                <li><Image src={`${BASE}/serv-icon2.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Editing &amp; <br />Proofreading</strong></li>
+                <li><Image src={`${BASE}/serv-icon3.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Cover &amp; Interior <br />Design</strong></li>
+              </ul>
+            </div>
+            <Image src={`${BASE}/typewritter.png`} alt="Typewriter" className="typw-img" data-aos="fade-up" data-aos-duration="1000" width={480} height={360} unoptimized style={{ display: 'block', margin: '0 auto', marginTop: '80px' }} />
+            <div className="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+              <ul className="right">
+                <li><Image src={`${BASE}/serv-icon4.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Book <br />Publishing</strong></li>
+                <li><Image src={`${BASE}/serv-icon5.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Audiobook <br />Production</strong></li>
+                <li><Image src={`${BASE}/serv-icon6.png`} alt="" width={48} height={48} style={{ height: 'auto' }} /><strong>Book <br />Marketing</strong></li>
+              </ul>
+            </div>
+          </div>
+          <PopupButtons availText="Book a Free Consultation" pricingText="View Pricing" consultLink />
+        </div>
+      </section>
+
+      {/* Genre */}
+      <section className="genre-sec">
+        <div className="container">
+          <h2 className="center" data-aos="fade-up" data-aos-duration="1000">
+            We Write Every Type<br />of Book — In Your Voice
+          </h2>
+          <p data-aos="fade-up" data-aos-duration="1000" className="center">
+            Whether you&apos;re a CEO, coach, doctor, or first-time author — we have specialized writers<br /> who understand your industry and know how to make your book stand out.
+          </p>
+          <div className="row">
+            <div className="col-md-4"></div>
+            <div className="col-md-8">
+              <div className="row">
+                {genres.map(({ num, title, desc }) => (
+                  <div key={num} className="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div className="box">
+                      <h4>{title}</h4><h5 className="pull-right">{num}</h5>
+                      <p>{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ensure */}
+      <section className="ensure-sec">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h2 className="left" data-aos="fade-up" data-aos-duration="1000">
+                A Publishing Partner You Can Trust — From Start to Shelf
+              </h2>
+              <h6 data-aos="fade-up" data-aos-duration="1000">
+                Writing, publishing, and marketing — all under one roof
+              </h6>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                At The Author Success, we've built a proven system that takes you from raw idea to published book — without the guesswork, the delays, or the stress. Every author we work with receives a dedicated team that stays in close communication from day one.
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                Our writers, editors, designers, and publishing specialists work together on your project — so nothing falls through the cracks. We study your audience, shape your message, and create a book that reflects your expertise and voice with precision.
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                With over 3,000 authors published and a decade of experience, The Author Success has become the trusted choice for entrepreneurs, executives, and thought leaders who want a book done right — on time, on brand, and built to last.
+              </p>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                We don't just write books. We build author careers.
+              </p>
+              <PopupButtons />
+            </div>
+            <div className="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+              <Image src={`${BASE}/ensure-thumbnail.png`} className="autowidth" alt="Book publishing process overview" width={600} height={450} style={{ width: '100%', height: 'auto' }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Offer */}
+      <section className="cta-offer">
+        <div className="container">
+          <h2 className="center" data-aos="fade-up" data-aos-duration="1000">
+            Your Book Won&apos;t Write Itself.<br />But We Can Help You Write It.
+          </h2>
+          <h4 className="center" data-aos="fade-up" data-aos-duration="1000">
+            Book a free consultation and let&apos;s talk about your idea today.
+          </h4>
+          <PopupButtons />
+        </div>
+      </section>
+
+      {/* Exceptional Services */}
+      <section className="exceptional-sec">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5" data-aos="fade-up" data-aos-duration="1000" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingRight: '2rem' }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: '360px' }}>
+                {/* Top row */}
+                <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', marginBottom: '14px' }}>
+                  <Image src="/assets/Book Covers/003.png" alt="Book Cover" width={160} height={240} style={{ width: '44%', height: 'auto', borderRadius: '6px', boxShadow: '0 12px 32px rgba(0,0,0,0.6)', transform: 'rotate(-3deg)' }} />
+                  <Image src="/assets/Book Covers/004.png" alt="Book Cover" width={160} height={240} style={{ width: '44%', height: 'auto', borderRadius: '6px', boxShadow: '0 12px 32px rgba(0,0,0,0.6)', transform: 'rotate(3deg)', marginTop: '18px' }} />
+                </div>
+                {/* Bottom row */}
+                <div style={{ display: 'flex', gap: '14px', justifyContent: 'center' }}>
+                  <Image src="/assets/Book Covers/006.png" alt="Book Cover" width={160} height={240} style={{ width: '44%', height: 'auto', borderRadius: '6px', boxShadow: '0 12px 32px rgba(0,0,0,0.6)', transform: 'rotate(2deg)', marginTop: '-10px' }} />
+                  <Image src="/assets/Book Covers/008.png" alt="Book Cover" width={160} height={240} style={{ width: '44%', height: 'auto', borderRadius: '6px', boxShadow: '0 12px 32px rgba(0,0,0,0.6)', transform: 'rotate(-2deg)' }} />
+                </div>
+                {/* Red glow behind */}
+                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '200px', height: '200px', background: 'radial-gradient(circle, rgba(224,45,45,0.15) 0%, transparent 70%)', pointerEvents: 'none', zIndex: 0 }} />
+              </div>
+            </div>
+            <div className="col-md-7" style={{ paddingLeft: '2rem' }}>
+              <h2 className="left" data-aos="fade-up" data-aos-duration="1000">
+                Everything We Do,<br /> Done Exceptionally Well.
+              </h2>
+              <ul>
+                {exceptionalServices.map(({ icon, title, desc }, i) => (
+                  <li key={icon} data-aos="fade-up" data-aos-duration={`${1000 + i * 500}`}>
+                    <div className="except-thumb">
+                      <Image src={`${BASE}/${icon}.png`} alt="" width={34} height={34} style={{ width: '34px', height: '34px', objectFit: 'contain' }} />
+                    </div>
+                    <h5>{title}</h5>
+                    <p>{desc}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Section */}
+      <section className="why-sec">
+        <div className="container">
+          <h2 className="center" data-aos="fade-up" data-aos-duration="1000">
+            Why Authors Choose<br /> The Author Success
+          </h2>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            Over 3,000 entrepreneurs, executives, and experts have trusted us to write and publish their books. Here&apos;s why they chose us — and why they come back:
+          </p>
+          <div className="row">
+            {whyItems.map(({ img, title, desc }) => (
+              <div key={img} className="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                <div className="box">
+                  <Image src={`${BASE}/${img}.png`} alt="" width={48} height={48} style={{ width: '48px', height: 'auto' }} />
+                  <h3>{title}</h3>
+                  <p>{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <PopupButtons />
+        </div>
+      </section>
+
+      {/* Logos */}
+      <section className="logos center" style={{ textAlign: 'center' }}>
+        <Image src={`${BASE}/logos.jpg`} alt="Publisher and media partner logos" data-aos="fade-up" data-aos-duration="1000" width={900} height={120} style={{ display: 'block', margin: '0 auto', maxWidth: '100%', height: 'auto' }} />
+      </section>
+
+      {/* CTA Star */}
+      <section className="cta-stare">
+        <div className="container">
+          <h2 data-aos="fade-up" data-aos-duration="1000">Your Story Deserves to Be Published</h2>
+          <h4 data-aos="fade-up" data-aos-duration="1000">
+            Join 3,000+ authors who turned their expertise<br /> into a book with The Author Success.
+          </h4>
+          <PopupButtons />
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="testimonial-sec">
+        <div className="container" data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-duration="1000">What Our Authors Say</h2>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            Real stories from real authors who partnered with The Author Success<br /> to bring their books to life.
+          </p>
+          <div className="owl-testimonial owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
+            {testimonials.map(({ initial, name, role, quote }) => (
+              <div key={name} className="item">
+                <div className="box">
+                  <div className="testim-content">
+                    <p>&ldquo;{quote}&rdquo;</p>
+                  </div>
+                  <div className="info-testim">
+                    <div className="testim-circle">{initial}</div>
+                    <h4>{name}</h4>
+                    <h6>{role}</h6>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Channels */}
+      <section className="channels center" data-aos="fade-up" data-aos-duration="1000" style={{ textAlign: 'center' }}>
+        <Image src={`${BASE}/channels.png`} alt="Book distribution channels" width={900} height={200} style={{ display: 'block', margin: '0 auto', maxWidth: '100%', height: 'auto' }} />
+      </section>
+
+      {/* CTA Success */}
+      <section className="cta-success">
+        <div className="container">
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            We Write, Publish &amp; Market Your Book<br /> And Make It a Global Success
+          </h2>
+          <PopupButtons />
+        </div>
+      </section>
+
+      <Footer />
+
+      {/* Main Popup Form */}
+      <div style={{ display: 'none' }} id="popupform" className="tas-popup">
+        <div className="tas-popup__inner">
+          <div className="tas-popup__left">
+            <span className="tas-popup__eyebrow">The Author Success</span>
+            <h2 className="tas-popup__heading">Let&apos;s Turn Your Idea Into a Published Book.</h2>
+            <p className="tas-popup__sub">Tell us about your book and a publishing specialist will reach out within one business day — no pressure, just clarity.</p>
+            <ul className="tas-popup__perks">
+              <li>✓ Expert ghostwriting &amp; publishing</li>
+              <li>✓ End-to-end — writing to marketing</li>
+              <li>✓ 3,000+ authors published</li>
+              <li>✓ You keep 100% of your rights</li>
+            </ul>
+          </div>
+          <div className="tas-popup__right">
+            <form action="/order/mail.php" method="post" className="tas-popup__form validate-popupform" noValidate>
+              <div className="tas-popup__field">
+                <input type="text" required placeholder="Full Name *" name="cn" />
+              </div>
+              <div className="tas-popup__field">
+                <input type="email" required placeholder="Email Address *" name="em" />
+              </div>
+              <div className="tas-popup__field">
+                <input type="tel" minLength={10} required placeholder="Phone Number *" name="pn" />
+              </div>
+              <div className="tas-popup__field">
+                <textarea name="msg" required placeholder="Tell us about your book idea..." rows={3}></textarea>
+              </div>
+              <button type="submit" className="tas-popup__submit">Get Expert Guidance →</button>
+              <p className="tas-popup__note">No spam. No commitment. Just a conversation.</p>
+              <input type="hidden" name="send" value="1" />
+              <input type="hidden" name="lb_source" value="Direct" />
+              <input type="hidden" name="token" value="2tvy0cva3sysccg8ok8cs4sko4g8gk0" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Auto Popup */}
+      <div style={{ display: 'none' }} id="autopopup" className="tas-popup">
+        <div className="tas-popup__inner">
+          <div className="tas-popup__left">
+            <span className="tas-popup__eyebrow">The Author Success</span>
+            <h2 className="tas-popup__heading">Ready to Write Your Book?</h2>
+            <p className="tas-popup__sub">Join 3,000+ authors who trusted The Author Success to bring their story to life.</p>
+            <ul className="tas-popup__perks">
+              <li>✓ Expert ghostwriting &amp; publishing</li>
+              <li>✓ End-to-end — writing to marketing</li>
+              <li>✓ 3,000+ authors published</li>
+              <li>✓ You keep 100% of your rights</li>
+            </ul>
+          </div>
+          <div className="tas-popup__right">
+            <form action="/order/mail.php" method="post" className="tas-popup__form avalidate-popupform" noValidate>
+              <div className="tas-popup__field">
+                <input type="text" required placeholder="Full Name *" name="cn" />
+              </div>
+              <div className="tas-popup__field">
+                <input type="email" required placeholder="Email Address *" name="em" />
+              </div>
+              <div className="tas-popup__field">
+                <input type="tel" minLength={10} required placeholder="Phone Number *" name="pn" />
+              </div>
+              <div className="tas-popup__field">
+                <textarea name="msg" required placeholder="Tell us about your book idea..." rows={3}></textarea>
+              </div>
+              <button type="submit" className="tas-popup__submit">Get Expert Guidance →</button>
+              <p className="tas-popup__note">No spam. No commitment. Just a conversation.</p>
+              <input type="hidden" name="send" value="1" />
+              <input type="hidden" name="lb_source" value="Direct" />
+              <input type="hidden" name="token" value="2tvy0cva3sysccg8ok8cs4sko4g8gk0" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </>
+  )
+}
+

@@ -61,6 +61,7 @@ const books = [
 
 export default function Hero() {
   const [form, setForm] = useState({ name: "", email: "", service: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   return (
     <section className="relative min-h-screen bg-white overflow-hidden flex items-center">
@@ -174,33 +175,64 @@ export default function Hero() {
               </div>
               <p className="text-brand-muted text-xs mb-5">Our expert calls you within 24 hours — no commitment.</p>
 
-              <form className="flex flex-col gap-3" onSubmit={e => e.preventDefault()}>
-                <input
-                  type="text" placeholder="Your Full Name"
-                  value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
-                />
-                <input
-                  type="email" placeholder="Email Address"
-                  value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
-                />
-                <select
-                  value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors text-slate-500"
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center py-6 gap-3 text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle size={24} className="text-green-500" />
+                  </div>
+                  <p className="font-semibold text-brand-dark text-sm">Request received! We&apos;ll call you within 24 hours.</p>
+                  <button onClick={() => { setStatus("idle"); setForm({ name: "", email: "", service: "" }); }} className="text-xs text-primary underline">Submit another</button>
+                </div>
+              ) : (
+                <form
+                  className="flex flex-col gap-3"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    setStatus("loading");
+                    try {
+                      const res = await fetch("/api/hero-form", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(form),
+                      });
+                      if (!res.ok) throw new Error();
+                      setStatus("success");
+                    } catch {
+                      setStatus("error");
+                    }
+                  }}
                 >
-                  <option value="">Select a Service...</option>
-                  {["Ghostwriting","Book Editing","Cover Design","Publishing","Book Marketing","Audiobooks","Full Package"].map(s => (
-                    <option key={s}>{s}</option>
-                  ))}
-                </select>
-                <button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-100 transition-all mt-0.5"
-                >
-                  Claim Free Consultation →
-                </button>
-              </form>
+                  <input
+                    type="text" placeholder="Your Full Name" required
+                    value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                  />
+                  <input
+                    type="email" placeholder="Email Address" required
+                    value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors placeholder:text-slate-400"
+                  />
+                  <select
+                    value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:bg-white transition-colors text-slate-500"
+                  >
+                    <option value="">Select a Service...</option>
+                    {["Ghostwriting","Book Editing","Cover Design","Publishing","Book Marketing","Audiobooks","Full Package"].map(s => (
+                      <option key={s}>{s}</option>
+                    ))}
+                  </select>
+                  {status === "error" && (
+                    <p className="text-xs text-red-600 font-medium">Something went wrong. Please try again.</p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-100 transition-all mt-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? "Sending..." : "Claim Free Consultation →"}
+                  </button>
+                </form>
+              )}
 
               <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-slate-100">
                 <div className="flex">
