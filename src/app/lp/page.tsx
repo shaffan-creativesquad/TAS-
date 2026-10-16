@@ -280,7 +280,7 @@ export default function LandingPage() {
                 onClick={() => setPopup(true)}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-bold px-7 py-4 rounded-full transition-colors text-[0.95rem]"
               >
-                View Pricing
+                Schedule a Call
               </button>
             </div>
           </div>
@@ -425,7 +425,7 @@ export default function LandingPage() {
                   Book Free Consultation <ArrowRight size={15} />
                 </button>
                 <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark font-bold px-6 py-3.5 rounded-full transition-colors text-sm">
-                  View Pricing
+                  Schedule a Call
                 </button>
               </div>
             </div>
@@ -461,7 +461,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="py-20 bg-primary">
+      <section className="py-20" style={{ backgroundColor: '#089bb2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="absolute inset-0 opacity-[0.06] pointer-events-none"
             style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
@@ -472,11 +472,11 @@ export default function LandingPage() {
             Book a free consultation and let&apos;s talk about your idea today.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-primary font-bold px-8 py-4 rounded-full shadow-lg transition-colors">
+            <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 font-bold px-8 py-4 rounded-full shadow-lg transition-colors" style={{ color: '#089bb2' }}>
               Book a Free Consultation <ArrowRight size={16} />
             </button>
             <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-7 py-4 rounded-full transition-colors">
-              View Pricing
+              Schedule a Call
             </button>
           </div>
         </div>
@@ -618,37 +618,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ── */}
-      <section className="py-24 bg-brand-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{ backgroundImage: 'radial-gradient(#0891B2 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <div className="flex justify-center mb-5">
-            {[Shield, Zap, Trophy].map((Icon, i) => (
-              <div key={i} className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center -ml-2 first:ml-0">
-                <Icon size={16} className="text-white/70" />
-              </div>
-            ))}
-          </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white mb-4">
-            We Write, Publish &amp; Market Your Book<br />
-            <span className="text-primary">And Make It a Global Success</span>
-          </h2>
-          <p className="text-white/60 text-lg mb-8">
-            Join 3,000+ authors who turned their expertise into a published book with The Author Success.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-900/40 transition-colors">
-              Book a Free Consultation <ArrowRight size={16} />
-            </button>
-            <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-7 py-4 rounded-full transition-colors">
-              View Pricing
-            </button>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
