@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const whoWeHelp = [
@@ -43,12 +43,23 @@ export default function Navbar() {
   const [whoWeHelpOpen, setWhoWeHelpOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const whoWeHelpRef = useRef<HTMLDivElement>(null);
+  const isOpenRef = useRef(isOpen);
+  useEffect(() => { isOpenRef.current = isOpen; }, [isOpen]);
 
+  const router = useRouter();
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  const navigate = (href: string) => {
+    setIsOpen(false);
+    setServicesOpen(false);
+    setWhoWeHelpOpen(false);
+    router.push(href);
+  };
+
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
+      if (isOpenRef.current) return;
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
       }
@@ -228,7 +239,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 px-4 py-5 flex flex-col gap-4 shadow-xl">
+        <div className="lg:hidden bg-white border-t border-slate-100 px-4 py-5 flex flex-col gap-4 shadow-xl overflow-y-auto max-h-[calc(100vh-68px)]">
           {["Home", "About"].map((item) => {
             const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
             return (
@@ -262,12 +273,12 @@ export default function Navbar() {
             </button>
           </div>
           {servicesOpen && (
-            <div className="pl-4 flex flex-col gap-2">
+            <div className="pl-4 flex flex-col">
               {services.map((s) => (
-                <Link key={s.name} href={s.href} onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors ${pathname === s.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
+                <button key={s.name} onClick={() => navigate(s.href)}
+                  className={`text-sm font-medium py-2.5 border-b border-slate-50 text-left transition-colors ${pathname === s.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
                   {s.name}
-                </Link>
+                </button>
               ))}
             </div>
           )}
@@ -289,12 +300,12 @@ export default function Navbar() {
             </button>
           </div>
           {whoWeHelpOpen && (
-            <div className="pl-4 flex flex-col gap-2">
+            <div className="pl-4 flex flex-col">
               {whoWeHelp.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors ${pathname === item.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
+                <button key={item.name} onClick={() => navigate(item.href)}
+                  className={`text-sm font-medium py-2.5 border-b border-slate-50 text-left transition-colors ${pathname === item.href ? "text-primary font-semibold" : "text-brand-muted hover:text-primary"}`}>
                   {item.name}
-                </Link>
+                </button>
               ))}
             </div>
           )}
