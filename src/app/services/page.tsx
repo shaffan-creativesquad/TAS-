@@ -258,19 +258,19 @@ export default function ServicesPage() {
               >
                 {/* Color panel */}
                 <div
-                  className={`p-10 flex flex-col justify-between ${i % 2 === 1 ? "lg:order-2" : ""}`}
+                  className={`p-10 flex flex-col justify-between items-center text-center lg:items-start lg:text-left ${i % 2 === 1 ? "lg:order-2" : ""}`}
                   style={{ background: `linear-gradient(135deg, ${s.color}15 0%, ${s.color}08 100%)`, borderLeft: `4px solid ${s.color}` }}
                 >
                   {s.badge && (
                     <span
-                      className="self-start text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full text-white mb-4"
+                      className="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full text-white mb-4"
                       style={{ background: s.color }}
                     >
                       {s.badge}
                     </span>
                   )}
-                  <div>
-                    <div className={`w-14 h-14 ${s.iconBg} rounded-2xl flex items-center justify-center mb-5`}>
+                  <div className="w-full">
+                    <div className={`w-14 h-14 ${s.iconBg} rounded-2xl flex items-center justify-center mb-5 mx-auto lg:mx-0`}>
                       <s.icon size={24} className={s.iconColor} />
                     </div>
                     <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-brand-dark mb-2">
@@ -279,9 +279,9 @@ export default function ServicesPage() {
                     <p className="font-semibold text-sm mb-4" style={{ color: s.color }}>{s.subtitle}</p>
                     <p className="text-brand-body leading-relaxed text-sm mb-6">{s.desc}</p>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-center lg:items-start gap-3 w-full">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      <div className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
                       <span className="text-xs font-semibold text-brand-muted">{s.result}</span>
                     </div>
                     <Link
@@ -295,15 +295,15 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Features panel */}
-                <div className={`bg-white p-10 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`bg-white p-10 text-center lg:text-left ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   <h4 className="font-bold text-brand-dark text-sm uppercase tracking-wider mb-5">
                     What&apos;s Included
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                     {s.features.map(f => (
-                      <div key={f} className="flex items-start gap-2.5">
+                      <div key={f} className="flex items-start justify-center lg:justify-start gap-2.5">
                         <CheckCircle size={15} className="shrink-0 mt-0.5" style={{ color: s.color }} />
-                        <span className="text-sm text-brand-dark-2">{f}</span>
+                        <span className="text-sm text-brand-dark-2 text-left">{f}</span>
                       </div>
                     ))}
                   </div>
@@ -343,7 +343,7 @@ export default function ServicesPage() {
               <FadeUp key={s.title} delay={(i % 4) * 0.07}>
                 <Link
                   href={s.href}
-                  className="group bg-white border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-100 hover:-translate-y-1 transition-all block h-full"
+                  className="group bg-white border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-100 hover:-translate-y-1 transition-all flex flex-col items-center text-center sm:items-start sm:text-left h-full"
                 >
                   <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-4">
                     <s.icon size={18} className="text-primary" />
