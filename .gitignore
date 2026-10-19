@@ -45,3 +45,6 @@ next-env.d.ts
 .kiro/
 .claude/
 .github/
+
+# local notes
+website-pages.txt
