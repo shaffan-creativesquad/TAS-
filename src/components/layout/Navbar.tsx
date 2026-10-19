@@ -189,19 +189,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Insights link */}
-            <Link
-              href="/insights"
-              className={`relative text-sm font-semibold transition-colors ${
-                isActive("/insights") ? "text-primary" : "text-brand-dark-2 hover:text-primary"
-              }`}
-            >
-              Insights
-              {isActive("/insights") && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
-              )}
-            </Link>
-
             {/* Contact link — last */}
             <Link
               href="/contact"
@@ -311,17 +298,6 @@ export default function Navbar() {
               ))}
             </div>
           )}
-
-          {/* Insights mobile */}
-          <Link
-            href="/insights"
-            onClick={() => setIsOpen(false)}
-            className={`font-semibold py-0.5 border-l-2 pl-3 transition-colors ${
-              isActive("/insights") ? "text-primary border-primary" : "text-brand-dark-2 border-transparent"
-            }`}
-          >
-            Insights
-          </Link>
 
           <Link
             href="/contact"
