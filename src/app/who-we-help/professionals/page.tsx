@@ -102,7 +102,7 @@ export default function ProfessionalsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <SlideLeft>
-              <div>
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <span className="text-xs font-bold uppercase tracking-[0.18em] mb-3 block text-primary">Built For Professionals</span>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black mb-5">
                   <span className="text-black">Expertise </span>
@@ -116,7 +116,7 @@ export default function ProfessionalsPage() {
             <SlideRight delay={0.1}>
               <div className="flex flex-col gap-5">
                 {features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                  <div key={i} className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100">
                     <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
                       <CheckCircle size={16} className="text-white" />
                     </div>
@@ -173,7 +173,7 @@ export default function ProfessionalsPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {bookExamples.map((book, i) => (
               <ScaleIn key={book.title} delay={i * 0.1}>
-                <div className="bg-white border border-slate-100 rounded-2xl p-7 hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="bg-white border border-slate-100 rounded-2xl p-7 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center md:items-start md:text-left">
                   <div className="w-12 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
                     <BookOpen size={24} className="text-primary" />
                   </div>
