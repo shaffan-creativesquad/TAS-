@@ -83,9 +83,9 @@ export default function HowItWorks() {
                 <div className="hidden lg:block absolute top-8 -right-2.5 z-10 text-white/50 text-lg">›</div>
               )}
 
-              <div className="bg-white/15 border border-white/25 rounded-2xl p-6 hover:bg-white/25 hover:border-white/40 transition-all h-full">
+              <div className="bg-white/15 border border-white/25 rounded-2xl p-6 hover:bg-white/25 hover:border-white/40 transition-all h-full flex flex-col items-center text-center md:items-start md:text-left">
                 {/* Number */}
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between mb-5 w-full">
                   <div className={`w-12 h-12 ${step.color} rounded-xl flex items-center justify-center shadow-lg`}>
                     <step.icon size={20} className="text-white" />
                   </div>
@@ -105,7 +105,7 @@ export default function HowItWorks() {
 
         {/* CTA strip */}
         <motion.div
-          className="bg-white rounded-2xl p-7 flex flex-col sm:flex-row items-center justify-between gap-5"
+          className="bg-white rounded-2xl p-7 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

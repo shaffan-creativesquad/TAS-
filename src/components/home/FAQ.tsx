@@ -68,15 +68,12 @@ export default function FAQ() {
         <div className="grid lg:grid-cols-[380px_1fr] gap-14 items-start">
           {/* Left sticky header */}
           <motion.div
-            className="lg:sticky lg:top-28"
+            className="lg:sticky lg:top-28 text-center lg:text-left"
             initial={{ opacity: 0, x: -28 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            {/* <span className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 block">
-              FAQ
-            </span> */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-brand-dark mb-5 leading-tight">
               Answers Before<br /><span className="text-primary">You Sign</span><br />Anything.
             </h2>

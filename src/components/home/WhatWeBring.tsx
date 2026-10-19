@@ -145,8 +145,8 @@ export default function WhatWeBring() {
             <div className="grid sm:grid-cols-2 gap-4">
               {spokes.map((s, i) => (
                 <FadeUp key={s.title} delay={i * 0.07}>
-                  <div className="group bg-white border border-slate-100 rounded-2xl p-5 hover:shadow-xl transition-all duration-300 flex items-start gap-4">
-                    <div className={`w-11 h-11 ${s.bg} rounded-xl flex items-center justify-center shrink-0`}>
+                  <div className="group bg-white border border-slate-100 rounded-2xl p-5 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                    <div className={`w-11 h-11 ${s.bg} rounded-xl flex items-center justify-center mb-3`}>
                       <s.icon size={20} style={{ color: s.color }} />
                     </div>
                     <div>

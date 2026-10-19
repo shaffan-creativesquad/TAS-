@@ -17,13 +17,17 @@ const ROTATIONS = [-5, -2, 1, -3, 4, -1];
 type Props = { count?: number; width?: number };
 
 export default function BookCoversStrip({ count = 6, width = 70 }: Props) {
+  const gapPx = 8;
+  const totalGap = (count - 1) * gapPx;
+  const responsiveWidth = `min(${width}px, calc((100vw - 48px - ${totalGap}px) / ${count}))`;
+
   return (
     <div className="flex items-end justify-center gap-2 sm:gap-3">
       {COVERS.slice(0, count).map((b, i) => (
         <motion.div
           key={b.src}
           className="relative rounded-[3px_10px_10px_3px] overflow-hidden shadow-xl flex-shrink-0"
-          style={{ width, aspectRatio: "2/3", rotate: `${ROTATIONS[i]}deg` }}
+          style={{ width: responsiveWidth, aspectRatio: "2/3", rotate: `${ROTATIONS[i]}deg` }}
           whileHover={{ scale: 1.12, rotate: 0, zIndex: 20, y: -10 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
         >

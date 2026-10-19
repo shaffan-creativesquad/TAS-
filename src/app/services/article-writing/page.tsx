@@ -76,12 +76,12 @@ export default function ArticleWritingPage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideLeft>
-              <div>
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5 text-white" style={{ background: COLOR }}>{badge}</div>
                 <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-black leading-[1.1] mb-4"><span className="text-black">Your Expertise,</span><br /><span className="text-primary">Published Where It Matters</span></h1>
                 <p className="text-lg font-semibold mb-4" style={{ color: COLOR }}>{subline}</p>
                 <p className="text-brand-body leading-relaxed mb-8">{desc}</p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                   <Link href="/contact" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:opacity-90" style={{ background: COLOR }}>Get Free Quote <ArrowRight size={16} /></Link>
                   <Link href="/portfolio" className="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-800 text-slate-800 font-bold px-7 py-4 rounded-full transition-all">See Our Work</Link>
                 </div>
@@ -115,7 +115,7 @@ export default function ArticleWritingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {subServices.map((sub, i) => (
               <FadeUp key={sub.title} delay={i * 0.08}>
-                <div className="rounded-2xl p-6 border border-slate-100 hover:border-transparent hover:shadow-xl transition-all" style={{ background: LIGHT_BG }}>
+                <div className="rounded-2xl p-6 border border-slate-100 hover:border-transparent hover:shadow-xl transition-all flex flex-col items-center text-center" style={{ background: LIGHT_BG }}>
                   <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full text-white inline-block mb-4" style={{ background: COLOR }}>{sub.tag}</span>
                   <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-brand-dark mb-2">{sub.title}</h3>
                   <p className="text-sm text-brand-body leading-relaxed">{sub.desc}</p>
@@ -194,7 +194,7 @@ export default function ArticleWritingPage() {
               <FadeUp key={t.name} delay={i * 0.1}>
                 <div className="bg-white border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                   <div className="flex mb-4">{[1,2,3,4,5].map(j => <Star key={j} size={13} className="text-amber-400 fill-amber-400" />)}</div>
-                  <p className="font-[family-name:var(--font-playfair)] text-base italic text-brand-dark-2 mb-6 leading-relaxed">&quot;{t.quote}&quot;</p>
+                  <p className="font-[family-name:var(--font-playfair)] text-base italic text-brand-dark-2 mb-6 leading-relaxed text-center">&quot;{t.quote}&quot;</p>
                   <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold text-xs shrink-0" style={{ background: COLOR }}>{t.name.split(" ").map(n => n[0]).join("")}</div>

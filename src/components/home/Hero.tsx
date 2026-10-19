@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1fr_480px] gap-12 xl:gap-16 items-center">
 
           {/* ── LEFT ── */}
-          <div>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
             <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2.5 bg-white border border-cyan-200 shadow-sm rounded-full px-4 py-1.5 mb-7">
               <div className="flex">
@@ -63,7 +63,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <motion.h1 {...fadeUp(0.08)} className="font-[family-name:var(--font-playfair)] text-[3.2rem] sm:text-[3.75rem] lg:text-[4rem] font-black text-brand-dark leading-[1.08] mb-5">
+            <motion.h1 {...fadeUp(0.08)} className="font-[family-name:var(--font-playfair)] text-[2rem] sm:text-[3.2rem] lg:text-[4rem] font-black text-brand-dark leading-[1.08] mb-5">
               <span className="text-black">Your Head Has a</span>
               <br />
               <span className="text-gradient">Bestseller</span>
@@ -77,7 +77,7 @@ export default function Hero() {
             </motion.p>
 
             {/* Checklist */}
-            <motion.div {...fadeUp(0.24)} className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-9">
+            <motion.div {...fadeUp(0.24)} className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-9 w-full">
               {[
                 "You Keep All Your Royalties",
                 "Featured on Leading Global Platforms",
@@ -86,7 +86,7 @@ export default function Hero() {
                 "A Dedicated Project Manager",
                 "Unwavering, Human Support",
               ].map(item => (
-                <div key={item} className="flex items-center gap-2 text-sm font-medium text-brand-dark-2">
+                <div key={item} className="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-brand-dark-2">
                   <CheckCircle size={15} className="text-primary shrink-0" />
                   {item}
                 </div>
@@ -94,7 +94,7 @@ export default function Hero() {
             </motion.div>
 
             {/* CTAs */}
-            <motion.div {...fadeUp(0.32)} className="flex flex-wrap gap-3 mb-12">
+            <motion.div {...fadeUp(0.32)} className="flex flex-wrap gap-3 mb-12 justify-center lg:justify-start">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all text-[0.95rem]"
@@ -110,7 +110,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-8 pt-5 border-t border-slate-100">
+            <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-8 pt-5 border-t border-slate-100 justify-center lg:justify-start w-full">
               {[
                 { value: "2,500+", label: "Books Published" },
                 { value: "1,800+", label: "Happy Authors" },

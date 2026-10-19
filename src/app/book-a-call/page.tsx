@@ -80,7 +80,7 @@ export default function BookACallPage() {
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
 
             <SlideLeft>
-              <div>
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-black mb-8">
                   <span className="text-black">Here&apos;s How the </span>
                   <span className="text-primary">Call Works</span>

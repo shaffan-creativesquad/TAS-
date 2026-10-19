@@ -142,9 +142,9 @@ export default function HowItWorksPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {steps.map((step, i) => (
               <FadeUp key={step.n} delay={i * 0.06}>
-                <div className="relative bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary/20 transition-all h-full">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                <div className="relative bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary/20 transition-all h-full flex flex-col items-center text-center md:items-start md:text-left">
+                  <div className="flex items-center justify-center md:justify-between gap-3 mb-4 w-full">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shrink-0">
                       <span className="text-white text-xs font-black">{step.n}</span>
                     </div>
                     <span className="text-[10px] font-semibold text-primary bg-cyan-50 px-2 py-1 rounded-full">Your Role</span>
@@ -194,7 +194,7 @@ export default function HowItWorksPage() {
             </SlideLeft>
 
             <SlideRight>
-              <div className="sticky top-28">
+              <div className="sticky top-28 flex flex-col items-center text-center lg:items-start lg:text-left">
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary block mb-3">One Book, More Reach</span>
                 <h3 className="font-[family-name:var(--font-playfair)] text-3xl font-black text-slate-900 mb-4">
                   Your Book Is Your Best Marketer

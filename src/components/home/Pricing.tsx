@@ -90,7 +90,7 @@ export default function Pricing() {
               transition={{ duration: 0.85, ease: "easeOut", delay: i * 0.1 }}
               className={`relative rounded-3xl border overflow-hidden hover-lift ${
                 plan.highlight
-                  ? "bg-brand-dark border-brand-dark shadow-2xl shadow-slate-900/30 scale-[1.02]"
+                  ? "bg-brand-dark border-brand-dark shadow-2xl shadow-slate-900/30 md:scale-[1.02]"
                   : "bg-white border-slate-200"
               }`}
             >
@@ -100,7 +100,7 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className="p-7">
+              <div className="p-7 text-center md:text-left">
                 <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${plan.highlight ? "text-white/70" : "text-primary"}`}>
                   {plan.name}
                 </div>
@@ -111,11 +111,11 @@ export default function Pricing() {
                   {plan.desc}
                 </p>
 
-                <div className="flex flex-col gap-3 mb-7">
+                <div className="flex flex-col gap-3 mb-7 items-center md:items-start">
                   {plan.features.map(f => (
                     <div key={f} className="flex items-start gap-2.5">
                       <CheckCircle size={15} className={`shrink-0 mt-0.5 ${plan.highlight ? "text-white" : "text-primary"}`} />
-                      <span className={`text-sm ${plan.highlight ? "text-slate-300" : "text-brand-dark-2"}`}>{f}</span>
+                      <span className={`text-sm text-left ${plan.highlight ? "text-slate-300" : "text-brand-dark-2"}`}>{f}</span>
                     </div>
                   ))}
                 </div>

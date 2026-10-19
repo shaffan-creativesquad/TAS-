@@ -31,13 +31,13 @@ export default function AuthorityHub() {
 
           {/* ── Hub diagram ── */}
           <motion.div
-            className="relative flex items-center justify-center order-2 lg:order-1"
+            className="relative flex items-center justify-center order-2 lg:order-1 w-full"
             initial={{ opacity: 0, scale: 0.94 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="relative w-[340px] h-[340px] sm:w-[400px] sm:h-[400px]">
+            <div className="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px]">
               {/* Dashed orbit ring */}
               <div className="absolute inset-[18%] rounded-full border-2 border-dashed border-slate-200 pointer-events-none" />
 
@@ -67,7 +67,7 @@ export default function AuthorityHub() {
 
           {/* ── Copy ── */}
           <motion.div
-            className="order-1 lg:order-2"
+            className="order-1 lg:order-2 text-center lg:text-left"
             initial={{ opacity: 0, x: 32 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -87,7 +87,7 @@ export default function AuthorityHub() {
             </p>
 
             <p className="text-sm font-semibold text-slate-700 mb-3">We partner with leaders who want to share something meaningful:</p>
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
               {verticals.map(v => (
                 <Link
                   key={v.href}
@@ -99,7 +99,7 @@ export default function AuthorityHub() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-cyan-200 transition-all"

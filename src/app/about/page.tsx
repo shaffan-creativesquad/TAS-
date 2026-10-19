@@ -120,24 +120,24 @@ export default function AboutPage() {
               <FadeUp key={p.phase} delay={i * 0.1}>
                 <div className={`relative bg-white border ${p.border} rounded-3xl p-7 hover:shadow-xl transition-all duration-300 h-full`}>
                   {/* Phase number */}
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
                     <div className={`w-10 h-10 ${p.bg} rounded-xl flex items-center justify-center`}>
                       <span className="font-[family-name:var(--font-playfair)] font-black text-sm" style={{ color: p.color }}>{i + 1}</span>
                     </div>
-                    <div>
+                    <div className="text-center md:text-left">
                       <div className="text-[10px] font-bold uppercase tracking-widest" style={{ color: p.color }}>{p.phase}</div>
                       <h3 className="font-[family-name:var(--font-playfair)] text-xl font-black text-brand-dark">{p.title}</h3>
                     </div>
                   </div>
 
-                  <p className="text-brand-body text-sm leading-relaxed mb-5">
+                  <p className="text-brand-body text-sm leading-relaxed mb-5 text-center md:text-left">
                     <span className="font-bold text-brand-dark">{p.bold}</span><br />
                     {p.desc}
                   </p>
 
                   <div className="flex flex-col gap-2">
                     {p.steps.map(s => (
-                      <div key={s} className="flex items-center gap-2.5">
+                      <div key={s} className="flex items-center justify-center md:justify-start gap-2.5">
                         <CheckCircle size={14} style={{ color: p.color }} className="shrink-0" />
                         <span className="text-sm text-brand-dark-2 font-medium">{s}</span>
                       </div>
@@ -182,7 +182,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideLeft>
-              <div>
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Mission</span>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-5 leading-tight">
                   <span className="text-black">Publishing Should Be</span><br /><span className="text-primary">Open to Every Author</span>
@@ -193,13 +193,13 @@ export default function AboutPage() {
                 <p className="text-brand-body leading-relaxed mb-8">
                   We keep things straightforward. You should know what you&apos;re paying for, understand what&apos;s happening with your book, and remain in control of the work you&apos;ve created. Our job is to help you turn your manuscript into a finished book and get it where readers can find it.
                 </p>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 w-full">
                   {[
                     "Open to authors, genres, and stories of all kinds",
                     "Your book and intellectual property remain yours",
                     "Distribution through Amazon and other major platforms",
                   ].map(item => (
-                    <div key={item} className="flex items-center gap-3">
+                    <div key={item} className="flex items-center justify-center lg:justify-start gap-3">
                       <CheckCircle size={16} className="text-primary shrink-0" />
                       <span className="text-sm text-brand-dark-2 font-medium">{item}</span>
                     </div>
@@ -212,7 +212,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 {values.map((v, i) => (
                   <FadeUp key={v.title} delay={i * 0.08}>
-                    <div className="bg-white border border-slate-100 rounded-2xl p-5 hover-lift">
+                    <div className="bg-white border border-slate-100 rounded-2xl p-5 hover-lift flex flex-col items-center text-center lg:items-start lg:text-left">
                       <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-3">
                         <v.icon size={18} className="text-primary" />
                       </div>

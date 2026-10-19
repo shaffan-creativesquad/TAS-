@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
             {left.map((f, i) => (
               <motion.div
                 key={f.title}
-                className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover-lift"
+                className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover-lift flex flex-col items-center text-center lg:items-start lg:text-left"
                 initial={{ opacity: 0, x: -28 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
             {right.map((f, i) => (
               <motion.div
                 key={f.title}
-                className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover-lift"
+                className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover-lift flex flex-col items-center text-center lg:items-start lg:text-left"
                 initial={{ opacity: 0, x: 28 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}

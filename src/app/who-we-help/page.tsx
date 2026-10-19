@@ -189,7 +189,7 @@ export default function WhoWeHelpPage() {
             <div className={`grid lg:grid-cols-2 gap-14 items-start ${idx % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}`}>
 
               <SlideLeft delay={0}>
-                <div>
+                <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                   <div
                     className="inline-flex items-center gap-2 text-white rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider mb-5"
                     style={{ background: "#0891B2" }}
@@ -202,7 +202,7 @@ export default function WhoWeHelpPage() {
                   </h2>
                   <p className="text-brand-body mb-6 leading-relaxed">{v.sub}</p>
 
-                  <div className="flex flex-wrap items-center gap-2 mb-8">
+                  <div className="flex flex-wrap items-center gap-2 mb-8 justify-center lg:justify-start">
                     {v.pipeline.map((step, i) => (
                       <div key={step} className="flex items-center gap-2">
                         <span className="bg-white border border-slate-200 text-slate-800 font-semibold text-xs px-3 py-1.5 rounded-full shadow-sm">{step}</span>
@@ -211,7 +211,7 @@ export default function WhoWeHelpPage() {
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8 w-full">
                     {v.features.map(f => (
                       <div key={f} className="flex items-start gap-2 text-sm text-slate-800">
                         <CheckCircle size={15} className="text-primary shrink-0 mt-0.5" />
@@ -220,7 +220,7 @@ export default function WhoWeHelpPage() {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                     <Link
                       href={`/who-we-help/${v.slug}`}
                       className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition-all"

@@ -336,7 +336,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Header */}
-          <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-14">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-14 text-center lg:text-left">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">What We Do</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black leading-tight">
@@ -345,7 +345,7 @@ export default function LandingPage() {
               </h2>
             </div>
             <div className="lg:text-right">
-              <p className="text-brand-muted text-sm leading-relaxed max-w-sm lg:ml-auto mb-4">
+              <p className="text-brand-muted text-sm leading-relaxed max-w-sm lg:ml-auto mb-4 mx-auto lg:mx-0">
                 From your first idea to a professionally published book — we handle every step so you can focus on your story.
               </p>
               <button
@@ -368,7 +368,7 @@ export default function LandingPage() {
           */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.slice(0, 8).map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -379,7 +379,7 @@ export default function LandingPage() {
 
             {/* card[8] — row 3, col 1 */}
             {[services[8]].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -401,7 +401,7 @@ export default function LandingPage() {
 
             {/* card[9] — row 3, col 4 */}
             {[services[9]].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -412,7 +412,7 @@ export default function LandingPage() {
 
             {/* card[10] — row 4, col 1 */}
             {[services[10]].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -423,7 +423,7 @@ export default function LandingPage() {
 
             {/* card[11] — row 4, col 4 */}
             {[services[11]].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="self-start bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -434,7 +434,7 @@ export default function LandingPage() {
 
             {/* cards 12-19 — rows 5-6 */}
             {services.slice(12).map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default">
+              <div key={title} className="bg-slate-50 border border-slate-100 rounded-2xl p-5 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group cursor-default flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:bg-primary group-hover:border-primary transition-all">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
@@ -451,7 +451,7 @@ export default function LandingPage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[380px_1fr] gap-12 items-start">
-            <div className="lg:sticky lg:top-28">
+            <div className="lg:sticky lg:top-28 flex flex-col items-center text-center lg:items-start lg:text-left">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Every Genre</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
                 <span className="text-black">We Write Every Type</span><br />
@@ -486,7 +486,7 @@ export default function LandingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Why Trust Us</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
                 <span className="text-black">A Publishing Partner You Can Trust</span><br />
@@ -498,15 +498,15 @@ export default function LandingPage() {
                 <p>Our writers, editors, designers, and publishing specialists work together on your project — so nothing falls through the cracks. We shape your message and create a book that reflects your expertise and voice with precision.</p>
                 <p>With over 3,000 authors published and a decade of experience, The Author Success has become the trusted choice for entrepreneurs, executives, and thought leaders who want a book done right.</p>
               </div>
-              <div className="flex flex-col gap-2 mb-8">
+              <div className="flex flex-col gap-2 mb-8 w-full">
                 {['Dedicated project manager from day one', 'NDA signed before any project details shared', 'You keep 100% of your royalties', 'Unlimited revision rounds included'].map(item => (
-                  <div key={item} className="flex items-center gap-2.5 text-sm text-brand-dark-2">
+                  <div key={item} className="flex items-center justify-center lg:justify-start gap-2.5 text-sm text-brand-dark-2">
                     <CheckCircle size={14} className="text-primary shrink-0" />
                     {item}
                   </div>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full transition-colors text-sm shadow-lg shadow-cyan-200">
                   Book Free Consultation <ArrowRight size={15} />
                 </button>
@@ -586,15 +586,15 @@ export default function LandingPage() {
             </div>
 
             {/* Services list */}
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Core Services</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-10">
                 <span className="text-black">Everything We Do,</span><br />
                 <span className="text-primary">Done Exceptionally Well.</span>
               </h2>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 w-full">
                 {exceptionalServices.map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="flex items-start gap-4">
+                  <div key={title} className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-4">
                     <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center shrink-0">
                       <Icon size={20} className="text-primary" />
                     </div>

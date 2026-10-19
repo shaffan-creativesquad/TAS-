@@ -68,22 +68,19 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"
+          className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 text-center lg:text-left"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <div>
-            {/* <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-              Our Services
-            </span> */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark leading-tight">
               <span className="text-black">Everything Your Book Needs.</span><br /><span className="text-black">Nothing You Have to </span><span className="text-primary">Chase.</span>
             </h2>
           </div>
           <div>
-            <p className="text-brand-muted max-w-sm mb-4 text-sm leading-relaxed">
+            <p className="text-brand-muted max-w-sm mb-4 text-sm leading-relaxed mx-auto lg:mx-0">
               We offer six main services and a dedicated team to guide your book from first draft to finished product. You&apos;ll know what to expect at every step.
             </p>
             <Link href="/services" className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:gap-3 transition-all">
@@ -112,13 +109,13 @@ export default function Services() {
                 }`}
               >
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 mx-auto lg:mx-0 ${
                   s.dark ? "bg-white/10" : "bg-cyan-50"
                 }`}>
                   <s.icon size={22} className={s.dark ? "text-white" : "text-primary"} />
                 </div>
 
-                <div className="flex items-start justify-between gap-2 mb-3">
+                <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between gap-2 mb-3 text-center lg:text-left">
                   <h3 className={`font-[family-name:var(--font-playfair)] text-xl font-bold ${
                     s.dark ? "text-white" : "text-brand-dark"
                   }`}>{s.title}</h3>
@@ -129,11 +126,11 @@ export default function Services() {
                   )}
                 </div>
 
-                <p className={`text-sm leading-relaxed mb-5 ${
+                <p className={`text-sm leading-relaxed mb-5 text-center lg:text-left ${
                   s.dark ? "text-[#CFFAFE]" : "text-brand-muted"
                 }`}>{s.desc}</p>
 
-                <div className={`flex items-center gap-1.5 text-sm font-bold group-hover:gap-3 transition-all ${
+                <div className={`flex items-center gap-1.5 text-sm font-bold group-hover:gap-3 transition-all justify-center lg:justify-start ${
                   s.dark ? "text-[#CFFAFE]" : "text-primary"
                 }`}>
                   Learn more <ArrowUpRight size={15} />

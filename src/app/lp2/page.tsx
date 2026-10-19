@@ -196,7 +196,7 @@ export default function LP2() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
             {/* Left */}
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white border border-cyan-200 shadow-sm rounded-full px-4 py-1.5 mb-6">
                 <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}</div>
                 <span className="text-xs font-semibold text-slate-700">Trusted by <strong className="text-primary">3,000+</strong> Authors Worldwide</span>
@@ -208,9 +208,9 @@ export default function LP2() {
               <p className="text-brand-body text-lg leading-relaxed mb-8 max-w-xl">
                 From ghostwriting to global distribution — The Author Success handles every step so your story reaches the world, in your voice, under your name.
               </p>
-              <div className="grid sm:grid-cols-2 gap-2.5 mb-8">
+              <div className="grid sm:grid-cols-2 gap-2.5 mb-8 w-full">
                 {['You Keep All Your Royalties', 'Featured on Leading Global Platforms', 'Careful Editing for Every Sentence', 'Your Ideas Stay Confidential', 'A Dedicated Project Manager', 'Unwavering, Human Support'].map(item => (
-                  <div key={item} className="flex items-center gap-2 text-sm font-medium text-brand-dark-2">
+                  <div key={item} className="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-brand-dark-2">
                     <CheckCircle size={15} className="text-primary shrink-0" />
                     {item}
                   </div>
@@ -249,7 +249,7 @@ export default function LP2() {
 
       {/* ── Books Marquee ── */}
       <section className="bg-slate-50 py-16 overflow-hidden border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-1">Our Work</p>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-brand-dark">Books We&apos;ve Published</h2>
         </div>
@@ -271,7 +271,7 @@ export default function LP2() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             {/* Perks */}
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Why It Matters</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black leading-tight mb-8">
                 What a Published Book{' '}
@@ -291,7 +291,7 @@ export default function LP2() {
             </div>
 
             {/* Steps */}
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">How It Works</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black leading-tight mb-8">
                 From Idea to{' '}
@@ -334,15 +334,15 @@ export default function LP2() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
             {services.map(({ Icon, title, desc, bullets }) => (
-              <div key={title} className="bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group">
+              <div key={title} className="bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all group flex flex-col items-center text-center sm:items-start sm:text-left">
                 <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
                   <Icon size={18} className="text-primary group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="font-[family-name:var(--font-playfair)] font-bold text-brand-dark mb-2">{title}</h3>
                 <p className="text-brand-muted text-sm leading-relaxed mb-4">{desc}</p>
-                <ul className="flex flex-col gap-1.5">
+                <ul className="flex flex-col gap-1.5 w-full">
                   {bullets.map(b => (
-                    <li key={b} className="text-xs text-brand-muted flex items-center gap-2">
+                    <li key={b} className="text-xs text-brand-muted flex items-center justify-center sm:justify-start gap-2">
                       <CheckCircle size={13} className="text-primary shrink-0" /> {b}
                     </li>
                   ))}
@@ -390,7 +390,7 @@ export default function LP2() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Every Genre</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black mb-4">
                 The Genres Available{' '}
@@ -399,7 +399,7 @@ export default function LP2() {
               <p className="text-brand-muted leading-relaxed mb-8">
                 The Author Success is known for publishing a wide variety of genres — from business books and memoirs to novels and expert guides.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {genres.map(g => (
                   <span key={g} className="px-3.5 py-1.5 border border-slate-200 hover:border-primary hover:text-primary hover:bg-cyan-50 rounded-full text-sm text-brand-muted transition-all cursor-default">
                     {g}
@@ -494,7 +494,7 @@ export default function LP2() {
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70 mb-2">Get in Touch</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-white leading-tight mb-4">
                 Ready to Take the Next Step?
@@ -506,9 +506,9 @@ export default function LP2() {
               <p className="text-white/60 text-sm leading-relaxed mb-8">
                 On the call: we&apos;ll learn about your book, recommend the right service tier, and answer any questions — no preparation needed, no commitment required.
               </p>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-3 w-full">
                 {['Expert ghostwriting & publishing', 'End-to-end — writing to marketing', '3,000+ authors published', 'You keep 100% of your rights'].map(point => (
-                  <li key={point} className="flex items-center gap-3 text-white text-sm">
+                  <li key={point} className="flex items-center justify-center lg:justify-start gap-3 text-white text-sm">
                     <CheckCircle size={16} className="text-white shrink-0" /> {point}
                   </li>
                 ))}

@@ -26,13 +26,14 @@ export default function CTABanner() {
           <div className="relative grid lg:grid-cols-[1fr_auto] gap-10 items-center">
             {/* Left */}
             <motion.div
+              className="text-center lg:text-left"
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
             >
               {/* Trustpilot */}
-              <div className="flex items-center gap-3 mb-5">
+              <div className="flex items-center gap-3 mb-5 justify-center lg:justify-start">
                 <div className="bg-white rounded-lg px-3 py-1.5 shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/trustpilot.png" alt="Trustpilot" style={{ height: "18px", width: "auto", display: "block" }} />
@@ -43,12 +44,12 @@ export default function CTABanner() {
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white leading-tight mb-4">
                 Stop Drafting It in Your Head. Start Publishing It With Us.
               </h2>
-              <p className="text-cyan-100 text-lg max-w-lg mb-6">
+              <p className="text-cyan-100 text-lg max-w-lg mb-6 mx-auto lg:mx-0">
                 Book a free 30-minute consultation with a publishing specialist. No jargon, no pressure, just a clear roadmap to get a book published that carries your name and your ideas further.
               </p>
 
               {/* Mini badges */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 {["✓ No Commitment", "✓ NDA Signed First", "✓ 100% Royalties Yours"].map(b => (
                   <span key={b} className="text-sm font-semibold text-white/80 bg-white/15 px-3 py-1 rounded-full">
                     {b}
@@ -59,7 +60,7 @@ export default function CTABanner() {
 
             {/* Right: action box */}
             <motion.div
-              className="bg-white rounded-2xl p-7 w-full lg:w-[300px] shrink-0"
+              className="bg-white rounded-2xl p-7 w-full lg:w-[300px] shrink-0 flex flex-col items-center text-center lg:items-start lg:text-left"
               initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -75,7 +76,7 @@ export default function CTABanner() {
                 Tell us where your book stands today, and we'll map the fastest route from draft to bookshelf.
               </p>
 
-              <div className="flex flex-col gap-2.5">
+              <div className="flex flex-col gap-2.5 w-full">
                 <Link
                   href="/contact"
                   className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl text-sm shadow-lg shadow-cyan-200 transition-all"

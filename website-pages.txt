@@ -1,0 +1,54 @@
+Website Pages - All Links
+=========================
+Live URL: https://tas-rho.vercel.app/
+
+Main Pages
+----------
+https://tas-rho.vercel.app/
+https://tas-rho.vercel.app/about
+https://tas-rho.vercel.app/portfolio
+https://tas-rho.vercel.app/our-books
+https://tas-rho.vercel.app/how-it-works
+https://tas-rho.vercel.app/contact
+https://tas-rho.vercel.app/book-a-call
+
+
+Who We Help
+-----------
+https://tas-rho.vercel.app/who-we-help
+https://tas-rho.vercel.app/who-we-help/founders-ceos
+https://tas-rho.vercel.app/who-we-help/consultants
+https://tas-rho.vercel.app/who-we-help/coaches-speakers
+https://tas-rho.vercel.app/who-we-help/professionals
+https://tas-rho.vercel.app/who-we-help/businesses
+
+Services
+--------
+https://tas-rho.vercel.app/services
+https://tas-rho.vercel.app/services/ghostwriting
+https://tas-rho.vercel.app/services/book-publishing
+https://tas-rho.vercel.app/services/book-editing
+https://tas-rho.vercel.app/services/book-formatting
+https://tas-rho.vercel.app/services/book-printing
+https://tas-rho.vercel.app/services/book-marketing
+https://tas-rho.vercel.app/services/book-promotion
+https://tas-rho.vercel.app/services/book-illustrations
+https://tas-rho.vercel.app/services/book-trailer
+https://tas-rho.vercel.app/services/cover-design
+https://tas-rho.vercel.app/services/audiobooks
+https://tas-rho.vercel.app/services/author-website
+https://tas-rho.vercel.app/services/author-marketing
+https://tas-rho.vercel.app/services/childrens-book-publication
+https://tas-rho.vercel.app/services/childrens-book-editing
+https://tas-rho.vercel.app/services/blog-writing
+https://tas-rho.vercel.app/services/article-writing
+https://tas-rho.vercel.app/services/web-content
+https://tas-rho.vercel.app/services/digital-marketing
+https://tas-rho.vercel.app/services/business-proposal
+
+Landing Pages
+-------------
+https://tas-rho.vercel.app/lp1
+https://tas-rho.vercel.app/lp2
+
+
