@@ -9,10 +9,10 @@ const books = [
   { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",    bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD",   outcome: "Pre-Orders Sold Out",image: "/The Last Oracle.jpeg" },
   { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",     bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC",   outcome: "Audible Bestseller",image: "/Silicon Dreams.jpeg" },
   { title: "Whispers of Eden",        author: "E. Chen",   genre: "Memoir",     bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D",   outcome: "Press Coverage",image: "/Whispers of Eden.jpeg"  },
-  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",   bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC",   outcome: "Wall St. Pick",},
-  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74",   outcome: "Award Winner",},
-  { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology", bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC",   outcome: "5K+ Reviews" },
-  { title: "Little Wonders",       author: "S. Park",     genre: "Children's", bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7",   outcome: "School Favourite" },
+  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",   bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC",   outcome: "Wall St. Pick",       image: "/Rise and Conquer.jpg.jpeg" },
+  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical", bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74",   outcome: "Award Winner",        image: "/The Iron Crown.jpg.jpeg" },
+  { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology", bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC",   outcome: "5K+ Reviews",         image: "/Mind Unlocked.jpg.jpeg" },
+  { title: "Little Wonders",       author: "S. Park",     genre: "Children's", bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7",   outcome: "School Favourite",    image: "/Children's School Favourite Little Wonders.jpg.jpeg" },
 ];
 
 function BookCover({ b }: { b: typeof books[0] }) {

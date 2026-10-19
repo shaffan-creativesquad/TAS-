@@ -13,12 +13,12 @@ const books = [
   { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD", result: "Pre-Orders Sold Out",  image: "/The Last Oracle.jpeg" },
   { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",      bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC", result: "Audible Bestseller",   image: "/Silicon Dreams.jpeg" },
   { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",      bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D", result: "Press Coverage",       image: "/Roots-of-gold.jpeg" },
-  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",    bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC", result: "Wall St. Pick" },
-  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical",  bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74", result: "Award Winner" },
-  { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology",  bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC", result: "5K+ Reviews" },
-  { title: "Little Wonders",       author: "S. Park",     genre: "Children's",  bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7", result: "School Favourite" },
-  { title: "The Dark Algorithm",   author: "R. Blake",    genre: "Thriller",    bg: "#27272a", spine: "#18181b", text: "#fafafa", accent: "#F87171", result: "Kindle #1" },
-  { title: "Sacred Grounds",       author: "L. Brooks",   genre: "Spiritual",   bg: "#44403c", spine: "#292524", text: "#fefce8", accent: "#FDE68A", result: "Bestseller Week 1" },
+  { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",    bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC", result: "Wall St. Pick",      image: "/Rise and Conquer.jpg.jpeg" },
+  { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical",  bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74", result: "Award Winner",       image: "/The Iron Crown.jpg.jpeg" },
+  { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology",  bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC", result: "5K+ Reviews",        image: "/Mind Unlocked.jpg.jpeg" },
+  { title: "Little Wonders",       author: "S. Park",     genre: "Children's",  bg: "#064e3b", spine: "#022c22", text: "#ecfdf5", accent: "#6EE7B7", result: "School Favourite",   image: "/Children's School Favourite Little Wonders.jpg.jpeg" },
+  { title: "The Dark Algorithm",   author: "R. Blake",    genre: "Thriller",    bg: "#27272a", spine: "#18181b", text: "#fafafa", accent: "#F87171", result: "Kindle #1",          image: "/The Dark Algorithm.jpeg" },
+  { title: "Sacred Grounds",       author: "L. Brooks",   genre: "Spiritual",   bg: "#44403c", spine: "#292524", text: "#fefce8", accent: "#FDE68A", result: "Bestseller Week 1",  image: "/sacred ground.jpeg" },
 ];
 
 const genres = ["All", "Thriller", "Romance", "Self-Help", "Fantasy", "Sci-Fi", "Memoir", "Business", "Children's", "Historical", "Psychology", "Spiritual"];

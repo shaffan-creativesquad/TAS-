@@ -20,6 +20,12 @@ const books = [
   '/The Last Oracle.jpeg',
   '/Whispers of Eden.jpeg',
   '/Roots-of-gold.jpeg',
+  '/Rise and Conquer.jpg.jpeg',
+  '/The Iron Crown.jpg.jpeg',
+  '/Mind Unlocked.jpg.jpeg',
+  "/Children's School Favourite Little Wonders.jpg.jpeg",
+  '/The Dark Algorithm.jpeg',
+  '/sacred ground.jpeg',
 ]
 
 const bestItems = [

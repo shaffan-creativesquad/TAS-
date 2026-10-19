@@ -14,26 +14,17 @@ function fadeUp(delay = 0) {
   };
 }
 
-function BookCover({ src, alt, width = 120, height = 175, floatDelay = 0 }: {
-  src: string; alt: string; width?: number; height?: number; floatDelay?: number;
+function BookCover({ src, alt, width = 120, height = 175 }: {
+  src: string; alt: string; width?: number; height?: number;
 }) {
   return (
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: floatDelay }}
+    <div
       className="relative rounded-[3px_10px_10px_3px] overflow-hidden shadow-2xl cursor-pointer group"
       style={{ width, height }}
-      whileHover={{ scale: 1.06, y: -14, transition: { duration: 0.25 } }}
     >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover"
-        sizes="130px"
-      />
+      <Image src={src} alt={alt} fill className="object-cover" sizes="130px" />
       <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
-    </motion.div>
+    </div>
   );
 }
 
@@ -142,19 +133,19 @@ export default function Hero() {
             transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
           >
             {/* Book covers cluster */}
-            <div className="relative h-[260px] mb-8 hidden sm:block">
-              <div className="absolute inset-x-4 bottom-0 h-16 bg-cyan-100/50 blur-2xl rounded-full" />
-              <div className="absolute bottom-0 left-[0px]"   style={{ transform: "rotate(-7deg)", transformOrigin: "bottom center" }}>
-                <BookCover {...books[0]} floatDelay={0} />
+            <div className="relative h-[300px] mb-6 hidden sm:block">
+              <div className="absolute inset-x-8 bottom-0 h-20 bg-cyan-100/60 blur-2xl rounded-full pointer-events-none" />
+              <div className="absolute top-0 left-4"       style={{ transform: "rotate(-8deg)" }}>
+                <BookCover {...books[0]} width={160} height={228} />
               </div>
-              <div className="absolute bottom-0 left-[118px]" style={{ transform: "rotate(3deg)",  transformOrigin: "bottom center" }}>
-                <BookCover {...books[1]} floatDelay={0.6} />
+              <div className="absolute top-4 left-[160px]" style={{ transform: "rotate(4deg)" }}>
+                <BookCover {...books[1]} width={160} height={228} />
               </div>
-              <div className="absolute bottom-0 left-[236px]" style={{ transform: "rotate(-4deg)", transformOrigin: "bottom center" }}>
-                <BookCover {...books[2]} floatDelay={1.2} />
+              <div className="absolute top-0 left-[310px]" style={{ transform: "rotate(-3deg)" }}>
+                <BookCover {...books[2]} width={160} height={228} />
               </div>
-              <div className="absolute bottom-0 left-[354px]" style={{ transform: "rotate(5deg)",  transformOrigin: "bottom center" }}>
-                <BookCover {...books[3]} floatDelay={1.8} />
+              <div className="absolute top-6 right-0"      style={{ transform: "rotate(7deg)" }}>
+                <BookCover {...books[3]} width={160} height={228} />
               </div>
             </div>
 
