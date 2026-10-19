@@ -8,11 +8,11 @@ import { FadeUp } from "@/components/ui/Animate";
 
 const books = [
   { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller",    bg: "#0891B2", spine: "#0c2340", text: "#f8fafc", accent: "#F59E0B", result: "Amazon Top 100", image: "/midnight-verdict.jpeg" },
-  { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",     bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5", result: "10K Copies Sold" },
-  { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",   bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD", result: "#1 Category" },
-  { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD", result: "Pre-Orders Sold Out" },
-  { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",      bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC", result: "Audible Bestseller" },
-  { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",      bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D", result: "Press Coverage" },
+  { title: "Whispers of Eden",     author: "E. Chen",     genre: "Romance",     bg: "#881337", spine: "#4c0519", text: "#fff1f2", accent: "#FCA5A5", result: "10K Copies Sold",       image: "/Whispers of Eden.jpeg" },
+  { title: "Beyond the Horizon",   author: "J. Rodriguez",genre: "Self-Help",   bg: "#1e3a5f", spine: "#0c2340", text: "#eff6ff", accent: "#93C5FD", result: "#1 Category",          image: "/Beyond the Horizon.jpeg" },
+  { title: "The Last Oracle",      author: "A. Johnson",  genre: "Fantasy",     bg: "#3b0764", spine: "#1e0336", text: "#faf5ff", accent: "#C4B5FD", result: "Pre-Orders Sold Out",  image: "/The Last Oracle.jpeg" },
+  { title: "Silicon Dreams",       author: "D. Thompson", genre: "Sci-Fi",      bg: "#0c4a6e", spine: "#062a3e", text: "#e0f2fe", accent: "#7DD3FC", result: "Audible Bestseller",   image: "/Silicon Dreams.jpeg" },
+  { title: "Roots of Gold",        author: "M. Santos",   genre: "Memoir",      bg: "#78350f", spine: "#451a03", text: "#fffbeb", accent: "#FCD34D", result: "Press Coverage",       image: "/Roots-of-gold.jpeg" },
   { title: "Rise & Conquer",       author: "K. Williams", genre: "Business",    bg: "#14532d", spine: "#052e16", text: "#f0fdf4", accent: "#86EFAC", result: "Wall St. Pick" },
   { title: "The Iron Crown",       author: "T. Morgan",   genre: "Historical",  bg: "#431407", spine: "#27100a", text: "#fff7ed", accent: "#FDBA74", result: "Award Winner" },
   { title: "Mind Unlocked",        author: "P. Evans",    genre: "Psychology",  bg: "#1e1b4b", spine: "#0f0e27", text: "#eef2ff", accent: "#A5B4FC", result: "5K+ Reviews" },

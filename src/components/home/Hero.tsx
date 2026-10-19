@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Star, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -13,50 +14,34 @@ function fadeUp(delay = 0) {
   };
 }
 
-function BookCover({
-  title, author, genre, bg, spine, textColor, accentColor, className,
-}: {
-  title: string; author: string; genre: string;
-  bg: string; spine: string; textColor: string; accentColor: string; className?: string;
+function BookCover({ src, alt, width = 120, height = 175, floatDelay = 0 }: {
+  src: string; alt: string; width?: number; height?: number; floatDelay?: number;
 }) {
   return (
-    <div
-      className={`relative rounded-[3px_10px_10px_3px] overflow-hidden shadow-2xl cursor-pointer group ${className}`}
-      style={{ width: 160, height: 228 }}
+    <motion.div
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: floatDelay }}
+      className="relative rounded-[3px_10px_10px_3px] overflow-hidden shadow-2xl cursor-pointer group"
+      style={{ width, height }}
+      whileHover={{ scale: 1.06, y: -14, transition: { duration: 0.25 } }}
     >
-      <div className="absolute left-0 top-0 bottom-0 w-4" style={{ background: spine }} />
-      <div className="absolute left-4 right-0 top-0 bottom-0 flex flex-col justify-between p-3" style={{ background: bg }}>
-        <div>
-          <span
-            className="text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
-            style={{ background: `${accentColor}30`, color: accentColor }}
-          >
-            {genre}
-          </span>
-        </div>
-        <div className="flex flex-col gap-1">
-          <div className="h-px opacity-20" style={{ background: textColor }} />
-          <div className="h-px opacity-10 w-2/3" style={{ background: textColor }} />
-        </div>
-        <div>
-          <div className="font-[family-name:var(--font-playfair)] text-[13px] font-bold leading-tight mb-2" style={{ color: textColor }}>
-            {title}
-          </div>
-          <div className="text-[9px] uppercase tracking-widest opacity-60" style={{ color: textColor }}>
-            {author}
-          </div>
-        </div>
-      </div>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        sizes="130px"
+      />
       <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
-    </div>
+    </motion.div>
   );
 }
 
 const books = [
-  { title: "The Midnight Verdict", author: "J. Harrison", genre: "Thriller", bg: "linear-gradient(160deg,#0891B2 0%,#1e293b 100%)", spine: "#0891B2", textColor: "#f8fafc", accentColor: "#F59E0B", className: "float-a" },
-  { title: "Whispers of Forever", author: "E. Chen", genre: "Romance", bg: "linear-gradient(160deg,#881337 0%,#be123c 100%)", spine: "#4C0519", textColor: "#fff1f2", accentColor: "#FCA5A5", className: "float-b" },
-  { title: "Beyond the Stars", author: "A. Mitchell", genre: "Sci-Fi", bg: "linear-gradient(160deg,#0c4a6e 0%,#075985 100%)", spine: "#082f49", textColor: "#e0f2fe", accentColor: "#7DD3FC", className: "float-c" },
-  { title: "Rise to Power", author: "K. Williams", genre: "Business", bg: "linear-gradient(160deg,#14532d 0%,#166534 100%)", spine: "#052e16", textColor: "#f0fdf4", accentColor: "#86EFAC", className: "float-a" },
+  { src: "/midnight-verdict.jpeg",   alt: "The Midnight Verdict" },
+  { src: "/Whispers of Eden.jpeg",   alt: "Whispers of Eden" },
+  { src: "/Beyond the Horizon.jpeg", alt: "Beyond the Horizon" },
+  { src: "/The Last Oracle.jpeg",    alt: "The Last Oracle" },
 ];
 
 export default function Hero() {
@@ -157,12 +142,20 @@ export default function Hero() {
             transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
           >
             {/* Book covers cluster */}
-            <div className="relative h-[300px] mb-6 hidden sm:block">
-              <div className="absolute inset-x-8 bottom-0 h-20 bg-cyan-100/60 blur-2xl rounded-full" />
-              <div className="absolute top-0 left-4"       style={{ transform: "rotate(-8deg)" }}><BookCover {...books[0]} /></div>
-              <div className="absolute top-4 left-[160px]" style={{ transform: "rotate(4deg)" }}><BookCover {...books[1]} /></div>
-              <div className="absolute top-0 left-[310px]" style={{ transform: "rotate(-3deg)" }}><BookCover {...books[2]} /></div>
-              <div className="absolute top-6 right-0"      style={{ transform: "rotate(7deg)" }}><BookCover {...books[3]} /></div>
+            <div className="relative h-[260px] mb-8 hidden sm:block">
+              <div className="absolute inset-x-4 bottom-0 h-16 bg-cyan-100/50 blur-2xl rounded-full" />
+              <div className="absolute bottom-0 left-[0px]"   style={{ transform: "rotate(-7deg)", transformOrigin: "bottom center" }}>
+                <BookCover {...books[0]} floatDelay={0} />
+              </div>
+              <div className="absolute bottom-0 left-[118px]" style={{ transform: "rotate(3deg)",  transformOrigin: "bottom center" }}>
+                <BookCover {...books[1]} floatDelay={0.6} />
+              </div>
+              <div className="absolute bottom-0 left-[236px]" style={{ transform: "rotate(-4deg)", transformOrigin: "bottom center" }}>
+                <BookCover {...books[2]} floatDelay={1.2} />
+              </div>
+              <div className="absolute bottom-0 left-[354px]" style={{ transform: "rotate(5deg)",  transformOrigin: "bottom center" }}>
+                <BookCover {...books[3]} floatDelay={1.8} />
+              </div>
             </div>
 
             {/* Form card */}
