@@ -20,7 +20,7 @@ export default function Footer() {
                 className="h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-[200px]">
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-[240px] mx-auto md:mx-0">
               Your trusted partner for end-to-end book publishing. From first draft to global distribution.
             </p>
             <div className="flex gap-2.5 justify-center md:justify-start">
