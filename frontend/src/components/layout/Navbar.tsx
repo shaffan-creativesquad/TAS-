@@ -200,6 +200,18 @@ export default function Navbar() {
               )}
             </div>
 
+            <Link
+              href="/blogs"
+              className={`relative text-sm font-semibold transition-colors ${
+                isActive("/blogs") ? "text-primary" : "text-brand-dark-2 hover:text-primary"
+              }`}
+            >
+              Blogs
+              {isActive("/blogs") && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+              )}
+            </Link>
+
             {/* Contact link — last */}
             <Link
               href="/contact"
@@ -309,6 +321,16 @@ export default function Navbar() {
               ))}
             </div>
           )}
+
+          <Link
+            href="/blogs"
+            onClick={() => setIsOpen(false)}
+            className={`font-semibold py-0.5 border-l-2 pl-3 transition-colors ${
+              isActive("/blogs") ? "text-primary border-primary" : "text-brand-dark-2 border-transparent"
+            }`}
+          >
+            Blogs
+          </Link>
 
           <Link
             href="/contact"
