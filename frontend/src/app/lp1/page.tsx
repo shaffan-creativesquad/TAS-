@@ -14,56 +14,55 @@ import {
 /* ─── Data ─────────────────────────────────────────────────── */
 
 const services = [
-  { icon: PenLine,     title: 'Ghostwriting',                    desc: 'We write your book in your voice — capturing your story, expertise, and personality on every page.' },
-  { icon: SpellCheck,  title: 'Book Editing',                    desc: 'Professional editing that sharpens your manuscript without losing your unique voice.' },
-  { icon: Palette,     title: 'Cover Design',                    desc: 'Award-worthy covers that make readers stop and reach for your book.' },
-  { icon: TrendingUp,  title: 'Book Marketing',                  desc: 'Targeted campaigns that put your book in front of the right readers at the right time.' },
-  { icon: Headphones,  title: 'Audiobooks',                      desc: 'Studio-quality audiobook production that brings your words to life for listeners everywhere.' },
-  { icon: BookOpen,    title: 'Book Publishing',                  desc: 'We handle every step of publishing your book on Amazon, KDP, and global platforms.' },
-  { icon: BarChart2,   title: 'Digital Marketing',               desc: 'Data-driven digital campaigns that grow your author brand and book visibility online.' },
-  { icon: Users,       title: 'Author Marketing',                desc: 'Build your personal brand as an author with strategies tailored to your audience and goals.' },
-  { icon: Newspaper,   title: 'Article Writing & Publishing',    desc: 'Professional articles that position you as a thought leader in your industry.' },
-  { icon: Rss,         title: 'Blog Writing',                    desc: 'Engaging blog content that builds your audience and drives organic traffic to your platform.' },
-  { icon: Video,       title: 'Book Trailer',                    desc: 'Compelling video trailers that capture attention and drive pre-orders for your book.' },
-  { icon: Briefcase,   title: 'Business Proposal Writing',       desc: 'Polished, persuasive proposals that win clients and communicate your value clearly.' },
-  { icon: BookMarked,  title: 'Children Book Publication',       desc: "End-to-end publishing for children's books — from illustrations to global distribution." },
-  { icon: Layers,      title: "Children's Book Illustrations",   desc: "Vibrant, professionally crafted illustrations that bring your children's book to life." },
-  { icon: Code,        title: 'Web Content Writing',             desc: 'Compelling website copy that converts visitors into readers, clients, and fans.' },
-  { icon: Monitor,     title: 'Author Website Design',           desc: 'Beautiful, professional author websites that showcase your books and build your brand.' },
-  { icon: FileCheck,   title: "Children's Book Editing",         desc: "Specialized editing for children's books ensuring age-appropriate language and flow." },
-  { icon: Printer,     title: 'Book Printing',                   desc: 'High-quality print-on-demand and bulk printing options for your published book.' },
-  { icon: AlignLeft,   title: 'Formatting Services',             desc: 'Professional interior formatting for print and digital editions that meet platform standards.' },
-  { icon: Share2,      title: 'Book Promotion',                  desc: 'Strategic promotional campaigns that drive reviews, rankings, and long-term book sales.' },
+  { icon: PenLine,     title: 'Ghostwriting',                    desc: 'Your ideas and stories, written in your voice from the first page to the last.' },
+  { icon: SpellCheck,  title: 'Book Editing',                    desc: 'Careful edits that tighten your writing without losing what makes it yours.' },
+  { icon: Palette,     title: 'Cover Design',                    desc: 'Covers that look great in a thumbnail and even better on a shelf.' },
+  { icon: TrendingUp,  title: 'Book Marketing',                  desc: 'Campaigns that help the right readers discover your book.' },
+  { icon: Headphones,  title: 'Audiobooks',                      desc: 'Professional narration that lets people listen to your book anywhere.' },
+  { icon: BookOpen,    title: 'Book Publishing',                  desc: 'Formatting, ISBN, and setup on Amazon KDP and other major platforms.' },
+  { icon: BarChart2,   title: 'Digital Marketing',               desc: 'Online ads and campaigns that grow your book\'s visibility.' },
+  { icon: Users,       title: 'Author Marketing',                desc: 'A personal brand that keeps readers coming back for your next book.' },
+  { icon: Newspaper,   title: 'Article Writing & Publishing',    desc: 'Well-researched articles that show you know your field.' },
+  { icon: Rss,         title: 'Blog Writing',                    desc: 'Fresh posts that bring steady traffic to your website.' },
+  { icon: Video,       title: 'Book Trailer',                    desc: 'Short videos that give readers a taste of your story.' },
+  { icon: Briefcase,   title: 'Business Proposal Writing',       desc: 'Clear, convincing proposals that help you win the deal.' },
+  { icon: BookMarked,  title: 'Children Book Publication',       desc: 'Complete publishing for picture books and young readers.' },
+  { icon: Layers,      title: "Children's Book Illustrations",   desc: "Original artwork that brings young readers' favourite characters to life." },
+  { icon: Code,        title: 'Web Content Writing',             desc: 'Website copy that turns visitors into readers and clients.' },
+  { icon: Monitor,     title: 'Author Website Design',           desc: 'A professional home online for your books and your brand.' },
+  { icon: FileCheck,   title: "Children's Book Editing",         desc: 'Edits that keep language, pacing, and tone right for young readers.' },
+  { icon: Printer,     title: 'Book Printing',                   desc: 'Print-on-demand and bulk copies in professional quality.' },
+  { icon: AlignLeft,   title: 'Formatting Services',             desc: "Clean print and eBook interiors that meet every platform's standards." },
+  { icon: Share2,      title: 'Book Promotion',                  desc: 'Targeted pushes that build reviews, rankings, and lasting sales.' },
 ]
 
 const genres = [
-  { num: '01', title: 'Business Books',      desc: 'Position yourself as the authority in your industry with a book that opens doors and builds lasting credibility.' },
-  { num: '02', title: 'Memoir & Biography',  desc: 'Your story, professionally told. We capture your voice, journey, and lessons in a narrative readers remember.' },
-  { num: '03', title: 'Self-Help',           desc: 'Turn your framework into an actionable book that transforms readers and grows your brand.' },
-  { num: '04', title: 'Entrepreneurship',    desc: 'Document your journey and inspire others. We help founders craft books that teach and motivate.' },
-  { num: '05', title: 'Thought Leadership',  desc: 'Put your ideas in front of the people who matter. A well-crafted book makes you the go-to expert.' },
-  { num: '06', title: 'Expert Guides',       desc: 'Turn your expertise into a definitive guide. We work with doctors, lawyers, and consultants.' },
+  { num: '01', title: 'Business Books',      desc: 'Share what you know and become the name people trust in your industry.' },
+  { num: '02', title: 'Memoir & Biography',  desc: 'Your life story, told with care and in words that sound like you.' },
+  { num: '03', title: 'Self-Help',           desc: 'Turn your method into practical guidance that helps readers make real changes.' },
+  { num: '04', title: 'Entrepreneurship',    desc: 'The highs, lows, and lessons of building something from nothing.' },
+  { num: '05', title: 'Thought Leadership',  desc: 'Fresh ideas that get you noticed by the people who matter.' },
+  { num: '06', title: 'Expert Guides',       desc: 'Clear, trusted guides for doctors, lawyers, consultants, and specialists.' },
 ]
 
 const whyItems = [
-  { icon: Clock,   title: 'Save Time & Focus',       desc: 'Writing a book takes hundreds of hours. We handle every word so you can focus on what you do best.' },
-  { icon: Trophy,  title: 'Professional Quality',    desc: 'Our writers, editors, and designers are industry veterans — your book will look and read like a bestseller.' },
-  { icon: Users,   title: 'One Team, Full Service',  desc: 'From writing to publishing to marketing — everything handled under one roof. No gaps, no surprises.' },
-  { icon: Mic,     title: 'Your Voice, Your Book',   desc: 'We study how you speak and think. The finished book sounds exactly like you — just professionally written.' },
+  { icon: Clock,   title: 'Save Your Time',           desc: 'Writing a book takes time and effort. We help with the writing process so you can focus on your work and other priorities.' },
+  { icon: Trophy,  title: 'Quality You Can See',      desc: 'Experienced writers, editors, and designers make sure your book reads and looks like it belongs on any bookstore shelf.' },
+  { icon: Users,   title: 'Everything in One Place',  desc: 'Writing, publishing, and marketing all happen under one roof, with no gaps and no surprises.' },
+  { icon: Mic,     title: 'Sounds Like You',          desc: 'We learn how you speak and think, so the finished book feels unmistakably yours.' },
 ]
 
 const exceptionalServices = [
-  { icon: PenLine,    title: 'Ghostwriting',          desc: 'We write your book in your voice — capturing your story, expertise, and personality on every page.' },
-  { icon: Globe,      title: 'Publishing',            desc: 'From formatting to distribution, we get your book onto Amazon, Barnes & Noble, and bookstores worldwide.' },
-  { icon: Headphones, title: 'Audiobook Production',  desc: 'Reach listeners everywhere. We produce professional-quality audiobooks that bring your words to life.' },
-  { icon: BarChart2,  title: 'Book Marketing',        desc: 'We build your author brand and get your book in front of the right readers through targeted strategies.' },
+  { icon: PenLine,    title: 'Ghostwriting',          desc: 'We write your book in your voice, chapter by chapter, while you stay in control of every page.' },
+  { icon: Globe,      title: 'Publishing',            desc: 'Formatting, ISBN, and distribution handled for you, so your book reaches Amazon, Barnes & Noble, and stores around the world.' },
+  { icon: Headphones, title: 'Audiobook Production',  desc: 'Professional narration and studio-quality sound that let people enjoy your book on the go.' },
+  { icon: BarChart2,  title: 'Book Marketing',        desc: 'Our book marketing services build your author brand and put your book in front of readers who are already looking for it.' },
 ]
 
 const testimonials = [
-  { initial: 'M', name: 'Marcus Reid',   role: 'Founder & CEO, ApexPrep',              quote: 'A book is one of the most powerful lead generators for businesses out there. The amount we spent on The Author Success project has generated a 10x plus return — if not 20x.' },
-  { initial: 'J', name: 'James Caldwell', role: 'Founder & CEO, Global Immersion Co.', quote: "I wasn't a 'writer.' The Author Success turned years of workshops into a clear book — and the book turned into credibility, revenue, and relationships I couldn't have reached any other way." },
-  { initial: 'V', name: 'Victor Harlen', role: 'Former Federal Agent',                 quote: "I am crazily thinking about writing a second book. There's no way, if the process wasn't anything but great, that I would say I want to do this again." },
-  { initial: 'E', name: 'Elijah Moore',  role: 'Business Strategist & Speaker',        quote: "The launch strategy The Author Success built for me was exceptional. New business started coming in immediately after launch — and it kept coming." },
+  { initial: 'O', name: 'Olivia Bennett', role: 'Fiction Author',    quote: 'The assistance has enabled me to shape up my manuscript in a well-defined manner through the ideas that had been lingering within me for years.' },
+  { initial: 'D', name: 'Daniel Brooks',  role: 'Business Author',   quote: "It's been nice to have the publishing process explained in a manner that is comprehensible and gives me an understanding of the decisions being made so that I can feel ready to continue with my book." },
+  { initial: 'S', name: 'Sophia Mitchell', role: 'Memoir Author',   quote: 'Having support throughout the project helped me stay focused on the story I wanted to tell. Communication and clear next steps made a complicated process feel less overwhelming.' },
 ]
 
 const bookCovers = [
@@ -269,24 +268,24 @@ export default function LandingPage() {
               <div className="flex">
                 {[1,2,3,4,5].map(i => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}
               </div>
-              <span className="text-white/90 text-xs font-semibold">Trusted by <strong className="text-white">3,000+</strong> Authors Worldwide</span>
+              <span className="text-white/90 text-xs font-semibold">Trusted by <strong className="text-white">Authors, Founders, and Experts</strong></span>
             </div>
 
             {/* Headline */}
             <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.75rem] font-black text-white leading-[1.08] mb-6">
-              Write the Book That Becomes<br />
-              <span className="text-primary">Your Greatest</span>{' '}
-              <span className="text-white">Business Asset</span>
+              The Book That<br />
+              <span className="text-primary">Builds Your</span>{' '}
+              <span className="text-white">Business</span>
             </h1>
 
             {/* Subtext */}
             <p className="text-white/65 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              The Author Success guides entrepreneurs, executives, and experts from first idea to published book — in your voice, under your name.
+              Our professional book writing services take you from a rough idea to a finished, published book, written in your voice and released under your name.
             </p>
 
             {/* Quick bullets */}
             <div className="flex flex-wrap justify-center gap-x-7 gap-y-2 mb-9">
-              {['You Keep 100% of Royalties', 'NDA Signed Before We Begin', 'No Commitment Required'].map(b => (
+              {['100% of Royalties Stay Yours', 'NDA Before We Start', 'Free, No-Pressure Consultation'].map(b => (
                 <div key={b} className="flex items-center gap-2 text-white/80 text-sm">
                   <CheckCircle size={14} className="text-primary shrink-0" />
                   {b}
@@ -300,29 +299,29 @@ export default function LandingPage() {
                 onClick={() => setPopup(true)}
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-9 py-4 rounded-full shadow-2xl shadow-cyan-900/60 transition-colors text-[0.95rem]"
               >
-                Book a Free Consultation <ArrowRight size={16} />
+                Get My Free Consultation <ArrowRight size={16} />
               </button>
               <button
                 onClick={openCalendly}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-bold px-7 py-4 rounded-full transition-colors text-[0.95rem]"
               >
-                Schedule a Call
+                Talk to Our Team
               </button>
             </div>
           </div>
         </div>
 
-        {/* ── Stats bar ── */}
+        {/* ── Highlights bar ── */}
         <div className="relative border-t border-white/10 bg-black/40 backdrop-blur-md">
-          <div className="max-w-3xl mx-auto px-4 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div className="max-w-4xl mx-auto px-4 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
-              { v: '3,000+', l: 'Books Published' },
-              { v: '98%',    l: 'Satisfaction Rate' },
-              { v: '40+',    l: 'Global Platforms' },
-              { v: '10+',    l: 'Years Experience' },
+              { v: 'Every Genre',   l: 'Fiction to Business' },
+              { v: 'Your Voice',    l: 'On Every Page' },
+              { v: 'Global Reach',  l: 'Major Retailers' },
+              { v: '100% Yours',    l: 'Rights & Royalties' },
             ].map((s, i) => (
               <div key={s.l} className={i < 3 ? 'sm:border-r border-white/10' : ''}>
-                <div className="font-[family-name:var(--font-playfair)] text-2xl font-black text-primary">{s.v}</div>
+                <div className="font-[family-name:var(--font-playfair)] text-lg font-black text-primary">{s.v}</div>
                 <div className="text-white/50 text-xs mt-0.5">{s.l}</div>
               </div>
             ))}
@@ -338,21 +337,21 @@ export default function LandingPage() {
           {/* Header */}
           <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end mb-14 text-center lg:text-left">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">What We Do</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Services</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black leading-tight">
-                <span className="text-black">Everything You Need to</span><br />
-                <span className="text-primary">Write, Publish &amp; Market</span>
+                <span className="text-black">Everything Your Book</span><br />
+                <span className="text-primary">and Brand Need</span>
               </h2>
             </div>
             <div className="lg:text-right">
               <p className="text-brand-muted text-sm leading-relaxed max-w-sm lg:ml-auto mb-4 mx-auto lg:mx-0">
-                From your first idea to a professionally published book — we handle every step so you can focus on your story.
+                Writing, editing, design, book publishing services, and promotion, all handled by one team so that you can stay focused on the story.
               </p>
               <button
                 onClick={() => setPopup(true)}
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-cyan-200 transition-colors text-sm"
               >
-                Book a Free Consultation <ArrowRight size={15} />
+                Start My Book <ArrowRight size={15} />
               </button>
             </div>
           </div>
@@ -452,19 +451,19 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[380px_1fr] gap-12 items-start">
             <div className="lg:sticky lg:top-28 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Every Genre</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Specialties</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
-                <span className="text-black">We Write Every Type</span><br />
-                <span className="text-primary">of Book</span><span className="text-black"> — In Your Voice</span>
+                <span className="text-black">Every Book Type,</span><br />
+                <span className="text-primary">Every Industry</span><span className="text-black"> Covered</span>
               </h2>
               <p className="text-brand-muted text-sm leading-relaxed mb-6">
-                Whether you&apos;re a CEO, coach, doctor, or first-time author — we have specialized writers who understand your industry and know how to make your book stand out.
+                Whether you&apos;re a CEO, coach, doctor, or writing your first book, we&apos;ll pair you with a writer who understands your work and the people you want to reach. That way, your book feels like you and speaks to the right readers.
               </p>
               <button
                 onClick={() => setPopup(true)}
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-7 py-3.5 rounded-full transition-colors text-sm"
               >
-                Get Started <ArrowRight size={15} />
+                Find My Writer <ArrowRight size={15} />
               </button>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -487,19 +486,19 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Why Trust Us</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Why Choose Us</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-4">
-                <span className="text-black">A Publishing Partner You Can Trust</span><br />
-                <span className="text-primary">From Start to Shelf</span>
+                <span className="text-black">Experts in Books,</span><br />
+                <span className="text-primary">Partners in Growth</span>
               </h2>
-              <p className="font-semibold text-brand-dark text-sm mb-4">Writing, publishing, and marketing — all under one roof</p>
+              <p className="font-semibold text-brand-dark text-sm mb-4">Everything your book needs, handled by one dedicated team</p>
               <div className="flex flex-col gap-3 mb-7 text-brand-body text-sm leading-relaxed">
-                <p>At The Author Success, we&apos;ve built a proven system that takes you from raw idea to published book — without the guesswork, the delays, or the stress. Every author receives a dedicated team that stays in close communication from day one.</p>
-                <p>Our writers, editors, designers, and publishing specialists work together on your project — so nothing falls through the cracks. We shape your message and create a book that reflects your expertise and voice with precision.</p>
-                <p>With over 3,000 authors published and a decade of experience, The Author Success has become the trusted choice for entrepreneurs, executives, and thought leaders who want a book done right.</p>
+                <p>Writing a book in itself is quite an ordeal. You should not be bothered with having to manage various freelancers along with that. With The Author Success, the entire process from the first conversation to the launch of the book is taken care of by our team.</p>
+                <p>Our writers, editors, designers, and publishing team work together throughout the process. We want the final book to sound like you, share your ideas clearly, and do justice to the knowledge you bring to it.</p>
+                <p>From ghostwriting services to cover design and global distribution, every part of your book gets the same care and attention, because your name is on the cover.</p>
               </div>
               <div className="flex flex-col gap-2 mb-8 w-full">
-                {['Dedicated project manager from day one', 'NDA signed before any project details shared', 'You keep 100% of your royalties', 'Unlimited revision rounds included'].map(item => (
+                {['A dedicated project manager from day one', 'NDA signed before you share any details', '100% of your royalties stay with you', 'Revision rounds at every stage'].map(item => (
                   <div key={item} className="flex items-center justify-center lg:justify-start gap-2.5 text-sm text-brand-dark-2">
                     <CheckCircle size={14} className="text-primary shrink-0" />
                     {item}
@@ -528,16 +527,16 @@ export default function LandingPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-slate-900/85 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-lg">
-                    <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-primary leading-none">3,000+</div>
-                    <div className="text-[11px] text-brand-muted font-medium mt-0.5">Authors Published</div>
+                    <div className="font-[family-name:var(--font-playfair)] text-sm font-black text-primary leading-none">Your Voice</div>
+                    <div className="text-[11px] text-brand-muted font-medium mt-0.5">On Every Page</div>
                   </div>
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-lg">
-                    <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-primary leading-none">98%</div>
-                    <div className="text-[11px] text-brand-muted font-medium mt-0.5">Satisfaction Rate</div>
+                    <div className="font-[family-name:var(--font-playfair)] text-sm font-black text-primary leading-none">Full Team</div>
+                    <div className="text-[11px] text-brand-muted font-medium mt-0.5">Under One Roof</div>
                   </div>
                   <div className="bg-primary rounded-xl px-4 py-2.5 shadow-lg">
-                    <div className="font-[family-name:var(--font-playfair)] text-xl font-black text-white leading-none">10+</div>
-                    <div className="text-[11px] text-white/80 font-medium mt-0.5">Years Experience</div>
+                    <div className="font-[family-name:var(--font-playfair)] text-sm font-black text-white leading-none">100% Yours</div>
+                    <div className="text-[11px] text-white/80 font-medium mt-0.5">Rights &amp; Royalties</div>
                   </div>
                 </div>
               </div>
@@ -552,14 +551,14 @@ export default function LandingPage() {
           <div className="absolute inset-0 opacity-[0.06] pointer-events-none"
             style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white mb-4">
-            Your Book Won&apos;t Write Itself.<br />But We Can Help You Write It.
+            Have a Story Worth Sharing?<br />We&apos;ll Help You Publish It.
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
-            Book a free consultation and let&apos;s talk about your idea today.
+            Book a free consultation, and we&apos;ll help you shape your idea into a clear plan.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <button onClick={() => setPopup(true)} className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 font-bold px-8 py-4 rounded-full shadow-lg transition-colors" style={{ color: '#089bb2' }}>
-              Book a Free Consultation <ArrowRight size={16} />
+              Get Free Consultation <ArrowRight size={16} />
             </button>
             <button onClick={openCalendly} className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-7 py-4 rounded-full transition-colors">
               Schedule a Call
@@ -587,10 +586,10 @@ export default function LandingPage() {
 
             {/* Services list */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Core Services</span>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Our Specialties</span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-black text-brand-dark mb-10">
-                <span className="text-black">Everything We Do,</span><br />
-                <span className="text-primary">Done Exceptionally Well.</span>
+                <span className="text-black">The Services Behind</span><br />
+                <span className="text-primary">Every Successful Author.</span>
               </h2>
               <div className="flex flex-col gap-6 w-full">
                 {exceptionalServices.map(({ icon: Icon, title, desc }) => (
@@ -614,13 +613,13 @@ export default function LandingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Why Authors Choose Us</span>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Why Work With Us</span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-              <span className="text-black">Why Authors Choose</span><br />
-              <span className="text-primary">The Author Success</span>
+              <span className="text-black">What Makes Authors</span><br />
+              <span className="text-primary">Choose Us First</span>
             </h2>
             <p className="text-brand-muted text-sm max-w-md mx-auto">
-              Over 3,000 entrepreneurs, executives, and experts have trusted us to write and publish their books.
+              Entrepreneurs, executives, and experts come to us for one simple reason: they want their book done right.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
@@ -639,13 +638,14 @@ export default function LandingPage() {
               Start My Book <ArrowRight size={16} />
             </button>
           </div>
+
         </div>
       </section>
 
       {/* ── LOGOS ── */}
       <section className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="max-w-5xl mx-auto px-4">
-          <p className="text-center text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-6">Published &amp; Distributed On</p>
+          <p className="text-center text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-6">Available Worldwide On</p>
           <Image
             src="/landing%20page%20Images/logos.jpg"
             alt="Publishing platforms and partners"
@@ -659,15 +659,15 @@ export default function LandingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Author Stories</span>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">Client Reviews</span>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl lg:text-5xl font-black text-brand-dark mb-4">
-              <span className="text-black">What Our</span> <span className="text-primary">Authors Say</span>
+              <span className="text-black">What Our</span> <span className="text-primary">Authors Are Saying</span>
             </h2>
             <p className="text-brand-muted text-sm max-w-md mx-auto">
-              Real stories from real authors who partnered with The Author Success to bring their books to life.
+              Honest words from authors who trusted us with their stories.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-3 gap-5">
             {testimonials.map(({ initial, name, role, quote }) => (
               <div key={name} className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
                 <div className="flex mb-4">
@@ -691,16 +691,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── CHANNELS ── */}
+      {/* ── TRUSTED BY AUTHORS IN ── */}
       <section className="py-12 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto px-4">
-          <p className="text-center text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-6">Available On All Major Platforms</p>
-          <Image
-            src="/landing%20page%20Images/channels.png"
-            alt="Book distribution channels"
-            width={900} height={200}
-            className="w-full h-auto mx-auto"
-          />
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-muted mb-6">Trusted By Authors In</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['Business & Finance', 'Health & Wellness', 'Law & Consulting', 'Coaching & Leadership', 'Technology', 'Real Estate'].map(chip => (
+              <span key={chip} className="bg-white border border-slate-200 text-brand-dark text-xs font-semibold px-5 py-2.5 rounded-full shadow-sm">
+                {chip}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

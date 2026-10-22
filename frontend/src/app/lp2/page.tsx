@@ -29,72 +29,75 @@ const books = [
 ]
 
 const bestItems = [
-  { num: '01', title: 'Attract More Readers', desc: 'When your name is on the bestseller list, readers searching for the best in your genre will find you first — every time.' },
-  { num: '02', title: 'Generate More Sales', desc: 'Bestseller status compounds. The credibility it creates drives sales long after launch, turning your book into a perpetual business asset.' },
-  { num: '03', title: 'Established Authority', desc: "A published book communicates depth of knowledge and genuine commitment to your field. Readers, clients, and event organizers take it seriously before you've said a word." },
-  { num: '04', title: 'A Foundation That Compounds', desc: "Your first book builds relationships and an audience that carry forward into everything you create next. You're not starting from zero again." },
-  { num: '05', title: 'Enjoy the Spotlight', desc: 'Bestseller status opens stages, media, and speaking opportunities that let you quote your own price for your expertise.' },
+  { num: '01', title: 'Reach More Readers',      desc: 'A well-written, well-edited book gets recommended, shared, and found by the people looking for it.' },
+  { num: '02', title: 'Build Lasting Sales',      desc: 'Good books keep selling long after launch, turning your story into an asset that keeps working.' },
+  { num: '03', title: 'Earn Instant Authority',   desc: 'Being a published author tells clients and event organisers you know your field before you say a word.' },
+  { num: '04', title: 'Open New Doors',           desc: 'Speaking invites, interviews, and partnerships often start with a book on someone\'s desk.' },
+  { num: '05', title: 'Build on Every Book',      desc: 'Your first book grows an audience that follows you to everything you create next.' },
 ]
 
 const services = [
-  { Icon: PenLine,    title: 'Ghostwriting',                   desc: 'We capture your voice and write every word — so the book sounds exactly like you.',              bullets: ['Qualified writers', 'In-depth interviews', '100% unique content', 'Full confidentiality'] },
-  { Icon: SpellCheck, title: 'Book Editing',                   desc: 'Our editors improve structure, clarity, and flow to professional publishing standards.',          bullets: ['Structural editing', 'Copyediting & proofread', 'Fast turnaround', '100% error-free'] },
-  { Icon: Palette,    title: 'Cover Design',                   desc: 'World-class cover design that makes your book impossible to ignore on any shelf.',                bullets: ['3-5 original proofs', 'Up to 5 revisions', 'Full ownership', 'Print & digital ready'] },
-  { Icon: Megaphone,  title: 'Book Marketing',                 desc: "Targeted strategies tailored to each author's goals — from launch campaigns to brand building.",   bullets: ['Experienced marketers', '24/7 support', 'Result-driven', 'Personalized plan'] },
-  { Icon: Headphones, title: 'Audiobooks',                     desc: 'Studio-quality audiobook production that brings your words to life for listeners everywhere.',    bullets: ['Professional narration', 'ACX & Audible ready', 'Fast turnaround', 'Full ownership'] },
-  { Icon: BookOpen,   title: 'Book Publishing',                desc: 'End-to-end publishing on Amazon, Audible, Apple Books, Barnes & Noble, and more.',               bullets: ['All major platforms', 'ISBNs registered', 'Complete ownership', 'Fast launch'] },
-  { Icon: BarChart2,  title: 'Digital Marketing',              desc: 'Data-driven digital campaigns that grow your author brand and book visibility online.',           bullets: ['SEO & social media', 'Ad campaigns', 'Analytics reporting', 'Brand growth'] },
-  { Icon: Users,      title: 'Author Marketing',               desc: 'Build your personal brand as an author with strategies tailored to your audience and goals.',     bullets: ['Brand strategy', 'Media outreach', 'Speaking opps', 'Audience building'] },
-  { Icon: Newspaper,  title: 'Article Writing & Publishing',   desc: 'Professional articles that position you as a thought leader in your industry.',                   bullets: ['Expert writers', 'SEO optimized', 'Publishing support', 'Quick turnaround'] },
-  { Icon: Rss,        title: 'Blog Writing',                   desc: 'Engaging blog content that builds your audience and drives traffic to your platform.',            bullets: ['Consistent content', 'SEO friendly', 'Your tone & voice', 'Research included'] },
-  { Icon: Video,      title: 'Book Trailer',                   desc: 'Compelling video trailers that capture attention and drive pre-orders for your book.',            bullets: ['Professional production', 'Script writing', 'Social media ready', 'Fast delivery'] },
-  { Icon: Briefcase,  title: 'Business Proposal Writing',      desc: 'Polished, persuasive proposals that win clients and communicate your value clearly.',             bullets: ['Expert writers', 'Custom templates', 'Revision rounds', 'Fast turnaround'] },
-  { Icon: BookMarked, title: 'Children Book Publication',      desc: "End-to-end publishing for children's books — from illustrations to global distribution.",        bullets: ['Full publishing', 'Age-appropriate', 'All platforms', 'Complete ownership'] },
-  { Icon: Layers,     title: "Children's Book Illustrations",  desc: "Vibrant, professionally crafted illustrations that bring your children's book to life.",         bullets: ['Custom artwork', 'Multiple styles', 'Revision rounds', 'Print & digital'] },
-  { Icon: Code,       title: 'Web Content Writing',            desc: 'Compelling website copy that converts visitors into readers, clients, and fans.',                 bullets: ['SEO optimized', 'Conversion focused', 'Brand voice', 'Fast delivery'] },
-  { Icon: Monitor,    title: 'Author Website Design',          desc: 'Beautiful, professional author websites that showcase your books and build your brand.',          bullets: ['Custom design', 'Mobile responsive', 'SEO ready', 'Easy to manage'] },
-  { Icon: FileCheck,  title: "Children's Book Editing",        desc: "Specialized editing ensuring age-appropriate language and an engaging narrative for young readers.", bullets: ['Age-appropriate', 'Flow & pacing', 'Expert editors', 'Fast turnaround'] },
-  { Icon: Printer,    title: 'Book Printing',                  desc: 'High-quality print-on-demand and bulk printing options for your published book.',                bullets: ['Premium quality', 'POD & bulk', 'Fast shipping', 'Global reach'] },
-  { Icon: AlignLeft,  title: 'Formatting Services',            desc: 'Professional interior formatting for print and digital editions that meet platform standards.',   bullets: ['Print & eBook', 'Platform compliant', 'Clean layouts', 'Fast turnaround'] },
-  { Icon: Share2,     title: 'Book Promotion',                 desc: 'Strategic promotional campaigns that drive reviews, rankings, and long-term book sales.',        bullets: ['Review campaigns', 'Ranking strategies', 'Social promotion', 'Long-term results'] },
+  { Icon: PenLine,    title: 'Ghostwriting',                   desc: 'Your ideas and stories, written in your voice from the first page to the last.',                  bullets: ['Experienced writers', 'In-depth interviews', 'Original content', 'Full confidentiality'] },
+  { Icon: SpellCheck, title: 'Book Editing',                   desc: 'Our manuscript editing services improve structure, clarity, and flow without changing who you are as a writer.', bullets: ['Developmental editing', 'Line and copy editing', 'Final proofreading', 'Tracked changes'] },
+  { Icon: Palette,    title: 'Cover Design',                   desc: 'Covers that stand out in a crowded search page and on a bookstore shelf.',                        bullets: ['Original concepts', 'Revision rounds', 'Full ownership', 'Print and eBook ready'] },
+  { Icon: Megaphone,  title: 'Book Marketing',                 desc: 'Plans built around your goals, from launch campaigns to long-term brand building.',               bullets: ['Experienced marketers', 'Launch strategy', 'Personalized plan', 'Clear reporting'] },
+  { Icon: Headphones, title: 'Audiobooks',                     desc: 'Professional narration that lets readers enjoy your book on the go.',                             bullets: ['Professional narrators', 'Audible-ready files', 'Studio-quality sound', 'Full ownership'] },
+  { Icon: BookOpen,   title: 'Book Publishing',                desc: 'Publishing on Amazon, Apple Books, Barnes & Noble, and more, all under your name.',               bullets: ['Major platforms', 'ISBN registration', 'Full ownership', 'Launch support'] },
+  { Icon: BarChart2,  title: 'Digital Marketing',              desc: "Online campaigns that grow your book's visibility and your author brand.",                        bullets: ['SEO and social media', 'Ad campaigns', 'Performance reports', 'Brand growth'] },
+  { Icon: Users,      title: 'Author Marketing',               desc: 'A personal brand that keeps readers following you from one book to the next.',                    bullets: ['Brand strategy', 'Media outreach', 'Speaking opportunities', 'Audience building'] },
+  { Icon: Newspaper,  title: 'Article Writing & Publishing',   desc: 'Thoughtful articles that show readers and clients you know your field.',                          bullets: ['Expert writers', 'SEO friendly', 'Publishing support', 'Written in your voice'] },
+  { Icon: Rss,        title: 'Blog Writing',                   desc: 'Regular blog content that brings readers to your website and keeps them coming back.',            bullets: ['Consistent posts', 'SEO friendly', 'Your tone and voice', 'Research included'] },
+  { Icon: Video,      title: 'Book Trailer',                   desc: 'Short videos that give readers a taste of your story and build excitement.',                      bullets: ['Professional production', 'Script writing', 'Social-ready formats', 'Amazon-ready version'] },
+  { Icon: Briefcase,  title: 'Business Proposal Writing',      desc: 'Clear, persuasive proposals that help you win the deal.',                                         bullets: ['Expert writers', 'Tailored structure', 'Revision rounds', 'Polished presentation'] },
+  { Icon: BookMarked, title: 'Children Book Publication',      desc: 'Complete publishing for picture books and young readers, from artwork to distribution.',          bullets: ['Full publishing', 'Age-appropriate content', 'Major platforms', 'Complete ownership'] },
+  { Icon: Layers,     title: "Children's Book Illustrations",  desc: "Original artwork that brings young readers' favourite characters to life.",                       bullets: ['Custom artwork', 'Multiple styles', 'Sketch approval', 'Print and digital files'] },
+  { Icon: Code,       title: 'Web Content Writing',            desc: 'Website copy that turns visitors into readers, clients, and fans.',                               bullets: ['SEO friendly', 'Clear calls to action', 'Brand voice', 'Upload support'] },
+  { Icon: Monitor,    title: 'Author Website Design',          desc: 'A professional home online for your books and your brand.',                                        bullets: ['Custom design', 'Mobile friendly', 'SEO ready', 'Easy to update'] },
+  { Icon: FileCheck,  title: "Children's Book Editing",        desc: 'Editing that keeps language, rhythm, and story just right for young readers.',                    bullets: ['Age-appropriate language', 'Read-aloud rhythm', 'Experienced editors', 'Gentle, clear feedback'] },
+  { Icon: Printer,    title: 'Book Printing',                  desc: 'Professional print-on-demand and bulk copies of your finished book.',                             bullets: ['Premium quality', 'Print on demand', 'Bulk orders', 'Paperback and hardcover'] },
+  { Icon: AlignLeft,  title: 'Formatting Services',            desc: "Clean interiors for print and eBook that meet every platform's standards.",                       bullets: ['Print and eBook', 'Platform-ready files', 'Clean layouts', 'Upload guidance'] },
+  { Icon: Share2,     title: 'Book Promotion',                 desc: 'Targeted campaigns that build reviews, rankings, and steady sales.',                              bullets: ['Review campaigns', 'Ranking strategy', 'Social promotion', 'Long-term momentum'] },
 ]
 
 const steps = [
-  { num: '01', title: 'Free Consultation',     desc: 'Tell us your idea, your goals, and your timeline. We map the right path forward — no pressure, no commitment.' },
-  { num: '02', title: 'Writing & Development', desc: 'Your dedicated writer captures your voice through structured interviews. You review and shape every chapter.' },
-  { num: '03', title: 'Editing & Design',      desc: 'Our editors refine structure, clarity, and flow. Our designers craft a cover and layout built to professional standards.' },
-  { num: '04', title: 'Publishing & Launch',   desc: 'We distribute to all major platforms under your name and execute a launch strategy built around your specific goals.' },
+  { num: '01', title: 'Free Consultation',   desc: "Tell us about your idea, your goals, and your timeline. We'll suggest the right path, with zero pressure." },
+  { num: '02', title: 'Writing & Editing',   desc: 'Your writer captures your voice through relaxed interviews, and our professional book editors refine every chapter for clarity and flow.' },
+  { num: '03', title: 'Design & Formatting', desc: 'Our designers create a standout cover and a clean interior for print and eBook.' },
+  { num: '04', title: 'Publishing & Launch', desc: 'We publish under your name on major platforms and launch with a plan built around your goals.' },
 ]
 
 const genres = [
-  'Business & Economics', 'Memoir', 'Self Help', 'Biography', 'Entrepreneurship',
+  'Business & Economics', 'Memoir', 'Self-Help', 'Biography', 'Entrepreneurship',
   'Thought Leadership', 'Health & Fitness', 'Novel', 'Historical Fiction', 'Romance',
   'Action & Adventure', 'Fantasy', 'Drama', 'Cookbook', 'Poetry',
   "Children's", 'Political Thriller', 'Autobiography', 'Picture Book', 'Expert Guides',
 ]
 
 const testimonials = [
-  { name: 'Sarma M.',   quote: "I can say with 100% honesty that it was great every step of the way. If you said 'just tell me what we could have done better,' I'd say: I don't know. I can't think of anything." },
-  { name: 'Adam S.',    quote: "As soon as I made the commitment to publish this book with The Author Success and just see it through, as soon as that contract was signed, everything else opened up." },
-  { name: 'Rich K.',    quote: "I wasn't a 'writer.' The Author Success turned years of workshops into a clear book — and the book turned into credibility, revenue, and relationships I couldn't have reached any other way." },
-  { name: 'Elijah M.', quote: "The launch strategy The Author Success built for me was exceptional. New business started coming in immediately after launch — and it kept coming." },
-  { name: 'Victor H.', quote: "Something I can tell you now — I am crazily thinking about writing a second book. There's no way, if the process wasn't anything but great, that I would say I want to do this again." },
+  { name: 'James R.',   quote: "I had all the ideas, but I couldn't put them into a proper book form. This group has helped me put my ideas together in a way that I'm happy to share." },
+  { name: 'Sarah M.',   quote: 'Indeed, the process of editing did make a huge impact on my work. My writing became more refined yet still very much me.' },
+  { name: 'Michael T.', quote: 'I thought of sharing my professional experience through a book, but I was not sure how to begin. The assistance provided enabled me to go from concept to plan.' },
+  { name: 'Laura B.',   quote: 'Communication has been crystal clear throughout the whole process. I loved the constructive criticism and effort to preserve my unique style of expression.' },
+  { name: 'David P.',   quote: "Having support with the book's preparation made the whole process feel more manageable. I had a clearer direction and felt more confident about the next steps." },
 ]
 
 const whyItems = [
-  { Icon: Clock,   title: 'Save Time & Focus',      desc: 'Writing a book takes hundreds of hours. We handle every word so you can focus on what you do best.' },
-  { Icon: Trophy,  title: 'Professional Quality',   desc: 'Our writers, editors, and designers are industry veterans — your book will look and read like a bestseller.' },
-  { Icon: Users,   title: 'One Team, Full Service', desc: 'From writing to publishing to marketing — everything handled under one roof. No gaps, no surprises.' },
-  { Icon: Mic,     title: 'Your Voice, Your Book',  desc: 'We study how you speak and think. The finished book sounds exactly like you — just professionally written.' },
+  { Icon: Clock,   title: 'Your Time Back',                 desc: 'Writing a book takes time, so we help with the writing while you focus on your work and daily life.' },
+  { Icon: Trophy,  title: 'Polished to Professional Standards', desc: 'Our writers, editors, and designers make sure your book reads and looks its very best.' },
+  { Icon: Users,   title: 'One Team, Start to Finish',      desc: 'We handle writing, editing, publishing, and marketing in one place, keeping things simple from start to finish.' },
+  { Icon: Mic,     title: 'Your Voice, Your Book',          desc: 'We get to know how you think and speak so your book sounds like you.' },
 ]
 
 const LP2_SERVICES = [
-  'Book Publishing',
-  'Ghostwriting / Book Writing',
-  'Book Coaching (Guided Author)',
+  'Ghostwriting',
+  'Book Editing',
+  'Cover Design',
+  'Publishing',
   'Book Marketing',
-  'Audiobook Production',
-  'Other',
+  'Audiobooks',
+  "Children's Books",
+  'Other Services',
+  'Not Sure Yet',
 ]
 
 /* ─── Contact Form ───────────────────────────────────────────── */
@@ -155,7 +158,7 @@ function ContactForm({ compact = false }: { compact?: boolean }) {
         type="submit" disabled={status === 'loading'}
         className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-100 transition-all disabled:opacity-60 text-sm"
       >
-        {status === 'loading' ? 'Sending...' : 'Submit Now →'}
+        {status === 'loading' ? 'Sending...' : 'Get My Free Call →'}
       </button>
     </form>
   )
@@ -199,17 +202,17 @@ export default function LP2() {
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white border border-cyan-200 shadow-sm rounded-full px-4 py-1.5 mb-6">
                 <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}</div>
-                <span className="text-xs font-semibold text-slate-700">Trusted by <strong className="text-primary">3,000+</strong> Authors Worldwide</span>
+                <span className="text-xs font-semibold text-slate-700">Trusted by <strong className="text-primary">Authors, Founders, and Experts</strong></span>
               </div>
               <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-black leading-[1.1] mb-5">
-                We Make Your Book Publishing Experience{' '}
-                <span className="text-primary">Seamless &amp; Professional</span>
+                Turn Your Expertise Into{' '}
+                <span className="text-primary">a Published Book</span>
               </h1>
               <p className="text-brand-body text-lg leading-relaxed mb-8 max-w-xl">
-                From ghostwriting to global distribution — The Author Success handles every step so your story reaches the world, in your voice, under your name.
+                From ghostwriting and book editing services to publishing and marketing, The Author Success takes care of every step, so your story reaches readers in your voice and under your name.
               </p>
               <div className="grid sm:grid-cols-2 gap-2.5 mb-8 w-full">
-                {['You Keep All Your Royalties', 'Featured on Leading Global Platforms', 'Careful Editing for Every Sentence', 'Your Ideas Stay Confidential', 'A Dedicated Project Manager', 'Unwavering, Human Support'].map(item => (
+                {['100% of Royalties Stay Yours', 'Available on Major Platforms', 'Every Page Carefully Edited', 'NDA Signed Before We Start', 'One Dedicated Project Manager', 'Real People, Real Support'].map(item => (
                   <div key={item} className="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-brand-dark-2">
                     <CheckCircle size={15} className="text-primary shrink-0" />
                     {item}
@@ -217,7 +220,7 @@ export default function LP2() {
                 ))}
               </div>
               <p className="text-xs text-brand-muted">
-                Free 15-minute call &middot; For entrepreneurs, executives &amp; experts &middot; Response within 1 business day
+                Free 15-minute call &middot; For authors, entrepreneurs &amp; experts &middot; No obligation
               </p>
             </div>
 
@@ -225,22 +228,22 @@ export default function LP2() {
             <div className="bg-white rounded-3xl border border-slate-100 shadow-2xl shadow-slate-200/60 p-7">
               <div className="flex items-center justify-between mb-1">
                 <h2 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-brand-dark">
-                  Book a Free 15-Min Strategy Call
+                  Book Your Free 15-Min Strategy Call
                 </h2>
                 <span className="text-xs bg-green-100 text-green-700 font-semibold px-2.5 py-1 rounded-full">&#9679; Live</span>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4 mt-2">
-                {['Free · No commitment', 'For executives & experts', '15 minutes'].map(tag => (
+                {['Free · No Commitment', 'Fiction & Non-Fiction', '15 Minutes'].map(tag => (
                   <span key={tag} className="text-[11px] text-brand-muted bg-slate-100 rounded-full px-2.5 py-0.5">{tag}</span>
                 ))}
               </div>
               <p className="text-brand-muted text-xs mb-4 leading-relaxed">
-                Fill out the form and a publishing strategist will reach out within <strong className="text-brand-dark">1 business day</strong> to schedule your call.
+                Share a few details, and a publishing specialist will reach out to schedule your call.
               </p>
               <ContactForm compact />
               <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-slate-100">
                 <div className="flex">{[1,2,3,4,5].map(i => <Star key={i} size={12} className="text-amber-400 fill-amber-400" />)}</div>
-                <span className="text-xs text-slate-400">4.9 / 5 from 1,200+ author reviews</span>
+                <span className="text-xs text-slate-400">Trusted by authors, founders, and experts</span>
               </div>
             </div>
           </div>
@@ -251,7 +254,7 @@ export default function LP2() {
       <section className="bg-slate-50 py-16 overflow-hidden border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-1">Our Work</p>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-brand-dark">Books We&apos;ve Published</h2>
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-brand-dark">Proud Published Work</h2>
         </div>
         <div className="overflow-hidden px-4">
           <div className="lp2-track">
@@ -272,10 +275,10 @@ export default function LP2() {
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             {/* Perks */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Why It Matters</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">What You Gain</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black leading-tight mb-8">
-                What a Published Book{' '}
-                <span className="text-primary">Opens Up for You</span>
+                How One Book Grows Your{' '}
+                <span className="text-primary">Name and Business</span>
               </h2>
               <div className="flex flex-col gap-3">
                 {bestItems.map(({ num, title, desc }) => (
@@ -292,10 +295,10 @@ export default function LP2() {
 
             {/* Steps */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">How It Works</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Our Approach</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black leading-tight mb-8">
-                From Idea to{' '}
-                <span className="text-primary">Published Book</span>
+                Idea to Author,{' '}
+                <span className="text-primary">Made Easy</span>
               </h2>
               <div className="flex flex-col gap-4">
                 {steps.map(({ num, title, desc }, i) => (
@@ -325,12 +328,12 @@ export default function LP2() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">What We Do</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">How We Help</p>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black mb-3">
-              Everything You Need,{' '}
-              <span className="text-primary">Under One Roof</span>
+              Every Service Your Book{' '}
+              <span className="text-primary">Will Ever Need</span>
             </h2>
-            <p className="text-brand-muted max-w-xl mx-auto">From your first draft to your bestseller launch — we handle every step.</p>
+            <p className="text-brand-muted max-w-xl mx-auto">From first draft to launch day and beyond, every service your book needs lives under one roof.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
             {services.map(({ Icon, title, desc, bullets }) => (
@@ -352,7 +355,7 @@ export default function LP2() {
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
             <a href="#contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-cyan-200 transition-all">
-              Book a Free Consult <ArrowRight size={16} />
+              Book a Free Call <ArrowRight size={16} />
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 border-2 border-slate-200 hover:border-primary text-brand-dark font-bold px-7 py-4 rounded-full transition-all">
               View All Services
@@ -367,21 +370,21 @@ export default function LP2() {
           style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-black text-white mb-4">
-            Ready to Publish a Book That Works as Hard as You Do?
+            Ready for a Book That Grows Your Business?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
-            Join 3,000+ entrepreneurs, executives, and experts who trusted The Author Success to bring their book to life.
+            Authors, entrepreneurs, and experts come to The Author Success for help turning their ideas into books they&apos;re proud to call their own.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a href="#contact" className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 font-bold px-8 py-4 rounded-full shadow-lg transition-colors text-primary">
               Let&apos;s Work Together <ArrowRight size={16} />
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-7 py-4 rounded-full transition-colors">
-              Book a Free Consult
+              Book a Free Call
             </a>
           </div>
           <p className="mt-4 text-white/50 text-xs">
-            Free 15-minute strategy call &middot; Response within 1 business day
+            Free 15-minute strategy call &middot; No obligation
           </p>
         </div>
       </section>
@@ -393,11 +396,11 @@ export default function LP2() {
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Every Genre</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black mb-4">
-                The Genres Available{' '}
-                <span className="text-primary">at Your Service</span>
+                Every Genre,{' '}
+                <span className="text-primary">One Trusted Team</span>
               </h2>
               <p className="text-brand-muted leading-relaxed mb-8">
-                The Author Success is known for publishing a wide variety of genres — from business books and memoirs to novels and expert guides.
+                From business books and memoirs to novels and picture books, we work across every genre. Fiction writers get novel proofreading services that catch every last slip, while experts get writing and editing that make their ideas shine.
               </p>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {genres.map(g => (
@@ -424,8 +427,8 @@ export default function LP2() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black">
-              Why Authors Choose{' '}
-              <span className="text-primary">The Author Success</span>
+              Why Authors and Experts{' '}
+              <span className="text-primary">Choose Us</span>
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -446,8 +449,8 @@ export default function LP2() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">What Our Authors Say</p>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black">In Their <span className="text-primary">Words</span></h2>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2">Author Reviews</p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-black">Authors Who <span className="text-primary">Trusted Us</span></h2>
           </div>
 
           <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 sm:p-10">
@@ -495,19 +498,18 @@ export default function LP2() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70 mb-2">Get in Touch</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70 mb-2">Let&apos;s Talk</p>
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-black text-white leading-tight mb-4">
-                Ready to Take the Next Step?
+                Ready to Become a Published Author?
               </h2>
               <p className="text-white/80 leading-relaxed mb-2">
-                For entrepreneurs, executives, and experts with a book idea — at any stage. Fill out the form and a publishing specialist will reach out within{' '}
-                <strong className="text-white">1 business day</strong> to schedule a free 15-minute strategy call.
+                For authors, entrepreneurs, and experts with a book idea at any stage. Share a few details, and a publishing specialist will reach out to plan a free 15-minute call.
               </p>
               <p className="text-white/60 text-sm leading-relaxed mb-8">
-                On the call: we&apos;ll learn about your book, recommend the right service tier, and answer any questions — no preparation needed, no commitment required.
+                On the call, we&apos;ll learn about your book, recommend the right services, and answer your questions. No preparation needed, no commitment required.
               </p>
               <ul className="flex flex-col gap-3 w-full">
-                {['Expert ghostwriting & publishing', 'End-to-end — writing to marketing', '3,000+ authors published', 'You keep 100% of your rights'].map(point => (
+                {['Ghostwriting, editing, and publishing', 'Writing to marketing, under one roof', 'Book editing services for every stage', 'You keep 100% of your rights'].map(point => (
                   <li key={point} className="flex items-center justify-center lg:justify-start gap-3 text-white text-sm">
                     <CheckCircle size={16} className="text-white shrink-0" /> {point}
                   </li>
@@ -515,9 +517,13 @@ export default function LP2() {
               </ul>
             </div>
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-brand-dark mb-1">Let&apos;s Talk About Your Book</h3>
-              <p className="text-brand-muted text-xs mb-5">A publishing strategist will reach out within 24 hours.</p>
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-brand-dark mb-1">Tell Us About Your Book</h3>
+              <p className="text-brand-muted text-xs mb-5">A publishing specialist will be in touch soon.</p>
               <ContactForm />
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 mt-4 pt-4 border-t border-slate-100 text-xs text-brand-muted">
+                <span>Call <a href="tel:+13073166909" className="text-primary font-semibold hover:underline">+1 (307) 316-6909</a></span>
+                <span>Email <a href="mailto:Support@theauthorsuccess.com" className="text-primary font-semibold hover:underline">Support@theauthorsuccess.com</a></span>
+              </div>
             </div>
           </div>
         </div>
